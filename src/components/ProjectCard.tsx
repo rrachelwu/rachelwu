@@ -18,19 +18,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0
     <Link
       to={`/projects/${project.slug}`}
       className={cn(
-        'group block bg-card rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-400',
-        'opacity-0 animate-fade-in-up',
+        'group block bg-card rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500',
+        'opacity-0 animate-fade-in-up border border-border/50 hover:border-primary/30',
         className
       )}
       style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}
     >
-      <div className="aspect-[4/3] overflow-hidden bg-muted">
+      <div className="aspect-[16/10] overflow-hidden bg-muted relative">
         <img
           src={project.coverImage}
           alt={language === 'zh' ? project.title : project.titleEn}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
+        {/* Overlay on hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        
+        {/* Arrow icon on hover */}
+        <div className="absolute bottom-4 right-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+          <ArrowUpRight className="w-5 h-5" />
+        </div>
       </div>
       
       <div className="p-6">
@@ -38,24 +45,23 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0
           {project.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="px-2.5 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"
+              className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground"
             >
               {tag}
             </span>
           ))}
         </div>
         
-        <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors flex items-center gap-2">
+        <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
           {language === 'zh' ? project.title : project.titleEn}
-          <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
         </h3>
         
         <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
           {language === 'zh' ? project.summary : project.summaryEn}
         </p>
         
-        <div className="flex items-center justify-between text-xs text-muted-foreground">
-          <span>{language === 'zh' ? project.role : project.roleEn}</span>
+        <div className="flex items-center justify-between text-xs text-muted-foreground pt-4 border-t border-border">
+          <span className="font-medium">{language === 'zh' ? project.role : project.roleEn}</span>
           <span>{language === 'zh' ? project.duration : project.durationEn}</span>
         </div>
       </div>

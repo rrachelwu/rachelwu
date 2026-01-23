@@ -1,10 +1,9 @@
 import React from 'react';
-import { Download, MapPin, Mail } from 'lucide-react';
+import { Download, MapPin, Mail, Briefcase, GraduationCap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import SectionTitle from '@/components/SectionTitle';
 import Button from '@/components/Button';
 import SkillBar from '@/components/SkillBar';
-import TimelineItem from '@/components/TimelineItem';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
 
@@ -12,143 +11,232 @@ const About: React.FC = () => {
   const { t, language } = useLanguage();
   const introRef = useScrollAnimation();
   const skillsRef = useScrollAnimation();
-  const timelineRef = useScrollAnimation();
+  const experienceRef = useScrollAnimation();
+  const educationRef = useScrollAnimation();
 
   const skills = {
     frontend: [
-      { name: 'React / Next.js', level: 95 },
-      { name: 'TypeScript', level: 90 },
-      { name: 'Tailwind CSS', level: 92 },
-      { name: 'Vue.js', level: 75 },
+      { name: 'Figma / Sketch', level: 95 },
+      { name: 'UI/UX Design', level: 92 },
+      { name: 'Design Systems', level: 90 },
+      { name: 'Prototyping', level: 88 },
     ],
     backend: [
-      { name: 'Node.js', level: 85 },
-      { name: 'Python', level: 70 },
-      { name: 'PostgreSQL', level: 80 },
-      { name: 'MongoDB', level: 75 },
+      { name: 'App Design', level: 90 },
+      { name: 'Web Design', level: 88 },
+      { name: 'Mini Program', level: 85 },
+      { name: 'TV Platform', level: 80 },
     ],
     design: [
-      { name: 'Figma', level: 88 },
-      { name: 'UI/UX Design', level: 85 },
-      { name: 'Design Systems', level: 90 },
-      { name: 'Prototyping', level: 82 },
+      { name: 'Visual Design', level: 95 },
+      { name: 'Interaction Design', level: 88 },
+      { name: 'Brand Design', level: 85 },
+      { name: 'Motion Design', level: 75 },
     ],
   };
 
-  const timeline = [
+  const workExperience = [
     {
-      date: '2024',
-      title: t('高级前端工程师', 'Senior Frontend Engineer'),
-      subtitle: t('某知名科技公司', 'Leading Tech Company'),
-      description: t(
-        '负责设计系统建设，带领团队完成多个核心项目',
-        'Led design system development and multiple core projects'
-      ),
+      company: t('雷神(武汉)网络技术有限公司', 'Thunder Network'),
+      role: t('UI设计师', 'UI Designer'),
+      period: '2023.12 - 2024.06',
     },
     {
-      date: '2022 - 2024',
-      title: t('全栈开发工程师', 'Full-Stack Developer'),
-      subtitle: t('创业公司', 'Startup'),
-      description: t(
-        '从 0 到 1 构建多个产品，涵盖 Web、App 及后端服务',
-        'Built multiple products from scratch, including web, mobile, and backend'
-      ),
+      company: t('峰米(北京)科技有限公司', 'Formovie Technology'),
+      role: t('产品设计师', 'Product Designer'),
+      period: '2023.08 - 2023.11',
     },
     {
-      date: '2020 - 2022',
-      title: t('前端开发工程师', 'Frontend Developer'),
-      subtitle: t('互联网大厂', 'Big Tech'),
-      description: t(
-        '参与电商平台核心功能开发，优化性能与用户体验',
-        'Developed core e-commerce features, optimized performance and UX'
-      ),
+      company: t('矩阵元(深圳)技术有限公司', 'Matrix Element'),
+      role: t('高级UI设计师', 'Senior UI Designer'),
+      period: '2022.03 - 2023.01',
     },
     {
-      date: '2016 - 2020',
-      title: t('计算机科学学士', 'B.S. Computer Science'),
-      subtitle: t('重点大学', 'Top University'),
-      description: t(
-        '主修计算机科学，辅修设计',
-        'Major in Computer Science, Minor in Design'
-      ),
+      company: t('武汉紫荆花有限公司', 'Bauhinia'),
+      role: t('高级UI设计师', 'Senior UI Designer'),
+      period: '2019.02 - 2022.03',
+    },
+    {
+      company: t('北京榆钱投资管理有限公司', 'Yuqian Investment'),
+      role: t('UI设计师', 'UI Designer'),
+      period: '2017.02 - 2018.11',
+    },
+    {
+      company: t('北京小米电子产品有限公司', 'Xiaomi Electronics'),
+      role: t('视觉设计师', 'Visual Designer'),
+      period: '2013.11 - 2016.03',
+    },
+  ];
+
+  const education = [
+    {
+      school: t('湖北工业大学', 'Hubei University of Technology'),
+      major: t('视觉传达设计 / 艺术系', 'Visual Communication Design / Art'),
+      period: '2017.09 - 2020.12',
+    },
+    {
+      school: t('湖北青年职业学院', 'Hubei Youth Vocational College'),
+      major: t('广告与会展 / 艺术系', 'Advertising & Exhibition / Art'),
+      period: '2010.09 - 2013.06',
     },
   ];
 
   return (
     <main className="pt-24 pb-16 min-h-screen">
       <div className="container">
-        {/* Intro Section */}
+        {/* Intro Section - PDF Style */}
         <div
           ref={introRef.ref}
           className={cn(
-            'grid lg:grid-cols-3 gap-12 mb-20 transition-all duration-700',
+            'grid lg:grid-cols-5 gap-16 mb-24 transition-all duration-700',
             introRef.isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-8'
           )}
         >
-          {/* Avatar */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-32">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden bg-muted mb-6 mx-auto lg:mx-0">
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-                  alt={t('张三', 'Zhang San')}
-                  className="w-full h-full object-cover"
-                />
+          {/* Left Content */}
+          <div className="lg:col-span-3">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
+                R.
               </div>
-              
-              <div className="text-center lg:text-left">
-                <h1 className="text-2xl font-bold mb-2">{t('张三', 'Zhang San')}</h1>
-                <p className="text-muted-foreground mb-4">
-                  {t('全栈开发者 & 产品设计师', 'Full-Stack Developer & Product Designer')}
-                </p>
-                
-                <div className="flex flex-col gap-2 text-sm text-muted-foreground mb-6">
-                  <div className="flex items-center justify-center lg:justify-start gap-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>{t('北京, 中国', 'Beijing, China')}</span>
-                  </div>
-                  <div className="flex items-center justify-center lg:justify-start gap-2">
-                    <Mail className="w-4 h-4" />
-                    <a href="mailto:hello@example.com" className="hover:text-primary transition-colors">
-                      hello@example.com
-                    </a>
-                  </div>
-                </div>
-                
-                <Button href="/resume.pdf" size="sm" className="mx-auto lg:mx-0">
-                  <Download className="w-4 h-4" />
-                  {t('下载简历', 'Download Resume')}
-                </Button>
+              <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+                RACHEL PORTFOLIO
+              </span>
+            </div>
+
+            <h1 className="text-4xl md:text-5xl font-bold mb-3">
+              Rachel Wu
+              <span className="text-xl md:text-2xl font-normal text-muted-foreground ml-4">
+                {t('高级UI设计师', 'Senior UI Designer')}
+              </span>
+            </h1>
+            
+            <p className="text-muted-foreground mb-10 max-w-2xl leading-relaxed">
+              {t(
+                '金牛座靠谱设计师，信奉追求极致的产品美学，10年设计工作经验，曾任职于小米电视，精通互联网产品 App、小程序及网页设计，有丰富的产品和交互设计经验，能独立负责产品设计，有硬件产品设计经验，对多端的用户体验和视觉设计有总结沉淀；有丰富的B端C端设计经验、海外项目经验，过往项目涉及网页端、移动端、小程序、电视端等平台设计；擅长视觉运营和产品交互设计，多次负责 0-1 项目，能运用自己的设计沉淀在紧急的需求中快速完成设计工作。',
+                'A reliable Taurus designer who pursues ultimate product aesthetics. 10 years of design experience, formerly at Xiaomi TV. Skilled in App, Mini Program, and Web design with rich product and interaction experience. Capable of independently managing product design with hardware experience. Extensive B2B/B2C and overseas project experience across web, mobile, mini programs, and TV platforms.'
+              )}
+            </p>
+
+            {/* Stats - like in PDF */}
+            <div className="flex gap-16 mb-10">
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-foreground">20+</div>
+                <div className="text-sm text-muted-foreground mt-2">{t('独立负责项目', 'Independent Projects')}</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-foreground">10</div>
+                <div className="text-sm text-muted-foreground mt-2">{t('设计经验年数', 'Years Experience')}</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-foreground">6</div>
+                <div className="text-sm text-muted-foreground mt-2">{t('曾带领团队人数', 'Team Size Led')}</div>
               </div>
             </div>
+
+            <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span>{t('武汉, 中国', 'Wuhan, China')}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-primary" />
+                <a href="mailto:rachel@example.com" className="hover:text-primary transition-colors">
+                  rachel@example.com
+                </a>
+              </div>
+            </div>
+            
+            <Button href="/resume.pdf" size="md">
+              <Download className="w-4 h-4" />
+              {t('下载简历', 'Download Resume')}
+            </Button>
           </div>
 
-          {/* Bio */}
-          <div className="lg:col-span-2">
-            <SectionTitle title={t('关于我', 'About Me')} />
-            
-            <div className="prose prose-neutral dark:prose-invert max-w-none">
-              <p className="text-lg text-muted-foreground mb-6">
-                {t(
-                  '你好！我是一名拥有 5 年+经验的全栈开发者与产品设计师。我热爱将复杂的问题转化为简洁、优雅的解决方案，始终追求用户体验与技术实现的完美平衡。',
-                  "Hi! I'm a full-stack developer and product designer with 5+ years of experience. I love transforming complex problems into clean, elegant solutions, always pursuing the perfect balance between user experience and technical implementation."
-                )}
-              </p>
-              <p className="text-muted-foreground mb-6">
-                {t(
-                  '在过去的工作中，我参与并主导了多个从 0 到 1 的产品建设，涵盖企业级 SaaS、移动应用、数据可视化平台等多个领域。我擅长与设计师、产品经理紧密协作，确保产品在技术可行性与用户需求之间找到最佳平衡点。',
-                  "In my past work, I've led multiple products from 0 to 1, covering enterprise SaaS, mobile applications, and data visualization platforms. I excel at collaborating closely with designers and product managers to find the optimal balance between technical feasibility and user needs."
-                )}
-              </p>
-              <p className="text-muted-foreground">
-                {t(
-                  '目前我对 AI 与前端的结合特别感兴趣，正在探索如何用 AI 提升开发效率与用户体验。如果你有有趣的项目或机会，欢迎联系我！',
-                  "Currently, I'm particularly interested in the intersection of AI and frontend development, exploring how AI can enhance development efficiency and user experience. Feel free to reach out if you have interesting projects or opportunities!"
-                )}
-              </p>
+          {/* Right Image - with red oval */}
+          <div className="lg:col-span-2 relative hidden lg:flex items-center justify-center">
+            <div className="relative">
+              {/* Red oval background like PDF */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-80 bg-primary rounded-[50%] -z-10" />
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop&crop=face"
+                alt="Rachel Wu"
+                className="w-64 h-80 object-cover rounded-2xl shadow-elevated"
+              />
             </div>
+          </div>
+        </div>
+
+        {/* Work Experience - PDF Grid Style */}
+        <div
+          ref={experienceRef.ref}
+          className={cn(
+            'mb-20 transition-all duration-700',
+            experienceRef.isVisible
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-8'
+          )}
+        >
+          <SectionTitle
+            title={t('工作经历', 'Work Experience')}
+            titleEn="EXPERIENCE"
+          />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {workExperience.map((exp, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 hover:shadow-card transition-all duration-300"
+              >
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
+                    <Briefcase className="w-5 h-5 text-muted-foreground" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-foreground">{exp.company}</h3>
+                    <p className="text-sm text-primary font-medium">{exp.role}</p>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground">{exp.period}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Education - PDF Style */}
+        <div
+          ref={educationRef.ref}
+          className={cn(
+            'mb-20 transition-all duration-700',
+            educationRef.isVisible
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-8'
+          )}
+        >
+          <SectionTitle
+            title={t('教育经历', 'Education')}
+            titleEn="EDUCATION"
+          />
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {education.map((edu, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-xl bg-card border border-border"
+              >
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <GraduationCap className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-foreground">{edu.school}</h3>
+                    <p className="text-sm text-muted-foreground">{edu.major}</p>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground">{edu.period}</p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -156,7 +244,7 @@ const About: React.FC = () => {
         <div
           ref={skillsRef.ref}
           className={cn(
-            'mb-20 transition-all duration-700',
+            'transition-all duration-700',
             skillsRef.isVisible
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-8'
@@ -164,62 +252,37 @@ const About: React.FC = () => {
         >
           <SectionTitle
             title={t('技能栈', 'Skills')}
-            subtitle={t('按领域分类的技术能力', 'Technical capabilities by domain')}
+            titleEn="SKILLS"
+            subtitle={t('按领域分类的设计能力', 'Design capabilities by domain')}
           />
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <h3 className="font-semibold mb-6">{t('前端开发', 'Frontend')}</h3>
-              <div className="space-y-4">
+            <div className="p-8 rounded-xl bg-card border border-border">
+              <h3 className="font-bold text-lg mb-6">{t('设计工具', 'Design Tools')}</h3>
+              <div className="space-y-5">
                 {skills.frontend.map((skill, i) => (
                   <SkillBar key={skill.name} {...skill} delay={i * 100} />
                 ))}
               </div>
             </div>
             
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <h3 className="font-semibold mb-6">{t('后端开发', 'Backend')}</h3>
-              <div className="space-y-4">
+            <div className="p-8 rounded-xl bg-card border border-border">
+              <h3 className="font-bold text-lg mb-6">{t('平台经验', 'Platform')}</h3>
+              <div className="space-y-5">
                 {skills.backend.map((skill, i) => (
                   <SkillBar key={skill.name} {...skill} delay={i * 100} />
                 ))}
               </div>
             </div>
             
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <h3 className="font-semibold mb-6">{t('设计', 'Design')}</h3>
-              <div className="space-y-4">
+            <div className="p-8 rounded-xl bg-card border border-border">
+              <h3 className="font-bold text-lg mb-6">{t('设计能力', 'Design Skills')}</h3>
+              <div className="space-y-5">
                 {skills.design.map((skill, i) => (
                   <SkillBar key={skill.name} {...skill} delay={i * 100} />
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Timeline Section */}
-        <div
-          ref={timelineRef.ref}
-          className={cn(
-            'transition-all duration-700',
-            timelineRef.isVisible
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-8'
-          )}
-        >
-          <SectionTitle
-            title={t('经历', 'Experience')}
-            subtitle={t('教育与工作经历时间线', 'Education and work experience timeline')}
-          />
-          
-          <div className="max-w-2xl">
-            {timeline.map((item, index) => (
-              <TimelineItem
-                key={index}
-                {...item}
-                isLast={index === timeline.length - 1}
-              />
-            ))}
           </div>
         </div>
       </div>
