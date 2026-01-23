@@ -18,8 +18,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0
     <Link
       to={`/projects/${project.slug}`}
       className={cn(
-        'group block bg-card rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500',
-        'opacity-0 animate-fade-in-up border border-border/50 hover:border-primary/30',
+        'group block bg-card rounded-2xl overflow-hidden card-lift glow-hover relative',
+        'opacity-0 animate-fade-in-up border border-border/50',
         className
       )}
       style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}
@@ -28,15 +28,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0
         <img
           src={project.coverImage}
           alt={language === 'zh' ? project.title : project.titleEn}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
           loading="lazy"
         />
-        {/* Overlay on hover */}
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
         
-        {/* Arrow icon on hover */}
-        <div className="absolute bottom-4 right-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-          <ArrowUpRight className="w-5 h-5" />
+        {/* Arrow icon with enhanced animation */}
+        <div className="absolute bottom-4 right-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 shadow-elevated">
+          <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </div>
+        
+        {/* Shine effect */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
         </div>
       </div>
       
@@ -45,7 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0
           {project.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground"
+              className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground transition-all duration-300 group-hover:bg-primary/10 group-hover:text-primary"
             >
               {tag}
             </span>
