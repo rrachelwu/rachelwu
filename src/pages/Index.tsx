@@ -65,15 +65,23 @@ const Index: React.FC = () => {
   return (
     <main>
       {/* Hero Section - Matching PDF Cover Style */}
-      <section className="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
-        {/* Background decoration - golden spiral inspired */}
-        <div className="absolute inset-0 pointer-events-none">
-          <svg className="absolute top-0 right-0 w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] opacity-[0.03]" viewBox="0 0 800 800" fill="none">
-            <circle cx="400" cy="400" r="380" stroke="currentColor" strokeWidth="1"/>
-            <circle cx="400" cy="400" r="280" stroke="currentColor" strokeWidth="1"/>
-            <circle cx="400" cy="400" r="180" stroke="currentColor" strokeWidth="1"/>
-            <path d="M400 20 Q780 400 400 780 Q20 400 400 20" stroke="currentColor" strokeWidth="1" fill="none"/>
+      <section className="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden bg-gradient-mesh">
+        {/* Framer-style floating decorative shapes */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Large red glow */}
+          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]" />
+          <div className="absolute top-1/2 -left-40 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px]" />
+          <div className="absolute -bottom-20 right-1/4 w-[300px] h-[300px] bg-primary/8 rounded-full blur-[80px]" />
+          
+          {/* Decorative circles */}
+          <svg className="absolute top-20 right-20 w-[300px] h-[300px] opacity-[0.03]" viewBox="0 0 300 300" fill="none">
+            <circle cx="150" cy="150" r="140" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="150" cy="150" r="100" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="150" cy="150" r="60" stroke="currentColor" strokeWidth="1"/>
           </svg>
+          
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 grid-pattern opacity-30" />
         </div>
 
         <div className="container">
@@ -156,8 +164,13 @@ const Index: React.FC = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-24 bg-gradient-subtle">
-        <div className="container">
+      <section className="py-24 bg-gradient-subtle relative overflow-hidden">
+        {/* Subtle background decoration */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px]" />
+          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/3 rounded-full blur-[120px]" />
+        </div>
+        <div className="container relative z-10">
           <SectionTitle
             title={t('精选作品', 'Featured Projects')}
             titleEn="PROJECTS"
@@ -203,14 +216,16 @@ const Index: React.FC = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group p-8 rounded-xl bg-card border border-border hover:border-primary/30 hover:shadow-card-hover transition-all duration-500"
+                className="group p-8 rounded-2xl bg-card border border-border/50 card-lift glow-hover relative"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  <feature.icon className="w-7 h-7" />
+                <div className="relative z-10">
+                  <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                    <feature.icon className="w-7 h-7" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-3 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
                 </div>
-                <h3 className="font-bold text-lg mb-3">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
