@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Code, Palette, Zap } from 'lucide-react';
+import { ArrowRight, Code, Palette, Sparkles, Zap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { projects } from '@/data/projects';
 import ProjectCard from '@/components/ProjectCard';
@@ -25,7 +25,7 @@ const Index: React.FC = () => {
     },
     {
       icon: Palette,
-      title: t('产品设计', 'Product Design'),
+      title: t('UI/UX 设计', 'UI/UX Design'),
       description: t(
         '用户体验优先的设计思维，将复杂需求转化为优雅解决方案',
         'User-first design thinking, transforming complex needs into elegant solutions'
@@ -49,77 +49,125 @@ const Index: React.FC = () => {
     },
   ];
 
+  const stats = [
+    { number: '20+', label: t('独立负责项目', 'Independent Projects') },
+    { number: '10', label: t('设计经验年数', 'Years of Experience') },
+    { number: '6', label: t('曾带领团队人数', 'Team Size Led') },
+  ];
+
   const logos = [
-    { name: 'Google', logo: 'G' },
-    { name: 'ByteDance', logo: 'BD' },
-    { name: 'Alibaba', logo: 'Ali' },
-    { name: 'Tencent', logo: 'TX' },
-    { name: 'Microsoft', logo: 'MS' },
+    { name: '小米电视', nameEn: 'Xiaomi TV' },
+    { name: '峰米科技', nameEn: 'Formovie' },
+    { name: '矩阵元', nameEn: 'Matrix Element' },
+    { name: '雷神网络', nameEn: 'Thunder' },
   ];
 
   return (
     <main>
-      {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center pt-24 pb-16">
+      {/* Hero Section - Matching PDF Cover Style */}
+      <section className="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
+        {/* Background decoration - golden spiral inspired */}
+        <div className="absolute inset-0 pointer-events-none">
+          <svg className="absolute top-0 right-0 w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] opacity-[0.03]" viewBox="0 0 800 800" fill="none">
+            <circle cx="400" cy="400" r="380" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="400" cy="400" r="280" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="400" cy="400" r="180" stroke="currentColor" strokeWidth="1"/>
+            <path d="M400 20 Q780 400 400 780 Q20 400 400 20" stroke="currentColor" strokeWidth="1" fill="none"/>
+          </svg>
+        </div>
+
         <div className="container">
-          <div
-            ref={heroRef.ref}
-            className={cn(
-              'max-w-3xl transition-all duration-700',
-              heroRef.isVisible
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-8'
-            )}
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              {t('开放新机会', 'Open to opportunities')}
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 leading-[1.1]">
-              {t('你好，我是', "Hi, I'm ")}
-              <span className="text-gradient">{t('张三', 'Zhang San')}</span>
-              <br />
-              <span className="text-muted-foreground">
-                {t('全栈开发者 & 产品设计师', 'Full-Stack Developer & Product Designer')}
-              </span>
-            </h1>
-            
-            <p className="text-lg text-muted-foreground mb-8 max-w-xl">
-              {t(
-                '5年+互联网产品经验，专注于构建高质量的 Web 应用与用户体验。曾服务于多家知名科技公司，擅长从 0 到 1 打造产品。',
-                '5+ years of experience in building high-quality web applications and user experiences. Worked with leading tech companies, skilled at building products from 0 to 1.'
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div
+              ref={heroRef.ref}
+              className={cn(
+                'transition-all duration-700',
+                heroRef.isVisible
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-8'
               )}
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <Button to="/projects" size="lg">
-                {t('查看作品', 'View Projects')}
-                <ArrowRight className="w-5 h-5" />
-              </Button>
-              <Button to="/contact" variant="outline" size="lg">
-                {t('联系我', 'Contact Me')}
-              </Button>
+            >
+              {/* Brand badge */}
+              <div className="inline-flex items-center gap-3 mb-8">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  R.
+                </div>
+                <div>
+                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider block">
+                    PORTFOLIO 2024
+                  </span>
+                  <span className="text-sm font-semibold text-foreground">
+                    UI/VISUAL DESIGN
+                  </span>
+                </div>
+              </div>
+              
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.05]">
+                Rachel Wu
+              </h1>
+              
+              <p className="text-xl text-muted-foreground mb-4">
+                {t('高级UI设计师', 'Senior UI Designer')}
+              </p>
+              
+              <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
+                {t(
+                  '10年设计工作经验，曾任职于小米电视，精通互联网产品 App、小程序及网页设计，有丰富的产品和交互设计经验。',
+                  '10 years of design experience, formerly at Xiaomi TV, skilled in App, Mini Program, and Web design with rich product and interaction design experience.'
+                )}
+              </p>
+
+              {/* Stats - like in PDF */}
+              <div className="flex gap-12 mb-10">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-foreground">{stat.number}</div>
+                    <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="flex flex-wrap gap-4">
+                <Button to="/projects" size="lg">
+                  {t('查看作品', 'View Projects')}
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+                <Button to="/contact" variant="outline" size="lg">
+                  {t('联系我', 'Contact Me')}
+                </Button>
+              </div>
+            </div>
+
+            {/* Right Image - with red oval background like PDF */}
+            <div className="relative hidden lg:block">
+              <div className="relative z-10 w-full max-w-md mx-auto">
+                {/* Red oval background */}
+                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-80 h-96 bg-primary rounded-[50%] -z-10" />
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=700&fit=crop&crop=face"
+                  alt="Rachel Wu"
+                  className="w-full max-w-sm ml-auto rounded-2xl shadow-elevated"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-24 bg-gradient-subtle">
         <div className="container">
           <SectionTitle
             title={t('精选作品', 'Featured Projects')}
+            titleEn="PROJECTS"
             subtitle={t(
               '近期完成的部分代表性项目',
               'Recent representative projects'
             )}
           />
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
             {projects.slice(0, 3).map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
@@ -135,10 +183,11 @@ const Index: React.FC = () => {
       </section>
 
       {/* Capabilities */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="container">
           <SectionTitle
             title={t('能力亮点', 'Capabilities')}
+            titleEn="SKILLS"
             subtitle={t('我能为你带来的价值', 'What I can bring to the table')}
           />
           
@@ -154,21 +203,21 @@ const Index: React.FC = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group p-6 rounded-xl bg-card border border-border hover:border-primary/50 hover:shadow-card-hover transition-all duration-400"
+                className="group p-8 rounded-xl bg-card border border-border hover:border-primary/30 hover:shadow-card-hover transition-all duration-500"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  <feature.icon className="w-6 h-6" />
+                <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                  <feature.icon className="w-7 h-7" />
                 </div>
-                <h3 className="font-semibold mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <h3 className="font-bold text-lg mb-3">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Trust Logos */}
+      {/* Experience Logos */}
       <section className="py-16 border-t border-border">
         <div className="container">
           <div
@@ -180,16 +229,16 @@ const Index: React.FC = () => {
                 : 'opacity-0 translate-y-8'
             )}
           >
-            <p className="text-sm text-muted-foreground mb-8">
-              {t('曾合作过的公司与团队', 'Companies & Teams I\'ve Worked With')}
+            <p className="text-sm text-muted-foreground mb-10 uppercase tracking-wider">
+              {t('工作经历', 'Work Experience')}
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
               {logos.map((logo, index) => (
                 <div
                   key={index}
-                  className="text-2xl font-bold text-muted-foreground/50 hover:text-muted-foreground transition-colors"
+                  className="text-xl md:text-2xl font-bold text-muted-foreground/40 hover:text-primary transition-colors duration-300"
                 >
-                  {logo.name}
+                  {language === 'zh' ? logo.name : logo.nameEn}
                 </div>
               ))}
             </div>
@@ -197,19 +246,19 @@ const Index: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-foreground text-background">
+      {/* CTA - with brand style */}
+      <section className="py-24 bg-secondary text-secondary-foreground">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
             {t('有项目想法？', 'Have a project in mind?')}
           </h2>
-          <p className="text-lg opacity-80 mb-8 max-w-xl mx-auto">
+          <p className="text-lg opacity-80 mb-10 max-w-xl mx-auto">
             {t(
               '无论是全新产品还是现有项目优化，我都很乐意交流。',
               "Whether it's a new product or optimizing an existing project, I'd love to chat."
             )}
           </p>
-          <Button to="/contact" variant="outline" size="lg" className="border-background text-background hover:bg-background hover:text-foreground">
+          <Button to="/contact" variant="outline" size="lg" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
             {t('开始对话', 'Start a Conversation')}
             <ArrowRight className="w-5 h-5" />
           </Button>

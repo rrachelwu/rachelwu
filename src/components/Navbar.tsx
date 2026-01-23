@@ -40,16 +40,22 @@ const Navbar: React.FC = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-background/80 backdrop-blur-lg border-b border-border py-3'
+          ? 'bg-background/95 backdrop-blur-lg border-b border-border py-3'
           : 'bg-transparent py-6'
       )}
     >
       <nav className="container flex items-center justify-between">
+        {/* Brand Logo - Matching PDF style */}
         <Link
           to="/"
-          className="text-xl font-bold tracking-tight hover:text-primary transition-colors"
+          className="flex items-center gap-2 group"
         >
-          {t('张三', 'Zhang San')}
+          <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg transition-transform group-hover:scale-105">
+            R.
+          </div>
+          <span className="text-sm font-medium text-muted-foreground hidden sm:block">
+            RACHEL PORTFOLIO
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -59,18 +65,21 @@ const Navbar: React.FC = () => {
               key={link.to}
               to={link.to}
               className={cn(
-                'text-sm font-medium transition-colors hover:text-primary',
+                'text-sm font-medium transition-colors relative',
                 isActive(link.to)
                   ? 'text-foreground'
-                  : 'text-muted-foreground'
+                  : 'text-muted-foreground hover:text-foreground'
               )}
             >
               {link.label}
+              {isActive(link.to) && (
+                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />
+              )}
             </Link>
           ))}
           <button
             onClick={() => setLanguage(language === 'zh' ? 'en' : 'zh')}
-            className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors px-3 py-1.5 rounded-full border border-border hover:border-primary"
             aria-label="Toggle language"
           >
             <Globe className="w-4 h-4" />
@@ -100,7 +109,7 @@ const Navbar: React.FC = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          'md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border overflow-hidden transition-all duration-300',
+          'md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-lg border-b border-border overflow-hidden transition-all duration-300',
           isOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         )}
       >
@@ -112,7 +121,7 @@ const Navbar: React.FC = () => {
               className={cn(
                 'text-base font-medium py-2 transition-colors',
                 isActive(link.to)
-                  ? 'text-foreground'
+                  ? 'text-primary'
                   : 'text-muted-foreground'
               )}
             >
