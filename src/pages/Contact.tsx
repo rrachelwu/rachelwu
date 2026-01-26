@@ -60,13 +60,13 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: t('邮箱', 'Email'),
-      value: 'hello@example.com',
-      href: 'mailto:hello@example.com',
+      value: 'rachelwuqian@icloud.com',
+      href: 'mailto:rachelwuqian@icloud.com',
     },
     {
       icon: MapPin,
       label: t('位置', 'Location'),
-      value: t('北京, 中国', 'Beijing, China'),
+      value: t('武汉, 中国 / 可出差', 'Wuhan, China / Travel OK'),
     },
   ];
 

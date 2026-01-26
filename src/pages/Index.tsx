@@ -50,16 +50,18 @@ const Index: React.FC = () => {
   ];
 
   const stats = [
+    { number: '10+', label: t('设计经验年数', 'Years of Experience') },
     { number: '20+', label: t('独立负责项目', 'Independent Projects') },
-    { number: '10', label: t('设计经验年数', 'Years of Experience') },
-    { number: '6', label: t('曾带领团队人数', 'Team Size Led') },
+    { number: '3', label: t('语言能力', 'Languages') },
   ];
 
   const logos = [
-    { name: '小米电视', nameEn: 'Xiaomi TV' },
+    { name: '小米电子', nameEn: 'Xiaomi' },
     { name: '峰米科技', nameEn: 'Formovie' },
     { name: '矩阵元', nameEn: 'Matrix Element' },
     { name: '雷神网络', nameEn: 'Thunder' },
+    { name: '紫荆花', nameEn: 'Bauhinia' },
+    { name: '光速源', nameEn: 'Guangsuyuan' },
   ];
 
   return (
@@ -112,17 +114,17 @@ const Index: React.FC = () => {
               </div>
               
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.05]">
-                Rachel Wu
+                {t('吴倩', 'Rachel Wu')}
               </h1>
               
               <p className="text-xl text-muted-foreground mb-4">
-                {t('高级UI设计师', 'Senior UI Designer')}
+                {t('产品设计师 / 产品经理（设计负责人）', 'Product Designer / Product Manager')}
               </p>
               
               <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
                 {t(
-                  '10年设计工作经验，曾任职于小米电视，精通互联网产品 App、小程序及网页设计，有丰富的产品和交互设计经验。',
-                  '10 years of design experience, formerly at Xiaomi TV, skilled in App, Mini Program, and Web design with rich product and interaction design experience.'
+                  '10+ 年互联网产品设计经验，擅长 0-1 搭建、商业化转化、跨端体验（Web/H5/多语言）与硬件交互设计。能把复杂功能拆解为清晰的信息架构与可执行的交付标准。',
+                  '10+ years of product design experience, skilled in 0-1 building, commercial conversion, cross-platform experience (Web/H5/multilingual) and hardware interaction design.'
                 )}
               </p>
 
