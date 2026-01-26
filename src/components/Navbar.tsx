@@ -26,7 +26,6 @@ const Navbar: React.FC = () => {
     { to: '/', label: t('首页', 'Home') },
     { to: '/projects', label: t('作品', 'Projects') },
     { to: '/about', label: t('关于我', 'About') },
-    { to: '/blog', label: t('博客', 'Blog') },
     { to: '/contact', label: t('联系', 'Contact') },
   ];
 
