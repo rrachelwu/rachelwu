@@ -7,6 +7,7 @@ import SectionTitle from '@/components/SectionTitle';
 import Button from '@/components/Button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
+import rachelPhoto from '@/assets/rachel-photo.jpg';
 
 const Index: React.FC = () => {
   const { t, language } = useLanguage();
@@ -152,10 +153,9 @@ const Index: React.FC = () => {
             {/* Right Image - with red oval background like PDF */}
             <div className="relative hidden lg:block">
               <div className="relative z-10 w-full max-w-md mx-auto">
-                {/* Red oval background */}
                 <div className="absolute top-1/2 right-0 -translate-y-1/2 w-80 h-96 bg-primary rounded-[50%] -z-10" />
                 <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=700&fit=crop&crop=face"
+                  src={rachelPhoto}
                   alt="Rachel Wu"
                   className="w-full max-w-sm ml-auto rounded-2xl shadow-elevated"
                 />

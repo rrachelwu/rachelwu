@@ -6,6 +6,7 @@ import Button from '@/components/Button';
 import SkillBar from '@/components/SkillBar';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
+import rachelPhoto from '@/assets/rachel-photo.jpg';
 
 const About: React.FC = () => {
   const { t, language } = useLanguage();
@@ -219,7 +220,7 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-80 bg-primary rounded-[50%] -z-10" />
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop&crop=face"
+                src={rachelPhoto}
                 alt="Rachel Wu"
                 className="w-64 h-80 object-cover rounded-2xl shadow-elevated"
               />
