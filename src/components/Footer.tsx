@@ -8,8 +8,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:hello@example.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:rachelwuqian@icloud.com', label: 'Email' },
   ];
 
   return (
@@ -18,7 +17,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} {t('张三', 'Zhang San')}. {t('保留所有权利', 'All rights reserved')}.
+              © {new Date().getFullYear()} {t('吴倩 (Rachel)', 'Rachel Wu')}. {t('保留所有权利', 'All rights reserved')}.
             </p>
             <p className="text-xs text-muted-foreground mt-1">
               {t('使用 React + TypeScript 构建', 'Built with React + TypeScript')}
