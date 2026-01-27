@@ -1,3 +1,7 @@
+import ssrouterCover from '@/assets/ssrouter-cover.png';
+import pokubyCover from '@/assets/pokubuy-cover.png';
+import wheelslineCover from '@/assets/wheelsline-cover.png';
+
 export interface ProjectSection {
   title: string;
   content: string;
@@ -36,7 +40,7 @@ export const projects: Project[] = [
     slug: "ssrouter",
     title: "SSRouter 智能家庭路由器",
     titleEn: "SSRouter Smart Home Router",
-    coverImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+    coverImage: ssrouterCover,
     summary: "内置 VPN/代理 + Telegram 远程控制的家庭路由器产品，从0-1完成官网、控制台、定价体系的全链路设计",
     summaryEn: "Home router with built-in VPN/proxy + Telegram remote control, completed full-chain design from 0-1",
     role: "产品负责人 / 设计负责人",
@@ -90,7 +94,7 @@ export const projects: Project[] = [
     slug: "pokubuy",
     title: "PokuBuy / Pakupay 跨境电商平台",
     titleEn: "PokuBuy / Pakupay Cross-border E-commerce",
-    coverImage: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?w=800&h=600&fit=crop",
+    coverImage: pokubyCover,
     summary: "面向俄罗斯的跨境电商/服务平台，构建仓配流程产品化呈现与多语言内容体系",
     summaryEn: "Cross-border e-commerce platform for Russia, building warehouse process productization and multilingual system",
     role: "产品设计 / 多语言体系",
@@ -142,7 +146,7 @@ export const projects: Project[] = [
     slug: "wheelsline",
     title: "WheelsLine 轮毂定制报价网站",
     titleEn: "WheelsLine Custom Wheel Quotation",
-    coverImage: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop",
+    coverImage: wheelslineCover,
     summary: "主导从 0–1 的轮毂定制与报价网站建设，设计可扩展的定制流程与 B2B 合作模型，显著提升客户沟通效率与商业转化率",
     summaryEn: "Led 0-1 custom wheel quotation website, designed scalable customization flow and B2B cooperation model, significantly improving communication efficiency and conversion",
     role: "产品经理 / UX视觉设计 / 项目推进",
