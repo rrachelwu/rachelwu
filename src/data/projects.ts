@@ -49,7 +49,7 @@ export const projects: Project[] = [
     metricsEn: ["Website IA completed", "CN/EN/RU localization", "Commercial conversion design"],
     status: "已上线/验证与推广前期",
     statusEn: "Launched / Early validation",
-    links: {},
+    links: { demo: "https://ssrouter.com/" },
     sections: [
       {
         title: "项目背景",
@@ -153,7 +153,7 @@ export const projects: Project[] = [
     techStack: ["Figma", "中英俄三语", "报价信息结构"],
     status: "网站已上线，Mini App 前期暂缓",
     statusEn: "Website launched, Mini App paused",
-    links: {},
+    links: { demo: "https://wheelsline.com/" },
     sections: [
       {
         title: "项目背景",
