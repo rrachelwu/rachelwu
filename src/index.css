@@ -171,7 +171,7 @@
   
   .card-lift:hover {
     @apply -translate-y-2;
-    box-shadow: var(--shadow-card-hover);
+    box-shadow: none;
   }
 
   /* Glow effect on hover */
@@ -186,7 +186,7 @@
   }
   
   .glow-hover:hover::before {
-    @apply opacity-100;
+    @apply opacity-0;
   }
 
   /* Decorative grid pattern */
