@@ -8,6 +8,7 @@ import Button from '@/components/Button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
 import rachelPhoto from '@/assets/rachel-photo.jpg';
+import logo from '@/assets/logo.svg';
 
 const Index: React.FC = () => {
   const { t, language } = useLanguage();
@@ -101,9 +102,7 @@ const Index: React.FC = () => {
             >
               {/* Brand badge */}
               <div className="inline-flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
-                  R.
-                </div>
+                <img src={logo} alt="Rachel Portfolio" className="w-12 h-12" />
                 <div>
                   <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider block">
                     PORTFOLIO 2024
