@@ -17,35 +17,35 @@ const Index: React.FC = () => {
 
   const features = [
     {
-      icon: Code,
-      title: t('全栈开发', 'Full-Stack Dev'),
-      description: t(
-        '精通 React、Node.js、TypeScript，从前端到后端全链路开发能力',
-        'Expert in React, Node.js, TypeScript with end-to-end development capabilities'
-      ),
-    },
-    {
       icon: Palette,
-      title: t('UI/UX 设计', 'UI/UX Design'),
+      title: t('产品体验', 'Product Experience'),
       description: t(
-        '用户体验优先的设计思维，将复杂需求转化为优雅解决方案',
-        'User-first design thinking, transforming complex needs into elegant solutions'
+        '用户路径梳理、信息架构、交互原型、可用性优化、A/B 设计支持',
+        'User journey mapping, information architecture, prototyping, usability optimization, A/B design support'
       ),
     },
     {
-      icon: Sparkles,
-      title: t('AI 集成', 'AI Integration'),
+      icon: Code,
+      title: t('视觉与系统', 'Visual & System'),
       description: t(
-        '善于将 AI 能力融入产品，提升效率与用户体验',
-        'Skilled at integrating AI capabilities to enhance efficiency and UX'
+        '设计语言/组件库、规范沉淀、跨端一致性、品牌与运营设计',
+        'Design language/component library, standards documentation, cross-platform consistency, brand & operation design'
       ),
     },
     {
       icon: Zap,
-      title: t('快速交付', 'Fast Delivery'),
+      title: t('落地与协作', 'Delivery & Collaboration'),
       description: t(
-        '敏捷开发方法论，高质量快速迭代',
-        'Agile methodology with high-quality rapid iteration'
+        '与产品/研发/运营协作闭环、设计评审、需求澄清、灰度上线支持',
+        'Cross-team collaboration, design review, requirement clarification, gradual release support'
+      ),
+    },
+    {
+      icon: Sparkles,
+      title: t('多语言国际化', 'Internationalization'),
+      description: t(
+        '跨境/多语言产品体验（中英俄）、商业化定价表达、复杂规则梳理',
+        'Cross-border/multilingual experience (CN/EN/RU), commercial pricing, complex rule structuring'
       ),
     },
   ];
