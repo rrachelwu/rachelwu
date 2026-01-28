@@ -105,7 +105,7 @@ export const projects: Project[] = [
     techStack: ["Figma", "中英俄三语", "服务流程设计"],
     status: "验证中",
     statusEn: "In validation",
-    links: {},
+    links: { demo: "https://pokubuy.com/" },
     sections: [
       {
         title: "项目背景",
