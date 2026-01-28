@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
+import logo from '@/assets/logo.svg';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,14 +45,16 @@ const Navbar: React.FC = () => {
       )}
     >
       <nav className="container flex items-center justify-between">
-        {/* Brand Logo - Matching PDF style */}
+        {/* Brand Logo */}
         <Link
           to="/"
           className="flex items-center gap-2 group"
         >
-          <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg transition-transform group-hover:scale-105">
-            R.
-          </div>
+          <img 
+            src={logo} 
+            alt="Rachel Portfolio" 
+            className="w-9 h-9 transition-transform group-hover:scale-105"
+          />
           <span className="text-sm font-medium text-muted-foreground hidden sm:block">
             RACHEL PORTFOLIO
           </span>
