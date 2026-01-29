@@ -100,18 +100,6 @@ const Index: React.FC = () => {
                   : 'opacity-0 translate-y-8'
               )}
             >
-              {/* Brand badge */}
-              <div className="inline-flex items-center gap-3 mb-8">
-                <img src={logo} alt="Rachel Portfolio" className="w-12 h-12" />
-                <div>
-                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider block">
-                    PORTFOLIO 2024
-                  </span>
-                  <span className="text-sm font-semibold text-foreground">
-                    UI/VISUAL DESIGN
-                  </span>
-                </div>
-              </div>
               
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.05]">
                 {t('吴倩', 'Rachel Wu')}
