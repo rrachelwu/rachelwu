@@ -141,14 +141,6 @@ const About: React.FC = () => {
         >
           {/* Left Content */}
           <div className="lg:col-span-3">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-xl">
-                R.
-              </div>
-              <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-                RACHEL PORTFOLIO
-              </span>
-            </div>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-3">
               {t('吴倩', 'Rachel Wu')}
