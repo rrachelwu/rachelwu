@@ -111,8 +111,8 @@ const Index: React.FC = () => {
               
               <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
                 {t(
-                  '10+ 年互联网产品设计经验，擅长 0-1 搭建、商业化转化、跨端体验（Web/H5/多语言）与硬件交互设计。能把复杂功能拆解为清晰的信息架构与可执行的交付标准。',
-                  '10+ years of product design experience, skilled in 0-1 building, commercial conversion, cross-platform experience (Web/H5/multilingual) and hardware interaction design.'
+                  '10 年互联网产品设计经验，覆盖 App / Web / 多端适配与运营增长支持。近一年以"产品Owner形态"主导多个 0→1 项目，擅长在资源有限与业务不确定阶段，用 MVP 思维做可行性验证与持续迭代。',
+                  '10 years of product design experience covering App/Web/multi-platform and growth support. Recently led multiple 0→1 projects as Product Owner, skilled in MVP validation and iteration under resource constraints.'
                 )}
               </p>
 
