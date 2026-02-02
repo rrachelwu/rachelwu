@@ -151,8 +151,8 @@ const About: React.FC = () => {
             
             <p className="text-muted-foreground mb-8 max-w-2xl leading-relaxed">
               {t(
-                '10+ 年互联网产品设计经验，长期在小团队/创业团队场景承担"产品+设计"双角色，覆盖 0-1 搭建、商业化转化页面、跨端体验（Web/H5/多语言）、硬件相关交互与说明体系。擅长把复杂功能与规则拆解为清晰的信息架构与可执行的交付标准，能与研发/销售/运营高效协同，推动方案快速落地上线并持续迭代。',
-                '10+ years of internet product design experience. Long-term "product + design" dual role in small/startup teams, covering 0-1 building, commercial conversion pages, cross-platform experience (Web/H5/multilingual), hardware-related interaction and documentation. Skilled at breaking complex functions into clear IA and executable delivery standards, efficiently collaborating with dev/sales/ops to drive rapid implementation and iteration.'
+                '10 年互联网产品设计经验，覆盖 App / Web / 运营增长 / 多端适配，曾在小米、雷神科技、峰米科技等团队负责核心功能与体系化设计。擅长从业务目标出发，把复杂功能拆解为清晰路径，兼顾体验与落地效率；同时具备较强的跨团队沟通与推进能力，能在不确定中推动方案闭环交付。近一年以"产品Owner形态"主导多个 0→1 项目：从需求澄清、信息架构、交互原型到高保真与交付规范，推动研发落地。擅长在资源有限与业务不确定阶段，用 MVP 思维做可行性验证、阶段性决策与持续迭代。',
+                '10 years of product design experience covering App/Web/growth/multi-platform. Previously led core features and systematic design at Xiaomi, Thunder, and Formovie. Skilled at breaking down complex functions into clear paths from business goals, balancing UX and delivery efficiency with strong cross-team communication. Recently led multiple 0→1 projects as Product Owner: from requirement clarification, IA, prototyping to hi-fi and delivery specs. Expert in MVP validation, phased decisions and continuous iteration under resource constraints.'
               )}
             </p>
 
