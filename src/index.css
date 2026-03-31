@@ -222,7 +222,8 @@
   
   .brand-line::before {
     content: '';
-    @apply absolute left-0 top-0 w-1 h-full bg-primary rounded-full;
+    @apply absolute left-0 top-1 w-1 bg-primary rounded-none;
+    height: calc(100% - 8px);
   }
 
   /* Section number badge - red accent */
