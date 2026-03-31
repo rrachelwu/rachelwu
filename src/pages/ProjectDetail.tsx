@@ -101,7 +101,7 @@ const ProjectDetail: React.FC = () => {
         {/* 3. 背景与挑战 */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <span className="w-1 h-6 bg-primary rounded-full" />
+            <span className="w-1 bg-primary" style={{ height: "20px" }} />
             {t('背景与挑战', 'Background & Challenge')}
           </h2>
           <p className="text-muted-foreground leading-relaxed pl-4 border-l-2 border-border">
@@ -112,7 +112,7 @@ const ProjectDetail: React.FC = () => {
         {/* 4. 决策过程 */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
-            <span className="w-1 h-6 bg-primary rounded-full" />
+            <span className="w-1 bg-primary" style={{ height: "20px" }} />
             {t('我的决策过程', 'My Decision Process')}
           </h2>
           <div className="space-y-8">
@@ -162,7 +162,7 @@ const ProjectDetail: React.FC = () => {
         {/* 5. 交付物展示 */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
-            <span className="w-1 h-6 bg-primary rounded-full" />
+            <span className="w-1 bg-primary" style={{ height: "20px" }} />
             {t('交付物', 'Deliverables')}
           </h2>
           <div className="grid gap-4">
@@ -193,7 +193,7 @@ const ProjectDetail: React.FC = () => {
         {/* 6. 结果 */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <span className="w-1 h-6 bg-primary rounded-full" />
+            <span className="w-1 bg-primary" style={{ height: "20px" }} />
             {t('项目结果', 'Results')}
           </h2>
           <div className="rounded-xl bg-primary/5 border border-primary/10 p-6">
@@ -211,7 +211,7 @@ const ProjectDetail: React.FC = () => {
         {/* 7. 反思 */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <span className="w-1 h-6 bg-primary rounded-full" />
+            <span className="w-1 bg-primary" style={{ height: "20px" }} />
             {t('反思', 'Reflection')}
           </h2>
           <div className="rounded-xl border border-border bg-card p-6 flex items-start gap-3">
@@ -225,7 +225,7 @@ const ProjectDetail: React.FC = () => {
         {/* Tech Stack */}
         <section className="mb-12">
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <span className="w-1 h-6 bg-primary rounded-full" />
+            <span className="w-1 bg-primary" style={{ height: "20px" }} />
             {t('技术栈', 'Tech Stack')}
           </h2>
           <div className="flex flex-wrap gap-2">
