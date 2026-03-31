@@ -222,7 +222,8 @@
   
   .brand-line::before {
     content: '';
-    @apply absolute left-0 top-1 w-1 bg-primary rounded-none;
+    @apply absolute left-0 top-1 w-1 bg-primary;
+    border-radius: 0;
     height: calc(100% - 8px);
   }
 
