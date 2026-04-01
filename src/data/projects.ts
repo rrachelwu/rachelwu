@@ -68,6 +68,8 @@ export interface Project {
   resultsEn: string[];
   reflection: string;
   reflectionEn: string;
+  /** Optional comparison section (e.g. before/after redesign) */
+  comparisons?: ComparisonSection;
 }
 
 export const projects: Project[] = [
