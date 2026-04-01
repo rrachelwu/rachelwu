@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github, Calendar, User, Lightbulb, CheckCircle2, MessageSquareQuote } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Lightbulb, CheckCircle2, MessageSquareQuote } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getProjectBySlug } from '@/data/projects';
 import Button from '@/components/Button';
@@ -29,6 +29,11 @@ const ProjectDetail: React.FC = () => {
     setLightboxOpen(true);
   };
 
+  // Collect all comparison images for lightbox
+  const comparisonImages = project.comparisons
+    ? project.comparisons.items.flatMap(item => [item.leftImage, item.rightImage].filter(Boolean) as string[])
+    : [];
+
   return (
     <main className="pt-24 pb-16 min-h-screen">
       <div className="container max-w-4xl">
@@ -53,11 +58,9 @@ const ProjectDetail: React.FC = () => {
               </span>
             ))}
           </div>
-
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             {language === 'zh' ? project.title : project.titleEn}
           </h1>
-
           <p className="text-lg text-muted-foreground leading-relaxed">
             {language === 'zh' ? project.summary : project.summaryEn}
           </p>
@@ -117,78 +120,158 @@ const ProjectDetail: React.FC = () => {
           </h2>
           <div className="space-y-8">
             {decisions.map((decision, index) => (
-              <div
-                key={index}
-                className="rounded-xl border border-border bg-card p-6"
-              >
-                <div className="flex items-start gap-3 mb-4">
-                  <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary/10 text-primary text-sm font-semibold flex items-center justify-center mt-0.5">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
-                      {t('问题', 'Problem')}
-                    </p>
-                    <p className="font-medium">{decision.problem}</p>
-                  </div>
-                </div>
-
-                <div className="ml-10 space-y-4">
-                  <div className="flex items-start gap-2">
-                    <Lightbulb className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
+              <div key={index}>
+                <div className="rounded-xl border border-border bg-card p-6">
+                  <div className="flex items-start gap-3 mb-4">
+                    <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary/10 text-primary text-sm font-semibold flex items-center justify-center mt-0.5">
+                      {index + 1}
+                    </span>
                     <div>
                       <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
-                        {t('我的判断', 'My Judgment')}
+                        {t('问题', 'Problem')}
                       </p>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{decision.judgment}</p>
+                      <p className="font-medium">{decision.problem}</p>
                     </div>
                   </div>
-
-                  <div className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
-                        {t('最终方案', 'Solution')}
-                      </p>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{decision.solution}</p>
+                  <div className="ml-10 space-y-4">
+                    <div className="flex items-start gap-2">
+                      <Lightbulb className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
+                          {t('我的判断', 'My Judgment')}
+                        </p>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{decision.judgment}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
+                          {t('最终方案', 'Solution')}
+                        </p>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{decision.solution}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
 
-        {/* 5. 交付物展示 */}
-        <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
-            <span className="w-1 bg-primary" style={{ height: "18px" }} />
-            {t('交付物', 'Deliverables')}
-          </h2>
-          <div className="grid gap-4">
-            {deliverables.map((item, index) => (
-              <div key={index} className="group">
-                {item.image ? (
-                  <button
-                    onClick={() => openLightbox(
-                      deliverables.filter(d => d.image).map(d => d.image!),
-                      deliverables.filter(d => d.image).findIndex(d => d.image === item.image)
+                {/* Decision image (e.g. flow diagram) */}
+                {decision.image && (
+                  <div className="mt-4">
+                    <button
+                      onClick={() => openLightbox([decision.image!], 0)}
+                      className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in"
+                    >
+                      <img
+                        src={decision.image}
+                        alt={language === 'zh' ? (decision.imageCaption || '') : (decision.imageCaptionEn || decision.imageCaption || '')}
+                        className="w-full h-auto"
+                        loading="lazy"
+                      />
+                    </button>
+                    {(decision.imageCaption || decision.imageCaptionEn) && (
+                      <p className="text-sm text-muted-foreground mt-2 text-center">
+                        {language === 'zh' ? decision.imageCaption : (decision.imageCaptionEn || decision.imageCaption)}
+                      </p>
                     )}
-                    className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in mb-2"
-                  >
-                    <img src={item.image} alt={item.caption} className="w-full h-auto" loading="lazy" />
-                  </button>
-                ) : null}
-                <div className="flex items-center gap-2 py-3 px-4 rounded-lg bg-secondary/50">
-                  <span className="text-xs font-medium text-primary bg-primary/10 w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0">
-                    {index + 1}
-                  </span>
-                  <p className="text-sm text-muted-foreground">{item.caption}</p>
-                </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
         </section>
+
+        {/* 5a. Comparison section (if present, replaces deliverables) */}
+        {project.comparisons && (
+          <section className="mb-12">
+            <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
+              <span className="w-1 bg-primary" style={{ height: "18px" }} />
+              {language === 'zh' ? project.comparisons.title : project.comparisons.titleEn}
+            </h2>
+            <p className="text-sm text-muted-foreground mb-8">
+              {language === 'zh' ? project.comparisons.subtitle : project.comparisons.subtitleEn}
+            </p>
+            <div className="space-y-0">
+              {project.comparisons.items.map((comp, index) => (
+                <div key={index}>
+                  {index > 0 && <hr className="border-border my-8" />}
+                  <h3 className="text-base font-semibold mb-4">
+                    {language === 'zh' ? comp.title : comp.titleEn}
+                  </h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    {/* Left: before */}
+                    <div>
+                      <button
+                        onClick={() => openLightbox(comparisonImages, comparisonImages.indexOf(comp.leftImage || ''))}
+                        className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in aspect-[9/16]"
+                      >
+                        <img
+                          src={comp.leftImage || '/placeholder.svg'}
+                          alt={language === 'zh' ? comp.leftCaption : comp.leftCaptionEn}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </button>
+                      <p className="text-xs text-muted-foreground mt-2">
+                        {language === 'zh' ? comp.leftCaption : comp.leftCaptionEn}
+                      </p>
+                    </div>
+                    {/* Right: after */}
+                    <div>
+                      <button
+                        onClick={() => openLightbox(comparisonImages, comparisonImages.indexOf(comp.rightImage || ''))}
+                        className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in aspect-[9/16]"
+                      >
+                        <img
+                          src={comp.rightImage || '/placeholder.svg'}
+                          alt={language === 'zh' ? comp.rightCaption : comp.rightCaptionEn}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </button>
+                      <p className="text-xs text-muted-foreground mt-2">
+                        {language === 'zh' ? comp.rightCaption : comp.rightCaptionEn}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* 5b. 交付物展示 (only if no comparisons and has deliverables) */}
+        {!project.comparisons && deliverables.length > 0 && (
+          <section className="mb-12">
+            <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
+              <span className="w-1 bg-primary" style={{ height: "18px" }} />
+              {t('交付物', 'Deliverables')}
+            </h2>
+            <div className="grid gap-4">
+              {deliverables.map((item, index) => (
+                <div key={index} className="group">
+                  {item.image ? (
+                    <button
+                      onClick={() => openLightbox(
+                        deliverables.filter(d => d.image).map(d => d.image!),
+                        deliverables.filter(d => d.image).findIndex(d => d.image === item.image)
+                      )}
+                      className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in mb-2"
+                    >
+                      <img src={item.image} alt={item.caption} className="w-full h-auto" loading="lazy" />
+                    </button>
+                  ) : null}
+                  <div className="flex items-center gap-2 py-3 px-4 rounded-lg bg-secondary/50">
+                    <span className="text-xs font-medium text-primary bg-primary/10 w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0">
+                      {index + 1}
+                    </span>
+                    <p className="text-sm text-muted-foreground">{item.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* 6. 结果 */}
         <section className="mb-12">
