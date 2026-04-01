@@ -6,11 +6,34 @@ export interface DecisionItem {
   problem: string;
   judgment: string;
   solution: string;
+  /** Optional image inserted below this decision card */
+  image?: string;
+  imageCaption?: string;
+  imageCaptionEn?: string;
 }
 
 export interface DeliverableItem {
   image?: string;
   caption: string;
+}
+
+export interface ComparisonItem {
+  title: string;
+  titleEn: string;
+  leftImage?: string;
+  leftCaption: string;
+  leftCaptionEn: string;
+  rightImage?: string;
+  rightCaption: string;
+  rightCaptionEn: string;
+}
+
+export interface ComparisonSection {
+  title: string;
+  titleEn: string;
+  subtitle: string;
+  subtitleEn: string;
+  items: ComparisonItem[];
 }
 
 export interface Project {
