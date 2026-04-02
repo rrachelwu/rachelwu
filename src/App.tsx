@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
-import KMSDetail from "./pages/KMSDetail";
+
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
