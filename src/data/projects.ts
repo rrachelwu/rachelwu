@@ -349,7 +349,7 @@ export const projects: Project[] = [
     durationEn: "Mar 2022 - Jan 2023",
     status: "已上线",
     statusEn: "Launched",
-    tags: ["产品设计", "区块链", "0-1改版", "设计体系"],
+    tags: ["产品设计", "区块链", "0-1改版", "设计体系", "B端后台", "设计规范"],
     techStack: ["Figma", "Sketch", "iOS", "Android", "Ant Design", "React"],
     links: {},
     background: "矩阵元旗下两条业务线同步推进：Privacy Wallet需要在不割裂老用户习惯的前提下对旧版ATON进行全面重构；MPC-KMS是全新产品，需要从0建立品牌视觉、操作台和官网。两条线设计语言需要保持一致性，同时又要分别满足C端钱包「安全私密」和B端后台「专业高效」的不同调性需求。",
