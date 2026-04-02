@@ -15,6 +15,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import WeChat from "./pages/WeChat";
+import MoreWorks from "./pages/MoreWorks";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
