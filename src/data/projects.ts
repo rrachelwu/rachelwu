@@ -411,12 +411,14 @@ export const projects: Project[] = [
       { caption: "Three logo design proposals" },
     ],
     results: [
-      "两条产品线完整上线，建立统一的区块链产品设计语言",
+      "三条产品线完整上线，建立统一的区块链产品设计语言",
+      "KMS知识管理系统作为唯一设计师完成从品牌到页面的全链路交付",
       "设计规范落地后前端H5开发效率提升，组件复用率提高",
       "响应式组件库减少跨屏适配的重复工作量",
     ],
     resultsEn: [
-      "Both product lines fully launched, establishing a unified blockchain product design language",
+      "All three product lines fully launched, establishing a unified blockchain product design language",
+      "KMS knowledge management system delivered end-to-end as the sole designer, from brand to pages",
       "Frontend H5 development efficiency improved after design specs landed, component reuse rate increased",
       "Responsive component library reduced repetitive work for cross-screen adaptation",
     ],
