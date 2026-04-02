@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Code, Palette, Sparkles, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { projects } from '@/data/projects';
 import ProjectCard from '@/components/ProjectCard';

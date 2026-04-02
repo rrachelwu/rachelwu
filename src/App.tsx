@@ -40,6 +40,7 @@ const App = () => (
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/wechat" element={<WeChat />} />
+                <Route path="/more-works" element={<MoreWorks />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
