@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Code, Palette, Sparkles, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { projects } from '@/data/projects';
 import ProjectCard from '@/components/ProjectCard';
@@ -175,11 +176,19 @@ const Index: React.FC = () => {
             ))}
           </div>
           
-          <div className="text-center">
+          <div className="text-center space-y-3">
             <Button to="/projects" variant="ghost">
               {t('查看全部作品', 'View All Projects')}
               <ArrowRight className="w-4 h-4" />
             </Button>
+            <div>
+              <Link
+                to="/more-works"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t('查看更多项目 →', 'View more projects →')}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
