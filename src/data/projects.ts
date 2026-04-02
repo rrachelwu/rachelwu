@@ -338,8 +338,8 @@ export const projects: Project[] = [
   {
     id: "4",
     slug: "juzhengyuan",
-    title: "矩阵元产品设计 — 区块链钱包、密钥管理平台与知识管理系统的设计体系建设",
-    titleEn: "Juzhengyuan Product Design — Design System for Blockchain Wallet, Key Management & Knowledge Management",
+    title: "区块链钱包、密钥管理平台与知识管理系统的设计体系建设",
+    titleEn: "Design System for Blockchain Wallet, Key Management & Knowledge Management",
     coverImage: "/placeholder.svg",
     summary: "在矩阵元（深圳）担任产品设计师期间，独立负责三条产品线的完整设计：面向个人用户的Privacy Wallet区块链钱包（App）、面向企业用户的MPC-KMS密钥管理系统（Web后台+官网），以及内部KMS知识管理系统（从品牌到组件库的从0到1设计），从视觉规范到交互体系全面交付。",
     summaryEn: "As product designer at Juzhengyuan (Shenzhen), independently led the complete design of three product lines: Privacy Wallet blockchain wallet (App), MPC-KMS key management system (Web dashboard + website), and internal KMS knowledge management system (0-to-1 from brand to component library), delivering from visual specs to interaction systems.",
