@@ -7,6 +7,7 @@ export interface MoreProjectDecision {
 export interface MoreProject {
   id: string;
   slug: string;
+  title: string;
   titleEn: string;
   summary: string;
   summaryEn: string;
