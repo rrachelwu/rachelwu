@@ -42,6 +42,8 @@ export interface Project {
   title: string;
   titleEn: string;
   coverImage: string;
+  /** Optional custom link path (overrides default /projects/:slug) */
+  linkTo?: string;
   // 一句话描述：我解决了什么问题
   summary: string;
   summaryEn: string;

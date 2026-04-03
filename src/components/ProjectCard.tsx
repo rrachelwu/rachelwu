@@ -16,7 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0
 
   return (
     <Link
-      to={`/projects/${project.slug}`}
+      to={project.linkTo || `/projects/${project.slug}`}
       className={cn(
         'group block bg-card rounded-2xl overflow-hidden card-lift glow-hover relative',
         'opacity-0 animate-fade-in-up border border-border/50',
