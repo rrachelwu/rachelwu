@@ -42,6 +42,8 @@ export interface Project {
   title: string;
   titleEn: string;
   coverImage: string;
+  /** Optional custom link path (overrides default /projects/:slug) */
+  linkTo?: string;
   // 一句话描述：我解决了什么问题
   summary: string;
   summaryEn: string;
@@ -424,6 +426,64 @@ export const projects: Project[] = [
     ],
     reflection: "两条产品线并行推进时，前期花了较多时间在反复确认品牌关键词上。如果重来，会在项目启动时先用一次设计冲刺把两条线的品牌定位同时对齐，再分头执行，避免各自调整时产生风格偏差。",
     reflectionEn: "When advancing two product lines in parallel, too much time was spent early on repeatedly confirming brand keywords. If I could redo it, I'd run a design sprint at project kickoff to align both lines' brand positioning simultaneously, then execute separately to avoid style drift during individual adjustments.",
+  },
+  {
+    id: "5",
+    slug: "renren",
+    title: "人人相册",
+    titleEn: "Renren Album",
+    coverImage: "",
+    linkTo: "/more-works/renren",
+    summary: "社交电商货源管理工具的全链路产品设计",
+    summaryEn: "Full-chain product design for social commerce supply management tool",
+    role: "高级UI设计师 / 产品部",
+    roleEn: "Senior UI Designer / Product Dept.",
+    duration: "2019.02 - 2021.02",
+    durationEn: "Feb 2019 - Feb 2021",
+    status: "已上线",
+    statusEn: "Launched",
+    tags: ["产品设计", "C端", "社交电商"],
+    techStack: ["Figma", "Sketch", "微信小程序", "Ant Design"],
+    links: {},
+    background: "",
+    backgroundEn: "",
+    decisions: [],
+    decisionsEn: [],
+    deliverables: [],
+    deliverablesEn: [],
+    results: [],
+    resultsEn: [],
+    reflection: "",
+    reflectionEn: "",
+  },
+  {
+    id: "6",
+    slug: "yiban",
+    title: "医伴助手",
+    titleEn: "Medical Companion",
+    coverImage: "",
+    linkTo: "/more-works/yiban",
+    summary: "基于企业微信的医患管理工具",
+    summaryEn: "Enterprise WeChat-based doctor-patient management tool",
+    role: "高级UI设计师 / 产品部",
+    roleEn: "Senior UI Designer / Product Dept.",
+    duration: "2021.03 - 2021.10",
+    durationEn: "Mar 2021 - Oct 2021",
+    status: "已上线",
+    statusEn: "Launched",
+    tags: ["产品设计", "B端", "医疗健康"],
+    techStack: ["Figma", "企业微信", "Zan Design", "微信小程序"],
+    links: {},
+    background: "",
+    backgroundEn: "",
+    decisions: [],
+    decisionsEn: [],
+    deliverables: [],
+    deliverablesEn: [],
+    results: [],
+    resultsEn: [],
+    reflection: "",
+    reflectionEn: "",
   },
 ];
 
