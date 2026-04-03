@@ -16,6 +16,7 @@ import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import WeChat from "./pages/WeChat";
 import MoreWorks from "./pages/MoreWorks";
+import MoreWorkDetail from "./pages/MoreWorkDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/wechat" element={<WeChat />} />
                 <Route path="/more-works" element={<MoreWorks />} />
+                <Route path="/more-works/:slug" element={<MoreWorkDetail />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>

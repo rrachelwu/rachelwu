@@ -6,6 +6,7 @@ export interface MoreProjectDecision {
 
 export interface MoreProject {
   id: string;
+  slug: string;
   title: string;
   titleEn: string;
   summary: string;
@@ -35,6 +36,7 @@ export interface MoreProject {
 export const moreProjects: MoreProject[] = [
   {
     id: "more-1",
+    slug: "renren",
     title: "人人相册 — 社交电商货源管理工具的全链路产品设计",
     titleEn: "Renren Album — Full-chain Product Design for Social Commerce Supply Management",
     summary: "为微信卖货商家设计的货源图文管理工具，覆盖App、小程序、Web三端，帮助商家搭建代理体系、管理货源、提升卖货效率",
@@ -114,6 +116,7 @@ export const moreProjects: MoreProject[] = [
   },
   {
     id: "more-2",
+    slug: "yiban",
     title: "医伴助手 — 基于企业微信的医患管理工具",
     titleEn: "Medical Companion — Enterprise WeChat-based Doctor-Patient Management Tool",
     summary: "帮助医生在企业微信生态内管理患者、发送随访问卷、建立私域流量，同时为患者提供就诊信息登记入口",
