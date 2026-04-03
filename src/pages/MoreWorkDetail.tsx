@@ -66,7 +66,6 @@ const MoreWorkDetail: React.FC = () => {
             <p className="font-medium mt-0.5">{language === 'zh' ? project.role : project.roleEn}</p>
           </div>
           <div>
-          <div>
             <span className="text-muted-foreground">{t('时间', 'Duration')}</span>
             <p className="font-medium mt-0.5">{language === 'zh' ? project.duration : project.durationEn}</p>
           </div>
