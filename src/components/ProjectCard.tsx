@@ -25,12 +25,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0
       style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}
     >
       <div className="aspect-[16/10] overflow-hidden bg-muted relative">
-        <img
-          src={project.coverImage}
-          alt={language === 'zh' ? project.title : project.titleEn}
-          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-          loading="lazy"
-        />
+        {project.coverImage ? (
+          <img
+            src={project.coverImage}
+            alt={language === 'zh' ? project.title : project.titleEn}
+            className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+            loading="lazy"
+          />
+        ) : (
+          <div className="w-full h-full" style={{ backgroundColor: '#F0F0F0' }} />
+        )}
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
         
