@@ -42,6 +42,7 @@ const App = () => (
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/wechat" element={<WeChat />} />
                 <Route path="/more-works" element={<MoreWorks />} />
+                <Route path="/more-works/:slug" element={<MoreWorkDetail />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
