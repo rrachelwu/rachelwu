@@ -36,6 +36,7 @@ export interface MoreProject {
 export const moreProjects: MoreProject[] = [
   {
     id: "more-1",
+    slug: "renren",
     title: "人人相册 — 社交电商货源管理工具的全链路产品设计",
     titleEn: "Renren Album — Full-chain Product Design for Social Commerce Supply Management",
     summary: "为微信卖货商家设计的货源图文管理工具，覆盖App、小程序、Web三端，帮助商家搭建代理体系、管理货源、提升卖货效率",
