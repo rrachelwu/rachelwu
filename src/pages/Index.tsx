@@ -112,8 +112,8 @@ const Index: React.FC = () => {
               
               <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
                 {t(
-                  '10年互联网产品设计经验，曾任职小米，具备从0到1独立搭建产品体系的实战能力。擅长将复杂业务逻辑转化为清晰的用户路径与信息架构，覆盖Web、App、小程序、OTT/HMI等多端场景。',
-                  '10 years of product design experience, formerly at Xiaomi, with proven ability to build product systems from 0 to 1. Skilled at transforming complex business logic into clear user paths and information architecture across Web, App, Mini Programs, OTT/HMI.'
+                  '10年互联网产品设计经验，曾任职小米，具备从0到1独立搭建产品体系的实战能力。擅长将复杂业务逻辑转化为清晰的用户路径与信息架构，覆盖Web、App、小程序、OTT/HMI等多端场景。有出海产品设计经验，熟悉跨文化用户需求差异，建立过多语言国际化规范体系；具备软硬件结合的产品感知，持续关注AI与产品交互的融合方向。善于在资源有限、分工模糊的环境中推动方案落地，有带团队与制定设计规范的经验。',
+                  '10 years of product design experience, formerly at Xiaomi, with proven ability to build product systems from 0 to 1. Skilled at transforming complex business logic into clear user paths and information architecture across Web, App, Mini Programs, OTT/HMI. Experienced in overseas product design with cross-cultural user insights and multilingual i18n standards. Combines hardware-software product sense with a focus on AI-product interaction. Adept at driving delivery in resource-limited environments, with team leadership and design standards experience.'
                 )}
               </p>
 
