@@ -52,8 +52,8 @@ const Projects: React.FC = () => {
         <SectionTitle
           title={t('作品集', 'Projects')}
           subtitle={t(
-            '探索我参与的各类项目，从 Web 应用到移动端，从设计到开发',
-            'Explore various projects I\'ve worked on, from web apps to mobile, from design to development'
+            '覆盖出海品牌、跨境电商、硬件系统等方向，从信息架构到多端交付的完整产品设计案例',
+            'Comprehensive product design cases spanning overseas brands, cross-border e-commerce, and hardware systems — from information architecture to multi-platform delivery'
           )}
         />
 
