@@ -165,7 +165,7 @@ export const projects: Project[] = [
     durationEn: "2025",
     status: "已交付",
     statusEn: "Delivered",
-    tags: ["跨境电商", "多语言", "B2C"],
+    tags: ["跨境电商"],
     techStack: ["Figma", "Telegram Mini App", "中俄双语", "信息架构"],
     links: { demo: "https://pokubuy.com/" },
     background: "PokuBuy是面向俄罗斯用户的跨境采购一站式服务平台，用户可以通过平台从中国采购、运输商品。我介入时，Web端设计混乱、H5开发滞后，用户访问路径不清晰。作为设计负责人，我需要在指导团队设计师的同时，独立完成Telegram Mini App的全部设计。",
