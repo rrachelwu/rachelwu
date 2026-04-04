@@ -89,7 +89,7 @@ export const projects: Project[] = [
     durationEn: "Jan 2025 - Present",
     status: "已上线/验证与推广前期",
     statusEn: "Launched / Early validation",
-    tags: ["产品设计", "官网", "商业化"],
+    tags: ["出海品牌"],
     techStack: ["Figma", "中英俄多语言", "定价系统", "FAQ体系"],
     links: { demo: "https://ssrouter.com/" },
     background: "这是一个全新出海品牌，目标市场横跨美国和俄罗斯，两个市场用户习惯和信息接受方式差异显著。我介入时没有任何现成的产品框架，需要从用户路径、商业化设计、到多语言规范全部从0建立。",
