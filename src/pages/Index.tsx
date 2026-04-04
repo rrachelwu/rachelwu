@@ -107,13 +107,13 @@ const Index: React.FC = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground mb-4">
-                {t('产品设计师 / 产品经理（设计负责人）', 'Product Designer / Product Manager')}
+                {t('产品设计师 / 产品经理', 'Product Designer / Product Manager')}
               </p>
               
               <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
                 {t(
-                  '10 年互联网产品设计经验，覆盖 App / Web / 多端适配与运营增长支持。近一年以"产品Owner形态"主导多个 0→1 项目，擅长在资源有限与业务不确定阶段，用 MVP 思维做可行性验证与持续迭代。',
-                  '10 years of product design experience covering App/Web/multi-platform and growth support. Recently led multiple 0→1 projects as Product Owner, skilled in MVP validation and iteration under resource constraints.'
+                  '10年互联网产品设计经验，曾任职小米，具备从0到1独立搭建产品体系的实战能力。擅长将复杂业务逻辑转化为清晰的用户路径与信息架构，覆盖Web、App、小程序、OTT/HMI等多端场景。',
+                  '10 years of product design experience, formerly at Xiaomi, with proven ability to build product systems from 0 to 1. Skilled at transforming complex business logic into clear user paths and information architecture across Web, App, Mini Programs, OTT/HMI.'
                 )}
               </p>
 
