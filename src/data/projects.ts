@@ -496,7 +496,5 @@ export const getProjectsByTag = (tag: string): Project[] => {
 };
 
 export const getAllTags = (): string[] => {
-  const tags = new Set<string>();
-  projects.forEach((p) => p.tags.forEach((t) => tags.add(t)));
-  return Array.from(tags);
+  return ['出海品牌', '跨境电商', '区块链', 'C端产品', 'B端系统', '医疗健康'];
 };
