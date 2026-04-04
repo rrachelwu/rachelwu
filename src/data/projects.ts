@@ -471,7 +471,7 @@ export const projects: Project[] = [
     durationEn: "Mar 2021 - Oct 2021",
     status: "已上线",
     statusEn: "Launched",
-    tags: ["产品设计", "B端", "医疗健康"],
+    tags: ["B端系统", "医疗健康"],
     techStack: ["Figma", "企业微信", "Zan Design", "微信小程序"],
     links: {},
     background: "",
