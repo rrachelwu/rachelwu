@@ -22,32 +22,32 @@ const Index: React.FC = () => {
       icon: Palette,
       title: t('产品体验', 'Product Experience'),
       description: t(
-        '用户路径梳理、信息架构、交互原型、可用性优化、A/B 设计支持',
-        'User journey mapping, information architecture, prototyping, usability optimization, A/B design support'
+        '信息架构、交互设计、0-1产品搭建、用户路径梳理、多端适配',
+        'Information architecture, interaction design, 0-1 product building, user journey mapping, multi-platform adaptation'
       ),
     },
     {
       icon: Code,
       title: t('视觉与系统', 'Visual & System'),
       description: t(
-        '设计语言/组件库、规范沉淀、跨端一致性、品牌与运营设计',
-        'Design language/component library, standards documentation, cross-platform consistency, brand & operation design'
+        '设计系统与规范、商业化产品设计、品牌视觉、组件库建设',
+        'Design system & standards, commercial product design, brand visual, component library'
       ),
     },
     {
       icon: Zap,
       title: t('落地与协作', 'Delivery & Collaboration'),
       description: t(
-        '与产品/研发/运营协作闭环、设计评审、需求澄清、灰度上线支持',
-        'Cross-team collaboration, design review, requirement clarification, gradual release support'
+        '跨团队推进、AI辅助原型交付、设计评审、需求澄清、交付质量管控',
+        'Cross-team coordination, AI-assisted prototyping, design review, requirement clarification, delivery quality control'
       ),
     },
     {
       icon: Sparkles,
-      title: t('多语言国际化', 'Internationalization'),
+      title: t('出海与国际化', 'Overseas & i18n'),
       description: t(
-        '跨境/多语言产品体验（中英俄）、商业化定价表达、复杂规则梳理',
-        'Cross-border/multilingual experience (CN/EN/RU), commercial pricing, complex rule structuring'
+        '出海产品设计、多语言国际化（中英俄）、跨文化用户需求、硬件交互（HMI/OTT）',
+        'Overseas product design, multilingual i18n (CN/EN/RU), cross-cultural user needs, hardware UI (HMI/OTT)'
       ),
     },
   ];
@@ -107,13 +107,13 @@ const Index: React.FC = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground mb-4">
-                {t('产品设计师 / 产品经理（设计负责人）', 'Product Designer / Product Manager')}
+                {t('产品设计师 / 产品经理', 'Product Designer / Product Manager')}
               </p>
               
               <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
                 {t(
-                  '10 年互联网产品设计经验，覆盖 App / Web / 多端适配与运营增长支持。近一年以"产品Owner形态"主导多个 0→1 项目，擅长在资源有限与业务不确定阶段，用 MVP 思维做可行性验证与持续迭代。',
-                  '10 years of product design experience covering App/Web/multi-platform and growth support. Recently led multiple 0→1 projects as Product Owner, skilled in MVP validation and iteration under resource constraints.'
+                  '10年互联网产品设计经验，曾任职小米，具备从0到1独立搭建产品体系的实战能力。擅长将复杂业务逻辑转化为清晰的用户路径与信息架构，覆盖Web、App、小程序、OTT/HMI等多端场景。',
+                  '10 years of product design experience, formerly at Xiaomi, with proven ability to build product systems from 0 to 1. Skilled at transforming complex business logic into clear user paths and information architecture across Web, App, Mini Programs, OTT/HMI.'
                 )}
               </p>
 
