@@ -275,7 +275,7 @@ export const projects: Project[] = [
     durationEn: "2025",
     status: "已上线",
     statusEn: "Launched",
-    tags: ["B2B", "报价系统", "多语言"],
+    tags: ["出海品牌"],
     techStack: ["Figma", "中英俄三语", "后台系统", "数据架构", "AI辅助交付"],
     links: { demo: "https://wheelsline.com/" },
     background: "品牌从0起步，没有任何数字化产品基础。轮毂定制业务涉及型号、色卡、工艺、规格等大量结构化数据，如何让海外B端客户快速理解产品能力并完成询盘，是核心挑战。同时后台需要支撑仓储和业务协同，流程规范完全空白。",
