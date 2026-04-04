@@ -89,7 +89,7 @@ export const projects: Project[] = [
     durationEn: "Jan 2025 - Present",
     status: "已上线/验证与推广前期",
     statusEn: "Launched / Early validation",
-    tags: ["产品设计", "官网", "商业化"],
+    tags: ["出海品牌"],
     techStack: ["Figma", "中英俄多语言", "定价系统", "FAQ体系"],
     links: { demo: "https://ssrouter.com/" },
     background: "这是一个全新出海品牌，目标市场横跨美国和俄罗斯，两个市场用户习惯和信息接受方式差异显著。我介入时没有任何现成的产品框架，需要从用户路径、商业化设计、到多语言规范全部从0建立。",
@@ -165,7 +165,7 @@ export const projects: Project[] = [
     durationEn: "2025",
     status: "已交付",
     statusEn: "Delivered",
-    tags: ["跨境电商", "多语言", "B2C"],
+    tags: ["跨境电商"],
     techStack: ["Figma", "Telegram Mini App", "中俄双语", "信息架构"],
     links: { demo: "https://pokubuy.com/" },
     background: "PokuBuy是面向俄罗斯用户的跨境采购一站式服务平台，用户可以通过平台从中国采购、运输商品。我介入时，Web端设计混乱、H5开发滞后，用户访问路径不清晰。作为设计负责人，我需要在指导团队设计师的同时，独立完成Telegram Mini App的全部设计。",
@@ -275,7 +275,7 @@ export const projects: Project[] = [
     durationEn: "2025",
     status: "已上线",
     statusEn: "Launched",
-    tags: ["B2B", "报价系统", "多语言"],
+    tags: ["出海品牌"],
     techStack: ["Figma", "中英俄三语", "后台系统", "数据架构", "AI辅助交付"],
     links: { demo: "https://wheelsline.com/" },
     background: "品牌从0起步，没有任何数字化产品基础。轮毂定制业务涉及型号、色卡、工艺、规格等大量结构化数据，如何让海外B端客户快速理解产品能力并完成询盘，是核心挑战。同时后台需要支撑仓储和业务协同，流程规范完全空白。",
@@ -351,7 +351,7 @@ export const projects: Project[] = [
     durationEn: "Mar 2022 - Jan 2023",
     status: "已上线",
     statusEn: "Launched",
-    tags: ["产品设计", "区块链", "0-1改版", "设计体系", "B端后台", "设计规范"],
+    tags: ["区块链", "B端系统"],
     techStack: ["Figma", "Sketch", "iOS", "Android", "Ant Design", "React"],
     links: {},
     background: "矩阵元旗下三条业务线同步推进：Privacy Wallet需要在不割裂老用户习惯的前提下对旧版ATON进行全面重构；MPC-KMS是全新产品，需要从0建立品牌视觉、操作台和官网；KMS知识管理系统作为内部工具，需要从品牌标识到组件库完整搭建。三条线设计语言需要保持一致性，同时满足C端钱包「安全私密」、B端后台「专业高效」和内部系统「清晰易用」的不同调性需求。",
@@ -442,7 +442,7 @@ export const projects: Project[] = [
     durationEn: "Feb 2019 - Feb 2021",
     status: "已上线",
     statusEn: "Launched",
-    tags: ["产品设计", "C端", "社交电商"],
+    tags: ["C端产品"],
     techStack: ["Figma", "Sketch", "微信小程序", "Ant Design"],
     links: {},
     background: "",
@@ -471,7 +471,7 @@ export const projects: Project[] = [
     durationEn: "Mar 2021 - Oct 2021",
     status: "已上线",
     statusEn: "Launched",
-    tags: ["产品设计", "B端", "医疗健康"],
+    tags: ["B端系统", "医疗健康"],
     techStack: ["Figma", "企业微信", "Zan Design", "微信小程序"],
     links: {},
     background: "",
@@ -496,7 +496,5 @@ export const getProjectsByTag = (tag: string): Project[] => {
 };
 
 export const getAllTags = (): string[] => {
-  const tags = new Set<string>();
-  projects.forEach((p) => p.tags.forEach((t) => tags.add(t)));
-  return Array.from(tags);
+  return ['出海品牌', '跨境电商', '区块链', 'C端产品', 'B端系统', '医疗健康'];
 };
