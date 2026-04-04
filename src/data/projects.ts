@@ -442,7 +442,7 @@ export const projects: Project[] = [
     durationEn: "Feb 2019 - Feb 2021",
     status: "已上线",
     statusEn: "Launched",
-    tags: ["产品设计", "C端", "社交电商"],
+    tags: ["C端产品"],
     techStack: ["Figma", "Sketch", "微信小程序", "Ant Design"],
     links: {},
     background: "",
