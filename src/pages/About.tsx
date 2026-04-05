@@ -191,7 +191,7 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <Button href="#" size="sm" variant="outline">
+            <Button href="#" size="sm">
               <Download className="w-4 h-4" />
               {t('下载简历', 'Download Resume')}
             </Button>
