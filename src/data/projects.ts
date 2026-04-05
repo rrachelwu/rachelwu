@@ -113,9 +113,9 @@ export const projects: Project[] = [
     ],
     decisionsEn: [
       {
-        problem: "US and Russian users have different perceptions and trust-building patterns for VPN products — can't just translate the same content",
-        judgment: "Through Amazon review research and competitor analysis, found US users focus more on privacy and device compatibility, while Russian users prioritize stability and ease of use",
-        solution: "Made substantive differentiation in information priority and core selling points across language versions, rather than direct translation",
+        problem: "Two markets require two complete product pipelines, not just translation differences",
+        judgment: "Research revealed that Russian users' primary touchpoint is Telegram, while US users rely more on standalone websites and subscription conversion paths — the IA, purchase logic, and content strategies are fundamentally different",
+        solution: "Russian market: Telegram Mini App (device binding + plan purchase) + standalone Russian website (store + login/registration); US market: SaaS subscription website + router management dashboard — two pipelines designed and maintained independently",
       },
       {
         problem: "How to encourage first-time purchase while building long-term payment habits",
