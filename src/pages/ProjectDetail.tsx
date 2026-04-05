@@ -242,34 +242,33 @@ const ProjectDetail: React.FC = () => {
 
         {/* 5b. 交付物展示 (only if no comparisons and has deliverables) */}
         {!project.comparisons && deliverables.length > 0 && (
-          <section className="mb-12">
-            <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
-              <span className="w-1 bg-primary" style={{ height: "18px" }} />
-              {t('交付物', 'Deliverables')}
-            </h2>
-            <div className="grid gap-4">
-              {deliverables.map((item, index) => (
-                <div key={index} className="group">
-                  {item.image ? (
+          <section className="mb-12 space-y-12">
+            {deliverables.map((item, index) => {
+              const title = language === 'zh' ? (item.title || item.caption) : (item.titleEn || item.title || item.caption);
+              const desc = language === 'zh' ? item.description : (item.descriptionEn || item.description);
+              return (
+                <div key={index}>
+                  <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
+                    <span className="w-1 bg-primary" style={{ height: "18px" }} />
+                    {title}
+                  </h2>
+                  {desc && (
+                    <p className="text-sm text-muted-foreground mb-4">{desc}</p>
+                  )}
+                  {item.image && (
                     <button
                       onClick={() => openLightbox(
                         deliverables.filter(d => d.image).map(d => d.image!),
                         deliverables.filter(d => d.image).findIndex(d => d.image === item.image)
                       )}
-                      className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in mb-2"
+                      className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in"
                     >
-                      <img src={item.image} alt={item.caption} className="w-full h-auto" loading="lazy" />
+                      <img src={item.image} alt={title} className="w-full h-auto" loading="lazy" />
                     </button>
-                  ) : null}
-                  <div className="flex items-center gap-2 py-3 px-4 rounded-lg bg-secondary/50">
-                    <span className="text-xs font-medium text-primary bg-primary/10 w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0">
-                      {index + 1}
-                    </span>
-                    <p className="text-sm text-muted-foreground">{item.caption}</p>
-                  </div>
+                  )}
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </section>
         )}
 
