@@ -539,7 +539,7 @@ export const projects: Project[] = [
         caption: '', title: 'Privacy Wallet · Brand & Visual System', titleEn: 'Privacy Wallet · Brand & Visual System',
         description: 'Logo exploration (shape → color → final), brand keyword extraction, color & component spec system',
         descriptionEn: 'Logo exploration (shape → color → final), brand keyword extraction, color & component spec system',
-        images: ['/placeholder.svg'], layout: 'single',
+        images: ['/8d2b5d6d-7aa6-4326-abc4-86c7146b8b38.png'], layout: 'single',
       },
       {
         caption: '', title: 'Privacy Wallet · Redesign · Asset Overview', titleEn: 'Privacy Wallet · Redesign · Asset Overview',
