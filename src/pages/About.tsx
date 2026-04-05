@@ -209,6 +209,7 @@ const About: React.FC = () => {
               <Download className="w-4 h-4" />
               {t('下载简历', 'Download Resume')}
             </Button>
+          </div>
 
           {/* Right Image */}
           <div className="lg:col-span-2 relative hidden lg:flex items-center justify-center">
