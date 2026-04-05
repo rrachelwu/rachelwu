@@ -96,9 +96,9 @@ export const projects: Project[] = [
     backgroundEn: "This was a brand-new overseas brand targeting both the US and Russian markets, where user habits and information consumption differ significantly. When I joined, there was no existing product framework — everything from user paths, commercial design, to multilingual specs needed to be built from scratch.",
     decisions: [
       {
-        problem: "美国和俄罗斯用户对VPN产品的认知和信任建立方式不同，不能用同一套内容直接翻译",
-        judgment: "通过研究亚马逊评论和竞品，发现美国用户更关注隐私和设备兼容性，俄罗斯用户更关注稳定性和操作简便",
-        solution: "两个语言版本在信息优先级和核心卖点上做了实质性差异化处理，而非直接翻译",
+        problem: "两个市场需要两套完整的产品链路，而不只是翻译差异",
+        judgment: "通过研究发现，俄罗斯用户的主要触点在 Telegram，美国用户更依赖独立官网与订阅转化路径，两套链路的信息架构、购买逻辑、内容策略均不相同",
+        solution: "俄罗斯市场：Telegram Mini App（设备绑定+套餐购买）+ 独立俄语官网（商城+登录注册）；美国市场：SaaS 订阅官网 + 路由器后台管理系统，两套链路独立设计、独立维护",
       },
       {
         problem: "如何让用户在第一次购买时愿意尝试，同时建立长期付费习惯",
