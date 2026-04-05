@@ -96,9 +96,9 @@ export const projects: Project[] = [
     backgroundEn: "This was a brand-new overseas brand targeting both the US and Russian markets, where user habits and information consumption differ significantly. When I joined, there was no existing product framework — everything from user paths, commercial design, to multilingual specs needed to be built from scratch.",
     decisions: [
       {
-        problem: "美国和俄罗斯用户对VPN产品的认知和信任建立方式不同，不能用同一套内容直接翻译",
-        judgment: "通过研究亚马逊评论和竞品，发现美国用户更关注隐私和设备兼容性，俄罗斯用户更关注稳定性和操作简便",
-        solution: "两个语言版本在信息优先级和核心卖点上做了实质性差异化处理，而非直接翻译",
+        problem: "两个市场需要两套完整的产品链路，而不只是翻译差异",
+        judgment: "通过研究发现，俄罗斯用户的主要触点在 Telegram，美国用户更依赖独立官网与订阅转化路径，两套链路的信息架构、购买逻辑、内容策略均不相同",
+        solution: "俄罗斯市场：Telegram Mini App（设备绑定+套餐购买）+ 独立俄语官网（商城+登录注册）；美国市场：SaaS 订阅官网 + 路由器后台管理系统，两套链路独立设计、独立维护",
       },
       {
         problem: "如何让用户在第一次购买时愿意尝试，同时建立长期付费习惯",
@@ -113,9 +113,9 @@ export const projects: Project[] = [
     ],
     decisionsEn: [
       {
-        problem: "US and Russian users have different perceptions and trust-building patterns for VPN products — can't just translate the same content",
-        judgment: "Through Amazon review research and competitor analysis, found US users focus more on privacy and device compatibility, while Russian users prioritize stability and ease of use",
-        solution: "Made substantive differentiation in information priority and core selling points across language versions, rather than direct translation",
+        problem: "Two markets require two complete product pipelines, not just translation differences",
+        judgment: "Research revealed that Russian users' primary touchpoint is Telegram, while US users rely more on standalone websites and subscription conversion paths — the IA, purchase logic, and content strategies are fundamentally different",
+        solution: "Russian market: Telegram Mini App (device binding + plan purchase) + standalone Russian website (store + login/registration); US market: SaaS subscription website + router management dashboard — two pipelines designed and maintained independently",
       },
       {
         problem: "How to encourage first-time purchase while building long-term payment habits",
@@ -141,12 +141,18 @@ export const projects: Project[] = [
       { caption: "CN/EN/RU trilingual spec reference" },
     ],
     results: [
-      "产品完整上线，建立了覆盖官网、后台、Telegram Mini App的完整产品体系",
-      "英俄双语版本独立适配，各市场内容策略差异化落地",
+      "独立完成从品牌到产品的全链路设计，覆盖 Logo、硬件包装、App、官网、后台共5个产品触点",
+      "俄罗斯版 Telegram Mini App 完整上线，覆盖设备绑定、节点切换、套餐查看与购买全流程",
+      "俄罗斯版独立官网上线，包含登录注册体系与路由器购买商城",
+      "美版官网完成内容架构重建与订阅套餐三档定价设计，英俄双版本内容策略独立落地",
+      "美版路由器后台管理系统交付，支持设备管理与流量统计",
     ],
     resultsEn: [
-      "Product fully launched with a complete system covering website, dashboard, and Telegram Mini App",
-      "EN/RU versions independently adapted with differentiated content strategies per market",
+      "Independently completed full-chain design from brand to product, covering 5 touchpoints: Logo, hardware packaging, App, website, and dashboard",
+      "Russian Telegram Mini App fully launched, covering device binding, node switching, plan viewing and purchasing",
+      "Russian standalone website launched with login/registration system and router purchase store",
+      "US website completed IA restructuring and three-tier subscription pricing design, with EN/RU content strategies independently implemented",
+      "US router management dashboard delivered, supporting device management and traffic analytics",
     ],
     reflection: "如果重来，会在项目初期更早建立设计规范文档，避免后期多端适配时反复修改基础样式",
     reflectionEn: "If I could redo it, I'd establish design spec documentation earlier in the project to avoid repeatedly modifying base styles during later multi-platform adaptation",
