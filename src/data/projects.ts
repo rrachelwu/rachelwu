@@ -204,8 +204,8 @@ export const projects: Project[] = [
       "US website completed IA restructuring and three-tier subscription pricing design, with EN/RU content strategies independently implemented",
       "US router management dashboard delivered, supporting device management and traffic analytics",
     ],
-    reflection: "如果重来，会在项目初期更早建立设计规范文档，避免后期多端适配时反复修改基础样式",
-    reflectionEn: "If I could redo it, I'd establish design spec documentation earlier in the project to avoid repeatedly modifying base styles during later multi-platform adaptation",
+    reflection: "两个市场同步推进时，美版和俄版的产品优先级始终没有明确排序。资源有限的情况下，两条线并行导致两边都推进得不够彻底。如果重来，会在立项时先确定哪个市场是核心验证市场，集中做深再复制，而不是同步铺开。",
+    reflectionEn: "When advancing both markets simultaneously, priority between US and Russian versions was never clearly ranked. With limited resources, running two lines in parallel meant neither was pushed deep enough. If I could redo it, I'd first determine the core validation market at project initiation, go deep before replicating, instead of spreading out simultaneously.",
   },
   {
     id: "2",
@@ -314,8 +314,8 @@ export const projects: Project[] = [
       "Mini App design delivered from 0 to 1, optimizing user access paths",
       "Mentored team designers concurrently, establishing design standards and specifications to improve overall team output quality",
     ],
-    reflection: "如果重来，会更早建立双语测试流程，在设计阶段就验证俄文版本的布局稳定性",
-    reflectionEn: "If I could redo it, I'd establish bilingual testing processes earlier to validate Russian version layout stability during the design phase",
+    reflection: "改版的触发点是视觉问题，但根本原因是产品定位一直不够清晰——到底是服务有采购经验的批发商，还是个人买家，两类用户的决策路径完全不同。如果重来，会在改版前先做一轮用户分层，把核心用户画像确定下来，再决定信息架构的取舍方向。",
+    reflectionEn: "The redesign was triggered by visual issues, but the root cause was unclear product positioning — whether to serve experienced wholesalers or individual buyers, whose decision paths are completely different. If I could redo it, I'd conduct user segmentation before the redesign, define core user personas, then decide on information architecture trade-offs.",
   },
   {
     id: "3",
@@ -390,8 +390,8 @@ export const projects: Project[] = [
       "Frontend website launched, backend system supporting daily order management",
       "Established complete product specification system covering SKU naming, shipping marks, asset standards, and order workflows",
     ],
-    reflection: "如果重来，会在系统设计初期就把定价计算逻辑纳入规划，避免后期需要单独开发",
-    reflectionEn: "If I could redo it, I'd incorporate pricing calculation logic into the initial system design to avoid needing separate development later",
+    reflection: "项目初期把大量精力放在视觉呈现上，但轮毂定制的核心转化障碍其实是信任问题——海外买家不确定能不能拿到真实样品、工厂资质是否可靠。如果重来，会更早推动把工厂认证信息和买家案例纳入主流程，而不是作为补充内容放在边缘位置。",
+    reflectionEn: "Early on, too much effort was spent on visual presentation, but the core conversion barrier for custom wheels was actually trust — overseas buyers weren't sure they could get real samples or whether the factory was credible. If I could redo it, I'd push earlier to bring factory certification and buyer cases into the main flow rather than placing them as supplementary content on the periphery.",
   },
   {
     id: "4",
@@ -534,8 +534,8 @@ export const projects: Project[] = [
       "Frontend H5 development efficiency improved after design specs landed, component reuse rate increased",
       "Responsive component library reduced repetitive work for cross-screen adaptation",
     ],
-    reflection: "两条产品线并行推进时，前期花了较多时间在反复确认品牌关键词上。如果重来，会在项目启动时先用一次设计冲刺把两条线的品牌定位同时对齐，再分头执行，避免各自调整时产生风格偏差。",
-    reflectionEn: "When advancing two product lines in parallel, too much time was spent early on repeatedly confirming brand keywords. If I could redo it, I'd run a design sprint at project kickoff to align both lines' brand positioning simultaneously, then execute separately to avoid style drift during individual adjustments.",
+    reflection: "Privacy Wallet 和 KMS 是面向完全不同用户的两个产品，但在推进过程中两条线的资源分配和优先级始终混在一起决策。如果重来，会在项目启动时明确两条线各自的商业目标和阶段里程碑，让设计决策有独立的业务依据，而不是互相等待对齐。",
+    reflectionEn: "Privacy Wallet and KMS serve completely different users, but resource allocation and priority decisions for both lines were always mixed together during development. If I could redo it, I'd clarify each line's business goals and milestone phases at project kickoff, giving design decisions independent business justification rather than waiting for mutual alignment.",
   },
   {
     id: "5",
