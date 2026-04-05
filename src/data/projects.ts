@@ -141,7 +141,7 @@ export const projects: Project[] = [
       { caption: "CN/EN/RU trilingual spec reference" },
     ],
     results: [
-      "独立完成从品牌到产品的全链路设计，覆盖 Logo、硬件包装、App、官网、后台共5个产品触点",
+      "独立完成从品牌到产品的全链路设计，覆盖 Logo、硬件包装、Mini App、官网、后台共5个产品触点",
       "俄罗斯版 Telegram Mini App 完整上线，覆盖设备绑定、节点切换、套餐查看与购买全流程",
       "俄罗斯版独立官网上线，包含登录注册体系与路由器购买商城",
       "美版官网完成内容架构重建与订阅套餐三档定价设计，英俄双版本内容策略独立落地",
