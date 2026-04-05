@@ -66,7 +66,7 @@ const MoreWorks: React.FC = () => {
                   ))}
                 </div>
 
-                <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors line-clamp-2">
                   {language === 'zh' ? project.title : project.titleEn}
                 </h3>
 
