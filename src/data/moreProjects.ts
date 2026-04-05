@@ -4,6 +4,15 @@ export interface MoreProjectDecision {
   solution: string;
 }
 
+export interface MoreDeliverableItem {
+  title: string;
+  titleEn: string;
+  description: string;
+  descriptionEn: string;
+  images: string[];
+  layout: 'row-2' | 'row-3' | 'grid-2x2';
+}
+
 export interface MoreProject {
   id: string;
   slug: string;
@@ -25,8 +34,8 @@ export interface MoreProject {
   backgroundEn: string;
   decisions: MoreProjectDecision[];
   decisionsEn: MoreProjectDecision[];
-  deliverables: string[];
-  deliverablesEn: string[];
+  deliverables: MoreDeliverableItem[];
+  deliverablesEn: MoreDeliverableItem[];
   results: string[];
   resultsEn: string[];
   reflection: string;
@@ -88,16 +97,73 @@ export const moreProjects: MoreProject[] = [
       },
     ],
     deliverables: [
-      "App完整UI设计（iOS/Android）",
-      "微信小程序店铺界面",
-      "Web管理后台",
-      "海报拼图生成功能",
-      "运营活动H5及Banner",
+      {
+        title: '核心功能流程 · 首页 / 动态 / 发布',
+        titleEn: 'Core Flows · Home / Feed / Publish',
+        description: '首页个人主页结构、动态浏览与转存路径、发布图文完整流程',
+        descriptionEn: 'Homepage structure, feed browsing & repost paths, full publishing flow',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-3',
+      },
+      {
+        title: '工具与订单管理 · 商家效率',
+        titleEn: 'Tools & Orders · Merchant Efficiency',
+        description: '工具页信息架构、开单流程6步拆解、订单状态卡片化处理',
+        descriptionEn: 'Tools page IA, 6-step order creation breakdown, order status cards',
+        images: ['/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-2',
+      },
+      {
+        title: '人人掌柜 · 会员与代理体系',
+        titleEn: 'Renren Shopkeeper · Membership & Agent System',
+        description: '三档掌柜视觉方案（暗色品质感）、收益中心、会员认证与商家认证页面',
+        descriptionEn: 'Three-tier shopkeeper visuals (dark premium), earnings center, membership & merchant certification',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-3',
+      },
+      {
+        title: '全量页面览 · Web版延伸',
+        titleEn: 'Full Page Overview · Web Extension',
+        description: 'App完整页面总览，及PC Web版货源管理系统界面',
+        descriptionEn: 'Complete App page overview and PC Web supply management system interface',
+        images: ['/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-2',
+      },
     ],
     deliverablesEn: [
-      "Complete App UI design (iOS/Android)",
-      "WeChat Mini Program shop interface",
-      "Web management dashboard",
+      {
+        title: 'Core Flows · Home / Feed / Publish',
+        titleEn: 'Core Flows · Home / Feed / Publish',
+        description: 'Homepage structure, feed browsing & repost paths, full publishing flow',
+        descriptionEn: 'Homepage structure, feed browsing & repost paths, full publishing flow',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-3',
+      },
+      {
+        title: 'Tools & Orders · Merchant Efficiency',
+        titleEn: 'Tools & Orders · Merchant Efficiency',
+        description: 'Tools page IA, 6-step order creation breakdown, order status cards',
+        descriptionEn: 'Tools page IA, 6-step order creation breakdown, order status cards',
+        images: ['/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-2',
+      },
+      {
+        title: 'Renren Shopkeeper · Membership & Agent System',
+        titleEn: 'Renren Shopkeeper · Membership & Agent System',
+        description: 'Three-tier shopkeeper visuals (dark premium), earnings center, membership & merchant certification',
+        descriptionEn: 'Three-tier shopkeeper visuals (dark premium), earnings center, membership & merchant certification',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-3',
+      },
+      {
+        title: 'Full Page Overview · Web Extension',
+        titleEn: 'Full Page Overview · Web Extension',
+        description: 'Complete App page overview and PC Web supply management system interface',
+        descriptionEn: 'Complete App page overview and PC Web supply management system interface',
+        images: ['/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-2',
+      },
+    ],
       "Poster puzzle generation feature",
       "Marketing campaign H5 and banners",
     ],
