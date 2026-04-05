@@ -15,6 +15,10 @@ export interface DecisionItem {
 export interface DeliverableItem {
   image?: string;
   caption: string;
+  title?: string;
+  titleEn?: string;
+  description?: string;
+  descriptionEn?: string;
 }
 
 export interface ComparisonItem {
