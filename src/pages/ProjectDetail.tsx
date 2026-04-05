@@ -249,13 +249,9 @@ const ProjectDetail: React.FC = () => {
               const allImages = deliverables.flatMap(d => d.images || (d.image ? [d.image] : []));
               return (
                 <div key={index}>
-                  <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                    <span className="w-1 bg-primary" style={{ height: "18px" }} />
+                  <h2 className="text-xl font-semibold mb-3">
                     {title}
                   </h2>
-                  {desc && (
-                    <p className="text-sm text-muted-foreground mb-4">{desc}</p>
-                  )}
                   {/* Multiple images with layout */}
                   {item.images && item.images.length > 0 && (
                     <div className={
@@ -284,6 +280,9 @@ const ProjectDetail: React.FC = () => {
                     >
                       <img src={item.image} alt={title} className="w-full h-auto" loading="lazy" />
                     </button>
+                  )}
+                  {desc && (
+                    <p className="text-sm text-muted-foreground mt-3">{desc}</p>
                   )}
                 </div>
               );
