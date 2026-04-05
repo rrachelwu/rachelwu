@@ -78,7 +78,7 @@ const Index: React.FC = () => {
           <img
             src={heroPattern}
             alt=""
-            className="absolute bottom-0 left-0 h-[70%] w-auto"
+            className="absolute bottom-0 left-0 h-[63%] w-auto"
           />
           
           {/* Large red glow */}
