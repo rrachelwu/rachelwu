@@ -401,7 +401,7 @@ export const projects: Project[] = [
   },
   {
     id: "4",
-    slug: "juzhengyuan",
+    slug: "juzhenyuan",
     title: "区块链钱包、密钥管理平台与知识管理系统的设计体系建设",
     titleEn: "Design System for Blockchain Wallet, Key Management & Knowledge Management",
     coverImage: "/juzhenyuan-cover.png",
