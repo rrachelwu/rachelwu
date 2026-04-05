@@ -9,6 +9,7 @@ import Button from '@/components/Button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
 import rachelPhoto from '@/assets/rachel-photo.jpg';
+import heroPattern from '@/assets/hero-pattern.svg';
 import logo from '@/assets/logo.svg';
 
 const Index: React.FC = () => {
@@ -141,11 +142,15 @@ const Index: React.FC = () => {
             {/* Right Image - with red oval background like PDF */}
             <div className="relative hidden lg:block">
               <div className="relative z-10 w-full max-w-md mx-auto">
-                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-80 h-96 bg-primary rounded-[50%] -z-10" />
                 <img
                   src={rachelPhoto}
                   alt="Rachel Wu"
-                  className="w-full max-w-sm ml-auto rounded-2xl shadow-elevated"
+                  className="w-full max-w-sm ml-auto rounded-2xl shadow-elevated relative z-10"
+                />
+                <img
+                  src={heroPattern}
+                  alt=""
+                  className="absolute -bottom-16 -right-16 w-[400px] h-auto opacity-100 z-0"
                 />
               </div>
             </div>
