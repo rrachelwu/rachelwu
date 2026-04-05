@@ -484,10 +484,19 @@ export const projects: Project[] = [
         images: ['/placeholder.svg'], layout: 'single',
       },
       {
-        caption: '', title: 'Privacy Wallet · 完整界面设计', titleEn: 'Privacy Wallet · Complete UI Design',
-        description: 'iOS/Android双端完整UI输出，涵盖钱包首页、资产管理、发送收款、委托质押全流程',
-        descriptionEn: 'Full iOS/Android UI output covering wallet home, asset management, send/receive, and staking flows',
-        images: ['/placeholder.svg'], layout: 'single',
+        caption: '', title: 'Privacy Wallet · 页面总览', titleEn: 'Privacy Wallet · Page Overview',
+        description: '页面总览',
+        descriptionEn: 'Page Overview',
+        images: [
+          '/8d2b5d6d-7aa6-4326-abc4-86c7146b8b38.png',
+          '/40f66e0f-923d-43f4-894b-830711e07f08.png',
+          '/6e3a064f-8306-48f5-88e7-27d7f0076c79.png',
+          '/e9ecb419-ec78-48f9-840e-74762c6b0efe.png',
+          '/4ae06990-c8e5-49b7-a467-840f6243f23c.png',
+          '/2de8c78d-0a97-4f03-bcd2-b1e1a734a40f.png',
+          '/61dc9163-b0cf-4c92-ac2c-3d11f1abf442.png'
+        ],
+        layout: 'grid-2x2',
       },
       {
         caption: '', title: 'Privacy Wallet · 组件规范化', titleEn: 'Privacy Wallet · Component Standardization',
