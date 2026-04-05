@@ -67,24 +67,34 @@ const ProjectDetail: React.FC = () => {
         </header>
 
         {/* 2. 角色 / 时间 / 状态 */}
-        <section className="mb-10 flex flex-wrap gap-x-8 gap-y-3 text-sm border-y border-border py-5">
-          <div>
-            <span className="text-muted-foreground">{t('角色', 'Role')}</span>
-            <p className="font-medium mt-0.5">{language === 'zh' ? project.role : project.roleEn}</p>
-          </div>
-          <div>
-            <span className="text-muted-foreground">{t('时间', 'Duration')}</span>
-            <p className="font-medium mt-0.5">{language === 'zh' ? project.duration : project.durationEn}</p>
-          </div>
-          {project.status && (
+        <section className="mb-10 border-y border-border py-5">
+          <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm items-end">
             <div>
-              <span className="text-muted-foreground">{t('状态', 'Status')}</span>
-              <p className="font-medium mt-0.5">{language === 'zh' ? project.status : project.statusEn}</p>
+              <span className="text-muted-foreground">{t('角色', 'Role')}</span>
+              <p className="font-medium mt-0.5">{language === 'zh' ? project.role : project.roleEn}</p>
             </div>
-          )}
+            <div>
+              <span className="text-muted-foreground">{t('时间', 'Duration')}</span>
+              <p className="font-medium mt-0.5">{language === 'zh' ? project.duration : project.durationEn}</p>
+            </div>
+            {project.status && (
+              <div>
+                <span className="text-muted-foreground">{t('状态', 'Status')}</span>
+                <p className="font-medium mt-0.5">{language === 'zh' ? project.status : project.statusEn}</p>
+              </div>
+            )}
+            {project.links.demo && (
+              <div className="hidden md:flex ml-auto">
+                <Button href={project.links.demo} size="sm">
+                  <ExternalLink className="w-4 h-4" />
+                  {t('访问网站', 'Visit Site')}
+                </Button>
+              </div>
+            )}
+          </div>
           {project.links.demo && (
-            <div className="ml-auto flex items-end">
-              <Button href={project.links.demo} size="sm">
+            <div className="mt-4 md:hidden">
+              <Button href={project.links.demo} size="sm" className="w-full justify-center">
                 <ExternalLink className="w-4 h-4" />
                 {t('访问网站', 'Visit Site')}
               </Button>
