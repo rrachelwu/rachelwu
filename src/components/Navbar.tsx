@@ -52,8 +52,9 @@ const Navbar: React.FC = () => {
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           isScrolled || isOpen
-            ? 'bg-white/90 border-b border-border py-3'
-            : 'bg-transparent py-6'
+            ? 'bg-white/90 py-3'
+            : 'bg-transparent py-6',
+          isScrolled && !isOpen && 'border-b border-border'
         )}
         style={isScrolled || isOpen ? blurStyle : undefined}
       >
