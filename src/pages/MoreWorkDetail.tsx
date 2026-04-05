@@ -8,6 +8,9 @@ import ImageLightbox from '@/components/ImageLightbox';
 const MoreWorkDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t, language } = useLanguage();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImages, setLightboxImages] = useState<string[]>([]);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const project = moreProjects.find((p) => p.slug === slug);
 
@@ -27,6 +30,14 @@ const MoreWorkDetail: React.FC = () => {
   const decisions = language === 'zh' ? project.decisions : project.decisionsEn;
   const results = language === 'zh' ? project.results : project.resultsEn;
   const deliverables = language === 'zh' ? project.deliverables : project.deliverablesEn;
+
+  const allDeliverableImages = deliverables.flatMap(d => d.images || []);
+
+  const openLightbox = (images: string[], index: number) => {
+    setLightboxImages(images);
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
 
   return (
     <main className="pt-24 pb-16 min-h-screen">
