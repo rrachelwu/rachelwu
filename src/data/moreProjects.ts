@@ -196,7 +196,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Doctor Onboarding & Profile Display',
         description: '1 步完成入驻流程设计，物料中心支持便签条/台卡多模板选择，个人主页支持网页与图片两种分享格式',
         descriptionEn: 'One-step onboarding flow design, material center supports sticky note/desk card multi-template selection, personal page supports both web and image sharing formats',
-        images: ['37c22804-30c5-489f-a8b1-070fc3215656.png'],
+        images: ['/37c22804-30c5-489f-a8b1-070fc3215656.png'],
         layout: 'single',
       },
       {
@@ -238,7 +238,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Doctor Onboarding & Profile Display',
         description: 'One-step onboarding flow design, material center supports sticky note/desk card multi-template selection, personal page supports both web and image sharing formats',
         descriptionEn: 'One-step onboarding flow design, material center supports sticky note/desk card multi-template selection, personal page supports both web and image sharing formats',
-        images: ['37c22804-30c5-489f-a8b1-070fc3215656.png'],
+        images: ['/37c22804-30c5-489f-a8b1-070fc3215656.png'],
         layout: 'single',
       },
       {
