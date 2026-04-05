@@ -46,6 +46,7 @@ export interface MoreProject {
 export const moreProjects: MoreProject[] = [
   {
     id: "more-1",
+    coverImage: "/renren-cover.png",
     slug: "renren",
     title: "人人相册 — 社交电商货源管理工具的全链路产品设计",
     titleEn: "Renren Album — Full-chain Product Design for Social Commerce Supply Management",
