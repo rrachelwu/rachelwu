@@ -13,7 +13,7 @@ const About: React.FC = () => {
   const abilitiesRef = useScrollAnimation();
   const experienceRef = useScrollAnimation();
   const skillsRef = useScrollAnimation();
-  const resumeRef = useScrollAnimation();
+  
   const educationRef = useScrollAnimation();
 
   const coreAbilities = [
@@ -118,20 +118,6 @@ const About: React.FC = () => {
     ],
   };
 
-  const resumeCards = [
-    {
-      title: t('出海产品 UX 负责人', 'Overseas Product UX Lead'),
-      desc: t('跨文化用户研究 · 多语言规范体系', 'Cross-cultural user research · Multilingual standards'),
-    },
-    {
-      title: t('硬件产品设计负责人', 'Hardware Product Design Lead'),
-      desc: t('HMI/OTT经验 · AI辅助交付', 'HMI/OTT experience · AI-assisted delivery'),
-    },
-    {
-      title: t('产品设计负责人', 'Product Design Lead'),
-      desc: t('多线并行管控 · 全链路交付', 'Multi-line parallel management · Full-chain delivery'),
-    },
-  ];
 
   const education = [
     {
@@ -204,6 +190,11 @@ const About: React.FC = () => {
                 </a>
               </div>
             </div>
+
+            <Button href="#" size="sm" variant="outline">
+              <Download className="w-4 h-4" />
+              {t('下载简历', 'Download Resume')}
+            </Button>
           </div>
 
           {/* Right Image */}
@@ -329,36 +320,6 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        {/* Resume Download */}
-        <div
-          ref={resumeRef.ref}
-          className={cn(
-            'mb-20 transition-all duration-700',
-            resumeRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          )}
-        >
-          <SectionTitle
-            title={t('下载简历', 'Download Resume')}
-            titleEn="RESUME"
-            subtitle={t('根据您的需求选择对应版本', 'Choose the version that fits your needs')}
-          />
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            {resumeCards.map((card, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 hover:shadow-card transition-all duration-300 text-center"
-              >
-                <h3 className="font-bold text-lg mb-3">{card.title}</h3>
-                <p className="text-sm text-muted-foreground mb-6">{card.desc}</p>
-                <Button href="#" size="sm" variant="outline">
-                  <Download className="w-4 h-4" />
-                  {t('下载简历', 'Download Resume')}
-                </Button>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Education */}
         <div
