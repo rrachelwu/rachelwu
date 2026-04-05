@@ -246,6 +246,7 @@ const ProjectDetail: React.FC = () => {
             {deliverables.map((item, index) => {
               const title = language === 'zh' ? (item.title || item.caption) : (item.titleEn || item.title || item.caption);
               const desc = language === 'zh' ? item.description : (item.descriptionEn || item.description);
+              const allImages = deliverables.flatMap(d => d.images || (d.image ? [d.image] : []));
               return (
                 <div key={index}>
                   <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
@@ -255,12 +256,30 @@ const ProjectDetail: React.FC = () => {
                   {desc && (
                     <p className="text-sm text-muted-foreground mb-4">{desc}</p>
                   )}
-                  {item.image && (
+                  {/* Multiple images with layout */}
+                  {item.images && item.images.length > 0 && (
+                    <div className={
+                      item.layout === 'grid-2x2'
+                        ? 'grid grid-cols-2 gap-4'
+                        : item.layout === 'row-3'
+                          ? 'grid grid-cols-3 gap-4'
+                          : ''
+                    }>
+                      {item.images.map((img, imgIdx) => (
+                        <button
+                          key={imgIdx}
+                          onClick={() => openLightbox(allImages, allImages.indexOf(img))}
+                          className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in aspect-[4/3]"
+                        >
+                          <img src={img} alt={`${title} ${imgIdx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  {/* Single image fallback */}
+                  {!item.images && item.image && (
                     <button
-                      onClick={() => openLightbox(
-                        deliverables.filter(d => d.image).map(d => d.image!),
-                        deliverables.filter(d => d.image).findIndex(d => d.image === item.image)
-                      )}
+                      onClick={() => openLightbox(allImages, allImages.indexOf(item.image!))}
                       className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in"
                     >
                       <img src={item.image} alt={title} className="w-full h-auto" loading="lazy" />
