@@ -171,7 +171,7 @@ const Index: React.FC = () => {
             )}
           />
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {projects.slice(0, 4).map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
