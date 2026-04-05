@@ -264,43 +264,34 @@ const ProjectDetail: React.FC = () => {
               const allImages = deliverables.flatMap(d => d.images || (d.image ? [d.image] : []));
               return (
                 <div key={index}>
-                  {/* Red line + title + description */}
-                  <div className="flex items-start gap-3 mb-4">
-                    <span className="w-0.5 bg-destructive flex-shrink-0 rounded-full" style={{ height: '18px', marginTop: '3px' }} />
-                    <div>
-                      <h4 className="text-base font-semibold">{title}</h4>
-                      {desc && (
-                        <p className="text-sm text-muted-foreground mt-1">{desc}</p>
-                      )}
-                    </div>
-                  </div>
-                  {/* Images */}
+                  <h4 className="text-base font-semibold mb-3">
+                    {title}
+                  </h4>
+                  {/* Multiple images with layout */}
                   {item.images && item.images.length > 0 && (
-                    <div className={
-                      item.layout === 'grid-2x2'
-                        ? 'grid grid-cols-2 gap-4'
-                        : item.layout === 'row-3'
-                          ? 'grid grid-cols-3 gap-4'
-                          : 'space-y-4'
-                    }>
+                    <div className={`grid gap-3 ${item.layout === 'single' ? 'grid-cols-1' : item.layout === 'row-3' ? 'grid-cols-3' : item.layout === 'grid-2x2' ? 'grid-cols-2' : 'grid-cols-2'}`}>
                       {item.images.map((img, imgIdx) => (
                         <button
                           key={imgIdx}
                           onClick={() => openLightbox(allImages, allImages.indexOf(img))}
-                          className={`w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in ${item.layout !== 'single' ? 'aspect-[4/3]' : ''}`}
+                          className={`w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in ${item.layout === 'single' ? 'aspect-auto' : 'aspect-video'}`}
                         >
-                          <img src={img} alt={`${title} ${imgIdx + 1}`} className={item.layout === 'single' ? 'w-full h-auto' : 'w-full h-full object-cover'} loading="lazy" />
+                          <img src={img} alt={`${title} ${imgIdx + 1}`} className="w-full h-full object-cover" loading="lazy" />
                         </button>
                       ))}
                     </div>
                   )}
+                  {/* Single image fallback */}
                   {!item.images && item.image && (
                     <button
                       onClick={() => openLightbox(allImages, allImages.indexOf(item.image!))}
-                      className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in"
+                      className="w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in"
                     >
                       <img src={item.image} alt={title} className="w-full h-auto" loading="lazy" />
                     </button>
+                  )}
+                  {desc && (
+                    <p className="text-sm text-muted-foreground mt-3">{desc}</p>
                   )}
                 </div>
               );
