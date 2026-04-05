@@ -264,10 +264,17 @@ const ProjectDetail: React.FC = () => {
               const allImages = deliverables.flatMap(d => d.images || (d.image ? [d.image] : []));
               return (
                 <div key={index}>
-                  <h4 className="text-base font-semibold mb-3">
-                    {title}
-                  </h4>
-                  {/* Multiple images with layout */}
+                  {/* Red line + title + description */}
+                  <div className="flex items-start gap-3 mb-4">
+                    <span className="w-0.5 bg-destructive flex-shrink-0 rounded-full" style={{ height: '18px', marginTop: '3px' }} />
+                    <div>
+                      <h4 className="text-base font-semibold">{title}</h4>
+                      {desc && (
+                        <p className="text-sm text-muted-foreground mt-1">{desc}</p>
+                      )}
+                    </div>
+                  </div>
+                  {/* Images */}
                   {item.images && item.images.length > 0 && (
                     <div className={
                       item.layout === 'grid-2x2'
@@ -287,7 +294,6 @@ const ProjectDetail: React.FC = () => {
                       ))}
                     </div>
                   )}
-                  {/* Single image fallback */}
                   {!item.images && item.image && (
                     <button
                       onClick={() => openLightbox(allImages, allImages.indexOf(item.image!))}
@@ -295,9 +301,6 @@ const ProjectDetail: React.FC = () => {
                     >
                       <img src={item.image} alt={title} className="w-full h-auto" loading="lazy" />
                     </button>
-                  )}
-                  {desc && (
-                    <p className="text-sm text-muted-foreground mt-3">{desc}</p>
                   )}
                 </div>
               );
