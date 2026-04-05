@@ -10,7 +10,7 @@ export interface MoreDeliverableItem {
   description: string;
   descriptionEn: string;
   images: string[];
-  layout: 'row-2' | 'row-3' | 'grid-2x2';
+  layout: 'single' | 'row-2' | 'row-3' | 'grid-2x2';
 }
 
 export interface MoreProject {
