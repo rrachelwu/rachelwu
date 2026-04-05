@@ -188,7 +188,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Dual Color System · Workbench',
         description: '蓝色企业微信风格用于医生工作台，绿色用于患者侧流程，角色边界通过颜色系统清晰区分',
         descriptionEn: 'Blue Enterprise WeChat style for doctor workbench, green for patient-side flows, role boundaries clearly differentiated through color system',
-        images: ['/placeholder.svg'],
+        images: ['/a1ad6e5e-265c-49dd-8b63-7c75ae6a4fa4.png'],
         layout: 'single',
       },
       {
@@ -196,7 +196,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Doctor Onboarding & Profile Display',
         description: '1 步完成入驻流程设计，物料中心支持便签条/台卡多模板选择，个人主页支持网页与图片两种分享格式',
         descriptionEn: 'One-step onboarding flow design, material center supports sticky note/desk card multi-template selection, personal page supports both web and image sharing formats',
-        images: ['068041a0-e0cb-4ca5-884a-ef31e771ea81.png'],
+        images: ['37c22804-30c5-489f-a8b1-070fc3215656.png'],
         layout: 'single',
       },
       {
@@ -230,7 +230,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Dual Color System · Workbench',
         description: 'Blue Enterprise WeChat style for doctor workbench, green for patient-side flows, role boundaries clearly differentiated through color system',
         descriptionEn: 'Blue Enterprise WeChat style for doctor workbench, green for patient-side flows, role boundaries clearly differentiated through color system',
-        images: ['/placeholder.svg'],
+        images: ['/a1ad6e5e-265c-49dd-8b63-7c75ae6a4fa4.png'],
         layout: 'single',
       },
       {
@@ -238,7 +238,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Doctor Onboarding & Profile Display',
         description: 'One-step onboarding flow design, material center supports sticky note/desk card multi-template selection, personal page supports both web and image sharing formats',
         descriptionEn: 'One-step onboarding flow design, material center supports sticky note/desk card multi-template selection, personal page supports both web and image sharing formats',
-        images: ['068041a0-e0cb-4ca5-884a-ef31e771ea81.png'],
+        images: ['37c22804-30c5-489f-a8b1-070fc3215656.png'],
         layout: 'single',
       },
       {
