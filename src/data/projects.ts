@@ -459,7 +459,7 @@ export const projects: Project[] = [
         titleEn: 'Privacy Wallet · Brand & Visual System',
         description: 'Logo方案推演（形状探索→色彩确定→定稿）、品牌关键词提炼、设计规范色彩与组件',
         descriptionEn: 'Logo exploration (shape → color → final), brand keyword extraction, design spec colors & components',
-        images: ['https://395c4788-6345-44a7-b8ca-7c1520e89047.lovableproject.com/395c4788-6345-44a7-b8ca-7c1520e89047.png', 'https://cdad8ed0-2f66-4adb-87e0-7eae4f2f6e7f.lovableproject.com/cdad8ed0-2f66-4adb-87e0-7eae4f2f6e7f.png', 'https://871a32bb-5c3d-40f5-97b2-540bc6efbc16.lovableproject.com/871a32bb-5c3d-40f5-97b2-540bc6efbc16.png'],
+        images: ['/jzy-1.png', '/jzy-2.png', '/jzy-3.png'],
         layout: 'row-3',
       },
       {
@@ -468,7 +468,7 @@ export const projects: Project[] = [
         titleEn: 'Privacy Wallet · Core Page Redesign',
         description: '资产总览、导入钱包、收款页改版前后对比，交互路径优化与品牌强化',
         descriptionEn: 'Asset overview, import wallet, receive page before/after comparison, interaction path optimization & brand reinforcement',
-        images: ['https://dfa3d209-8d76-487d-a1dc-e3086b896826.lovableproject.com/dfa3d209-8d76-487d-a1dc-e3086b896826.png', 'https://10541160-2f1c-4e73-8b03-c91956291be5.lovableproject.com/10541160-2f1c-4e73-8b03-c91956291be5.png', 'https://2cf89662-e81f-4e0e-bbe5-de7c80dc68ce.lovableproject.com/2cf89662-e81f-4e0e-bbe5-de7c80dc68ce.png', 'https://6b1d5a0d-c819-4c4b-b3cc-0680f2d8954a.lovableproject.com/6b1d5a0d-c819-4c4b-b3cc-0680f2d8954a.png'],
+        images: ['/jzy-4.png', '/jzy-5.png', '/jzy-6.png', '/jzy-7.png'],
         layout: 'grid-2x2',
       },
       {
@@ -497,7 +497,7 @@ export const projects: Project[] = [
         titleEn: 'Privacy Wallet · Brand & Visual System',
         description: 'Logo exploration (shape → color → final), brand keyword extraction, design spec colors & components',
         descriptionEn: 'Logo exploration (shape → color → final), brand keyword extraction, design spec colors & components',
-        images: ['https://395c4788-6345-44a7-b8ca-7c1520e89047.lovableproject.com/395c4788-6345-44a7-b8ca-7c1520e89047.png', 'https://cdad8ed0-2f66-4adb-87e0-7eae4f2f6e7f.lovableproject.com/cdad8ed0-2f66-4adb-87e0-7eae4f2f6e7f.png', 'https://871a32bb-5c3d-40f5-97b2-540bc6efbc16.lovableproject.com/871a32bb-5c3d-40f5-97b2-540bc6efbc16.png'],
+        images: ['/jzy-1.png', '/jzy-2.png', '/jzy-3.png'],
         layout: 'row-3',
       },
       {
@@ -506,7 +506,7 @@ export const projects: Project[] = [
         titleEn: 'Privacy Wallet · Core Page Redesign',
         description: 'Asset overview, import wallet, receive page before/after comparison, interaction path optimization & brand reinforcement',
         descriptionEn: 'Asset overview, import wallet, receive page before/after comparison, interaction path optimization & brand reinforcement',
-        images: ['https://dfa3d209-8d76-487d-a1dc-e3086b896826.lovableproject.com/dfa3d209-8d76-487d-a1dc-e3086b896826.png', 'https://10541160-2f1c-4e73-8b03-c91956291be5.lovableproject.com/10541160-2f1c-4e73-8b03-c91956291be5.png', 'https://2cf89662-e81f-4e0e-bbe5-de7c80dc68ce.lovableproject.com/2cf89662-e81f-4e0e-bbe5-de7c80dc68ce.png', 'https://6b1d5a0d-c819-4c4b-b3cc-0680f2d8954a.lovableproject.com/6b1d5a0d-c819-4c4b-b3cc-0680f2d8954a.png'],
+        images: ['/jzy-4.png', '/jzy-5.png', '/jzy-6.png', '/jzy-7.png'],
         layout: 'grid-2x2',
       },
       {
