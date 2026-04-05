@@ -147,9 +147,9 @@ const MoreWorkDetail: React.FC = () => {
                 <p className="text-sm text-muted-foreground mb-4 ml-3">
                   {language === 'zh' ? item.description : item.descriptionEn}
                 </p>
-                <div className={`grid gap-3 ${item.layout === 'row-3' ? 'grid-cols-3' : 'grid-cols-2'}`}>
+                <div className={`grid gap-3 ${item.layout === 'single' ? 'grid-cols-1' : item.layout === 'row-3' ? 'grid-cols-3' : item.layout === 'grid-2x2' ? 'grid-cols-2' : 'grid-cols-2'}`}>
                   {item.images.map((img, imgIdx) => (
-                    <div key={imgIdx} className="rounded-lg overflow-hidden bg-secondary aspect-video">
+                    <div key={imgIdx} className={`rounded-lg overflow-hidden bg-secondary ${item.layout === 'single' ? 'aspect-auto' : 'aspect-video'}`}>
                       <img src={img} alt="" className="w-full h-full object-cover" />
                     </div>
                   ))}
