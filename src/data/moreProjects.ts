@@ -204,7 +204,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Patient Registration & Medical Record Management',
         description: '患者添加医生后自动触发登记流程，病案中心参考微信通讯录交互样式，降低医生学习成本',
         descriptionEn: 'Registration flow auto-triggered after patient adds doctor, medical record center references WeChat contacts interaction style to reduce doctor learning cost',
-        images: ['/placeholder.svg'],
+        images: ['/57ea693f-72eb-4a97-b32f-87ff1e827045.png'],
         layout: 'single',
       },
       {
@@ -212,7 +212,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Efficiency Tools · Automated Communication',
         description: '自动打招呼、快捷回复、患者群发、运营工具四大模块，卡片化组件设计支持功能复用',
         descriptionEn: 'Auto-greeting, quick replies, patient broadcast, operations tools — four modules with card-based component design supporting feature reuse',
-        images: ['/placeholder.svg'],
+        images: ['/292119d4-1f25-4251-9fd1-8d68091beb3e.png'],
         layout: 'single',
       },
       {
@@ -220,7 +220,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Complete Page Overview',
         description: '医生端（企业微信） + 患者端（小程序） 两端完整页面输出',
         descriptionEn: 'Doctor Side (Enterprise WeChat) + Patient Side (Mini Program) — complete page output across two platforms',
-        images: ['/placeholder.svg'],
+        images: ['/894e89eb-795c-4821-98da-3c9efc684d3c.png'],
         layout: 'single',
       },
     ],
@@ -246,7 +246,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Patient Registration & Medical Record Management',
         description: 'Registration flow auto-triggered after patient adds doctor, medical record center references WeChat contacts interaction style to reduce doctor learning cost',
         descriptionEn: 'Registration flow auto-triggered after patient adds doctor, medical record center references WeChat contacts interaction style to reduce doctor learning cost',
-        images: ['/placeholder.svg'],
+        images: ['/57ea693f-72eb-4a97-b32f-87ff1e827045.png'],
         layout: 'single',
       },
       {
@@ -254,7 +254,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Efficiency Tools · Automated Communication',
         description: 'Auto-greeting, quick replies, patient broadcast, operations tools — four modules with card-based component design supporting feature reuse',
         descriptionEn: 'Auto-greeting, quick replies, patient broadcast, operations tools — four modules with card-based component design supporting feature reuse',
-        images: ['/placeholder.svg'],
+        images: ['/292119d4-1f25-4251-9fd1-8d68091beb3e.png'],
         layout: 'single',
       },
       {
@@ -262,7 +262,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Complete Page Overview',
         description: '医生端（企业微信） + 患者端（小程序） 两端完整页面输出',
         descriptionEn: 'Doctor Side (Enterprise WeChat) + Patient Side (Mini Program) — complete page output across two platforms',
-        images: ['/placeholder.svg'],
+        images: ['/894e89eb-795c-4821-98da-3c9efc684d3c.png'],
         layout: 'single',
       },
     ],
