@@ -59,7 +59,7 @@ export const moreProjects: MoreProject[] = [
     status: "已上线",
     statusEn: "Launched",
     tags: ["产品设计", "C端", "社交电商", "三端"],
-    techStack: ["Figma", "Sketch", "微信小程序", "Ant Design"],
+    techStack: ["Sketch", "微信小程序", "Ant Design"],
     background: "人人相册服务于社交平台卖货的各类商家，商家需要同时管理货源、代理商、订单和客户，但市面上没有专门针对微信卖货场景的工具。我介入时产品处于重构阶段，需要在保留原有用户习惯的前提下重新梳理产品架构，并独立负责App、小程序、Web三端的完整UI设计，历时近3年持续迭代。",
     backgroundEn: "Renren Album serves various merchants selling on social platforms who need to manage supply sources, agents, orders, and customers simultaneously, but there were no specialized tools for WeChat selling scenarios. When I joined, the product was in a restructuring phase — I needed to reorganize the product architecture while preserving existing user habits, independently handling complete UI design across App, Mini Program, and Web for nearly 3 years of continuous iteration.",
     decisions: [
@@ -145,7 +145,7 @@ export const moreProjects: MoreProject[] = [
     status: "已上线",
     statusEn: "Launched",
     tags: ["产品设计", "B端", "医疗健康", "跨端"],
-    techStack: ["Figma", "企业微信", "Zan Design", "微信小程序"],
+    techStack: ["Sketch", "企业微信", "Zan Design", "微信小程序"],
     background: "医生日常用个人微信与患者沟通，边界模糊且无法系统管理患者数据。医伴助手以企业微信为依托，希望帮助医生分离个人与工作关系，同时通过随访问卷、快捷回复等工具提升诊后管理效率。产品需要同时服务医生和患者两类截然不同的用户群体，从0设计并覆盖小程序、H5、PC三端。",
     backgroundEn: "Doctors commonly use personal WeChat to communicate with patients, creating blurred boundaries and inability to systematically manage patient data. Medical Companion leverages Enterprise WeChat to help doctors separate personal and work relationships while improving post-consultation management through follow-up questionnaires and quick replies. The product serves two distinctly different user groups — doctors and patients — designed from scratch across Mini Program, H5, and PC.",
     decisions: [
