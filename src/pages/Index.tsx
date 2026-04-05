@@ -78,7 +78,7 @@ const Index: React.FC = () => {
           <img
             src={heroPattern}
             alt=""
-            className="absolute bottom-[40px] left-[-60px] h-[63%] w-auto"
+            className="absolute bottom-[140px] left-[-60px] h-[63%] w-auto"
             style={{
               maskImage: 'linear-gradient(to right, transparent 0%, black 100%)',
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 100%)',
