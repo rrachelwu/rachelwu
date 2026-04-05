@@ -274,15 +274,15 @@ const ProjectDetail: React.FC = () => {
                         ? 'grid grid-cols-2 gap-4'
                         : item.layout === 'row-3'
                           ? 'grid grid-cols-3 gap-4'
-                          : ''
+                          : 'space-y-4'
                     }>
                       {item.images.map((img, imgIdx) => (
                         <button
                           key={imgIdx}
                           onClick={() => openLightbox(allImages, allImages.indexOf(img))}
-                          className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in aspect-[4/3]"
+                          className={`w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in ${item.layout !== 'single' ? 'aspect-[4/3]' : ''}`}
                         >
-                          <img src={img} alt={`${title} ${imgIdx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                          <img src={img} alt={`${title} ${imgIdx + 1}`} className={item.layout === 'single' ? 'w-full h-auto' : 'w-full h-full object-cover'} loading="lazy" />
                         </button>
                       ))}
                     </div>

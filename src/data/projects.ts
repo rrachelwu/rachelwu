@@ -460,7 +460,7 @@ export const projects: Project[] = [
         description: 'Logo方案推演（形状探索→色彩确定→定稿）、品牌关键词提炼、设计规范色彩与组件',
         descriptionEn: 'Logo exploration (shape → color → final), brand keyword extraction, design spec colors & components',
         images: ['/jzy-1.png', '/jzy-2.png', '/jzy-3.png'],
-        layout: 'row-3',
+        layout: 'single',
       },
       {
         caption: '',
@@ -469,7 +469,7 @@ export const projects: Project[] = [
         description: '资产总览、导入钱包、收款页改版前后对比，交互路径优化与品牌强化',
         descriptionEn: 'Asset overview, import wallet, receive page before/after comparison, interaction path optimization & brand reinforcement',
         images: ['/jzy-4.png', '/jzy-5.png', '/jzy-6.png', '/jzy-7.png'],
-        layout: 'grid-2x2',
+        layout: 'single',
       },
       {
         caption: '',
@@ -498,7 +498,7 @@ export const projects: Project[] = [
         description: 'Logo exploration (shape → color → final), brand keyword extraction, design spec colors & components',
         descriptionEn: 'Logo exploration (shape → color → final), brand keyword extraction, design spec colors & components',
         images: ['/jzy-1.png', '/jzy-2.png', '/jzy-3.png'],
-        layout: 'row-3',
+        layout: 'single',
       },
       {
         caption: '',
@@ -507,7 +507,7 @@ export const projects: Project[] = [
         description: 'Asset overview, import wallet, receive page before/after comparison, interaction path optimization & brand reinforcement',
         descriptionEn: 'Asset overview, import wallet, receive page before/after comparison, interaction path optimization & brand reinforcement',
         images: ['/jzy-4.png', '/jzy-5.png', '/jzy-6.png', '/jzy-7.png'],
-        layout: 'grid-2x2',
+        layout: 'single',
       },
       {
         caption: '',
