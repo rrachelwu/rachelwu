@@ -540,38 +540,32 @@ export const projects: Project[] = [
         caption: '', title: 'Privacy Wallet · Redesign · Asset Overview', titleEn: 'Privacy Wallet · Redesign · Asset Overview',
         description: 'Old version had cluttered info hierarchy; new version restructures the home screen around asset data with clear priority',
         descriptionEn: 'Old version had cluttered info hierarchy; new version restructures the home screen around asset data with clear priority',
-        images: ['/placeholder.svg'], layout: 'single',
+        images: ['/40f66e0f-923d-43f4-894b-830711e07f08.png'], layout: 'single',
       },
       {
         caption: '', title: 'Privacy Wallet · Redesign · Import Wallet', titleEn: 'Privacy Wallet · Redesign · Import Wallet',
         description: 'Card-based import methods, mnemonic verification changed to random index selection, reducing small-screen burden',
         descriptionEn: 'Card-based import methods, mnemonic verification changed to random index selection, reducing small-screen burden',
-        images: ['/placeholder.svg'], layout: 'single',
+        images: ['/6e3a064f-8306-48f5-88e7-27d7f0076c79.png'], layout: 'single',
       },
       {
         caption: '', title: 'Privacy Wallet · Redesign · Receive Page', titleEn: 'Privacy Wallet · Redesign · Receive Page',
         description: 'Brand color base to strengthen identity, enlarged QR code display, action buttons fixed at bottom',
         descriptionEn: 'Brand color base to strengthen identity, enlarged QR code display, action buttons fixed at bottom',
-        images: ['/placeholder.svg'], layout: 'single',
+        images: ['/e9ecb419-ec78-48f9-840e-74762c6b0efe.png'], layout: 'single',
       },
       {
         caption: '', title: 'Privacy Wallet · Redesign · Launch Optimization', titleEn: 'Privacy Wallet · Redesign · Launch Optimization',
         description: 'Launch screen visual upgrade, reinforcing brand first impression, consistent with new design language',
         descriptionEn: 'Launch screen visual upgrade, reinforcing brand first impression, consistent with new design language',
-        images: ['/placeholder.svg'], layout: 'single',
+        images: ['/4ae06990-c8e5-49b7-a467-840f6243f23c.png'], layout: 'single',
       },
       {
         caption: '', title: 'Privacy Wallet · Page Overview', titleEn: 'Privacy Wallet · Page Overview',
         description: 'Page Overview',
         descriptionEn: 'Page Overview',
         images: [
-          '/8d2b5d6d-7aa6-4326-abc4-86c7146b8b38.png',
-          '/40f66e0f-923d-43f4-894b-830711e07f08.png',
-          '/6e3a064f-8306-48f5-88e7-27d7f0076c79.png',
-          '/e9ecb419-ec78-48f9-840e-74762c6b0efe.png',
-          '/4ae06990-c8e5-49b7-a467-840f6243f23c.png',
-          '/2de8c78d-0a97-4f03-bcd2-b1e1a734a40f.png',
-          '/61dc9163-b0cf-4c92-ac2c-3d11f1abf442.png'
+          '/2de8c78d-0a97-4f03-bcd2-b1e1a734a40f.png'
         ],
         layout: 'single',
       },
@@ -579,7 +573,7 @@ export const projects: Project[] = [
         caption: '', title: 'Privacy Wallet · Component Standardization', titleEn: 'Privacy Wallet · Component Standardization',
         description: 'Unified button, input, modal, toast, cell component specs for cross-platform consistency and reduced dev deviation',
         descriptionEn: 'Unified button, input, modal, toast, cell component specs for cross-platform consistency and reduced dev deviation',
-        images: ['/placeholder.svg'], layout: 'single',
+        images: ['/61dc9163-b0cf-4c92-ac2c-3d11f1abf442.png'], layout: 'single',
       },
       {
         caption: '', title: 'Staking DApp · Embedded H5 Pages', titleEn: 'Staking DApp · Embedded H5 Pages',
