@@ -234,6 +234,15 @@ const MoreWorkDetail: React.FC = () => {
           </Link>
         </div>
       </div>
+
+      <ImageLightbox
+        images={lightboxImages}
+        currentIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onPrev={() => setLightboxIndex((prev) => prev === 0 ? lightboxImages.length - 1 : prev - 1)}
+        onNext={() => setLightboxIndex((prev) => prev === lightboxImages.length - 1 ? 0 : prev + 1)}
+      />
     </main>
   );
 };
