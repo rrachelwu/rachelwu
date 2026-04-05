@@ -126,8 +126,8 @@ export const moreProjects: MoreProject[] = [
       "Nearly 3 years of continuous iteration, independently responsible for full-chain product design",
       "Reduced frontend redundant development through hierarchy organization and component-based design",
     ],
-    reflection: "持续迭代3年的产品，早期的设计决策会深刻影响后续所有功能的扩展方式。如果重来，会在更早期建立完整的组件规范，避免功能增多后视觉风格逐渐漂移。",
-    reflectionEn: "For a product iterated over 3 years, early design decisions profoundly impact how all subsequent features expand. If I could redo it, I'd establish complete component specifications earlier to prevent visual style drift as features grew.",
+    reflection: "产品持续迭代3年，但增长路径始终依赖功能堆叠，而不是从核心用户行为出发做减法。越到后期，新功能和已有功能之间的逻辑冲突越明显。如果重来，会在每个迭代周期前先做一次功能使用率的回顾，把低频功能收起来，给核心路径腾出空间。",
+    reflectionEn: "The product iterated for 3 years, but the growth path always relied on feature stacking rather than subtraction from core user behaviors. The later it got, the more obvious the logical conflicts between new and existing features became. If I could redo it, I'd review feature usage rates before each iteration cycle, collapse low-frequency features, and make room for core paths.",
   },
   {
     id: "more-2",
@@ -276,7 +276,7 @@ export const moreProjects: MoreProject[] = [
       "Dual color system effectively differentiates two user interfaces, reducing misoperation risk",
       "Offline material template system implemented, supporting backend dynamic generation with multi-length field adaptation",
     ],
-    reflection: "医伴助手涉及三端，组件复用率本可以更高。前期规范文档建立得不够完整，导致后期各端对齐时花了额外的沟通成本。如果重来，会在设计启动时先完成一版轻量的设计规范，再分端执行。",
-    reflectionEn: "Medical Companion involved three platforms where component reuse could have been higher. Insufficient early specification documentation led to extra communication costs when aligning platforms later. If I could redo it, I'd complete a lightweight design specification before executing per platform.",
+    reflection: "产品服务的是医生，但设计过程中获取真实医生反馈的机会很少，大多数决策依赖产品经理的二手转述。如果重来，会推动在项目中期安排至少一次直接的医生访谈，用第一手信息验证核心流程的假设是否成立。",
+    reflectionEn: "The product serves doctors, but opportunities to get real doctor feedback during the design process were rare — most decisions relied on secondhand accounts from product managers. If I could redo it, I'd push to arrange at least one direct doctor interview mid-project to validate core flow assumptions with firsthand information.",
   },
 ];
