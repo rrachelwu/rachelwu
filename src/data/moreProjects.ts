@@ -218,8 +218,8 @@ export const moreProjects: MoreProject[] = [
       {
         title: '全量页面总览',
         titleEn: 'Complete Page Overview',
-        description: 'Mini Programs + Mobile Web + PC 三端完整页面输出',
-        descriptionEn: 'Mini Programs + Mobile Web + PC — complete page output across three platforms',
+        description: '医生端（企业微信） + 患者端（小程序） 两端完整页面输出',
+        descriptionEn: 'Doctor Side (Enterprise WeChat) + Patient Side (Mini Program) — complete page output across two platforms',
         images: ['/placeholder.svg'],
         layout: 'single',
       },
@@ -260,8 +260,8 @@ export const moreProjects: MoreProject[] = [
       {
         title: 'Complete Page Overview',
         titleEn: 'Complete Page Overview',
-        description: 'Mini Programs + Mobile Web + PC — complete page output across three platforms',
-        descriptionEn: 'Mini Programs + Mobile Web + PC — complete page output across three platforms',
+        description: '医生端（企业微信） + 患者端（小程序） 两端完整页面输出',
+        descriptionEn: 'Doctor Side (Enterprise WeChat) + Patient Side (Mini Program) — complete page output across two platforms',
         images: ['/placeholder.svg'],
         layout: 'single',
       },
