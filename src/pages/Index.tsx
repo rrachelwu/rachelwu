@@ -79,6 +79,10 @@ const Index: React.FC = () => {
             src={heroPattern}
             alt=""
             className="absolute bottom-[40px] left-[-60px] h-[63%] w-auto"
+            style={{
+              maskImage: 'linear-gradient(to right, transparent 0%, black 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 100%)',
+            }}
           />
           
           {/* Large red glow */}
