@@ -281,6 +281,9 @@ const ProjectDetail: React.FC = () => {
                       <img src={item.image} alt={title} className="w-full h-auto" loading="lazy" />
                     </button>
                   )}
+                  {desc && (
+                    <p className="text-sm text-muted-foreground mt-3">{desc}</p>
+                  )}
                 </div>
               );
             })}
