@@ -457,7 +457,7 @@ export const projects: Project[] = [
         caption: '', title: 'Privacy Wallet · 品牌与视觉规范', titleEn: 'Privacy Wallet · Brand & Visual System',
         description: 'Logo方案推演（形状探索→色彩确定→定稿）、品牌关键词提炼、色彩与组件规范体系',
         descriptionEn: 'Logo exploration (shape → color → final), brand keyword extraction, color & component spec system',
-        images: ['/placeholder.svg'], layout: 'single',
+        images: ['/8d2b5d6d-7aa6-4326-abc4-86c7146b8b38.png'], layout: 'single',
       },
       {
         caption: '', title: 'Privacy Wallet · 改版对比 · 资产总览', titleEn: 'Privacy Wallet · Redesign · Asset Overview',
@@ -488,7 +488,6 @@ export const projects: Project[] = [
         description: '页面总览',
         descriptionEn: 'Page Overview',
         images: [
-          '/8d2b5d6d-7aa6-4326-abc4-86c7146b8b38.png',
           '/40f66e0f-923d-43f4-894b-830711e07f08.png',
           '/6e3a064f-8306-48f5-88e7-27d7f0076c79.png',
           '/e9ecb419-ec78-48f9-840e-74762c6b0efe.png',
@@ -540,7 +539,7 @@ export const projects: Project[] = [
         caption: '', title: 'Privacy Wallet · Brand & Visual System', titleEn: 'Privacy Wallet · Brand & Visual System',
         description: 'Logo exploration (shape → color → final), brand keyword extraction, color & component spec system',
         descriptionEn: 'Logo exploration (shape → color → final), brand keyword extraction, color & component spec system',
-        images: ['/placeholder.svg'], layout: 'single',
+        images: ['/8d2b5d6d-7aa6-4326-abc4-86c7146b8b38.png'], layout: 'single',
       },
       {
         caption: '', title: 'Privacy Wallet · Redesign · Asset Overview', titleEn: 'Privacy Wallet · Redesign · Asset Overview',
