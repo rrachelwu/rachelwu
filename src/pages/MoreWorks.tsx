@@ -2,11 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { moreProjects } from '@/data/moreProjects';
+import { projects } from '@/data/projects';
 import { cn } from '@/lib/utils';
 
 const MoreWorks: React.FC = () => {
   const { t, language } = useLanguage();
+
+  // Filter projects that link to /more-works/
+  const moreWorkProjects = projects.filter(p => p.linkTo?.startsWith('/more-works/'));
 
   return (
     <main className="pt-24 pb-16 min-h-screen">
@@ -24,10 +27,10 @@ const MoreWorks: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {moreProjects.map((project, index) => (
+          {moreWorkProjects.map((project, index) => (
             <Link
               key={project.id}
-              to={`/more-works/${project.slug}`}
+              to={project.linkTo!}
               className={cn(
                 'group block bg-card rounded-2xl overflow-hidden card-lift glow-hover relative',
                 'opacity-0 animate-fade-in-up border border-border/50'
@@ -35,9 +38,16 @@ const MoreWorks: React.FC = () => {
               style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}
             >
               <div className="aspect-[16/10] overflow-hidden bg-muted relative">
-                <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground text-sm">
-                  {language === 'zh' ? project.title : project.titleEn}
-                </div>
+                {project.coverImage ? (
+                  <img
+                    src={project.coverImage}
+                    alt={language === 'zh' ? project.title : project.titleEn}
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-full h-full" style={{ backgroundColor: '#F0F0F0' }} />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                 <div className="absolute bottom-4 right-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 shadow-elevated">
                   <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -57,7 +67,7 @@ const MoreWorks: React.FC = () => {
                 </div>
 
                 <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
-                  {language === 'zh' ? project.title.split(' — ')[0] : project.titleEn.split(' — ')[0]}
+                  {language === 'zh' ? project.title : project.titleEn}
                 </h3>
 
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
