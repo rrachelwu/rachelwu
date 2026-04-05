@@ -194,9 +194,9 @@ export const moreProjects: MoreProject[] = [
       {
         title: '医生入驻与形象展示',
         titleEn: 'Doctor Onboarding & Profile Display',
-        description: '1步完成入驻流程设计，物料中心支持便签条/台卡多模板选择，个人主页支持网页与图片两种分享格式',
+        description: '1 步完成入驻流程设计，物料中心支持便签条/台卡多模板选择，个人主页支持网页与图片两种分享格式',
         descriptionEn: 'One-step onboarding flow design, material center supports sticky note/desk card multi-template selection, personal page supports both web and image sharing formats',
-        images: ['/placeholder.svg'],
+        images: ['068041a0-e0cb-4ca5-884a-ef31e771ea81.png'],
         layout: 'single',
       },
       {
@@ -238,7 +238,7 @@ export const moreProjects: MoreProject[] = [
         titleEn: 'Doctor Onboarding & Profile Display',
         description: 'One-step onboarding flow design, material center supports sticky note/desk card multi-template selection, personal page supports both web and image sharing formats',
         descriptionEn: 'One-step onboarding flow design, material center supports sticky note/desk card multi-template selection, personal page supports both web and image sharing formats',
-        images: ['/placeholder.svg'],
+        images: ['068041a0-e0cb-4ca5-884a-ef31e771ea81.png'],
         layout: 'single',
       },
       {
