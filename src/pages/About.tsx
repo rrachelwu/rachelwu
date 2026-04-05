@@ -13,7 +13,7 @@ const About: React.FC = () => {
   const abilitiesRef = useScrollAnimation();
   const experienceRef = useScrollAnimation();
   const skillsRef = useScrollAnimation();
-  const resumeRef = useScrollAnimation();
+  
   const educationRef = useScrollAnimation();
 
   const coreAbilities = [
@@ -118,20 +118,6 @@ const About: React.FC = () => {
     ],
   };
 
-  const resumeCards = [
-    {
-      title: t('出海产品 UX 负责人', 'Overseas Product UX Lead'),
-      desc: t('跨文化用户研究 · 多语言规范体系', 'Cross-cultural user research · Multilingual standards'),
-    },
-    {
-      title: t('硬件产品设计负责人', 'Hardware Product Design Lead'),
-      desc: t('HMI/OTT经验 · AI辅助交付', 'HMI/OTT experience · AI-assisted delivery'),
-    },
-    {
-      title: t('产品设计负责人', 'Product Design Lead'),
-      desc: t('多线并行管控 · 全链路交付', 'Multi-line parallel management · Full-chain delivery'),
-    },
-  ];
 
   const education = [
     {
