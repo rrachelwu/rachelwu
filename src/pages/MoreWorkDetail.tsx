@@ -137,13 +137,23 @@ const MoreWorkDetail: React.FC = () => {
             <span className="w-1 bg-primary" style={{ height: '18px', borderRadius: 0 }} />
             {t('交付物', 'Deliverables')}
           </h3>
-          <div className="grid gap-3">
+          <div className="space-y-10">
             {deliverables.map((item, index) => (
-              <div key={index} className="flex items-center gap-2 py-3 px-4 rounded-lg bg-secondary/50">
-                <span className="text-xs font-medium text-primary bg-primary/10 w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0">
-                  {index + 1}
-                </span>
-                <p className="text-sm text-muted-foreground">{item}</p>
+              <div key={index}>
+                <h4 className="text-base font-semibold mb-2 flex items-center gap-2">
+                  <span className="w-1 bg-primary" style={{ height: '18px', borderRadius: 0 }} />
+                  {language === 'zh' ? item.title : item.titleEn}
+                </h4>
+                <p className="text-sm text-muted-foreground mb-4 ml-3">
+                  {language === 'zh' ? item.description : item.descriptionEn}
+                </p>
+                <div className={`grid gap-3 ${item.layout === 'row-3' ? 'grid-cols-3' : 'grid-cols-2'}`}>
+                  {item.images.map((img, imgIdx) => (
+                    <div key={imgIdx} className="rounded-lg overflow-hidden bg-secondary aspect-video">
+                      <img src={img} alt="" className="w-full h-full object-cover" />
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
