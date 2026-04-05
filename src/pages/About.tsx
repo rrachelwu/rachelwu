@@ -362,10 +362,10 @@ const About: React.FC = () => {
                 {t('中文（母语）', 'Chinese (Native)')}
               </span>
               <span className="px-4 py-2 bg-secondary text-foreground rounded-full text-sm font-medium">
-                {t('英语（工作沟通）', 'English (Working)')}
+                {t('英语（借助 AI 工具）', 'English (AI-assisted)')}
               </span>
               <span className="px-4 py-2 bg-secondary text-foreground rounded-full text-sm font-medium">
-                {t('俄语（基础）', 'Russian (Basic)')}
+                {t('俄语（借助 AI 工具）', 'Russian (AI-assisted)')}
               </span>
             </div>
           </div>
