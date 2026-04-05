@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Lightbulb, CheckCircle2, MessageSquareQuote } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { moreProjects, MoreProject } from '@/data/moreProjects';
+import ImageLightbox from '@/components/ImageLightbox';
 
 const MoreWorkDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t, language } = useLanguage();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImages, setLightboxImages] = useState<string[]>([]);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const project = moreProjects.find((p) => p.slug === slug);
 
@@ -26,6 +30,14 @@ const MoreWorkDetail: React.FC = () => {
   const decisions = language === 'zh' ? project.decisions : project.decisionsEn;
   const results = language === 'zh' ? project.results : project.resultsEn;
   const deliverables = language === 'zh' ? project.deliverables : project.deliverablesEn;
+
+  const allDeliverableImages = deliverables.flatMap(d => d.images || []);
+
+  const openLightbox = (images: string[], index: number) => {
+    setLightboxImages(images);
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
 
   return (
     <main className="pt-24 pb-16 min-h-screen">
@@ -145,9 +157,13 @@ const MoreWorkDetail: React.FC = () => {
                 </h4>
                 <div className={`grid gap-3 ${item.layout === 'single' ? 'grid-cols-1' : item.layout === 'row-3' ? 'grid-cols-3' : item.layout === 'grid-2x2' ? 'grid-cols-2' : 'grid-cols-2'}`}>
                   {item.images.map((img, imgIdx) => (
-                    <div key={imgIdx} className={`rounded-lg overflow-hidden bg-secondary ${item.layout === 'single' ? 'aspect-auto' : 'aspect-video'}`}>
-                      <img src={img} alt="" className="w-full h-full object-cover" />
-                    </div>
+                    <button
+                      key={imgIdx}
+                      onClick={() => openLightbox(allDeliverableImages, allDeliverableImages.indexOf(img))}
+                      className={`w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in ${item.layout === 'single' ? 'aspect-auto' : 'aspect-video'}`}
+                    >
+                      <img src={img} alt="" className="w-full h-full object-cover" loading="lazy" />
+                    </button>
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground mt-3">
@@ -218,6 +234,15 @@ const MoreWorkDetail: React.FC = () => {
           </Link>
         </div>
       </div>
+
+      <ImageLightbox
+        images={lightboxImages}
+        currentIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onPrev={() => setLightboxIndex((prev) => prev === 0 ? lightboxImages.length - 1 : prev - 1)}
+        onNext={() => setLightboxIndex((prev) => prev === lightboxImages.length - 1 ? 0 : prev + 1)}
+      />
     </main>
   );
 };
