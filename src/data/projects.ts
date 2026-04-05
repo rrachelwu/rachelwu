@@ -430,8 +430,8 @@ export const projects: Project[] = [
   {
     id: "5",
     slug: "renren",
-    title: "人人相册",
-    titleEn: "Renren Album",
+    title: "人人相册 — 社交电商货源管理工具的全链路产品设计",
+    titleEn: "Renren Album — Full-chain Product Design for Social Commerce Supply Management",
     coverImage: "",
     linkTo: "/more-works/renren",
     summary: "社交电商货源管理工具的全链路产品设计",
@@ -459,8 +459,8 @@ export const projects: Project[] = [
   {
     id: "6",
     slug: "yiban",
-    title: "医伴助手",
-    titleEn: "Medical Companion",
+    title: "医伴助手 — 基于企业微信的医患管理工具",
+    titleEn: "Medical Companion — Enterprise WeChat-based Doctor-Patient Management Tool",
     coverImage: "",
     linkTo: "/more-works/yiban",
     summary: "基于企业微信的医患管理工具",
