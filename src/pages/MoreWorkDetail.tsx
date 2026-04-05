@@ -87,6 +87,17 @@ const MoreWorkDetail: React.FC = () => {
           </div>
         </div>
 
+        {/* Cover Image */}
+        {project.coverImage && (
+          <div className="mb-12 rounded-xl overflow-hidden bg-muted aspect-video">
+            <img
+              src={project.coverImage}
+              alt={language === 'zh' ? project.title : project.titleEn}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        )}
+
         {/* Background */}
         <section className="mb-10">
           <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
