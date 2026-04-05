@@ -292,6 +292,7 @@ const ProjectDetail: React.FC = () => {
                 </div>
               );
             })}
+            </div>
           </section>
         )}
 
