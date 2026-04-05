@@ -74,20 +74,17 @@ const Index: React.FC = () => {
       <section className="min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden bg-gradient-mesh">
         {/* Framer-style floating decorative shapes */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Hero pattern SVG - full screen */}
+          <img
+            src={heroPattern}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          
           {/* Large red glow */}
           <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]" />
           <div className="absolute top-1/2 -left-40 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px]" />
           <div className="absolute -bottom-20 right-1/4 w-[300px] h-[300px] bg-primary/8 rounded-full blur-[80px]" />
-          
-          {/* Decorative circles */}
-          <svg className="absolute top-20 right-20 w-[300px] h-[300px] opacity-[0.03]" viewBox="0 0 300 300" fill="none">
-            <circle cx="150" cy="150" r="140" stroke="currentColor" strokeWidth="1"/>
-            <circle cx="150" cy="150" r="100" stroke="currentColor" strokeWidth="1"/>
-            <circle cx="150" cy="150" r="60" stroke="currentColor" strokeWidth="1"/>
-          </svg>
-          
-          {/* Grid pattern overlay */}
-          <div className="absolute inset-0 grid-pattern opacity-30" />
         </div>
 
         <div className="container">
@@ -145,12 +142,7 @@ const Index: React.FC = () => {
                 <img
                   src={rachelPhoto}
                   alt="Rachel Wu"
-                  className="w-full max-w-sm ml-auto rounded-2xl shadow-elevated relative z-10"
-                />
-                <img
-                  src={heroPattern}
-                  alt=""
-                  className="absolute -bottom-16 -right-16 w-[400px] h-auto opacity-100 z-0"
+                  className="w-full max-w-sm ml-auto rounded-2xl shadow-elevated"
                 />
               </div>
             </div>
