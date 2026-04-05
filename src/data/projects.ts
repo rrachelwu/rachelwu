@@ -457,7 +457,7 @@ export const projects: Project[] = [
         caption: '', title: 'Privacy Wallet · 品牌与视觉规范', titleEn: 'Privacy Wallet · Brand & Visual System',
         description: 'Logo方案推演（形状探索→色彩确定→定稿）、品牌关键词提炼、色彩与组件规范体系',
         descriptionEn: 'Logo exploration (shape → color → final), brand keyword extraction, color & component spec system',
-        images: ['/placeholder.svg'], layout: 'single',
+        images: ['/8d2b5d6d-7aa6-4326-abc4-86c7146b8b38.png'], layout: 'single',
       },
       {
         caption: '', title: 'Privacy Wallet · 改版对比 · 资产总览', titleEn: 'Privacy Wallet · Redesign · Asset Overview',
