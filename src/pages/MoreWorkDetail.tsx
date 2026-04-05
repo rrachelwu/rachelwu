@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Lightbulb, CheckCircle2, MessageSquareQuote } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { moreProjects, MoreProject } from '@/data/moreProjects';
+import ImageLightbox from '@/components/ImageLightbox';
 
 const MoreWorkDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
