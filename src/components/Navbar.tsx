@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled || isOpen
-          ? 'bg-white/70 backdrop-blur-lg border-b border-border py-3'
+          ? 'bg-white/90 backdrop-blur-lg border-b border-border py-3'
           : 'bg-transparent py-6'
       )}
     >
@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          'md:hidden absolute top-full left-0 right-0 bg-white/70 backdrop-blur-lg border-b border-border overflow-hidden transition-all duration-300',
+          'md:hidden absolute top-full left-0 right-0 bg-white/90 backdrop-blur-lg border-b border-border overflow-hidden transition-all duration-300',
           isOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
         )}
       >
