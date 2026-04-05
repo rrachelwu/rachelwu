@@ -386,11 +386,15 @@ export const projects: Project[] = [
     ],
     results: [
       "前台官网上线，后台系统支撑日常订单管理",
-      "建立了SKU命名、唛头规则、素材标准、订单流程的全套产品规范体系",
+      "建立SKU命名、唛头规则、素材标准、订单流程的全套产品规范体系",
+      "与工厂深度协作完成轮毂专业数据库梳理，建立常见车型轮毂规格参考表，将行业经验转化为系统化产品信息标准，支撑后台SKU规范与用户端选型逻辑",
+      "输出经销商完整销售手册，覆盖折扣体系、工艺说明、质保政策与物流须知，支撑海外经销商独立开展销售",
     ],
     resultsEn: [
       "Frontend website launched, backend system supporting daily order management",
       "Established complete product specification system covering SKU naming, shipping marks, asset standards, and order workflows",
+      "Collaborated deeply with factories to build a professional wheel database, establishing common vehicle wheel spec reference tables, transforming industry experience into systematic product information standards supporting backend SKU specs and user-facing selection logic",
+      "Delivered complete dealer sales manual covering discount structures, process descriptions, warranty policies, and logistics guidelines, enabling overseas dealers to independently conduct sales",
     ],
     reflection: "项目初期把大量精力放在视觉呈现上，但轮毂定制的核心转化障碍其实是信任问题——海外买家不确定能不能拿到真实样品、工厂资质是否可靠。如果重来，会更早推动把工厂认证信息和买家案例纳入主流程，而不是作为补充内容放在边缘位置。",
     reflectionEn: "Early on, too much effort was spent on visual presentation, but the core conversion barrier for custom wheels was actually trust — overseas buyers weren't sure they could get real samples or whether the factory was credible. If I could redo it, I'd push earlier to bring factory certification and buyer cases into the main flow rather than placing them as supplementary content on the periphery.",
