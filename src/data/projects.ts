@@ -148,7 +148,7 @@ export const projects: Project[] = [
       "美版路由器后台管理系统交付，支持设备管理与流量统计",
     ],
     resultsEn: [
-      "Independently completed full-chain design from brand to product, covering 5 touchpoints: Logo, hardware packaging, App, website, and dashboard",
+      "Independently completed full-chain design from brand to product, covering 5 touchpoints: Logo, hardware packaging, Mini App, website, and dashboard",
       "Russian Telegram Mini App fully launched, covering device binding, node switching, plan viewing and purchasing",
       "Russian standalone website launched with login/registration system and router purchase store",
       "US website completed IA restructuring and three-tier subscription pricing design, with EN/RU content strategies independently implemented",
