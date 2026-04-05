@@ -16,6 +16,7 @@ export interface MoreDeliverableItem {
 export interface MoreProject {
   id: string;
   slug: string;
+  coverImage?: string;
   title: string;
   titleEn: string;
   summary: string;
