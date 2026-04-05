@@ -140,13 +140,9 @@ const MoreWorkDetail: React.FC = () => {
           <div className="space-y-10">
             {deliverables.map((item, index) => (
               <div key={index}>
-                <h4 className="text-base font-semibold mb-2 flex items-center gap-2">
-                  <span className="w-1 bg-primary" style={{ height: '18px', borderRadius: 0 }} />
+                <h4 className="text-base font-semibold mb-3">
                   {language === 'zh' ? item.title : item.titleEn}
                 </h4>
-                <p className="text-sm text-muted-foreground mb-4 ml-3">
-                  {language === 'zh' ? item.description : item.descriptionEn}
-                </p>
                 <div className={`grid gap-3 ${item.layout === 'single' ? 'grid-cols-1' : item.layout === 'row-3' ? 'grid-cols-3' : item.layout === 'grid-2x2' ? 'grid-cols-2' : 'grid-cols-2'}`}>
                   {item.images.map((img, imgIdx) => (
                     <div key={imgIdx} className={`rounded-lg overflow-hidden bg-secondary ${item.layout === 'single' ? 'aspect-auto' : 'aspect-video'}`}>
@@ -154,6 +150,9 @@ const MoreWorkDetail: React.FC = () => {
                     </div>
                   ))}
                 </div>
+                <p className="text-sm text-muted-foreground mt-3">
+                  {language === 'zh' ? item.description : item.descriptionEn}
+                </p>
               </div>
             ))}
           </div>
