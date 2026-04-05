@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
       >
         <nav className="container flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
-            <img src={logo} alt="Rachel Portfolio" className="w-8 h-8 md:w-9 md:h-9 transition-transform group-hover:scale-105" />
+            <img src={logo} alt="Rachel Portfolio" className="w-9 h-9 transition-transform group-hover:scale-105" />
             <span className="text-sm font-medium text-muted-foreground hidden sm:block">RACHEL PORTFOLIO</span>
           </Link>
 
