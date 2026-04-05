@@ -165,12 +165,12 @@ export const moreProjects: MoreProject[] = [
       },
     ],
     results: [
-      "App、小程序、Web三端同步上线，覆盖商家完整卖货流程",
+      "App、小程序、Web三端同步上线，覆盖商家完整卖货流程，产品期间累计用户规模达27万+",
       "历时近3年持续迭代，独立负责产品全链路设计",
       "通过层级归纳和组件化设计，减少前端重复开发工作量",
     ],
     resultsEn: [
-      "App, Mini Program, and Web launched simultaneously, covering merchants' complete selling workflow",
+      "App, Mini Program, and Web launched simultaneously, covering merchants' complete selling workflow, with cumulative user base reaching 270,000+",
       "Nearly 3 years of continuous iteration, independently responsible for full-chain product design",
       "Reduced frontend redundant development through hierarchy organization and component-based design",
     ],
