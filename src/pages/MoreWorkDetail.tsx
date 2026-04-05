@@ -157,9 +157,13 @@ const MoreWorkDetail: React.FC = () => {
                 </h4>
                 <div className={`grid gap-3 ${item.layout === 'single' ? 'grid-cols-1' : item.layout === 'row-3' ? 'grid-cols-3' : item.layout === 'grid-2x2' ? 'grid-cols-2' : 'grid-cols-2'}`}>
                   {item.images.map((img, imgIdx) => (
-                    <div key={imgIdx} className={`rounded-lg overflow-hidden bg-secondary ${item.layout === 'single' ? 'aspect-auto' : 'aspect-video'}`}>
-                      <img src={img} alt="" className="w-full h-full object-cover" />
-                    </div>
+                    <button
+                      key={imgIdx}
+                      onClick={() => openLightbox(allDeliverableImages, allDeliverableImages.indexOf(img))}
+                      className={`w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in ${item.layout === 'single' ? 'aspect-auto' : 'aspect-video'}`}
+                    >
+                      <img src={img} alt="" className="w-full h-full object-cover" loading="lazy" />
+                    </button>
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground mt-3">
