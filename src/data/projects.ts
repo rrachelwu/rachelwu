@@ -350,7 +350,7 @@ export const projects: Project[] = [
       {
         problem: "需要在极短时间内完成系统从0到1的搭建",
         judgment: "后台页面结构相对固定，可以用提示词驱动HTML原型生成，后端直接基于原型开发",
-        solution: "与后端协作建立设计→AI生成→代码转化的快速交付链路，15天内完成系统完整搭建",
+        solution: "与后端协作建立设计→AI生成→代码转化的快速交付链路，15天内完成订单系统完整搭建",
       },
     ],
     decisionsEn: [
