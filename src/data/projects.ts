@@ -14,6 +14,8 @@ export interface DecisionItem {
 
 export interface DeliverableItem {
   image?: string;
+  images?: string[];
+  layout?: 'single' | 'row-3' | 'grid-2x2';
   caption: string;
   title?: string;
   titleEn?: string;
@@ -445,26 +447,80 @@ export const projects: Project[] = [
       },
     ],
     deliverables: [
-      { caption: "Privacy Wallet App完整UI（iOS/Android）" },
-      { caption: "Staking DApp内嵌H5" },
-      { caption: "MPC-KMS操作台（PC Web响应式）" },
-      { caption: "MPC-KMS官网（opentss.com）" },
-      { caption: "KMS知识管理系统 — Logo设计（草图→定稿）" },
-      { caption: "KMS知识管理系统 — 设计规范（颜色/字体/间距/组件库）" },
-      { caption: "KMS知识管理系统 — 核心页面设计" },
-      { caption: "统一设计规范（色彩/字体/组件库）" },
-      { caption: "三套Logo创作方案" },
+      {
+        caption: '',
+        title: 'Privacy Wallet · 品牌与视觉规范',
+        titleEn: 'Privacy Wallet · Brand & Visual System',
+        description: 'Logo方案推演（形状探索→色彩确定→定稿）、品牌关键词提炼、设计规范色彩与组件',
+        descriptionEn: 'Logo exploration (shape → color → final), brand keyword extraction, design spec colors & components',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-3',
+      },
+      {
+        caption: '',
+        title: 'Privacy Wallet · 核心页面改版',
+        titleEn: 'Privacy Wallet · Core Page Redesign',
+        description: '资产总览、导入钱包、收款页改版前后对比，交互路径优化与品牌强化',
+        descriptionEn: 'Asset overview, import wallet, receive page before/after comparison, interaction path optimization & brand reinforcement',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'grid-2x2',
+      },
+      {
+        caption: '',
+        title: 'MPC-KMS · 操作台页面设计',
+        titleEn: 'MPC-KMS · Dashboard Page Design',
+        description: '用户管理、秘钥管理、权限管理、授权审批核心页面，PC Web响应式',
+        descriptionEn: 'User management, key management, permission management, authorization approval core pages, PC Web responsive',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-3',
+      },
+      {
+        caption: '',
+        title: 'MPC-KMS · 官网与整体设计体系',
+        titleEn: 'MPC-KMS · Website & Design System',
+        description: 'opentss.com官网设计、跨产品统一设计规范沉淀、组件库输出',
+        descriptionEn: 'opentss.com website design, cross-product unified design spec, component library output',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-3',
+      },
     ],
     deliverablesEn: [
-      { caption: "Privacy Wallet App complete UI (iOS/Android)" },
-      { caption: "Staking DApp embedded H5" },
-      { caption: "MPC-KMS Dashboard (PC Web responsive)" },
-      { caption: "MPC-KMS Website (opentss.com)" },
-      { caption: "KMS Knowledge Management — Logo design (sketches → final)" },
-      { caption: "KMS Knowledge Management — Design specs (colors/typography/spacing/component library)" },
-      { caption: "KMS Knowledge Management — Core page designs" },
-      { caption: "Unified design specs (colors/typography/component library)" },
-      { caption: "Three logo design proposals" },
+      {
+        caption: '',
+        title: 'Privacy Wallet · Brand & Visual System',
+        titleEn: 'Privacy Wallet · Brand & Visual System',
+        description: 'Logo exploration (shape → color → final), brand keyword extraction, design spec colors & components',
+        descriptionEn: 'Logo exploration (shape → color → final), brand keyword extraction, design spec colors & components',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-3',
+      },
+      {
+        caption: '',
+        title: 'Privacy Wallet · Core Page Redesign',
+        titleEn: 'Privacy Wallet · Core Page Redesign',
+        description: 'Asset overview, import wallet, receive page before/after comparison, interaction path optimization & brand reinforcement',
+        descriptionEn: 'Asset overview, import wallet, receive page before/after comparison, interaction path optimization & brand reinforcement',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'grid-2x2',
+      },
+      {
+        caption: '',
+        title: 'MPC-KMS · Dashboard Page Design',
+        titleEn: 'MPC-KMS · Dashboard Page Design',
+        description: 'User management, key management, permission management, authorization approval core pages, PC Web responsive',
+        descriptionEn: 'User management, key management, permission management, authorization approval core pages, PC Web responsive',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-3',
+      },
+      {
+        caption: '',
+        title: 'MPC-KMS · Website & Design System',
+        titleEn: 'MPC-KMS · Website & Design System',
+        description: 'opentss.com website design, cross-product unified design spec, component library output',
+        descriptionEn: 'opentss.com website design, cross-product unified design spec, component library output',
+        images: ['/placeholder.svg', '/placeholder.svg', '/placeholder.svg'],
+        layout: 'row-3',
+      },
     ],
     results: [
       "三条产品线完整上线，建立统一的区块链产品设计语言",
