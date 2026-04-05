@@ -204,8 +204,8 @@ export const projects: Project[] = [
       "US website completed IA restructuring and three-tier subscription pricing design, with EN/RU content strategies independently implemented",
       "US router management dashboard delivered, supporting device management and traffic analytics",
     ],
-    reflection: "两个市场同步推进时，美版和俄版的产品优先级始终没有明确排序。资源有限的情况下，两条线并行导致两边都推进得不够彻底。如果重来，会在立项时先确定哪个市场是核心验证市场，集中做深再复制，而不是同步铺开。",
-    reflectionEn: "When advancing both markets simultaneously, priority between US and Russian versions was never clearly ranked. With limited resources, running two lines in parallel meant neither was pushed deep enough. If I could redo it, I'd first determine the core validation market at project initiation, go deep before replicating, instead of spreading out simultaneously.",
+    reflection: "俄版上线后因政策原因被迫转向美国市场，整个产品方向的切换是被动的而非主动规划的。如果重来，会在立项时就把政策风险纳入市场选择的评估维度，优先选择监管环境更稳定的市场作为首发，而不是在已经投入大量资源后再被迫转向。",
+    reflectionEn: "After the Russian version launched, policy changes forced a pivot to the US market — the entire product direction shift was reactive, not planned. If I could redo it, I'd include policy risk as a key factor in market selection from the start, prioritizing markets with more stable regulatory environments for initial launch, rather than being forced to pivot after significant resources had already been invested.",
   },
   {
     id: "2",
