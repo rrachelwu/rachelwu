@@ -132,6 +132,7 @@ export const moreProjects: MoreProject[] = [
   {
     id: "more-2",
     slug: "yiban",
+    coverImage: "/yb.png",
     title: "医伴助手 — 基于企业微信的医患管理工具",
     titleEn: "Medical Companion — Enterprise WeChat-based Doctor-Patient Management Tool",
     summary: "医生日常用个人微信与患者沟通，边界模糊且无法系统管理患者数据。医伴助手以企业微信为依托，希望帮助医生分离个人与工作关系，同时通过随访问卷、快捷回复等工具提升诊后管理效率。产品需要同时服务医生和患者两类截然不同的用户群体，从0设计并覆盖小程序、H5、PC三端。",
