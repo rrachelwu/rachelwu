@@ -415,7 +415,7 @@ export const projects: Project[] = [
     statusEn: "Launched",
     tags: ["区块链", "B端系统"],
     techStack: ["Figma", "Sketch", "iOS", "Android", "Ant Design", "React"],
-    links: {},
+    links: { demo: "https://opentss.com/" },
     background: "矩阵元旗下三条业务线同步推进：Privacy Wallet需要在不割裂老用户习惯的前提下对旧版ATON进行全面重构；MPC-KMS是全新产品，需要从0建立品牌视觉、操作台和官网；KMS知识管理系统作为内部工具，需要从品牌标识到组件库完整搭建。三条线设计语言需要保持一致性，同时满足C端钱包「安全私密」、B端后台「专业高效」和内部系统「清晰易用」的不同调性需求。",
     backgroundEn: "Juzhengyuan had three business lines advancing simultaneously: Privacy Wallet needed a complete redesign of the legacy ATON app without disrupting existing user habits; MPC-KMS was a brand-new product requiring brand visuals, dashboard, and website built from scratch; KMS knowledge management system as an internal tool needed complete setup from brand identity to component library. All three lines needed design language consistency while serving different tonal needs — 'secure & private' for the C-side wallet, 'professional & efficient' for the B-side dashboard, and 'clear & usable' for the internal system.",
     decisions: [
