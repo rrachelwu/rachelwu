@@ -488,7 +488,6 @@ export const projects: Project[] = [
         description: '页面总览',
         descriptionEn: 'Page Overview',
         images: [
-          '/8d2b5d6d-7aa6-4326-abc4-86c7146b8b38.png',
           '/40f66e0f-923d-43f4-894b-830711e07f08.png',
           '/6e3a064f-8306-48f5-88e7-27d7f0076c79.png',
           '/e9ecb419-ec78-48f9-840e-74762c6b0efe.png',
