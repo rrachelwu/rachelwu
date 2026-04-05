@@ -496,7 +496,7 @@ export const projects: Project[] = [
           '/2de8c78d-0a97-4f03-bcd2-b1e1a734a40f.png',
           '/61dc9163-b0cf-4c92-ac2c-3d11f1abf442.png'
         ],
-        layout: 'grid-2x2',
+        layout: 'single',
       },
       {
         caption: '', title: 'Privacy Wallet · 组件规范化', titleEn: 'Privacy Wallet · Component Standardization',
