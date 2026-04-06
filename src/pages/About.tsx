@@ -36,7 +36,7 @@ const About: React.FC = () => {
       role: t('产品负责人', 'Product Lead'),
       period: '2025.03 - ' + t('至今', 'Present'),
       description: t(
-        '主导路由器、轮毂、POKUBUY三条出海产品线并行设计，覆盖官网、订单管理后台、Telegram Mini App等多端产品；建立英俄双语国际化规范，针对不同市场主动调整内容策略；探索AI辅助原型交付模式，与团队协作在15天内完成系统完整搭建',
+        '主导路由器、轮毂、POKUBUY三条出海产品线并行设计，覆盖官网、订单管理后台、Telegram Mini App等多端产品；建立英俄双语国际化规范，针对不同市场主动调整内容策略；探索AI辅助原型交付模式，与团队协作在15天内完成订单系统完整搭建',
         'Led parallel design for three overseas product lines (router, wheels, PokuBuy), covering websites, order management backend, and Telegram Mini App; established EN/RU bilingual standards with market-specific content strategies; explored AI-assisted prototyping, completing full system build in 15 days'
       ),
     },
