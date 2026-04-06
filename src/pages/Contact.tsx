@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Mail, MapPin } from 'lucide-react';
+import { Send, Mail, MapPin, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import SectionTitle from '@/components/SectionTitle';
@@ -242,6 +242,25 @@ const Contact: React.FC = () => {
                     <p className="text-sm opacity-80">rrachelwu</p>
                   </div>
                 </Link>
+              </div>
+
+              <div className="pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground mb-4">
+                  {t('下载我的简历', 'Download my resume')}
+                </p>
+                <a
+                  href="/Rachel_Product_Design_Lead.docx"
+                  download="Rachel_Product_Design_Lead.docx"
+                  className="inline-flex items-center gap-3 px-4 py-3 rounded-xl bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-background/50 flex items-center justify-center group-hover:bg-primary-foreground/20">
+                    <Download className="w-5 h-5" />
+                  </div>
+                  <div className="text-left">
+                    <p className="font-medium">{t('简历', 'Resume')}</p>
+                    <p className="text-sm opacity-80">.docx</p>
+                  </div>
+                </a>
               </div>
 
               <div className="p-6 rounded-xl bg-primary/5 border border-primary/10">
