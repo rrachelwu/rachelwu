@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import SectionTitle from '@/components/SectionTitle';
 import Button from '@/components/Button';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 import wechatQr from '@/assets/wechat-qr.jpg';
 
 const Contact: React.FC = () => {
@@ -46,16 +47,34 @@ const Contact: React.FC = () => {
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+      });
 
-    toast({
-      title: t('发送成功！', 'Message sent!'),
-      description: t('感谢您的来信，我会尽快回复。', "Thanks for reaching out. I'll get back to you soon."),
-    });
+      if (error) throw error;
 
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setIsSubmitting(false);
+      toast({
+        title: t('发送成功！', 'Message sent!'),
+        description: t('感谢您的来信，我会尽快回复。', "Thanks for reaching out. I'll get back to you soon."),
+      });
+
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (err) {
+      console.error('Send email error:', err);
+      toast({
+        title: t('发送失败', 'Failed to send'),
+        description: t('请稍后重试或直接发送邮件联系我。', 'Please try again later or email me directly.'),
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
