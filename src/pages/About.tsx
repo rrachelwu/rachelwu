@@ -1,8 +1,7 @@
 import React from 'react';
-import { Download, MapPin, Mail, Phone, Briefcase, GraduationCap } from 'lucide-react';
+import { MapPin, Mail, Phone, Briefcase, GraduationCap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import SectionTitle from '@/components/SectionTitle';
-import Button from '@/components/Button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
 import rachelPhoto from '@/assets/rachel-photo.jpg';
