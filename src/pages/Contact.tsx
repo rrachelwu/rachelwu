@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import SectionTitle from '@/components/SectionTitle';
 import Button from '@/components/Button';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 import wechatQr from '@/assets/wechat-qr.jpg';
 
 const Contact: React.FC = () => {
