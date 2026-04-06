@@ -191,12 +191,6 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <a href="/Rachel_Product_Design_Lead.docx" download="Rachel_Product_Design_Lead.docx">
-              <Button size="sm">
-                <Download className="w-4 h-4" />
-                {t('下载简历', 'Download Resume')}
-              </Button>
-            </a>
           </div>
 
           {/* Right Image */}
