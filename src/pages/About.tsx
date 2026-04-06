@@ -1,8 +1,7 @@
 import React from 'react';
-import { Download, MapPin, Mail, Phone, Briefcase, GraduationCap } from 'lucide-react';
+import { MapPin, Mail, Phone, Briefcase, GraduationCap } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import SectionTitle from '@/components/SectionTitle';
-import Button from '@/components/Button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
 import rachelPhoto from '@/assets/rachel-photo.jpg';
@@ -191,12 +190,6 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <a href="/Rachel_Product_Design_Lead.docx" download="Rachel_Product_Design_Lead.docx">
-              <Button size="sm">
-                <Download className="w-4 h-4" />
-                {t('下载简历', 'Download Resume')}
-              </Button>
-            </a>
           </div>
 
           {/* Right Image */}
