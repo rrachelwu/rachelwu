@@ -32,6 +32,8 @@ export interface ComparisonItem {
   rightImage?: string;
   rightCaption: string;
   rightCaptionEn: string;
+  fullWidth?: boolean;
+  fullWidthImage?: string;
 }
 
 export interface ComparisonSection {
@@ -303,6 +305,16 @@ export const projects: Project[] = [
           rightImage: "/placeholder.svg",
           rightCaption: "每条订单直接显示状态标签，对应操作按钮出现在正确位置",
           rightCaptionEn: "Each order directly shows status tags, corresponding action buttons appear in the correct position",
+        },
+        {
+          title: "Overview总览",
+          titleEn: "Overview",
+          leftCaption: "",
+          leftCaptionEn: "",
+          rightCaption: "",
+          rightCaptionEn: "",
+          fullWidth: true,
+          fullWidthImage: "/placeholder.svg",
         },
       ],
     },
