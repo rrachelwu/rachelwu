@@ -56,7 +56,7 @@ const MoreWorks: React.FC = () => {
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-3">
-                  {project.tags.slice(0, 3).map((tag) => (
+                  {(language === 'zh' ? project.tags : project.tagsEn).slice(0, 3).map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground transition-all duration-300 group-hover:bg-primary/10 group-hover:text-primary"
