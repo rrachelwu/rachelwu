@@ -83,23 +83,35 @@ const ProjectDetail: React.FC = () => {
                 <p className="font-medium mt-0.5">{language === 'zh' ? project.status : project.statusEn}</p>
               </div>
             )}
-            {project.links.demo && (
-              <div className="hidden md:flex ml-auto">
+            <div className="hidden md:flex ml-auto gap-3">
+              {project.slug === 'pokubuy' && (
+                <Button href="https://t.me/pokubuy_bot?profile" size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  <ExternalLink className="w-4 h-4" />
+                  {t('体验Mini App', 'Try Mini App')}
+                </Button>
+              )}
+              {project.links.demo && (
                 <Button href={project.links.demo} size="sm">
                   <ExternalLink className="w-4 h-4" />
                   {t('访问网站', 'Visit Site')}
                 </Button>
-              </div>
-            )}
+              )}
+            </div>
           </div>
-          {project.links.demo && (
-            <div className="mt-4 md:hidden">
+          <div className="mt-4 md:hidden flex flex-col gap-2">
+            {project.slug === 'pokubuy' && (
+              <Button href="https://t.me/pokubuy_bot?profile" size="sm" variant="outline" className="w-full justify-center border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <ExternalLink className="w-4 h-4" />
+                {t('体验Mini App', 'Try Mini App')}
+              </Button>
+            )}
+            {project.links.demo && (
               <Button href={project.links.demo} size="sm" className="w-full justify-center">
                 <ExternalLink className="w-4 h-4" />
                 {t('访问网站', 'Visit Site')}
               </Button>
-            </div>
-          )}
+            )}
+          </div>
         </section>
 
         {/* Cover Image */}
