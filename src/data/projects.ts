@@ -708,8 +708,9 @@ export const getProjectsByTag = (tag: string): Project[] => {
   return projects.filter((p) => p.tags.includes(tag));
 };
 
-export const getAllTags = (): string[] => {
+export const getAllTags = (language: 'zh' | 'en' = 'zh'): string[] => {
   const tagSet = new Set<string>();
-  projects.forEach((p) => p.tags.forEach((tag) => tagSet.add(tag)));
+  const field = language === 'zh' ? 'tags' : 'tagsEn';
+  projects.forEach((p) => p[field].forEach((tag) => tagSet.add(tag)));
   return Array.from(tagSet);
 };

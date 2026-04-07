@@ -54,7 +54,7 @@ const MoreWorkDetail: React.FC = () => {
         {/* Header */}
         <header className="mb-8">
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.tags.map((tag) => (
+            {(language === 'zh' ? project.tags : project.tagsEn).map((tag) => (
               <span
                 key={tag}
                 className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"

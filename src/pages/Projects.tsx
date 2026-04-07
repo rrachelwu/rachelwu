@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
 
-  const allTags = getAllTags();
+  const allTags = getAllTags(language);
 
   const handleTagSelect = (tag: string) => {
     if (tag === 'all') {
@@ -27,9 +27,10 @@ const Projects: React.FC = () => {
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
+      const projectTags = language === 'zh' ? project.tags : project.tagsEn;
       const matchesTags =
         selectedTags.length === 0 ||
-        selectedTags.some((tag) => project.tags.includes(tag));
+        selectedTags.some((tag) => projectTags.includes(tag));
 
       const title = language === 'zh' ? project.title : project.titleEn;
       const summary = language === 'zh' ? project.summary : project.summaryEn;
