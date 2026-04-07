@@ -208,6 +208,19 @@ const ProjectDetail: React.FC = () => {
                   <h3 className="text-base font-semibold mb-4">
                     {language === 'zh' ? comp.title : comp.titleEn}
                   </h3>
+                  {comp.fullWidth && comp.fullWidthImage ? (
+                    <button
+                      onClick={() => openLightbox([comp.fullWidthImage!], 0)}
+                      className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in"
+                    >
+                      <img
+                        src={comp.fullWidthImage}
+                        alt={language === 'zh' ? comp.title : comp.titleEn}
+                        className="w-full h-auto"
+                        loading="lazy"
+                      />
+                    </button>
+                  ) : (
                   <div className="grid grid-cols-2 gap-4">
                     {/* Left: before */}
                     <div>
@@ -244,6 +257,7 @@ const ProjectDetail: React.FC = () => {
                       </p>
                     </div>
                   </div>
+                  )}
                 </div>
               ))}
             </div>
