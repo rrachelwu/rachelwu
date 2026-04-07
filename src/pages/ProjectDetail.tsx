@@ -85,7 +85,7 @@ const ProjectDetail: React.FC = () => {
             )}
             <div className="hidden md:flex ml-auto gap-3">
               {project.slug === 'pokubuy' && (
-                <Button href="https://t.me/pokubuy_bot?profile" size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <Button href="https://t.me/pokubuy_bot?profile" size="sm" variant="outline" className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   <ExternalLink className="w-4 h-4" />
                   {t('体验Mini App', 'Try Mini App')}
                 </Button>
@@ -100,7 +100,7 @@ const ProjectDetail: React.FC = () => {
           </div>
           <div className="mt-4 md:hidden flex flex-col gap-2">
             {project.slug === 'pokubuy' && (
-              <Button href="https://t.me/pokubuy_bot?profile" size="sm" variant="outline" className="w-full justify-center border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button href="https://t.me/pokubuy_bot?profile" size="sm" variant="outline" className="w-full justify-center border border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 <ExternalLink className="w-4 h-4" />
                 {t('体验Mini App', 'Try Mini App')}
               </Button>
