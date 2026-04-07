@@ -98,7 +98,7 @@ const ProjectDetail: React.FC = () => {
               )}
             </div>
           </div>
-          <div className="mt-4 md:hidden flex flex-col gap-2">
+          <div className="mt-4 md:hidden flex flex-row gap-2">
             {project.slug === 'pokubuy' && (
               <Button href="https://t.me/pokubuy_bot?profile" size="sm" variant="outline" className="w-full justify-center border border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 <ExternalLink className="w-4 h-4" />
