@@ -207,7 +207,7 @@ export const projects: Project[] = [
         title: "Website · Purchase & Account System",
         titleEn: "Website · Purchase & Account System",
         description: "Complete purchase flow from cart, checkout, payment to order tracking, including account settings, address management, and Telegram account linking — shared account system across both RU and US versions",
-        image: "/placeholder.svg",
+        image: "/d5b2d85b-aa87-4f45-a1d5-f1b1a7c7accf.png",
         caption: "Purchase & Account System",
         layout: 'single' as const,
       },
