@@ -460,14 +460,14 @@ export const projects: Project[] = [
       { caption: "", title: "品牌与官网 · Brand & Website", image: "/placeholder.svg", description: "从Logo设计到官网完整搭建，建立品牌从零到一的视觉体系，覆盖wheelsline.com全站页面" },
       { caption: "", title: "供应链后台 · 订单与SKU管理", image: "/placeholder.svg", description: "订单流转、SKU规范、型号管理全链路后台系统，支撑工厂与销售团队的日常运营协作" },
       { caption: "", title: "供应链后台 · 色卡规范系统", image: "/placeholder.svg", description: "将工厂色卡数据转化为标准化产品信息架构，与工厂深度协作" },
-      { caption: "", title: "供应链后台 · 案例库管理", { caption: "", title: "供应链后台 · 案例库管理", image: "/images/wheelsline/case-library.png", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
+      { caption: "", title: "供应链后台 · 案例库管理", image: "/images/wheelsline/case-library.png", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
       { caption: "", title: "用户端 Mini App", image: "/placeholder.svg", description: "面向海外用户的轮毂选型与询盘小程序，覆盖型号浏览、色卡选择、Telegram转化入口" },
     ],
     deliverablesEn: [
       { caption: "", title: "Brand & Website", image: "/placeholder.svg", description: "From logo design to full website build, establishing the brand's visual system from zero to one, covering all pages of wheelsline.com" },
       { caption: "", title: "Supply Chain Backend · Orders & SKU Management", image: "/placeholder.svg", description: "End-to-end backend system for order flow, SKU standards, and model management, supporting daily operations between factory and sales teams" },
       { caption: "", title: "Supply Chain Backend · Color Card System", image: "/placeholder.svg", description: "Transformed factory color card data into standardized product information architecture through deep factory collaboration" },
-      { caption: "", title: "Supply Chain Backend · Case Library", { caption: "", title: "Supply Chain Backend · Case Library", image: "/images/wheelsline/case-library.png", description: "Buyer finished-product cases linked with model and order data, enabling users to view specs, models and process details directly, one-click custom ordering to reduce barriers and drive mass production" }, linked with model and order data, enabling users to view specs, models and process details directly, one-click custom ordering to reduce barriers and drive mass production" },
+      { caption: "", title: "Supply Chain Backend · Case Library", image: "/images/wheelsline/case-library.png", description: "Buyer finished-product cases linked with model and order data, enabling users to view specs, models and process details directly, one-click custom ordering to reduce barriers and drive mass production" },
       { caption: "", title: "User-facing Mini App", image: "/placeholder.svg", description: "Wheel selection and inquiry mini program for overseas users, covering model browsing, color card selection, and Telegram conversion entry" },
     ],
     results: [
