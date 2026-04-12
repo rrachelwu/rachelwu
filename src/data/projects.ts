@@ -144,7 +144,7 @@ export const projects: Project[] = [
       {
         title: "品牌基础 · Brand Identity",
         description: "从 Logo 方案推演到硬件包装设计，建立品牌从零到一的视觉锚点",
-        image: "/placeholder.svg",
+        image: "/lovable-uploads/176f606b-f4da-4ef4-8fb2-911ff991bb58.png",
         caption: "品牌基础",
       },
       {
@@ -186,7 +186,7 @@ export const projects: Project[] = [
         title: "Brand Identity",
         titleEn: "Brand Identity",
         description: "From Logo concept to hardware packaging design, establishing the brand's visual anchor from zero to one",
-        image: "/placeholder.svg",
+        image: "/lovable-uploads/176f606b-f4da-4ef4-8fb2-911ff991bb58.png",
         caption: "Brand Identity",
       },
       {
