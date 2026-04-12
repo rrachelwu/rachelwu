@@ -160,6 +160,13 @@ export const projects: Project[] = [
         caption: "俄罗斯版官网",
       },
       {
+        title: "官网 · 购买与账户体系",
+        description: "购物车、下单、支付到订单追踪完整购买链路，含账户设置、地址管理、关联Telegram账户，俄美两版共用同一套账户体系",
+        image: "/placeholder.svg",
+        caption: "购买与账户体系",
+        layout: 'single' as const,
+      },
+      {
         title: "美版官网 · US Site",
         description: "美版官网内容架构重建，订阅套餐三档定价结构设计，侧重隐私安全信任感建立，与俄版内容策略独立分开",
         image: "/placeholder.svg",
@@ -195,6 +202,14 @@ export const projects: Project[] = [
         description: "Cyrillic typography adaptation, Ruble settlement, independent IA and purchase flow from the English version",
         image: "/placeholder.svg",
         caption: "Russian Website",
+      },
+      {
+        title: "Website · Purchase & Account System",
+        titleEn: "Website · Purchase & Account System",
+        description: "Complete purchase flow from cart, checkout, payment to order tracking, including account settings, address management, and Telegram account linking — shared account system across both RU and US versions",
+        image: "/placeholder.svg",
+        caption: "Purchase & Account System",
+        layout: 'single' as const,
       },
       {
         title: "US Website · US Site",
