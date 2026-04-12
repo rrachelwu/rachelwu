@@ -186,7 +186,7 @@ export const projects: Project[] = [
         title: "Russian Mini App · Telegram",
         titleEn: "Russian Mini App · Telegram",
         description: "Covering device binding, node switching, plan viewing and purchasing — the primary user touchpoint for the Russian market",
-        image: "/placeholder.svg",
+        image: "/lovable-uploads/dfb2de73-4247-4400-8ad7-5d601ab208fa.png",
         caption: "Russian Mini App",
       },
       {
