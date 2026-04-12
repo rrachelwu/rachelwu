@@ -223,7 +223,7 @@ export const projects: Project[] = [
         title: "US Router Dashboard",
         titleEn: "US Router Dashboard",
         description: "Covering service overview, operation monitoring, plan center, device management, custom nodes, and network diagnostics — supporting full user lifecycle management",
-        image: "/placeholder.svg",
+        image: "/8c93dad7-039d-4169-8797-e05b3e5447e5.png",
         caption: "US Router Dashboard",
         layout: 'single' as const,
       },
