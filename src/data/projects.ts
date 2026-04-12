@@ -156,7 +156,7 @@ export const projects: Project[] = [
       {
         title: "俄罗斯版官网 · RU Site",
         description: "西里尔字母排版适配、卢布结算、独立于英文版的内容架构与购买流程",
-        image: "/images/ssrouter/ru-site.jpg",
+        image: "/images/ssrouter/88ff610b-2c06-4aa2-aced-f9b7dd74e182.png",
         caption: "俄罗斯版官网",
       },
       {
@@ -200,7 +200,7 @@ export const projects: Project[] = [
         title: "Russian Website · RU Site",
         titleEn: "Russian Website · RU Site",
         description: "Cyrillic typography adaptation, Ruble settlement, independent IA and purchase flow from the English version",
-        image: "/images/ssrouter/ru-site.jpg",
+        image: "/images/ssrouter/88ff610b-2c06-4aa2-aced-f9b7dd74e182.png",
         caption: "Russian Website",
       },
       {
