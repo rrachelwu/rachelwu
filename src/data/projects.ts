@@ -162,7 +162,7 @@ export const projects: Project[] = [
       {
         title: "官网 · 购买与账户体系",
         description: "购物车、下单、支付到订单追踪完整购买链路，含账户设置、地址管理、关联Telegram账户，俄美两版共用同一套账户体系",
-        image: "/placeholder.svg",
+        image: "/a71f32b3-e0e4-48cf-bd25-50d05d031918.png",
         caption: "购买与账户体系",
         layout: 'single' as const,
       },
