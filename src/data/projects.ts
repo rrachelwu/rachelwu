@@ -21,6 +21,8 @@ export interface DeliverableItem {
   titleEn?: string;
   description?: string;
   descriptionEn?: string;
+  /** Captions for each image in `images` array (e.g. "Before", "After") */
+  imageCaptions?: string[];
 }
 
 export interface ComparisonItem {

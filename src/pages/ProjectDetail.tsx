@@ -297,13 +297,17 @@ const ProjectDetail: React.FC = () => {
                   {item.images && item.images.length > 0 && (
                     <div className={`grid gap-3 ${item.layout === 'single' ? 'grid-cols-1' : item.layout === 'row-3' ? 'grid-cols-3' : item.layout === 'grid-2x2' ? 'grid-cols-2' : 'grid-cols-2'}`}>
                       {item.images.map((img, imgIdx) => (
-                        <button
-                          key={imgIdx}
-                          onClick={() => openLightbox(allImages, allImages.indexOf(img))}
-                          className={`w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in ${item.layout === 'single' ? 'aspect-auto' : 'aspect-video'}`}
-                        >
-                          <img src={img} alt={`${title} ${imgIdx + 1}`} className="w-full h-full object-cover" loading="lazy" />
-                        </button>
+                        <div key={imgIdx}>
+                          <button
+                            onClick={() => openLightbox(allImages, allImages.indexOf(img))}
+                            className={`w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in ${item.layout === 'single' ? 'aspect-auto' : 'aspect-[9/16]'}`}
+                          >
+                            <img src={img} alt={`${title} ${imgIdx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                          </button>
+                          {item.imageCaptions && item.imageCaptions[imgIdx] && (
+                            <p className="text-xs text-muted-foreground mt-2">{item.imageCaptions[imgIdx]}</p>
+                          )}
+                        </div>
                       ))}
                     </div>
                   )}
