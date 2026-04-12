@@ -168,7 +168,7 @@ export const projects: Project[] = [
       },
       {
         title: "美版路由后台 · Dashboard",
-        description: "覆盖服务概览、运行监控、套餐中心、设备管理、自定义节点、网络诊断完整功能模块，支撑用户全生命周期管理",
+        description: "覆盖服务概览、运行监控、套餐中心、设备管理、自定义节点、网络诊断完整功能模块，支撑用户全生命周期管理；界面为中文，供中文运营团队管理使用",
         image: "/placeholder.svg",
         caption: "美版路由后台",
         layout: 'single' as const,
