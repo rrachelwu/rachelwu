@@ -365,7 +365,7 @@ export const projects: Project[] = [
       "Independently completed full Mini App design from 0 to 1, covering inquiry, purchase, payment, and logistics flows — 80+ pages including interaction states",
       "Established localization design standards for the Russian market — Cyrillic typography, Ruble settlement, and Russian copywriting all fully adapted",
     ],
-    reflection: "改版的触发点是视觉问题，但根本原因是产品定位一直不够清晰——到底是服务有采购经验的批发商，还是个人买家，两类用户的决策路径完全不同。如果重来，会在改版前先做一轮用户分层，把核心用户画像确定下来，再决定信息架构的取舍方向。",
+    reflection: "接手改版时，对俄罗斯用户的实际采购决策链路缺乏足够深入的了解——俄罗斯买家在跨境采购中最大的顾虑是什么、信任是如何建立的、支付环节的摩擦点在哪里，这些问题在设计过程中更多依赖假设而非真实用户反馈。同时主要精力放在视觉层面的统一上，询价到采购的核心转化节点没有做充分的数据验证。如果重来，会在改版前先针对俄语市场用户做一轮专项调研，同步梳理用户行为漏斗，找到真实的转化断点，再决定产品结构和改版优先级，而不是从视觉问题倒推设计方向。",
     reflectionEn: "The redesign was triggered by visual issues, but the root cause was unclear product positioning — whether to serve experienced wholesalers or individual buyers, whose decision paths are completely different. If I could redo it, I'd conduct user segmentation before the redesign, define core user personas, then decide on information architecture trade-offs.",
   },
   {
