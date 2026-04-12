@@ -169,7 +169,7 @@ export const projects: Project[] = [
       {
         title: "美版官网 · US Site",
         description: "美版官网内容架构重建，订阅套餐三档定价结构设计，侧重隐私安全信任感建立，与俄版内容策略独立分开",
-        image: "/images/ssrouter/us-site.jpg",
+        image: "/lovable-uploads/66b1a3de-605c-4900-9484-e7b9988611b9.png",
         caption: "美版官网",
         layout: 'single' as const,
       },
@@ -215,7 +215,7 @@ export const projects: Project[] = [
         title: "US Website · US Site",
         titleEn: "US Website · US Site",
         description: "US website IA restructuring, three-tier subscription pricing design, focused on building privacy and security trust, with content strategy independent from the Russian version",
-        image: "/images/ssrouter/us-site.jpg",
+        image: "/lovable-uploads/66b1a3de-605c-4900-9484-e7b9988611b9.png",
         caption: "US Website",
         layout: 'single' as const,
       },
