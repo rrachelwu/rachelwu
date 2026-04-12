@@ -156,7 +156,7 @@ export const projects: Project[] = [
       {
         title: "俄罗斯版官网 · RU Site",
         description: "西里尔字母排版适配、卢布结算、独立于英文版的内容架构与购买流程",
-        image: "/placeholder.svg",
+        image: "/lovable-uploads/9c791b3e-6c1e-4a97-8994-535a2c0b32b6.jpg",
         caption: "俄罗斯版官网",
       },
       {
@@ -169,7 +169,7 @@ export const projects: Project[] = [
       {
         title: "美版官网 · US Site",
         description: "美版官网内容架构重建，订阅套餐三档定价结构设计，侧重隐私安全信任感建立，与俄版内容策略独立分开",
-        image: "/placeholder.svg",
+        image: "/lovable-uploads/eb18b2f5-4174-4dba-abad-870538ae650c.jpg",
         caption: "美版官网",
         layout: 'single' as const,
       },
@@ -200,7 +200,7 @@ export const projects: Project[] = [
         title: "Russian Website · RU Site",
         titleEn: "Russian Website · RU Site",
         description: "Cyrillic typography adaptation, Ruble settlement, independent IA and purchase flow from the English version",
-        image: "/placeholder.svg",
+        image: "/lovable-uploads/9c791b3e-6c1e-4a97-8994-535a2c0b32b6.jpg",
         caption: "Russian Website",
       },
       {
@@ -215,7 +215,7 @@ export const projects: Project[] = [
         title: "US Website · US Site",
         titleEn: "US Website · US Site",
         description: "US website IA restructuring, three-tier subscription pricing design, focused on building privacy and security trust, with content strategy independent from the Russian version",
-        image: "/placeholder.svg",
+        image: "/lovable-uploads/eb18b2f5-4174-4dba-abad-870538ae650c.jpg",
         caption: "US Website",
         layout: 'single' as const,
       },
