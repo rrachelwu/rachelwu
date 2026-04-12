@@ -336,7 +336,7 @@ export const projects: Project[] = [
         title: "订单状态全流程",
         caption: "",
         description: "询价单、采购单（普通/白关）、物流单四条链路完整梳理，每个状态对应明确的操作按钮",
-        image: "/placeholder.svg",
+        image: "/d5b2d85b-aa87-4f45-a1d5-f1b1a7c7accf.png",
         layout: 'single',
       },
       {
@@ -376,7 +376,7 @@ export const projects: Project[] = [
         title: "Full Order Status Flow",
         caption: "",
         description: "Four complete chains: inquiry, purchase (standard/white customs), and logistics — each status maps to a clear action button",
-        image: "/placeholder.svg",
+        image: "/d5b2d85b-aa87-4f45-a1d5-f1b1a7c7accf.png",
         layout: 'single',
       },
       {
