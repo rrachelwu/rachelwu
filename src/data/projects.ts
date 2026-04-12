@@ -149,7 +149,7 @@ export const projects: Project[] = [
       },
       {
         title: "俄罗斯版 Mini App · Telegram",
-        description: "覆盖设备绑定、节点切换、套餐查看与购买全流程，承载俄语市场主要用户触点",
+        description: "覆盖设备绑定、节点切换、套餐查看与购买全流程，承载俄语市场主要用户触点；界面为俄语，面向俄罗斯终端用户",
         image: "/placeholder.svg",
         caption: "俄罗斯版 Mini App",
       },
