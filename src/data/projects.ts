@@ -162,7 +162,7 @@ export const projects: Project[] = [
       {
         title: "官网 · 购买与账户体系",
         description: "购物车、下单、支付到订单追踪完整购买链路，含账户设置、地址管理、关联Telegram账户，俄美两版共用同一套账户体系",
-        image: "/placeholder.svg",
+        image: "/a71f32b3-e0e4-48cf-bd25-50d05d031918.png",
         caption: "购买与账户体系",
         layout: 'single' as const,
       },
@@ -207,7 +207,7 @@ export const projects: Project[] = [
         title: "Website · Purchase & Account System",
         titleEn: "Website · Purchase & Account System",
         description: "Complete purchase flow from cart, checkout, payment to order tracking, including account settings, address management, and Telegram account linking — shared account system across both RU and US versions",
-        image: "/placeholder.svg",
+        image: "/a71f32b3-e0e4-48cf-bd25-50d05d031918.png",
         caption: "Purchase & Account System",
         layout: 'single' as const,
       },
