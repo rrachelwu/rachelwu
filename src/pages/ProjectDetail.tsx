@@ -290,20 +290,30 @@ const ProjectDetail: React.FC = () => {
               const allImages = deliverables.flatMap(d => d.images || (d.image ? [d.image] : []));
               return (
                 <div key={index}>
-                  <h4 className="text-base font-semibold mb-3">
-                    {title}
-                  </h4>
+                  <div className="flex items-start gap-3 mb-3">
+                    <span className="w-0.5 bg-primary flex-shrink-0 mt-1" style={{ height: "16px" }} />
+                    <div>
+                      <h4 className="text-base font-semibold">{title}</h4>
+                      {desc && (
+                        <p className="text-sm text-muted-foreground mt-1">{desc}</p>
+                      )}
+                    </div>
+                  </div>
                   {/* Multiple images with layout */}
                   {item.images && item.images.length > 0 && (
                     <div className={`grid gap-3 ${item.layout === 'single' ? 'grid-cols-1' : item.layout === 'row-3' ? 'grid-cols-3' : item.layout === 'grid-2x2' ? 'grid-cols-2' : 'grid-cols-2'}`}>
                       {item.images.map((img, imgIdx) => (
-                        <button
-                          key={imgIdx}
-                          onClick={() => openLightbox(allImages, allImages.indexOf(img))}
-                          className={`w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in ${item.layout === 'single' ? 'aspect-auto' : 'aspect-video'}`}
-                        >
-                          <img src={img} alt={`${title} ${imgIdx + 1}`} className="w-full h-full object-cover" loading="lazy" />
-                        </button>
+                        <div key={imgIdx}>
+                          <button
+                            onClick={() => openLightbox(allImages, allImages.indexOf(img))}
+                            className={`w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in ${item.layout === 'single' ? 'aspect-auto' : 'aspect-[9/16]'}`}
+                          >
+                            <img src={img} alt={`${title} ${imgIdx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                          </button>
+                          {item.imageCaptions && item.imageCaptions[imgIdx] && (
+                            <p className="text-xs text-muted-foreground mt-2">{item.imageCaptions[imgIdx]}</p>
+                          )}
+                        </div>
                       ))}
                     </div>
                   )}
@@ -315,9 +325,6 @@ const ProjectDetail: React.FC = () => {
                     >
                       <img src={item.image} alt={title} className="w-full h-auto" loading="lazy" />
                     </button>
-                  )}
-                  {desc && (
-                    <p className="text-sm text-muted-foreground mt-3">{desc}</p>
                   )}
                 </div>
               );
