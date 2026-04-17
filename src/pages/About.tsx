@@ -146,14 +146,14 @@ const About: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-3">
               {t('吴倩', 'Rachel Wu')}
               <span className="text-xl md:text-2xl font-normal text-muted-foreground ml-4">
-                {t('产品设计 / 产品策略', 'Product Design / Product Strategy')}
+                {t('产品负责人 · 出海硬件', 'Product Lead · Overseas Hardware')}
               </span>
             </h1>
             
             <p className="text-muted-foreground mb-8 max-w-2xl leading-relaxed">
               {t(
-                '10年互联网产品设计经验，曾任职小米，具备从0到1独立搭建产品体系的实战能力。擅长将复杂业务逻辑转化为清晰的用户路径与信息架构，覆盖Web、App、小程序、OTT/HMI等多端场景。\n\n有出海产品设计经验，熟悉跨文化用户需求差异，建立过多语言国际化规范体系；具备软硬件结合的产品感知，持续关注AI与产品交互的融合方向。善于在资源有限、分工模糊的环境中推动方案落地，有带团队与制定设计规范的经验。',
-                '10 years of internet product design experience, formerly at Xiaomi, with proven ability to independently build product systems from 0 to 1. Skilled at transforming complex business logic into clear user paths and information architecture, covering Web, App, Mini Programs, OTT/HMI and more.\n\nExperienced in overseas product design, familiar with cross-cultural user needs, and established multilingual internationalization standards. Possesses hardware-software integrated product awareness, continuously exploring AI-product interaction. Excels at driving solutions in resource-constrained environments with experience leading teams and establishing design standards.'
+                '10年跨硬件与互联网产品经验，小米/峰米背景。主导过出海硬件品牌0到1全链路交付（美俄双市场）、B端供应链订单系统及Telegram Mini App独立交付。具备从用户研究、需求定义、系统架构到开发验收的完整产品推进能力，有独立产品判断并推动落地的实战记录。',
+                '10 years of cross-hardware and internet product experience, with Xiaomi/Formovie background. Led 0-to-1 full-chain delivery for overseas hardware brands (US/RU markets), B-end supply chain order systems, and independent Telegram Mini App delivery. Possesses end-to-end product capabilities from user research and requirements to system architecture and development acceptance, with a track record of independent judgment and execution.'
               )}
             </p>
 
@@ -161,7 +161,7 @@ const About: React.FC = () => {
             <div className="flex gap-16 mb-10">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-foreground">10+</div>
-                <div className="text-sm text-muted-foreground mt-2">{t('设计经验年数', 'Years Experience')}</div>
+                <div className="text-sm text-muted-foreground mt-2">{t('产品经验年数', 'Product Experience')}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-foreground">20+</div>
