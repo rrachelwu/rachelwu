@@ -238,12 +238,12 @@ const ProjectDetail: React.FC = () => {
                     <div>
                       <button
                         onClick={() => openLightbox(comparisonImages, comparisonImages.indexOf(comp.leftImage || ''))}
-                        className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in aspect-[9/16]"
+                        className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in"
                       >
                         <img
                           src={comp.leftImage || '/placeholder.svg'}
                           alt={language === 'zh' ? comp.leftCaption : comp.leftCaptionEn}
-                          className="w-full h-full object-cover"
+                          className="w-full h-auto object-contain"
                           loading="lazy"
                         />
                       </button>
@@ -255,12 +255,12 @@ const ProjectDetail: React.FC = () => {
                     <div>
                       <button
                         onClick={() => openLightbox(comparisonImages, comparisonImages.indexOf(comp.rightImage || ''))}
-                        className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in aspect-[9/16]"
+                        className="w-full rounded-lg overflow-hidden bg-muted hover:opacity-90 transition-opacity cursor-zoom-in"
                       >
                         <img
                           src={comp.rightImage || '/placeholder.svg'}
                           alt={language === 'zh' ? comp.rightCaption : comp.rightCaptionEn}
-                          className="w-full h-full object-cover"
+                          className="w-full h-auto object-contain"
                           loading="lazy"
                         />
                       </button>
