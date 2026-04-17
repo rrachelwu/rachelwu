@@ -146,7 +146,7 @@ const About: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-3">
               {t('吴倩', 'Rachel Wu')}
               <span className="text-xl md:text-2xl font-normal text-muted-foreground ml-4">
-                {t('出海产品负责人', 'Overseas Product Lead')}
+                {t('产品设计 / 产品策略', 'Product Design / Product Strategy')}
               </span>
             </h1>
             
