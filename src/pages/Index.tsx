@@ -54,7 +54,7 @@ const Index: React.FC = () => {
   ];
 
   const stats = [
-    { number: '10+', label: t('设计经验年数', 'Years of Experience') },
+    { number: '10+', label: t('产品经验年数', 'Years of Product Experience') },
     { number: '20+', label: t('独立负责项目', 'Independent Projects') },
     { number: '3', label: t('出海项目', 'Overseas Projects') },
   ];
@@ -109,13 +109,13 @@ const Index: React.FC = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground mb-4">
-                {t('产品设计 / 产品策略', 'Product Design / Product Strategy')}
+                {t('产品负责人 · 出海硬件', 'Product Lead · International Hardware')}
               </p>
               
               <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
                 {t(
-                  '10年互联网产品设计经验，曾任职小米，具备从0到1独立搭建产品体系的实战能力。擅长将复杂业务逻辑转化为清晰的用户路径与信息架构，覆盖Web、App、小程序、OTT/HMI等多端场景。有出海产品设计经验，熟悉跨文化用户需求差异，建立过多语言国际化规范体系；具备软硬件结合的产品感知，持续关注AI与产品交互的融合方向。善于在资源有限、分工模糊的环境中推动方案落地，有带团队与制定设计规范的经验。',
-                  '10 years of product design experience, formerly at Xiaomi, with proven ability to build product systems from 0 to 1. Skilled at transforming complex business logic into clear user paths and information architecture across Web, App, Mini Programs, OTT/HMI. Experienced in overseas product design with cross-cultural user insights and multilingual i18n standards. Combines hardware-software product sense with a focus on AI-product interaction. Adept at driving delivery in resource-limited environments, with team leadership and design standards experience.'
+                  '10年跨硬件与互联网产品经验，小米/峰米背景。主导过出海硬件品牌0到1全链路交付（美俄双市场）、B端供应链订单系统及Telegram Mini App独立交付。具备从用户研究、需求定义、系统架构到开发验收的完整产品推进能力，有独立产品判断并推动落地的实战记录。',
+                  '10 years of experience across hardware and internet products, with a background at Xiaomi and Formovie. Led 0-to-1 full-chain delivery for overseas hardware brands (US and RU markets), B2B supply chain order systems, and independent delivery of Telegram Mini Apps. Comprehensive product capabilities from user research to system architecture and development acceptance.'
                 )}
               </p>
 
