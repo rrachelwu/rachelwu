@@ -383,7 +383,7 @@ export const projects: Project[] = [
         title: "Dark Mode",
         caption: "",
         description: "Dual light/dark theme switching built on a design token system — one component library supports both visual schemes",
-        image: "/placeholder.svg",
+        image: "/images/pokubuy/dark-mode.png",
         layout: 'single',
       },
     ],
