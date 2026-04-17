@@ -312,7 +312,7 @@ export const projects: Project[] = [
         title: "改版对比 · 首页",
         caption: "",
         description: "原版视觉风格陈旧、信息层级混乱；新版统一橙色品牌色，强化首屏核心采购入口权重",
-        images: ["/placeholder.svg", "/placeholder.svg"],
+        images: ["/a05742dc-91b1-4eff-bf8f-4facbc55c947.jpg", "/b412ebeb-4460-43d4-bbd2-37683873853b.png"],
         layout: 'grid-2x2',
         imageCaptions: ["改版前", "改版后"],
       },
