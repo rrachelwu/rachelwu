@@ -298,9 +298,9 @@ const ProjectDetail: React.FC = () => {
                         <div key={imgIdx}>
                           <button
                             onClick={() => openLightbox(allImages, allImages.indexOf(img))}
-                            className={`w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in ${item.layout === 'single' ? 'aspect-auto' : 'aspect-[9/16]'}`}
+                            className="w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in"
                           >
-                            <img src={img} alt={`${title} ${imgIdx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                            <img src={img} alt={`${title} ${imgIdx + 1}`} className="w-full h-auto object-contain" loading="lazy" />
                           </button>
                           {item.imageCaptions && item.imageCaptions[imgIdx] && (
                             <p className="text-xs text-muted-foreground mt-2">{item.imageCaptions[imgIdx]}</p>
