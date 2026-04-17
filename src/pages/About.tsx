@@ -349,19 +349,18 @@ const About: React.FC = () => {
             ))}
           </div>
 
-          {/* Languages */}
+          {/* Tools */}
           <div className="mt-8 p-6 rounded-xl bg-card border border-border">
-            <h3 className="font-bold text-lg mb-4">{t('语言能力', 'Languages')}</h3>
+            <h3 className="font-bold text-lg mb-4">{t('工作工具', 'Tools')}</h3>
             <div className="flex flex-wrap gap-4">
               <span className="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-medium">
-                {t('中文（母语）', 'Chinese (Native)')}
+                Figma
               </span>
-              <span className="px-4 py-2 bg-secondary text-foreground rounded-full text-sm font-medium">
-                {t('英语（借助 AI 工具）', 'English (AI-assisted)')}
-              </span>
-              <span className="px-4 py-2 bg-secondary text-foreground rounded-full text-sm font-medium">
-                {t('俄语（借助 AI 工具）', 'Russian (AI-assisted)')}
-              </span>
+              {['Sketch', 'Claude', 'Cursor', 'XMind', 'Notion'].map((tool) => (
+                <span key={tool} className="px-4 py-2 bg-secondary text-foreground rounded-full text-sm font-medium">
+                  {tool}
+                </span>
+              ))}
             </div>
           </div>
         </div>
