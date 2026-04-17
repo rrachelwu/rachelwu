@@ -352,7 +352,7 @@ export const projects: Project[] = [
         title: "Redesign Comparison · Homepage",
         caption: "",
         description: "Original had outdated visuals and confusing hierarchy; new version unifies orange brand color and strengthens core purchasing entry on first screen",
-        images: ["/placeholder.svg", "/placeholder.svg"],
+        images: ["/a05742dc-91b1-4eff-bf8f-4facbc55c947.jpg", "/b412ebeb-4460-43d4-bbd2-37683873853b.png"],
         layout: 'grid-2x2',
         imageCaptions: ["Before", "After"],
       },
