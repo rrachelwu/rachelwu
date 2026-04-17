@@ -343,7 +343,7 @@ export const projects: Project[] = [
         title: "暗黑模式 · Dark Mode",
         caption: "",
         description: "基于设计变量系统实现明暗双主题切换，同一套组件库支撑亮色与暗色两套视觉方案",
-        image: "/images/pokubuy/dark-mode.png",
+        image: "/e2bdebd7-aa48-49d3-b793-11ab4f737520.png",
         layout: 'single',
       },
     ],
