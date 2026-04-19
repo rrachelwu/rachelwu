@@ -473,6 +473,13 @@ export const projects: Project[] = [
       { caption: "", title: "供应链后台 · 案例库管理", image: "/placeholder.svg", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
       { caption: "", title: "用户端 Mini App", image: "/placeholder.svg", description: "面向海外用户的轮毂选型与询盘小程序，覆盖型号浏览、色卡选择、Telegram转化入口" },
     ],
+    deliverablesEn: [
+      { caption: "", title: "Brand & Website", image: "/placeholder.svg", description: "From logo design to complete website build, establishing a 0-to-1 brand visual system covering all wheelsline.com pages" },
+      { caption: "", title: "Supply Chain Backend · Orders & Models", image: "/placeholder.svg", description: "6-stage order lifecycle, parent-child model structure management, multi-currency and multi-factory support" },
+      { caption: "", title: "Supply Chain Backend · Color Card System", image: "/placeholder.svg", description: "Established the WheelsLine color code system with 99 codes in 13 groups, separating surface finish and structural process" },
+      { caption: "", title: "Supply Chain Backend · Case Library", image: "/placeholder.svg", description: "Linked buyer cases with model and order data, allowing one-click customization and lowering barriers for mass production" },
+      { caption: "", title: "User Mini App", image: "/placeholder.svg", description: "Wheel selection and inquiry mini app for overseas users, covering model browsing, color selection, and Telegram conversion" },
+    ],
     results: [
       "建立WheelsLine色号体系，区分表面工艺与结构工艺两个独立维度，前台筛选与后台录入引用同一套标准，消除两端数据不一致问题",
       "完成WheelChain后台管理系统前端原型，覆盖订单六阶段生命周期、多货币多工厂支持、型号父子结构管理",
