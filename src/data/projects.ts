@@ -484,14 +484,14 @@ export const projects: Project[] = [
     ],
     results: [
       "建立WL色号体系，区分表面工艺与结构工艺两个独立维度，前台筛选与后台录入引用同一套标准，消除两端数据不一致问题",
-      "完成WheelChain Pro后台管理系统前端原型，覆盖订单六阶段生命周期、多货币多工厂支持、型号父子结构管理",
+      "完成WheelChain后台管理系统前端原型，覆盖订单六阶段生命周期、多货币多工厂支持、型号父子结构管理",
       "设计前后异径移动端参数对比方案，共用参数合并、差异参数并排，解决小屏信息密度过高问题",
       "制定后台Tab vs Modal统一交互规范，覆盖所有创建与编辑流，保障操作一致性",
       "输出定制绘图单Excel模板，将线下沟通流程结构化，支持打印与客户传阅",
     ],
     resultsEn: [
       "Established the WL color code system, separating surface finish and structural process as two independent dimensions, with frontend filtering and backend entry referencing the same standard — eliminating data inconsistency between the two ends",
-      "Completed the WheelChain Pro backend management system frontend prototype, covering the 6-stage order lifecycle, multi-currency and multi-factory support, and parent-child model structure management",
+      "Completed the WheelChain backend management system frontend prototype, covering the 6-stage order lifecycle, multi-currency and multi-factory support, and parent-child model structure management",
       "Designed a mobile parameter comparison scheme for staggered front/rear configurations — merging shared parameters and pairing differing ones side-by-side — solving the small-screen information density problem",
       "Defined a unified Tab vs Modal interaction standard for the backend, covering all creation and editing flows to ensure operational consistency",
       "Delivered a custom drawing order Excel template that structured the offline communication process, supporting printing and client distribution",
