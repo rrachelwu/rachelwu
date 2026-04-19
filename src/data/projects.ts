@@ -469,21 +469,12 @@ export const projects: Project[] = [
     deliverables: [
       { caption: "", title: "品牌与官网 · Brand & Website", image: "/placeholder.svg", description: "从Logo设计到官网完整搭建，建立品牌从零到一的视觉体系，覆盖wheelsline.com全站页面" },
       { caption: "", title: "供应链后台 · 订单与型号管理", image: "/placeholder.svg", description: "订单六阶段生命周期（确认中→设计中→生产中→待尾款→已发货→完成），型号父子结构管理，支持多货币多工厂" },
-      { caption: "", title: "供应链后台 · 色卡规范系统", image: "/placeholder.svg", description: "建立WL色号体系，区分表面工艺与结构工艺两个独立维度，共99种色号/13个分组，前台筛选与后台录入引用同一套标准" },
+      { caption: "", title: "供应链后台 · 色卡规范系统", image: "/placeholder.svg", description: "建立WheelsLine色号体系，区分表面工艺与结构工艺两个独立维度，共99种色号/13个分组，前台筛选与后台录入引用同一套标准" },
       { caption: "", title: "供应链后台 · 案例库管理", image: "/placeholder.svg", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
       { caption: "", title: "用户端 Mini App", image: "/placeholder.svg", description: "面向海外用户的轮毂选型与询盘小程序，覆盖型号浏览、色卡选择、Telegram转化入口" },
-      { caption: "", title: "定制绘图单 · 线下流程结构化", image: "/placeholder.svg", description: "将原本依赖线下沟通的定制流程结构化，输出为Excel定制绘图单，覆盖车辆信息、轮毂规格、工艺选择与参考图，是后续工厂与客户小程序化沟通流程的前期业务梳理基础" },
-    ],
-    deliverablesEn: [
-      { caption: "", title: "Brand & Website", image: "/placeholder.svg", description: "From logo design to full website build, establishing the brand's visual system from zero to one, covering all pages of wheelsline.com" },
-      { caption: "", title: "Supply Chain Backend · Orders & Model Management", image: "/placeholder.svg", description: "Six-stage order lifecycle (Confirming → Designing → Producing → Awaiting Final Payment → Shipped → Completed), parent-child model structure management, supporting multi-currency and multi-factory" },
-      { caption: "", title: "Supply Chain Backend · Color Card System", image: "/placeholder.svg", description: "Established the WL color code system, separating surface finish and structural process as two independent dimensions, with 99 color codes across 13 groups, with frontend filtering and backend entry referencing the same standard" },
-      { caption: "", title: "Supply Chain Backend · Case Library", image: "/placeholder.svg", description: "Buyer finished-product cases linked with model and order data, enabling users to view specs, models and process details directly, one-click custom ordering to reduce barriers and drive mass production" },
-      { caption: "", title: "User-facing Mini App", image: "/placeholder.svg", description: "Wheel selection and inquiry mini program for overseas users, covering model browsing, color card selection, and Telegram conversion entry" },
-      { caption: "", title: "Custom Drawing Sheet · Structuring Offline Process", image: "/placeholder.svg", description: "Structured the previously offline-dependent customization process into an Excel custom drawing sheet, covering vehicle info, wheel specs, process choices and reference images — forming the business foundation for the subsequent factory-customer mini program communication flow" },
-    ],
+...
     results: [
-      "建立WL色号体系，区分表面工艺与结构工艺两个独立维度，前台筛选与后台录入引用同一套标准，消除两端数据不一致问题",
+      "建立WheelsLine色号体系，区分表面工艺与结构工艺两个独立维度，前台筛选与后台录入引用同一套标准，消除两端数据不一致问题",
       "完成WheelChain后台管理系统前端原型，覆盖订单六阶段生命周期、多货币多工厂支持、型号父子结构管理",
       "设计前后异径移动端参数对比方案，共用参数合并、差异参数并排，解决小屏信息密度过高问题",
       "制定后台Tab vs Modal统一交互规范，覆盖所有创建与编辑流，保障操作一致性",
