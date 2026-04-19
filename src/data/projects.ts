@@ -460,6 +460,11 @@ export const projects: Project[] = [
         judgment: "Backend page structures are relatively fixed — can use prompt-driven HTML prototype generation, with backend developing directly from prototypes",
         solution: "Established a design → AI generation → code conversion rapid delivery pipeline with backend team, completing the full system build within 15 days",
       },
+      {
+        problem: "How to clearly display two sets of spec parameters for staggered front/rear configurations on mobile",
+        judgment: "Showing both complete spec sets side-by-side creates excessive information density on small screens — users can't quickly identify the differences; but fully separating them creates large amounts of redundant information",
+        solution: "Merged shared parameters into a single display, with only differing parameters shown side-by-side, reducing cognitive load from redundancy and letting users focus on what actually requires a decision",
+      },
     ],
     deliverables: [
       { caption: "", title: "品牌与官网 · Brand & Website", image: "/placeholder.svg", description: "从Logo设计到官网完整搭建，建立品牌从零到一的视觉体系，覆盖wheelsline.com全站页面" },
