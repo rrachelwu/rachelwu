@@ -431,7 +431,7 @@ export const projects: Project[] = [
       {
         problem: "型号、色卡、订单、应用案例之间有关联关系，如何让录入人员高效管理",
         judgment: "每个型号是核心节点，色卡和案例都围绕型号关联，订单也需要和型号绑定",
-        solution: "设计型号为主索引的数据架构，色卡管理按颜色系分组（99种色号/13个分组），每个型号可直接查看关联订单和应用案例",
+        solution: "设计型号为主索引的数据架构，色卡管理按颜色系分组（99种色卡/13个分组），每个型号可直接查看关联订单和应用案例",
       },
       {
         problem: "需要在极短时间内完成系统从0到1的搭建",
@@ -469,7 +469,7 @@ export const projects: Project[] = [
     deliverables: [
       { caption: "", title: "品牌与官网 · Brand & Website", image: "/placeholder.svg", description: "从Logo设计到官网完整搭建，建立品牌从零到一的视觉体系，覆盖wheelsline.com全站页面" },
       { caption: "", title: "供应链后台 · 订单与型号管理", image: "/placeholder.svg", description: "订单六阶段生命周期（确认中→设计中→生产中→待尾款→已发货→完成），型号父子结构管理，支持多货币多工厂" },
-      { caption: "", title: "供应链后台 · 色卡规范系统", image: "/placeholder.svg", description: "建立WheelsLine色号体系，区分表面工艺与结构工艺两个独立维度，共99种色号/13个分组，前台筛选与后台录入引用同一套标准" },
+      { caption: "", title: "供应链后台 · 色卡规范系统", image: "/placeholder.svg", description: "建立WheelsLine色卡体系，区分表面工艺与结构工艺两个独立维度，共99种色卡/13个分组，前台筛选与后台录入引用同一套标准" },
       { caption: "", title: "供应链后台 · 案例库管理", image: "/placeholder.svg", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
       { caption: "", title: "用户端 Mini App", image: "/placeholder.svg", description: "面向海外用户的轮毂选型与询盘小程序，覆盖型号浏览、色卡选择、Telegram转化入口" },
     ],
@@ -481,7 +481,7 @@ export const projects: Project[] = [
       { caption: "", title: "User Mini App", image: "/placeholder.svg", description: "Wheel selection and inquiry mini app for overseas users, covering model browsing, color selection, and Telegram conversion" },
     ],
     results: [
-      "建立WheelsLine色号体系，区分表面工艺与结构工艺两个独立维度，前台筛选与后台录入引用同一套标准，消除两端数据不一致问题",
+      "建立WheelsLine色卡体系，区分表面工艺与结构工艺两个独立维度，前台筛选与后台录入引用同一套标准，消除两端数据不一致问题",
       "完成WheelChain后台管理系统前端原型，覆盖订单六阶段生命周期、多货币多工厂支持、型号父子结构管理",
       "设计前后异径移动端参数对比方案，共用参数合并、差异参数并排，解决小屏信息密度过高问题",
       "制定后台Tab vs Modal统一交互规范，覆盖所有创建与编辑流，保障操作一致性",
