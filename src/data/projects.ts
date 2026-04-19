@@ -420,8 +420,8 @@ export const projects: Project[] = [
     tagsEn: ["Global Brand", "B2B/B2C Platform", "Supply Chain", "Custom Products"],
     techStack: ["Figma", "中英俄三语", "后台系统", "数据架构", "AI辅助交付"],
     links: { demo: "https://wheelsline.com/" },
-    background: "品牌从0起步，没有任何数字化产品基础。轮毂定制业务涉及型号、色卡、工艺、规格等大量结构化数据，如何让海外B端客户快速理解产品能力并完成询盘，是核心挑战。同时后台需要支撑仓储和业务协同，流程规范完全空白。",
-    backgroundEn: "The brand started from zero with no digital product foundation. The custom wheel business involves large amounts of structured data — models, color cards, processes, specifications. The core challenge was enabling overseas B2B clients to quickly understand product capabilities and complete inquiries. Meanwhile, the backend needed to support warehouse and business collaboration, with no existing process standards.",
+    background: "WheelsLine 是一个专注高端锻造轮毂的定制品牌。品类本身的复杂性极高——车型各异、前后异径配置普遍、颜色与工艺组合多样、订单跨越多个工厂与货币体系。项目目标是从零开始，为这个品牌搭建一套完整的产品与系统基础设施，涵盖客户端展示、定制流程，以及内部运营管理，全部由一人独立完成。",
+    backgroundEn: "WheelsLine is a custom brand focused on high-end forged wheels. The category itself is extremely complex — diverse vehicle models, common staggered front/rear configurations, varied color and process combinations, and orders spanning multiple factories and currency systems. The project goal was to build, from scratch, a complete product and system infrastructure for this brand — covering client-facing presentation, customization flow, and internal operations management — all delivered independently by one person.",
     decisions: [
       {
         problem: "轮毂定制涉及大量专业参数，海外客户很难快速判断是否适合自己的车型",
@@ -437,6 +437,11 @@ export const projects: Project[] = [
         problem: "需要在极短时间内完成系统从0到1的搭建",
         judgment: "后台页面结构相对固定，可以用提示词驱动HTML原型生成，后端直接基于原型开发",
         solution: "与后端协作建立设计→AI生成→代码转化的快速交付链路，15天内完成订单系统完整搭建",
+      },
+      {
+        problem: "前后异径配置在移动端如何清晰展示两套规格参数",
+        judgment: "两套规格完整并排展示在小屏上信息密度过高，用户无法快速判断差异点在哪里；但完全分开展示又会造成大量重复信息",
+        solution: "共用参数合并展示，仅差异参数并排对比，减少重复信息的认知负担，让用户聚焦真正需要决策的部分",
       },
     ],
     decisionsEn: [
@@ -455,6 +460,11 @@ export const projects: Project[] = [
         judgment: "Backend page structures are relatively fixed — can use prompt-driven HTML prototype generation, with backend developing directly from prototypes",
         solution: "Established a design → AI generation → code conversion rapid delivery pipeline with backend team, completing the full system build within 15 days",
       },
+      {
+        problem: "How to clearly display two sets of spec parameters for staggered front/rear configurations on mobile",
+        judgment: "Showing both complete spec sets side-by-side creates excessive information density on small screens — users can't quickly identify the differences; but fully separating them creates large amounts of redundant information",
+        solution: "Merged shared parameters into a single display, with only differing parameters shown side-by-side, reducing cognitive load from redundancy and letting users focus on what actually requires a decision",
+      },
     ],
     deliverables: [
       { caption: "", title: "品牌与官网 · Brand & Website", image: "/placeholder.svg", description: "从Logo设计到官网完整搭建，建立品牌从零到一的视觉体系，覆盖wheelsline.com全站页面" },
@@ -471,16 +481,18 @@ export const projects: Project[] = [
       { caption: "", title: "User-facing Mini App", image: "/placeholder.svg", description: "Wheel selection and inquiry mini program for overseas users, covering model browsing, color card selection, and Telegram conversion entry" },
     ],
     results: [
-      "前台官网上线，后台系统支撑日常订单管理",
-      "建立SKU命名、唛头规则、素材标准、订单流程的全套产品规范体系",
-      "与工厂深度协作完成轮毂专业数据库梳理，建立常见车型轮毂规格参考表，将行业经验转化为系统化产品信息标准，支撑后台SKU规范与用户端选型逻辑",
-      "输出经销商完整销售手册，覆盖折扣体系、工艺说明、质保政策与物流须知，支撑海外经销商独立开展销售",
+      "建立WL色号体系，区分表面工艺与结构工艺两个独立维度，前台筛选与后台录入引用同一套标准，消除两端数据不一致问题",
+      "完成WheelChain Pro后台管理系统前端原型，覆盖订单六阶段生命周期、多货币多工厂支持、型号父子结构管理",
+      "设计前后异径移动端参数对比方案，共用参数合并、差异参数并排，解决小屏信息密度过高问题",
+      "制定后台Tab vs Modal统一交互规范，覆盖所有创建与编辑流，保障操作一致性",
+      "输出定制绘图单Excel模板，将线下沟通流程结构化，支持打印与客户传阅",
     ],
     resultsEn: [
-      "Frontend website launched, backend system supporting daily order management",
-      "Established complete product specification system covering SKU naming, shipping marks, asset standards, and order workflows",
-      "Collaborated deeply with factories to build a professional wheel database, establishing common vehicle wheel spec reference tables, transforming industry experience into systematic product information standards supporting backend SKU specs and user-facing selection logic",
-      "Delivered complete dealer sales manual covering discount structures, process descriptions, warranty policies, and logistics guidelines, enabling overseas dealers to independently conduct sales",
+      "Established the WL color code system, separating surface finish and structural process as two independent dimensions, with frontend filtering and backend entry referencing the same standard — eliminating data inconsistency between the two ends",
+      "Completed the WheelChain Pro backend management system frontend prototype, covering the 6-stage order lifecycle, multi-currency and multi-factory support, and parent-child model structure management",
+      "Designed a mobile parameter comparison scheme for staggered front/rear configurations — merging shared parameters and pairing differing ones side-by-side — solving the small-screen information density problem",
+      "Defined a unified Tab vs Modal interaction standard for the backend, covering all creation and editing flows to ensure operational consistency",
+      "Delivered a custom drawing order Excel template that structured the offline communication process, supporting printing and client distribution",
     ],
     reflection: "项目初期把大量精力放在视觉呈现上，但轮毂定制的核心转化障碍其实是信任问题——海外买家不确定能不能拿到真实样品、工厂资质是否可靠。如果重来，会更早推动把工厂认证信息和买家案例纳入主流程，而不是作为补充内容放在边缘位置。",
     reflectionEn: "Early on, too much effort was spent on visual presentation, but the core conversion barrier for custom wheels was actually trust — overseas buyers weren't sure they could get real samples or whether the factory was credible. If I could redo it, I'd push earlier to bring factory certification and buyer cases into the main flow rather than placing them as supplementary content on the periphery.",
