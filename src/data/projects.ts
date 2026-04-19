@@ -472,7 +472,7 @@ export const projects: Project[] = [
       { caption: "", title: "供应链后台 · 色卡规范系统", image: "/placeholder.svg", description: "建立WheelsLine色号体系，区分表面工艺与结构工艺两个独立维度，共99种色号/13个分组，前台筛选与后台录入引用同一套标准" },
       { caption: "", title: "供应链后台 · 案例库管理", image: "/placeholder.svg", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
       { caption: "", title: "用户端 Mini App", image: "/placeholder.svg", description: "面向海外用户的轮毂选型与询盘小程序，覆盖型号浏览、色卡选择、Telegram转化入口" },
-...
+    ],
     results: [
       "建立WheelsLine色号体系，区分表面工艺与结构工艺两个独立维度，前台筛选与后台录入引用同一套标准，消除两端数据不一致问题",
       "完成WheelChain后台管理系统前端原型，覆盖订单六阶段生命周期、多货币多工厂支持、型号父子结构管理",
@@ -481,7 +481,7 @@ export const projects: Project[] = [
       "输出定制绘图单Excel模板，将线下沟通流程结构化，支持打印与客户传阅",
     ],
     resultsEn: [
-      "Established the WL color code system, separating surface finish and structural process as two independent dimensions, with frontend filtering and backend entry referencing the same standard — eliminating data inconsistency between the two ends",
+      "Established the WheelsLine color code system, separating surface finish and structural process as two independent dimensions, with frontend filtering and backend entry referencing the same standard — eliminating data inconsistency between the two ends",
       "Completed the WheelChain backend management system frontend prototype, covering the 6-stage order lifecycle, multi-currency and multi-factory support, and parent-child model structure management",
       "Designed a mobile parameter comparison scheme for staggered front/rear configurations — merging shared parameters and pairing differing ones side-by-side — solving the small-screen information density problem",
       "Defined a unified Tab vs Modal interaction standard for the backend, covering all creation and editing flows to ensure operational consistency",
