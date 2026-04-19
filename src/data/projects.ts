@@ -418,7 +418,7 @@ export const projects: Project[] = [
     statusEn: "Launched",
     tags: ["出海品牌", "B2B/B2C平台", "供应链系统", "定制化产品"],
     tagsEn: ["Global Brand", "B2B/B2C Platform", "Supply Chain", "Custom Products"],
-    techStack: ["Figma", "中英俄三语", "后台系统", "数据架构", "AI辅助交付"],
+    techStack: ["Figma", "XMind", "后台系统", "数据架构", "AI辅助交付"],
     links: { demo: "https://wheelsline.com/" },
     background: "WheelsLine 是一个专注高端锻造轮毂的定制品牌。品类本身的复杂性极高——车型各异、前后异径配置普遍、颜色与工艺组合多样、订单跨越多个工厂与货币体系。项目目标是从零开始，为这个品牌搭建一套完整的产品与系统基础设施，涵盖客户端展示、定制流程，以及内部运营管理，全部由一人独立完成。",
     backgroundEn: "WheelsLine is a custom brand focused on high-end forged wheels. The category itself is extremely complex — diverse vehicle models, common staggered front/rear configurations, varied color and process combinations, and orders spanning multiple factories and currency systems. The project goal was to build, from scratch, a complete product and system infrastructure for this brand — covering client-facing presentation, customization flow, and internal operations management — all delivered independently by one person.",
