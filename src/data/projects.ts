@@ -420,8 +420,8 @@ export const projects: Project[] = [
     tagsEn: ["Global Brand", "B2B/B2C Platform", "Supply Chain", "Custom Products"],
     techStack: ["Figma", "中英俄三语", "后台系统", "数据架构", "AI辅助交付"],
     links: { demo: "https://wheelsline.com/" },
-    background: "品牌从0起步，没有任何数字化产品基础。轮毂定制业务涉及型号、色卡、工艺、规格等大量结构化数据，如何让海外B端客户快速理解产品能力并完成询盘，是核心挑战。同时后台需要支撑仓储和业务协同，流程规范完全空白。",
-    backgroundEn: "The brand started from zero with no digital product foundation. The custom wheel business involves large amounts of structured data — models, color cards, processes, specifications. The core challenge was enabling overseas B2B clients to quickly understand product capabilities and complete inquiries. Meanwhile, the backend needed to support warehouse and business collaboration, with no existing process standards.",
+    background: "WheelsLine 是一个专注高端锻造轮毂的定制品牌。品类本身的复杂性极高——车型各异、前后异径配置普遍、颜色与工艺组合多样、订单跨越多个工厂与货币体系。项目目标是从零开始，为这个品牌搭建一套完整的产品与系统基础设施，涵盖客户端展示、定制流程，以及内部运营管理，全部由一人独立完成。",
+    backgroundEn: "WheelsLine is a custom brand focused on high-end forged wheels. The category itself is extremely complex — diverse vehicle models, common staggered front/rear configurations, varied color and process combinations, and orders spanning multiple factories and currency systems. The project goal was to build, from scratch, a complete product and system infrastructure for this brand — covering client-facing presentation, customization flow, and internal operations management — all delivered independently by one person.",
     decisions: [
       {
         problem: "轮毂定制涉及大量专业参数，海外客户很难快速判断是否适合自己的车型",
