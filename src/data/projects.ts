@@ -461,7 +461,7 @@ export const projects: Project[] = [
       { caption: "", title: "供应链后台 · 订单与SKU管理", image: "/placeholder.svg", description: "订单流转、SKU规范、型号管理全链路后台系统，支撑工厂与销售团队的日常运营协作" },
       { caption: "", title: "供应链后台 · 色卡规范系统", image: "/placeholder.svg", description: "将工厂色卡数据转化为标准化产品信息架构，与工厂深度协作" },
       { caption: "", title: "供应链后台 · 案例库管理", image: "/images/wheelsline/case-library.png", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
-      { caption: "", title: "用户端 Mini App", image: "/b1fbfbde-b420-4d1d-84f8-85b027cfdc1f.png", description: "面向海外用户的轮毂选型与询盘小程序，覆盖型号浏览、色卡选择、Telegram转化入口" },
+      { caption: "", title: "用户端 Mini App", image: "/placeholder.svg", description: "面向海外用户的轮毂选型与询盘小程序，覆盖型号浏览、色卡选择、Telegram转化入口" },
     ],
     deliverablesEn: [
       { caption: "", title: "Brand & Website", image: "/placeholder.svg", description: "From logo design to full website build, establishing the brand's visual system from zero to one, covering all pages of wheelsline.com" },
