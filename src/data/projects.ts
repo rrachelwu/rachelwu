@@ -489,7 +489,7 @@ export const projects: Project[] = [
     ],
     resultsEn: [
       "Built end-to-end infrastructure from brand to system from scratch, covering three core scenarios: C-end presentation, B-end operations, and offline customization communication",
-      "Established the WL color code system, unifying data standards between frontend filtering and backend entry, eliminating communication costs caused by inconsistency between the two ends",
+      "Established the WheelsLine color card system, unifying data standards between frontend filtering and backend entry, eliminating communication costs caused by inconsistency between the two ends",
       "Built the WheelChain backend management system, supporting full order lifecycle tracking and multi-factory multi-currency collaboration, reducing operational coordination overhead",
       "Structured the offline customization communication process into a custom drawing order, reducing information loss between clients and factories, laying the business foundation for future mini-app integration",
       "Connected the case library with model and order data, allowing users to one-click customize from cases, shortening the decision path from browsing to inquiry",
