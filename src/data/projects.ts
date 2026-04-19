@@ -468,7 +468,7 @@ export const projects: Project[] = [
       { caption: "", title: "Supply Chain Backend · Orders & SKU Management", image: "/placeholder.svg", description: "End-to-end backend system for order flow, SKU standards, and model management, supporting daily operations between factory and sales teams" },
       { caption: "", title: "Supply Chain Backend · Color Card System", image: "/placeholder.svg", description: "Transformed factory color card data into standardized product information architecture through deep factory collaboration" },
       { caption: "", title: "Supply Chain Backend · Case Library", image: "/images/wheelsline/case-library.png", description: "Buyer finished-product cases linked with model and order data, enabling users to view specs, models and process details directly, one-click custom ordering to reduce barriers and drive mass production" },
-      { caption: "", title: "User-facing Mini App", image: "/b1fbfbde-b420-4d1d-84f8-85b027cfdc1f.png", description: "Wheel selection and inquiry mini program for overseas users, covering model browsing, color card selection, and Telegram conversion entry" },
+      { caption: "", title: "User-facing Mini App", image: "/placeholder.svg", description: "Wheel selection and inquiry mini program for overseas users, covering model browsing, color card selection, and Telegram conversion entry" },
     ],
     results: [
       "前台官网上线，后台系统支撑日常订单管理",
