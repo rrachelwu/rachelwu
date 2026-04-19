@@ -491,7 +491,7 @@ export const projects: Project[] = [
     ],
     resultsEn: [
       "Established the WL color code system, separating surface finish and structural process as two independent dimensions, with frontend filtering and backend entry referencing the same standard — eliminating data inconsistency between the two ends",
-      "Completed the WheelChain Pro backend management system frontend prototype, covering the 6-stage order lifecycle, multi-currency and multi-factory support, and parent-child model structure management",
+      "Completed the WheelChain backend management system frontend prototype, covering the 6-stage order lifecycle, multi-currency and multi-factory support, and parent-child model structure management",
       "Designed a mobile parameter comparison scheme for staggered front/rear configurations — merging shared parameters and pairing differing ones side-by-side — solving the small-screen information density problem",
       "Defined a unified Tab vs Modal interaction standard for the backend, covering all creation and editing flows to ensure operational consistency",
       "Delivered a custom drawing order Excel template that structured the offline communication process, supporting printing and client distribution",
