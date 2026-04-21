@@ -475,8 +475,8 @@ export const projects: Project[] = [
       { caption: "", title: "定制绘图单 · 线下流程结构化", image: "/a8811bdd-f8af-4f69-9f5e-1adb87fbaccc.png", description: "将原本依赖线下沟通的定制流程结构化，输出为Excel定制绘图单，覆盖车辆信息、轮毂规格、工艺选择与参考图，是后续工厂与客户小程序化沟通流程的前期业务梳理基础" },
     ],
     deliverablesEn: [
-      { caption: "", title: "Brand & Website", image: "/placeholder.svg", description: "From logo design to complete website build, establishing a 0-to-1 brand visual system covering all wheelsline.com pages" },
-      { caption: "", title: "Supply Chain Backend · Orders & Models", image: "/placeholder.svg", description: "6-stage order lifecycle, parent-child model structure management, multi-currency and multi-factory support" },
+      { caption: "", title: "Brand & Website", image: "/d1eac929-524f-4a6d-ba2c-0a1d3c1d5751.png", description: "From logo design to complete website build, establishing a 0-to-1 brand visual system covering all wheelsline.com pages" },
+      { caption: "", title: "Supply Chain Backend · Orders & Models", image: "/a5961f02-f58a-4b91-b42f-6dcafe8ab718.png", description: "6-stage order lifecycle, parent-child model structure management, multi-currency and multi-factory support" },
       { caption: "", title: "Supply Chain Backend · Color Card System", image: "/ebb1c6d9-61a2-4b54-8698-00ab8c3a07d7.png", description: "Established the WheelsLine color code system with 99 codes in 13 groups, separating surface finish and structural process" },
       { caption: "", title: "Supply Chain Backend · Case Library", image: "/placeholder.svg", description: "Linked buyer cases with model and order data, allowing one-click customization and lowering barriers for mass production" },
       { caption: "", title: "User Mini App", image: "/placeholder.svg", description: "Wheel selection and inquiry mini app for overseas users, covering model browsing, color selection, and Telegram conversion" },
