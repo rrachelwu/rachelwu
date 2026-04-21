@@ -469,7 +469,7 @@ export const projects: Project[] = [
     deliverables: [
       { caption: "", title: "品牌与官网 · Brand & Website", image: "/placeholder.svg", description: "从Logo设计到官网完整搭建，建立品牌从零到一的视觉体系，覆盖wheelsline.com全站页面" },
       { caption: "", title: "供应链后台 · 订单与型号管理", image: "/placeholder.svg", description: "订单六阶段生命周期（确认中→设计中→生产中→待尾款→已发货→完成），型号父子结构管理，支持多货币多工厂" },
-      { caption: "", title: "供应链后台 · 色卡规范系统", image: "/ebb1c6d9-61a2-4b54-8698-00ab8c3a07d7.png", description: "建立WheelsLine色卡体系，区分表面工艺与结构工艺两个独立维度，共99种色卡/13个分组，前台筛选与后台录入引用同一套标准" },
+      { caption: "", title: "供应链后台 · 色卡规范系统", image: "/50ce72bf-0bfc-48ac-91fd-d8852c7871c5.png", description: "建立WheelsLine色卡体系，区分表面工艺与结构工艺两个独立维度，共99种色卡/13个分组，前台筛选与后台录入引用同一套标准" },
       { caption: "", title: "供应链后台 · 案例库管理", image: "/placeholder.svg", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
       { caption: "", title: "用户端 Mini App", image: "/placeholder.svg", description: "面向海外用户的轮毂选型与询盘小程序，覆盖型号浏览、色卡选择、Telegram转化入口" },
       { caption: "", title: "定制绘图单 · 线下流程结构化", image: "/a8811bdd-f8af-4f69-9f5e-1adb87fbaccc.png", description: "将原本依赖线下沟通的定制流程结构化，输出为Excel定制绘图单，覆盖车辆信息、轮毂规格、工艺选择与参考图，是后续工厂与客户小程序化沟通流程的前期业务梳理基础" },
@@ -477,7 +477,7 @@ export const projects: Project[] = [
     deliverablesEn: [
       { caption: "", title: "Brand & Website", image: "/placeholder.svg", description: "From logo design to complete website build, establishing a 0-to-1 brand visual system covering all wheelsline.com pages" },
       { caption: "", title: "Supply Chain Backend · Orders & Models", image: "/placeholder.svg", description: "6-stage order lifecycle, parent-child model structure management, multi-currency and multi-factory support" },
-      { caption: "", title: "Supply Chain Backend · Color Card System", image: "/ebb1c6d9-61a2-4b54-8698-00ab8c3a07d7.png", description: "Established the WheelsLine color code system with 99 codes in 13 groups, separating surface finish and structural process" },
+      { caption: "", title: "Supply Chain Backend · Color Card System", image: "/50ce72bf-0bfc-48ac-91fd-d8852c7871c5.png", description: "Established the WheelsLine color code system with 99 codes in 13 groups, separating surface finish and structural process" },
       { caption: "", title: "Supply Chain Backend · Case Library", image: "/placeholder.svg", description: "Linked buyer cases with model and order data, allowing one-click customization and lowering barriers for mass production" },
       { caption: "", title: "User Mini App", image: "/placeholder.svg", description: "Wheel selection and inquiry mini app for overseas users, covering model browsing, color selection, and Telegram conversion" },
       { caption: "", title: "Custom Drawing Order · Offline Process Structuring", image: "/a8811bdd-f8af-4f69-9f5e-1adb87fbaccc.png", description: "Structured the originally offline-dependent customization process into an Excel custom drawing order, covering vehicle info, wheel specs, finish selection, and reference images — laying the business groundwork for subsequent mini app-based factory-customer communication" },
