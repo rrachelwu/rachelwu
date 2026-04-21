@@ -472,7 +472,7 @@ export const projects: Project[] = [
       { caption: "", title: "供应链后台 · 色卡规范系统", image: "/ebb1c6d9-61a2-4b54-8698-00ab8c3a07d7.png", description: "建立WheelsLine色卡体系，区分表面工艺与结构工艺两个独立维度，共99种色卡/13个分组，前台筛选与后台录入引用同一套标准" },
       { caption: "", title: "供应链后台 · 案例库管理", image: "/placeholder.svg", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
       { caption: "", title: "用户端 Mini App", image: "/placeholder.svg", description: "面向海外用户的轮毂选型与询盘小程序，覆盖型号浏览、色卡选择、Telegram转化入口" },
-      { caption: "", title: "定制绘图单 · 线下流程结构化", image: "/placeholder.svg", description: "将原本依赖线下沟通的定制流程结构化，输出为Excel定制绘图单，覆盖车辆信息、轮毂规格、工艺选择与参考图，是后续工厂与客户小程序化沟通流程的前期业务梳理基础" },
+      { caption: "", title: "定制绘图单 · 线下流程结构化", image: "/a8811bdd-f8af-4f69-9f5e-1adb87fbaccc.png", description: "将原本依赖线下沟通的定制流程结构化，输出为Excel定制绘图单，覆盖车辆信息、轮毂规格、工艺选择与参考图，是后续工厂与客户小程序化沟通流程的前期业务梳理基础" },
     ],
     deliverablesEn: [
       { caption: "", title: "Brand & Website", image: "/placeholder.svg", description: "From logo design to complete website build, establishing a 0-to-1 brand visual system covering all wheelsline.com pages" },
@@ -480,7 +480,7 @@ export const projects: Project[] = [
       { caption: "", title: "Supply Chain Backend · Color Card System", image: "/ebb1c6d9-61a2-4b54-8698-00ab8c3a07d7.png", description: "Established the WheelsLine color code system with 99 codes in 13 groups, separating surface finish and structural process" },
       { caption: "", title: "Supply Chain Backend · Case Library", image: "/placeholder.svg", description: "Linked buyer cases with model and order data, allowing one-click customization and lowering barriers for mass production" },
       { caption: "", title: "User Mini App", image: "/placeholder.svg", description: "Wheel selection and inquiry mini app for overseas users, covering model browsing, color selection, and Telegram conversion" },
-      { caption: "", title: "Custom Drawing Order · Offline Process Structuring", image: "/placeholder.svg", description: "Structured the originally offline-dependent customization process into an Excel custom drawing order, covering vehicle info, wheel specs, finish selection, and reference images — laying the business groundwork for subsequent mini app-based factory-customer communication" },
+      { caption: "", title: "Custom Drawing Order · Offline Process Structuring", image: "/a8811bdd-f8af-4f69-9f5e-1adb87fbaccc.png", description: "Structured the originally offline-dependent customization process into an Excel custom drawing order, covering vehicle info, wheel specs, finish selection, and reference images — laying the business groundwork for subsequent mini app-based factory-customer communication" },
     ],
     results: [
       "从零完成品牌到系统的全链路基础设施搭建，覆盖C端展示、B端运营、线下定制沟通三个核心场景",
