@@ -65,7 +65,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm flex flex-col items-center justify-center animate-fade-in"
+      className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm flex flex-col animate-fade-in overflow-y-auto overscroll-contain"
       onClick={onClose}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -74,7 +74,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
       {/* Close button */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-secondary/80 transition-colors z-10"
+        className="fixed top-4 right-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-secondary/80 transition-colors z-20"
         aria-label="Close"
       >
         <X className="w-5 h-5 md:w-6 md:h-6" />
@@ -88,7 +88,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
               e.stopPropagation();
               onPrev();
             }}
-            className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-secondary items-center justify-center text-foreground hover:bg-secondary/80 transition-colors"
+            className="hidden md:flex fixed left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-secondary items-center justify-center text-foreground hover:bg-secondary/80 transition-colors z-20"
             aria-label="Previous"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -98,7 +98,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
               e.stopPropagation();
               onNext();
             }}
-            className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-secondary items-center justify-center text-foreground hover:bg-secondary/80 transition-colors"
+            className="hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-secondary items-center justify-center text-foreground hover:bg-secondary/80 transition-colors z-20"
             aria-label="Next"
           >
             <ChevronRight className="w-6 h-6" />
@@ -106,15 +106,15 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         </>
       )}
 
-      {/* Image */}
+      {/* Image — scrollable for long screenshots, shown at full natural width up to 90vw */}
       <div
-        className="max-w-[90vw] max-h-[75vh] md:max-h-[90vh] animate-scale-in"
+        className="min-h-full w-full flex items-start justify-center py-16 md:py-20 px-4"
         onClick={(e) => e.stopPropagation()}
       >
         <img
           src={images[currentIndex]}
           alt=""
-          className="max-w-full max-h-[75vh] md:max-h-[90vh] object-contain rounded-lg"
+          className="w-auto max-w-[92vw] md:max-w-[85vw] h-auto rounded-lg"
         />
       </div>
 
