@@ -13,10 +13,12 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0 }) => {
   const { language } = useLanguage();
+  const projectTitle = language === 'zh' ? project.title : project.titleEn;
 
   return (
     <Link
       to={project.linkTo || `/projects/${project.slug}`}
+      aria-label={language === 'zh' ? `查看项目：${projectTitle}` : `View project: ${projectTitle}`}
       className={cn(
         'group block bg-card rounded-2xl overflow-hidden card-lift glow-hover relative',
         'opacity-0 animate-fade-in-up border border-border/50',
@@ -28,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0
         {project.coverImage ? (
           <img
             src={project.coverImage}
-            alt={language === 'zh' ? project.title : project.titleEn}
+            alt={projectTitle}
             className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
             loading="lazy"
           />
@@ -62,7 +64,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0
         </div>
         
         <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors line-clamp-2">
-          {language === 'zh' ? project.title : project.titleEn}
+          {projectTitle}
         </h3>
         
         <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
