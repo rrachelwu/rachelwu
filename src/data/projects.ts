@@ -535,16 +535,16 @@ export const projects: Project[] = [
       },
     ],
     deliverables: [
-      { caption: "", title: "品牌与官网 · Brand & Website", image: "/f82b36b9-3c3b-4149-80ac-fc2eff8b47ed.png", description: "从Logo设计到官网完整搭建，建立品牌从零到一的视觉体系，覆盖wheelsline.com全站页面" },
-      { caption: "", title: "供应链后台 · 订单与型号管理", image: "/e3dbfbce-ca81-4110-a25a-6f7c1e5ef787.png", description: "订单六阶段生命周期（确认中→设计中→生产中→待尾款→已发货→完成），型号父子结构管理，支持多货币多工厂" },
+      { caption: "", title: "品牌与官网 · Brand & Website", image: "/e3dbfbce-ca81-4110-a25a-6f7c1e5ef787.png", description: "从Logo设计到官网完整搭建，建立品牌从零到一的视觉体系，覆盖wheelsline.com全站页面" },
+      { caption: "", title: "供应链后台 · 订单与型号管理", image: "/f82b36b9-3c3b-4149-80ac-fc2eff8b47ed.png", description: "订单六阶段生命周期（确认中→设计中→生产中→待尾款→已发货→完成），型号父子结构管理，支持多货币多工厂" },
       { caption: "", title: "供应链后台 · 色卡规范系统", image: "/50ce72bf-0bfc-48ac-91fd-d8852c7871c5.png", description: "建立WheelsLine色卡体系，区分表面工艺与结构工艺两个独立维度，共99种色卡/13个分组，前台筛选与后台录入引用同一套标准" },
       { caption: "", title: "供应链后台 · 案例库管理", image: "/6e872ef5-c3fa-4cbc-acd6-a4187f803842.png", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
       
       { caption: "", title: "定制绘图单 · 线下流程结构化", image: "/a8811bdd-f8af-4f69-9f5e-1adb87fbaccc.png", description: "将原本依赖线下沟通的定制流程结构化，输出为Excel定制绘图单，覆盖车辆信息、轮毂规格、工艺选择与参考图，是后续工厂与客户小程序化沟通流程的前期业务梳理基础" },
     ],
     deliverablesEn: [
-      { caption: "", title: "Brand & Website", image: "/f82b36b9-3c3b-4149-80ac-fc2eff8b47ed.png", description: "From logo design to complete website build, establishing a 0-to-1 brand visual system covering all wheelsline.com pages" },
-      { caption: "", title: "Supply Chain Backend · Orders & Models", image: "/e3dbfbce-ca81-4110-a25a-6f7c1e5ef787.png", description: "6-stage order lifecycle, parent-child model structure management, multi-currency and multi-factory support" },
+      { caption: "", title: "Brand & Website", image: "/e3dbfbce-ca81-4110-a25a-6f7c1e5ef787.png", description: "From logo design to complete website build, establishing a 0-to-1 brand visual system covering all wheelsline.com pages" },
+      { caption: "", title: "Supply Chain Backend · Orders & Models", image: "/f82b36b9-3c3b-4149-80ac-fc2eff8b47ed.png", description: "6-stage order lifecycle, parent-child model structure management, multi-currency and multi-factory support" },
       { caption: "", title: "Supply Chain Backend · Color Card System", image: "/50ce72bf-0bfc-48ac-91fd-d8852c7871c5.png", description: "Established the WheelsLine color code system with 99 codes in 13 groups, separating surface finish and structural process" },
       { caption: "", title: "Supply Chain Backend · Case Library", image: "/6e872ef5-c3fa-4cbc-acd6-a4187f803842.png", description: "Linked buyer cases with model and order data, allowing one-click customization and lowering barriers for mass production" },
       
