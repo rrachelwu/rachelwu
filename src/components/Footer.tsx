@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
+  const [copied, setCopied] = useState(false);
+  const email = 'rachelwuqian@icloud.com';
+
+  const handleCopyEmail = async () => {
+    await navigator.clipboard.writeText(email);
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1800);
+  };
 
   return (
     <footer className="border-t border-border bg-muted/30">
@@ -21,16 +29,15 @@ const Footer: React.FC = () => {
           
           <div className="flex items-center gap-4">
             {/* Email */}
-            <a
-              href="mailto:rachelwuqian@icloud.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={handleCopyEmail}
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              aria-label="Email Rachel Wu"
-              title="rachelwuqian@icloud.com"
+              aria-label={copied ? t('邮箱已复制', 'Email copied') : t('复制邮箱地址', 'Copy email address')}
+              title={copied ? t('已复制', 'Copied') : email}
             >
               <Mail className="w-5 h-5" />
-            </a>
+            </button>
 
             {/* WeChat - Link to dedicated page */}
             <Link
