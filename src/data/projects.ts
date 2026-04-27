@@ -1,6 +1,6 @@
-import ssrouterCover from '@/assets/ssrouter-cover.png';
-import pokubyCover from '@/assets/pokubuy-cover.png';
-import wheelslineCover from '@/assets/wheelsline-cover.png';
+import ssrouterCover from '@/assets/ssrouter-cover.webp';
+import pokubyCover from '@/assets/pokubuy-cover.webp';
+import wheelslineCover from '@/assets/wheelsline-cover.webp';
 
 export interface DecisionItem {
   problem: string;
@@ -252,7 +252,7 @@ export const projects: Project[] = [
     slug: "juzhenyuan",
     title: "区块链钱包、密钥管理平台与知识管理系统的设计体系建设",
     titleEn: "Design System for Blockchain Wallet, Key Management & Knowledge Management",
-    coverImage: "/juzhenyuan-cover.png",
+    coverImage: "/juzhenyuan-cover.webp",
     summary: "深入区块链密钥管理业务逻辑，主导隐私钱包从1.0到2.0重构，识别关键产品缺陷并推动方案落地。",
     summaryEn: "As product designer at Juzhengyuan (Shenzhen), independently led the complete design of three product lines: Privacy Wallet blockchain wallet (App), MPC-KMS key management system (Web dashboard + website), and internal KMS knowledge management system (0-to-1 from brand to component library), delivering from visual specs to interaction systems.",
     role: "产品设计师",
