@@ -8,9 +8,8 @@ import SectionTitle from '@/components/SectionTitle';
 import Button from '@/components/Button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
-import rachelPhoto from '@/assets/rachel-photo.jpg';
+import rachelPhoto from '@/assets/rachel-photo.webp';
 import heroPattern from '@/assets/hero-pattern.svg';
-import logo from '@/assets/logo.svg';
 
 const Index: React.FC = () => {
   const { t, language } = useLanguage();
@@ -141,12 +140,14 @@ const Index: React.FC = () => {
             </div>
 
             {/* Right Image - with red oval background like PDF */}
-            <div className="relative hidden lg:block">
-              <div className="relative z-10 w-full max-w-md mx-auto">
+            <div className="relative hidden lg:block min-h-[480px]">
+              <div className="relative z-10 w-full max-w-md mx-auto aspect-[4/5]">
                 <img
                   src={rachelPhoto}
                   alt="Rachel Wu"
-                  className="w-full max-w-sm ml-auto rounded-2xl shadow-elevated"
+                  width="720"
+                  height="900"
+                  className="w-full max-w-sm h-auto ml-auto rounded-2xl shadow-elevated"
                 />
               </div>
             </div>
@@ -237,9 +238,9 @@ const Index: React.FC = () => {
                 : 'opacity-0 translate-y-8'
             )}
           >
-            <p className="text-sm text-muted-foreground mb-10 uppercase tracking-wider">
+            <h2 className="text-sm text-muted-foreground mb-10 uppercase tracking-wider">
               {t('工作经历', 'Work Experience')}
-            </p>
+            </h2>
             <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
               {logos.map((logo, index) => (
                 <div
