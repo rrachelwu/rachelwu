@@ -86,6 +86,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
     id: "1",
     slug: "ssrouter",
     title: "SSRouter — 从0搭建面向海外市场的VPN路由器产品体系",
