@@ -23,8 +23,11 @@ const Footer: React.FC = () => {
             {/* Email */}
             <a
               href="mailto:rachelwuqian@icloud.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              aria-label="Email"
+              aria-label="Email Rachel Wu"
+              title="rachelwuqian@icloud.com"
             >
               <Mail className="w-5 h-5" />
             </a>
