@@ -146,14 +146,14 @@ const About: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-3">
               {t('吴倩', 'Rachel Wu')}
               <span className="text-xl md:text-2xl font-normal text-muted-foreground ml-4">
-                {t('产品负责人 · 出海硬件', 'Product Lead · Overseas Hardware')}
+                {t('高级产品设计师 · 硬件 & 出海', 'Senior Product Designer · Hardware & Overseas')}
               </span>
             </h1>
             
             <p className="text-muted-foreground mb-8 max-w-2xl leading-relaxed">
               {t(
-                '10年跨硬件与互联网产品经验，小米/峰米背景。主导过出海硬件品牌0到1全链路交付（美俄双市场）、B端供应链订单系统及Telegram Mini App独立交付。具备从用户研究、需求定义、系统架构到开发验收的完整产品推进能力，有独立产品判断并推动落地的实战记录。',
-                '10 years of cross-hardware and internet product experience, with Xiaomi/Formovie background. Led 0-to-1 full-chain delivery for overseas hardware brands (US/RU markets), B-end supply chain order systems, and independent Telegram Mini App delivery. Possesses end-to-end product capabilities from user research and requirements to system architecture and development acceptance, with a track record of independent judgment and execution.'
+                '10年跨硬件与互联网UX设计经验，小米/峰米背景。主导过FengOS智能终端HMI交互设计及出海硬件品牌（美俄双市场）从用户研究到交互规范的全链路设计交付。具备交互设计、视觉规范到开发验收的完整能力，软硬件双背景。',
+                '10 years of UX design experience across hardware and internet, with Xiaomi/Formovie background. Led HMI interaction design for FengOS smart terminals and full-chain design delivery for overseas hardware brands (US/RU markets) from user research to interaction standards. Complete capabilities from interaction design and visual standards to development acceptance, with both software and hardware background.'
               )}
             </p>
 
