@@ -35,7 +35,7 @@ const About: React.FC = () => {
       role: t('高级产品设计师', 'Senior Product Designer'),
       period: '2025.03 - 2025.05',
       description: t(
-        '独立主导路由器、轮毂、POKUBUY三条DTC出海产品线的UX设计交付，覆盖官网、订单管理后台、Telegram Mini App等多端；建立英俄双语国际化设计规范；借助AI辅助原型验证，15天内完成订单系统核心模块交付。',
+        '独立主导路由器、轮毂、POKUBUY三条DTC出海产品线的全链路交付，覆盖官网、订单管理后台、Telegram Mini App等多端；建立英俄双语国际化设计规范；借助AI辅助原型验证，15天内完成订单系统核心模块交付。',
         'Independently led UX design delivery for three DTC overseas product lines (router, wheels, PokuBuy), covering websites, order management backend, Telegram Mini App and more; established EN/RU bilingual internationalization design standards; leveraged AI-assisted prototyping, delivering core modules of the order system within 15 days.'
       ),
     },
