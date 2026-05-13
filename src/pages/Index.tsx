@@ -108,7 +108,7 @@ const Index: React.FC = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground mb-4">
-                {t('高级产品设计师 · 硬件 & 出海', 'Senior Product Designer · Hardware & Overseas')}
+                {t('高级产品设计师', 'Senior Product Designer')}
               </p>
               
               <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
