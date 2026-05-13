@@ -32,11 +32,11 @@ const About: React.FC = () => {
   const workExperience = [
     {
       company: t('武汉光速源科技有限公司', 'Wuhan Guangsuyuan Tech'),
-      role: t('产品负责人', 'Product Lead'),
+      role: t('高级产品设计师', 'Senior Product Designer'),
       period: '2025.03 - 2025.05',
       description: t(
-        '主导路由器、轮毂、POKUBUY三条出海产品线并行设计，覆盖官网、订单管理后台、Telegram Mini App等多端产品；建立英俄双语国际化规范，针对不同市场主动调整内容策略；探索AI辅助原型交付模式，与团队协作在15天内完成订单系统完整搭建',
-        'Led parallel design for three overseas product lines (router, wheels, PokuBuy), covering websites, order management backend, and Telegram Mini App; established EN/RU bilingual standards with market-specific content strategies; explored AI-assisted prototyping, completing full system build in 15 days'
+        '独立主导路由器、轮毂、POKUBUY三条DTC出海产品线的UX设计交付，覆盖官网、订单管理后台、Telegram Mini App等多端；建立英俄双语国际化设计规范；借助AI辅助原型验证，15天内完成订单系统核心模块交付。',
+        'Independently led UX design delivery for three DTC overseas product lines (router, wheels, PokuBuy), covering websites, order management backend, Telegram Mini App and more; established EN/RU bilingual internationalization design standards; leveraged AI-assisted prototyping, delivering core modules of the order system within 15 days.'
       ),
     },
     {
