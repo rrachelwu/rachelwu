@@ -54,8 +54,8 @@ const Index: React.FC = () => {
 
   const stats = [
     { number: '10+', label: t('产品经验年数', 'Years of Product Experience') },
-    { number: '20+', label: t('独立负责项目', 'Independent Projects') },
-    { number: '3', label: t('出海项目', 'Overseas Projects') },
+    { number: '10+', label: t('交付项目', 'Delivered Projects') },
+    { number: '3+', label: t('出海市场', 'Overseas Markets') },
   ];
 
   const logos = [
