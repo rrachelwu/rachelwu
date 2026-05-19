@@ -36,10 +36,10 @@ const Index: React.FC = () => {
     },
     {
       icon: Zap,
-      title: t('落地与协作', 'Delivery & Collaboration'),
+      title: t('交互规范与系统', 'Interaction Design System'),
       description: t(
-        '跨团队推进、AI辅助原型交付、设计评审、需求澄清、交付质量管控',
-        'Cross-team coordination, AI-assisted prototyping, design review, requirement clarification, delivery quality control'
+        '设计系统建设、组件库规范、多端适配、开发验收、交付质量管控',
+        'Design system building, component library standards, multi-platform adaptation, development acceptance, delivery quality control'
       ),
     },
     {
