@@ -229,12 +229,11 @@ export const projects: Project[] = [
       },
     ],
     results: [
-      "独立完成从品牌到产品的全链路设计，覆盖 Logo、硬件包装、Mini App、官网、后台共5个产品触点",
-      "俄罗斯版 Telegram Mini App 完整上线，覆盖设备绑定、节点切换、套餐查看与购买全流程",
-      "俄罗斯版独立官网上线，包含登录注册体系与路由器购买商城",
-      "美版官网完成内容架构重建与订阅套餐三档定价设计，英俄双版本内容策略独立落地",
-      "美版路由器后台管理系统交付，支持设备管理与流量统计",
-      "美版后台覆盖概览、运行监控、套餐中心、设备管理、节点管理、网络诊断完整功能模块，支撑用户全生命周期管理",
+      "从0到1独立完成美俄双市场完整产品体系搭建，覆盖官网、Telegram Mini App、路由器后台管理系统三套独立产品线",
+      "设计并落地三档订阅定价体系，新用户 100G/3个月免费试用机制，降低首购门槛",
+      "交付含交互状态共 60+ 页面，覆盖设备绑定、节点切换、套餐购买、账户管理完整闭环",
+      "建立中英俄三语设计规范，西里尔字母排版与卢布结算均完成本地化适配",
+      "独立推进设计到开发验收全链路，项目从启动到上线约 4 个月",
     ],
     resultsEn: [
       "Independently completed full-chain design from brand to product, covering 5 touchpoints: Logo, hardware packaging, Mini App, website, and dashboard",
