@@ -61,8 +61,6 @@ const Index: React.FC = () => {
   const logos = [
     { name: '小米电子', nameEn: 'Xiaomi' },
     { name: '峰米科技', nameEn: 'Formovie' },
-    { name: '矩阵元', nameEn: 'Matrix Element' },
-    { name: '雷神网络', nameEn: 'Thunder' },
     { name: '紫荆花', nameEn: 'Bauhinia' },
     { name: '光速源', nameEn: 'Guangsuyuan' },
   ];
