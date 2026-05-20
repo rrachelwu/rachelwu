@@ -276,14 +276,34 @@ const ProjectDetail: React.FC = () => {
           </section>
         )}
 
+        {/* 5b. 交付物展示 (only if no comparisons) */}
+        {!project.comparisons && (
+          <section className="mb-12">
+            <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
+              <span className="w-1 bg-primary" style={{ height: '18px', borderRadius: 0 }} />
+              {t('交付物', 'Deliverables')}
+            </h2>
+            {deliverables.length === 0 ? (
+              <div className="rounded-xl border border-border bg-card p-6 flex items-start gap-3">
+                <Lock className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {t(
+                    '因签署保密协议，完整设计页面不对外展示。如需了解具体设计细节，欢迎在面试中交流。',
+                    'Full design pages are not publicly displayed due to NDA. Design details are available for discussion during interviews.'
+                  )}
+                </p>
+              </div>
+            ) : (
+              <div className="space-y-10">
         {/* 5b. 交付物展示 (only if no comparisons and has deliverables) */}
-        {!project.comparisons && deliverables.length > 0 && (
+        {false && !project.comparisons && deliverables.length > 0 && (
           <section className="mb-12">
             <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
               <span className="w-1 bg-primary" style={{ height: '18px', borderRadius: 0 }} />
               {t('交付物', 'Deliverables')}
             </h2>
             <div className="space-y-10">
+
             {deliverables.map((item, index) => {
               const title = language === 'zh' ? (item.title || item.caption) : (item.titleEn || item.title || item.caption);
               const desc = language === 'zh' ? item.description : (item.descriptionEn || item.description);
