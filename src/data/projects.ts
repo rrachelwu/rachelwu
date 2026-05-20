@@ -219,8 +219,8 @@ export const projects: Project[] = [
     tagsEn: ["AI Product", "Cybersecurity", "Enterprise Tool", "Government Research"],
     techStack: ["Figma", "漏洞检测界面", "代码块设计", "国家机构视觉规范"],
     links: {},
-    background: "武汉金银湖实验室是依托华中科技大学、武汉大学等顶尖高校，在国家网络安全人才与创新基地建立的新型研发机构，由武汉市人民政府批复设立。核心产品是面向网络安全领域的代码漏洞检测大模型——通过学习30多万个「漏洞切片」，实现从百万行代码中自动捕捉漏洞，10万行代码扫描不超过30分钟。我作为外包设计师独立负责该平台全部UI设计，用户是安全研究员和工程师。项目中途因需求表达不清晰，主动推动了一次线下需求沟通，明确了核心使用场景后再进入高保真设计阶段。",
-    backgroundEn: "Wuhan Jinyinhu Laboratory is a new R&D institution established at the National Cybersecurity Talent and Innovation Base, approved by the Wuhan Municipal Government and built with HUST and Wuhan University. Its core product is a code vulnerability detection LLM — trained on 300,000+ 'vulnerability slices' to automatically detect vulnerabilities, scanning 100k lines of code in under 30 minutes. As a freelance designer, I independently handled all UI design. Mid-project, I proactively initiated an in-person requirement clarification session before entering high-fidelity design.",
+    background: "武汉金银湖实验室是依托华中科技大学、武汉大学等顶尖高校，在国家网络安全人才与创新基地建立的新型研发机构，由武汉市人民政府批复设立。核心产品是面向网络安全领域的代码漏洞检测大模型——通过学习30多万个「漏洞切片」，实现从百万行代码中自动捕捉漏洞，10万行代码扫描不超过30分钟。我作为外包设计师独立负责该平台全部UI设计，用户是安全研究员和工程师。项目中途因需求表达不清晰，主动推动了一次线下需求沟通，明确了核心使用场景后再进入高保真设计阶段。因签署保密协议，完整页面不对外展示。",
+    backgroundEn: "Wuhan Jinyinhu Laboratory is a new R&D institution established at the National Cybersecurity Talent and Innovation Base, approved by the Wuhan Municipal Government and built with HUST and Wuhan University. Its core product is a code vulnerability detection LLM — trained on 300,000+ 'vulnerability slices' to automatically detect vulnerabilities, scanning 100k lines of code in under 30 minutes. As a freelance designer, I independently handled all UI design. Mid-project, I proactively initiated an in-person requirement clarification session before entering high-fidelity design. Full pages are not publicly displayed due to NDA.",
     decisions: [
       {
         problem: "漏洞检测报告包含大量代码片段和技术细节，纯文字呈现对工程师极不友好",
