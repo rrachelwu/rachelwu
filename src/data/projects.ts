@@ -270,7 +270,7 @@ export const projects: Project[] = [
       "Visual style successfully matched national institution tone — product launched internally, serving Jinyinhu Lab's security LLM research team",
     ],
     reflection: "这个项目让我意识到设计的风格基调判断需要从客户的机构属性出发，而不是从当下流行的产品趋势出发。金银湖实验室是国家级科研机构，它的用户对「权威感」和「专业可信度」的需求，远比对「好看」的需求更强烈。如果一开始就套用消费级AI产品的设计语言，反而会让用户感到不信任。这个判断是在线下沟通之后才真正确立的，也是这个项目最重要的设计决策。",
-    reflectionEn: "This project taught me that style direction judgments must start from the client's institutional nature, not current product trends. Jinyinhu Lab is a national-level research institution — its users' need for 'authority' and 'professional credibility' far outweighs their need for 'looking good.' Applying consumer AI product design language would have actually undermined user trust. This judgment was only truly established after the in-person communication session — and it was the most important design decision of the entire project.",
+    reflectionEn: "This project taught me that style direction judgments must start from the client's institutional nature, not current product trends. Jinyinhu Lab is a national-level research institution — its users' need for 'authority' and 'professional credibility' far outweighs their need for 'looking good.' Applying consumer AI product design language would have actually undermined user trust. This judgment was only truly established after the in-person communication — and it was the most important design decision of the entire project.",
   },
   {
     id: "1",
