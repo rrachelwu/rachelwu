@@ -219,8 +219,8 @@ export const projects: Project[] = [
     tagsEn: ["AI Product", "Cybersecurity", "Enterprise Tool", "Government Research"],
     techStack: ["Figma", "漏洞检测界面", "代码块设计", "国家机构视觉规范"],
     links: {},
-    background: "武汉金银湖实验室是依托华中科技大学、武汉大学等顶尖高校，在国家网络安全人才与创新基地建立的新型研发机构，由武汉市人民政府批复设立。核心产品是面向网络安全领域的代码漏洞检测大模型——通过学习30多万个「漏洞切片」，实现从百万行代码中自动捕捉漏洞，10万行代码扫描不超过30分钟。我作为外包设计师独立负责该平台全部UI设计，用户是安全研究员和工程师。项目中途因需求表达不清晰，主动推动了一次线下需求沟通，明确了核心使用场景后再进入高保真设计阶段。",
-    backgroundEn: "Wuhan Jinyinhu Laboratory is a new R&D institution established at the National Cybersecurity Talent and Innovation Base, approved by the Wuhan Municipal Government and built with HUST and Wuhan University. Its core product is a code vulnerability detection LLM — trained on 300,000+ 'vulnerability slices' to automatically detect vulnerabilities, scanning 100k lines of code in under 30 minutes. As a freelance designer, I independently handled all UI design. Mid-project, I proactively initiated an in-person requirement clarification session before entering high-fidelity design.",
+    background: "武汉金银湖实验室是依托华中科技大学、武汉大学等顶尖高校，在国家网络安全人才与创新基地建立的新型研发机构，由武汉市人民政府批复设立。核心产品是面向网络安全领域的代码漏洞检测大模型——通过学习30多万个「漏洞切片」，实现从百万行代码中自动捕捉漏洞，10万行代码扫描不超过30分钟。我作为外包设计师独立负责该平台全部UI设计，用户是安全研究员和工程师。项目中途因需求表达不清晰，主动推动了一次线下需求沟通，明确了核心使用场景后再进入高保真设计阶段。因签署保密协议，完整页面不对外展示。",
+    backgroundEn: "Wuhan Jinyinhu Laboratory is a new R&D institution established at the National Cybersecurity Talent and Innovation Base, approved by the Wuhan Municipal Government and built with HUST and Wuhan University. Its core product is a code vulnerability detection LLM — trained on 300,000+ 'vulnerability slices' to automatically detect vulnerabilities, scanning 100k lines of code in under 30 minutes. As a freelance designer, I independently handled all UI design. Mid-project, I proactively initiated an in-person requirement clarification session before entering high-fidelity design. Full pages are not publicly displayed due to NDA.",
     decisions: [
       {
         problem: "漏洞检测报告包含大量代码片段和技术细节，纯文字呈现对工程师极不友好",
@@ -252,55 +252,11 @@ export const projects: Project[] = [
       {
         problem: "Product serves a national cybersecurity research institution — visual style must match the authority of a government research organization, not the lightness of commercial SaaS",
         judgment: "Jinyinhu Lab's logo uses a deep blue palette; the National Cybersecurity Base's overall visual tone is serious, authoritative, and tech-forward — this directly dictates that the interface cannot follow consumer AI products' minimal white aesthetic; it needs gravitas and institutional credibility",
-        solution: "Used Jinyinhu Lab's logo deep blue as the primary color foundation, supplemented with dark background blocks and cool-gray grids — the overall interface conveys national institution-level gravitas and technological credibility. The shield element extends from the logo into the interface as a visual anchor for security attributes; the login page centers the brand logo to reinforce institutional backing, clearly distinguishing the visual language from commercial AI products",
+        solution: "Used Jinyinhu Lab's logo deep blue as the primary color foundation, supplemented with dark background blocks and cool-gray grids. The shield element extends from the logo into the interface as a visual anchor for security attributes; the login page centers the brand logo to reinforce institutional backing, clearly distinguishing the visual language from commercial AI products",
       },
     ],
-    deliverables: [
-      {
-        title: "登录与身份验证流程",
-        caption: "",
-        description: "账号登录、注册、验证码、忘记密码完整流程。以金银湖实验室品牌logo为视觉中心，深蓝背景强化国家机构级别的权威感与安全信任感",
-        image: "/images/jinyin/login-flow.png",
-        layout: "single" as const,
-      },
-      {
-        title: "漏洞检测任务列表",
-        caption: "",
-        description: "左侧任务导航，右侧检测结果概览，支持多任务并行管理，风险等级标签一目了然。整体配色延续深蓝主色调，与机构视觉体系保持一致",
-        image: "/images/jinyin/task-list.png",
-        layout: "single" as const,
-      },
-      {
-        title: "漏洞检测报告与代码块",
-        caption: "",
-        description: "三层信息架构：漏洞摘要→详情→代码块。深色代码块与浅色正文区形成强对比，等宽字体+关键行高亮+一键复制，让工程师扫描式阅读即可定位漏洞",
-        image: "/images/jinyin/report-code.png",
-        layout: "single" as const,
-      },
-    ],
-    deliverablesEn: [
-      {
-        title: "Login & Authentication Flow",
-        caption: "",
-        description: "Complete flow covering login, registration, verification, and password recovery. Brand logo centered as visual anchor; deep blue background reinforces national institution-level authority and security trust",
-        image: "/images/jinyin/login-flow.png",
-        layout: "single" as const,
-      },
-      {
-        title: "Vulnerability Detection Task List",
-        caption: "",
-        description: "Left task navigation, right detection results overview, multi-task parallel management with risk level labels. Color system follows deep blue primary tone consistent with institutional visual identity",
-        image: "/images/jinyin/task-list.png",
-        layout: "single" as const,
-      },
-      {
-        title: "Vulnerability Report & Code Blocks",
-        caption: "",
-        description: "Three-level IA: summary → details → code block. Dark code blocks contrast strongly with light body text; monospace font, key line highlighting, one-click copy — scan-readable for engineers",
-        image: "/images/jinyin/report-code.png",
-        layout: "single" as const,
-      },
-    ],
+    deliverables: [],
+    deliverablesEn: [],
     results: [
       "独立完成 13 个页面全部 UI 设计，从登录注册到漏洞检测报告完整交付",
       "主动推动线下需求对齐，设计方案一次通过客户评审，无重大返工",
@@ -314,7 +270,7 @@ export const projects: Project[] = [
       "Visual style successfully matched national institution tone — product launched internally, serving Jinyinhu Lab's security LLM research team",
     ],
     reflection: "这个项目让我意识到设计的风格基调判断需要从客户的机构属性出发，而不是从当下流行的产品趋势出发。金银湖实验室是国家级科研机构，它的用户对「权威感」和「专业可信度」的需求，远比对「好看」的需求更强烈。如果一开始就套用消费级AI产品的设计语言，反而会让用户感到不信任。这个判断是在线下沟通之后才真正确立的，也是这个项目最重要的设计决策。",
-    reflectionEn: "This project taught me that style direction judgments must start from the client's institutional nature, not current product trends. Jinyinhu Lab is a national-level research institution — its users' need for 'authority' and 'professional credibility' far outweighs their need for 'looking good.' Applying consumer AI product design language would have actually undermined user trust. This judgment was only truly established after the in-person communication session — and it was the most important design decision of the entire project.",
+    reflectionEn: "This project taught me that style direction judgments must start from the client's institutional nature, not current product trends. Jinyinhu Lab is a national-level research institution — its users' need for 'authority' and 'professional credibility' far outweighs their need for 'looking good.' Applying consumer AI product design language would have actually undermined user trust. This judgment was only truly established after the in-person communication — and it was the most important design decision of the entire project.",
   },
   {
     id: "1",

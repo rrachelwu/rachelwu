@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Lightbulb, CheckCircle2, MessageSquareQuote } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Lightbulb, CheckCircle2, MessageSquareQuote, Lock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getProjectBySlug } from '@/data/projects';
 import Button from '@/components/Button';
@@ -276,55 +276,65 @@ const ProjectDetail: React.FC = () => {
           </section>
         )}
 
-        {/* 5b. 交付物展示 (only if no comparisons and has deliverables) */}
-        {!project.comparisons && deliverables.length > 0 && (
+        {/* 5b. 交付物展示 (only if no comparisons) */}
+        {!project.comparisons && (
           <section className="mb-12">
             <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
               <span className="w-1 bg-primary" style={{ height: '18px', borderRadius: 0 }} />
               {t('交付物', 'Deliverables')}
             </h2>
-            <div className="space-y-10">
-            {deliverables.map((item, index) => {
-              const title = language === 'zh' ? (item.title || item.caption) : (item.titleEn || item.title || item.caption);
-              const desc = language === 'zh' ? item.description : (item.descriptionEn || item.description);
-              const allImages = deliverables.flatMap(d => d.images || (d.image ? [d.image] : []));
-              return (
-                <div key={index}>
-                  <h4 className="text-base font-semibold mb-3">{title}</h4>
-                  {/* Multiple images with layout */}
-                  {item.images && item.images.length > 0 && (
-                    <div className={`grid gap-3 ${item.layout === 'single' ? 'grid-cols-1' : item.layout === 'row-3' ? 'grid-cols-3' : item.layout === 'grid-2x2' ? 'grid-cols-2' : 'grid-cols-2'}`}>
-                      {item.images.map((img, imgIdx) => (
-                        <div key={imgIdx}>
-                          <button
-                            onClick={() => openLightbox(allImages, allImages.indexOf(img))}
-                            className="w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in"
-                          >
-                            <img src={img} alt={`${title} ${imgIdx + 1}`} className="w-full h-auto object-contain" loading="lazy" />
-                          </button>
-                          {item.imageCaptions && item.imageCaptions[imgIdx] && (
-                            <p className="text-xs text-muted-foreground mt-2">{item.imageCaptions[imgIdx]}</p>
-                          )}
+            {deliverables.length === 0 ? (
+              <div className="rounded-xl border border-border bg-card p-6 flex items-start gap-3">
+                <Lock className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {t(
+                    '因签署保密协议，完整设计页面不对外展示。如需了解具体设计细节，欢迎在面试中交流。',
+                    'Full design pages are not publicly displayed due to NDA. Design details are available for discussion during interviews.'
+                  )}
+                </p>
+              </div>
+            ) : (
+              <div className="space-y-10">
+                {deliverables.map((item, index) => {
+                  const title = language === 'zh' ? (item.title || item.caption) : (item.titleEn || item.title || item.caption);
+                  const desc = language === 'zh' ? item.description : (item.descriptionEn || item.description);
+                  const allImages = deliverables.flatMap(d => d.images || (d.image ? [d.image] : []));
+                  return (
+                    <div key={index}>
+                      <h4 className="text-base font-semibold mb-3">{title}</h4>
+                      {item.images && item.images.length > 0 && (
+                        <div className={`grid gap-3 ${item.layout === 'single' ? 'grid-cols-1' : item.layout === 'row-3' ? 'grid-cols-3' : item.layout === 'grid-2x2' ? 'grid-cols-2' : 'grid-cols-2'}`}>
+                          {item.images.map((img, imgIdx) => (
+                            <div key={imgIdx}>
+                              <button
+                                onClick={() => openLightbox(allImages, allImages.indexOf(img))}
+                                className="w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in"
+                              >
+                                <img src={img} alt={`${title} ${imgIdx + 1}`} className="w-full h-auto object-contain" loading="lazy" />
+                              </button>
+                              {item.imageCaptions && item.imageCaptions[imgIdx] && (
+                                <p className="text-xs text-muted-foreground mt-2">{item.imageCaptions[imgIdx]}</p>
+                              )}
+                            </div>
+                          ))}
                         </div>
-                      ))}
+                      )}
+                      {!item.images && item.image && (
+                        <button
+                          onClick={() => openLightbox(allImages, allImages.indexOf(item.image!))}
+                          className="w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in"
+                        >
+                          <img src={item.image} alt={title} className="w-full h-auto" loading="lazy" />
+                        </button>
+                      )}
+                      {desc && (
+                        <p className="text-sm text-muted-foreground mt-3">{desc}</p>
+                      )}
                     </div>
-                  )}
-                  {/* Single image fallback */}
-                  {!item.images && item.image && (
-                    <button
-                      onClick={() => openLightbox(allImages, allImages.indexOf(item.image!))}
-                      className="w-full rounded-lg overflow-hidden bg-secondary hover:opacity-90 transition-opacity cursor-zoom-in"
-                    >
-                      <img src={item.image} alt={title} className="w-full h-auto" loading="lazy" />
-                    </button>
-                  )}
-                  {desc && (
-                    <p className="text-sm text-muted-foreground mt-3">{desc}</p>
-                  )}
-                </div>
-              );
-            })}
-            </div>
+                  );
+                })}
+              </div>
+            )}
           </section>
         )}
 
