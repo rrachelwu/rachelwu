@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Lightbulb, CheckCircle2, MessageSquareQuote } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Lightbulb, CheckCircle2, MessageSquareQuote, Lock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getProjectBySlug } from '@/data/projects';
 import Button from '@/components/Button';
