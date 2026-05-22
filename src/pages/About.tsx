@@ -161,15 +161,15 @@ const About: React.FC = () => {
             <div className="flex gap-16 mb-10">
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-foreground">10+</div>
-                <div className="text-sm text-muted-foreground mt-2">{t('产品经验年数', 'Product Experience')}</div>
+                <div className="text-sm text-muted-foreground mt-2">{t('产品经验年数', 'Years of Product Experience')}</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-foreground">20+</div>
-                <div className="text-sm text-muted-foreground mt-2">{t('独立负责项目', 'Independent Projects')}</div>
+                <div className="text-4xl md:text-5xl font-bold text-foreground">10+</div>
+                <div className="text-sm text-muted-foreground mt-2">{t('交付项目', 'Delivered Projects')}</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-foreground">3</div>
-                <div className="text-sm text-muted-foreground mt-2">{t('出海项目', 'Overseas Projects')}</div>
+                <div className="text-4xl md:text-5xl font-bold text-foreground">3+</div>
+                <div className="text-sm text-muted-foreground mt-2">{t('出海市场', 'Overseas Markets')}</div>
               </div>
             </div>
 
