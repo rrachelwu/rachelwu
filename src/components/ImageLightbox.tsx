@@ -41,6 +41,12 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   const pinchStartZoom = useRef(1);
   const activeTouches = useRef(0);
 
+  // 图片加载进度与缓存
+  const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [displaySrc, setDisplaySrc] = useState<string>('');
+  const blobCache = useRef<Map<string, string>>(new Map());
+
   const clamp = (v: number) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, v));
 
   const recalcFit = () => {
