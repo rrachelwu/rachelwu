@@ -219,8 +219,8 @@ export const projects: Project[] = [
     tagsEn: ["AI Product", "Cybersecurity", "Enterprise Tool", "Government Research"],
     techStack: ["Figma", "漏洞检测界面", "代码块设计", "国家机构视觉规范"],
     links: {},
-    background: "武汉金银湖实验室是依托华中科技大学、武汉大学等顶尖高校，在国家网络安全人才与创新基地建立的新型研发机构，由武汉市人民政府批复设立。核心产品是面向网络安全领域的代码漏洞检测大模型——通过学习30多万个「漏洞切片」，实现从百万行代码中自动捕捉漏洞，10万行代码扫描不超过30分钟。我作为外包设计师独立负责该平台全部UI设计，用户是安全研究员和工程师。项目中途因需求表达不清晰，主动推动了一次线下需求沟通，明确了核心使用场景后再进入高保真设计阶段。因签署保密协议，完整页面不对外展示。",
-    backgroundEn: "Wuhan Jinyinhu Laboratory is a new R&D institution established at the National Cybersecurity Talent and Innovation Base, approved by the Wuhan Municipal Government and built with HUST and Wuhan University. Its core product is a code vulnerability detection LLM — trained on 300,000+ 'vulnerability slices' to automatically detect vulnerabilities, scanning 100k lines of code in under 30 minutes. As a freelance designer, I independently handled all UI design. Mid-project, I proactively initiated an in-person requirement clarification session before entering high-fidelity design. Full pages are not publicly displayed due to NDA.",
+    background: "武汉金银湖实验室是依托华中科技大学、武汉大学等顶尖高校，在国家网络安全人才与创新基地建立的新型研发机构，由武汉市人民政府批复设立。核心产品是面向网络安全领域的代码漏洞检测大模型——通过学习30多万个「漏洞切片」，实现从百万行代码中自动捕捉漏洞，10万行代码扫描不超过30分钟。我作为外包设计师独立负责该平台全部UI设计，用户是安全研究员和工程师。项目中途因需求表达不清晰，主动推动了一次线下需求沟通，明确了核心使用场景后再进入高保真设计阶段。因签署保密协议，完整页面不对外展示。这个产品本质上是把安全工程师原本在命令行环境下完成的漏洞扫描工作，转化为有界面、有结构化输出的 Web 平台——设计的核心挑战不只是「好看」，而是如何让习惯了 CLI 工具的专业用户，在 GUI 界面里感受到同等甚至更高的效率和可控感。",
+    backgroundEn: "Wuhan Jinyinhu Laboratory is a new R&D institution established at the National Cybersecurity Talent and Innovation Base, approved by the Wuhan Municipal Government and built with HUST and Wuhan University. Its core product is a code vulnerability detection LLM — trained on 300,000+ 'vulnerability slices' to automatically detect vulnerabilities, scanning 100k lines of code in under 30 minutes. As a freelance designer, I independently handled all UI design. Mid-project, I proactively initiated an in-person requirement clarification session before entering high-fidelity design. Full pages are not publicly displayed due to NDA. This product essentially transforms vulnerability scanning work that security engineers previously did in command-line environments into a web platform with structured UI and output — the core design challenge wasn't just aesthetics, but how to make professional users accustomed to CLI tools feel equal or greater efficiency and control in a GUI interface.",
     decisions: [
       {
         problem: "漏洞检测报告包含大量代码片段和技术细节，纯文字呈现对工程师极不友好",
@@ -236,6 +236,11 @@ export const projects: Project[] = [
         problem: "产品服务于国家网安基地科研机构，视觉风格需要匹配政府科研机构的权威感，而不是商业SaaS产品的轻量感",
         judgment: "金银湖实验室logo采用深蓝色系，国家网安基地的视觉调性是专业、权威——这套语言决定了产品的主色方向。但作为一个工具类平台，界面本身需要保持简洁克制，让用户专注于内容而非界面本身，不能因为强调机构感而牺牲信息可读性",
         solution: "白色底+深蓝主色的设计方案：整体界面保持白色简约风格，以金银湖实验室logo的深蓝色作为主色，用于导航、按钮、强调元素等关键交互节点。盾牌logo在登录页居中作为视觉锚点，传递安全可信的机构背书感。简约的白色底保证了信息密集时的可读性，深蓝主色则维持了与商业消费级产品的视觉区分",
+      },
+      {
+        problem: "目标用户是习惯命令行的安全工程师，GUI界面容易让他们感到「失控」——不知道系统在后台做什么",
+        judgment: "CLI 工具的核心体验是「可见、可控、可预期」——每一个操作都有即时的文字反馈，用户清楚知道当前状态。把这套工具做成 GUI 时，最大的陷阱是把复杂性藏起来，结果让专业用户反而不信任这个界面",
+        solution: "在界面设计上保留「CLI 的信息密度」：检测进度实时可见，日志输出完整展示，代码块保留原始格式而不做过度美化。让工程师在 GUI 里能看到和 CLI 一样多的信息，同时通过视觉层级让这些信息更易扫描——这是 CLI 到 GUI 的体验迁移，而不是简单的界面包装",
       },
     ],
     decisionsEn: [
@@ -253,6 +258,11 @@ export const projects: Project[] = [
         problem: "Product serves a national cybersecurity research institution — visual style must match the authority of a government research organization, not the lightness of commercial SaaS",
         judgment: "Jinyinhu Lab's logo uses a deep blue palette — the National Cybersecurity Base's visual tone is professional and authoritative, determining the primary color direction. But as a tool platform, the interface itself needs to remain clean and restrained so users focus on content, not the interface — institutional gravitas cannot come at the cost of information readability",
         solution: "White-base + deep blue primary color solution: overall interface maintains a clean white aesthetic, with Jinyinhu Lab's logo deep blue as the primary color applied to navigation, buttons, and key interactive nodes. The shield logo is centered on the login page as a visual anchor conveying institutional credibility. The clean white base ensures readability under information-dense conditions, while the deep blue primary color maintains clear visual distinction from consumer commercial products",
+      },
+      {
+        problem: "Target users are security engineers accustomed to command lines — GUI interfaces easily make them feel 'out of control,' not knowing what the system is doing in the background",
+        judgment: "The core CLI experience is 'visible, controllable, predictable' — every action has immediate text feedback and users clearly know current status. The biggest trap when building GUI versions of such tools is hiding complexity, which causes professional users to distrust the interface instead",
+        solution: "Preserved 'CLI information density' in the UI design: detection progress visible in real-time, complete log output displayed, code blocks retain original formatting without over-beautification. Engineers can see as much information in the GUI as in CLI, while visual hierarchy makes this information more scannable — this is a CLI-to-GUI experience migration, not a simple interface wrapper",
       },
     ],
     deliverables: [],
