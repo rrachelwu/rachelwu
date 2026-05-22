@@ -413,6 +413,15 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
             {currentIndex + 1}/{images.length}
           </span>
         )}
+        <button
+          onClick={onClose}
+          className="h-8 md:h-9 px-3 ml-0.5 md:ml-1 rounded-full text-xs font-medium bg-black text-white hover:bg-black/85 active:bg-black/70 transition-colors flex items-center gap-1 border-l border-black/15"
+          aria-label="Close lightbox"
+          title="关闭"
+        >
+          <X className="w-3.5 h-3.5" />
+          <span>关闭</span>
+        </button>
       </div>
     </div>
   );
