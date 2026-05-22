@@ -243,7 +243,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
       <div
         ref={containerRef}
         className="flex-1 w-full overflow-auto flex items-start justify-center p-2 md:p-4"
-        style={{ cursor, touchAction: 'pan-y' }}
+        style={{ cursor, touchAction: 'pan-x pan-y' }}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
         onMouseUp={stopPan}
