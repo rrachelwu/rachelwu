@@ -531,6 +531,7 @@ export const projects: Project[] = [
       "搭建WheelChain后台管理系统，主导订单6阶段全生命周期管理落地（询价→报价→确认→生产→发货→验收），支持多工厂多货币协作，推动业务从混沌到标准化",
       "将线下定制沟通流程结构化输出为定制绘图单，减少客户与工厂之间的信息传递损耗，为后续小程序化奠定业务基础",
       "案例库与型号、订单数据打通，用户通过案例可一键定制同款，缩短从浏览到询盘的决策路径",
+      "基于后台供应链系统一手业务数据，完成C端小程序产品设计，建立从工厂数据到用户端的完整产品链路",
     ],
     resultsEn: [
       "Built end-to-end infrastructure from brand to system from scratch, covering three core scenarios: C-end presentation, B-end operations, and offline customization communication",
@@ -538,6 +539,7 @@ export const projects: Project[] = [
       "Built the WheelChain backend management system and led implementation of a 6-stage order lifecycle (inquiry → quotation → confirmation → production → shipping → acceptance), supporting multi-factory and multi-currency collaboration and moving operations from chaos to standardization",
       "Structured the offline customization communication process into a custom drawing order, reducing information loss between clients and factories, laying the business foundation for future mini-app integration",
       "Connected the case library with model and order data, allowing users to one-click customize from cases, shortening the decision path from browsing to inquiry",
+      "Leveraged firsthand business data from the backend supply chain system to design the consumer mini app, establishing a complete product chain from factory data to end users",
     ],
     reflection: "这个项目最大的教训是：在业务逻辑没有跑通之前，过早投入产品化设计容易偏离真实场景。前期Telegram Mini App是根据老板描述的场景设计的，当时搁置转而推进其他项目。直到深度参与供应链系统建设、真正接触到一手业务数据后，重新设计C端小程序时才发现——之前基于描述建立的场景假设与实际业务存在明显偏差。如果重来，会在设计启动前先花时间把业务链路完整跑一遍，用真实数据验证场景假设，再决定从哪个触点切入设计。",
     reflectionEn: "Early on, too much effort was spent on visual presentation, but the core conversion barrier for custom wheels was actually trust — overseas buyers weren't sure they could get real samples or whether the factory was credible. If I could redo it, I'd push earlier to bring factory certification and buyer cases into the main flow rather than placing them as supplementary content on the periphery.",
