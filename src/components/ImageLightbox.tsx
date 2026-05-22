@@ -46,7 +46,13 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     if (!img || !container || !img.naturalWidth) return;
     const maxW = container.clientWidth - 16;
     const maxH = container.clientHeight - 16;
-    const ratio = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
+    const imgRatio = img.naturalHeight / img.naturalWidth;
+    const containerRatio = maxH / maxW;
+    // 长图（明显比容器更"高瘦"）：按宽度适配，允许垂直滚动，避免被高度挤压导致模糊
+    const isLong = imgRatio > containerRatio * 1.5;
+    const ratio = isLong
+      ? Math.min(maxW / img.naturalWidth, 1)
+      : Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
     setFitZoom(ratio);
     setZoom(clamp(ratio));
     setOffset({ x: 0, y: 0 });
@@ -219,8 +225,8 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
 
       <div
         ref={containerRef}
-        className="flex-1 w-full overflow-hidden flex items-center justify-center p-2 md:p-4"
-        style={{ cursor, touchAction: 'none' }}
+        className="flex-1 w-full overflow-auto flex items-start justify-center p-2 md:p-4"
+        style={{ cursor, touchAction: 'pan-y' }}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
         onMouseUp={stopPan}
@@ -234,12 +240,15 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
           src={images[currentIndex]}
           alt=""
           onLoad={recalcFit}
+          loading="eager"
+          decoding="sync"
           style={{
             width: imgRef.current?.naturalWidth ? `${imgRef.current.naturalWidth * zoom}px` : 'auto',
             height: 'auto',
             maxWidth: 'none',
             transform: `translate(${offset.x}px, ${offset.y}px)`,
             pointerEvents: 'none',
+            imageRendering: 'auto',
           }}
           className="rounded-lg select-none flex-shrink-0"
           draggable={false}
