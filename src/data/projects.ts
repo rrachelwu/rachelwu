@@ -752,7 +752,7 @@ export const projects: Project[] = [
     reflectionEn: "Early on, too much effort was spent on visual presentation, but the core conversion barrier for custom wheels was actually trust — overseas buyers weren't sure they could get real samples or whether the factory was credible. If I could redo it, I'd push earlier to bring factory certification and buyer cases into the main flow rather than placing them as supplementary content on the periphery.",
   },
 {
-    id: "2",
+    id: "7",
     slug: "pokubuy",
     title: "PokuBuy — 重构面向俄罗斯市场的跨境采购平台Telegram Mini App",
     titleEn: "PokuBuy — Rebuilding a Cross-border Purchasing Telegram Mini App for the Russian Market",
