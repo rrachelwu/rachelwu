@@ -259,6 +259,11 @@ export const projects: Project[] = [
         judgment: "Jinyinhu Lab's logo uses a deep blue palette — the National Cybersecurity Base's visual tone is professional and authoritative, determining the primary color direction. But as a tool platform, the interface itself needs to remain clean and restrained so users focus on content, not the interface — institutional gravitas cannot come at the cost of information readability",
         solution: "White-base + deep blue primary color solution: overall interface maintains a clean white aesthetic, with Jinyinhu Lab's logo deep blue as the primary color applied to navigation, buttons, and key interactive nodes. The shield logo is centered on the login page as a visual anchor conveying institutional credibility. The clean white base ensures readability under information-dense conditions, while the deep blue primary color maintains clear visual distinction from consumer commercial products",
       },
+      {
+        problem: "Target users are security engineers accustomed to command lines — GUI interfaces easily make them feel 'out of control,' not knowing what the system is doing in the background",
+        judgment: "The core CLI experience is 'visible, controllable, predictable' — every action has immediate text feedback and users clearly know current status. The biggest trap when building GUI versions of such tools is hiding complexity, which causes professional users to distrust the interface instead",
+        solution: "Preserved 'CLI information density' in the UI design: detection progress visible in real-time, complete log output displayed, code blocks retain original formatting without over-beautification. Engineers can see as much information in the GUI as in CLI, while visual hierarchy makes this information more scannable — this is a CLI-to-GUI experience migration, not a simple interface wrapper",
+      },
     ],
     deliverables: [],
     deliverablesEn: [],
