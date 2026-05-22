@@ -232,7 +232,10 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         onMouseUp={stopPan}
         onMouseLeave={stopPan}
         onClick={(e) => {
-          if (!panMode && e.target === e.currentTarget) onClose();
+          // 仅当点击发生在容器本身（即图片外的留白区域）且非交互状态时关闭
+          if (panMode || isPanning) return;
+          if (e.target !== e.currentTarget) return;
+          onClose();
         }}
       >
         <img
@@ -242,13 +245,15 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
           onLoad={recalcFit}
           loading="eager"
           decoding="sync"
+          onClick={(e) => e.stopPropagation()}
           style={{
             width: imgRef.current?.naturalWidth ? `${imgRef.current.naturalWidth * zoom}px` : 'auto',
             height: 'auto',
             maxWidth: 'none',
             transform: `translate(${offset.x}px, ${offset.y}px)`,
-            pointerEvents: 'none',
             imageRendering: 'auto',
+            WebkitUserSelect: 'none',
+            WebkitTouchCallout: 'none',
           }}
           className="rounded-lg select-none flex-shrink-0"
           draggable={false}
