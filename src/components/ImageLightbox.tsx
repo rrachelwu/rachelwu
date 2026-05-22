@@ -98,29 +98,36 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     return () => window.removeEventListener('resize', onResize);
   }, [isOpen]);
 
-  // ----- Touch gestures: swipe / pan / pinch -----
+  // ----- Touch gestures: swipe / pinch (pan uses native scroll) -----
   const isZoomed = () => zoom > fitZoom + 0.01;
-  // On touch devices, allow drag-to-pan whenever zoomed in OR pan mode is on
-  const touchPanEnabled = () => panMode || isZoomed();
+  const pinchCenter = useRef<{ x: number; y: number } | null>(null);
+  const pinchScrollStart = useRef<{ left: number; top: number } | null>(null);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     activeTouches.current = e.touches.length;
     if (e.touches.length === 2) {
-      // pinch begin
-      const dx = e.touches[0].clientX - e.touches[1].clientX;
-      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      const t1 = e.touches[0];
+      const t2 = e.touches[1];
+      const dx = t1.clientX - t2.clientX;
+      const dy = t1.clientY - t2.clientY;
       pinchStartDist.current = Math.hypot(dx, dy);
       pinchStartZoom.current = zoom;
-      setIsPanning(false);
+      const container = containerRef.current;
+      if (container) {
+        const rect = container.getBoundingClientRect();
+        const cx = (t1.clientX + t2.clientX) / 2;
+        const cy = (t1.clientY + t2.clientY) / 2;
+        pinchCenter.current = { x: cx - rect.left, y: cy - rect.top };
+        pinchScrollStart.current = {
+          left: container.scrollLeft,
+          top: container.scrollTop,
+        };
+      }
       return;
     }
     const t = e.touches[0];
     touchStartX.current = t.clientX;
     touchEndX.current = t.clientX;
-    if (touchPanEnabled()) {
-      setIsPanning(true);
-      panStart.current = { x: t.clientX, y: t.clientY, ox: offset.x, oy: offset.y };
-    }
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -129,31 +136,41 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
       const dy = e.touches[0].clientY - e.touches[1].clientY;
       const dist = Math.hypot(dx, dy);
       const next = clamp(pinchStartZoom.current * (dist / pinchStartDist.current));
-      setZoom(next);
+      const container = containerRef.current;
+      const start = pinchScrollStart.current;
+      const center = pinchCenter.current;
+      if (container && start && center) {
+        const scale = next / pinchStartZoom.current;
+        // 保持双指中点在图像上的相对位置（以缩放中心为焦点）
+        const newScrollLeft = (start.left + center.x) * scale - center.x;
+        const newScrollTop = (start.top + center.y) * scale - center.y;
+        setZoom(next);
+        requestAnimationFrame(() => {
+          if (containerRef.current) {
+            containerRef.current.scrollLeft = newScrollLeft;
+            containerRef.current.scrollTop = newScrollTop;
+          }
+        });
+      } else {
+        setZoom(next);
+      }
+      e.preventDefault();
       return;
     }
     const t = e.touches[0];
     touchEndX.current = t.clientX;
-    if (isPanning) {
-      setOffset({
-        x: panStart.current.ox + (t.clientX - panStart.current.x),
-        y: panStart.current.oy + (t.clientY - panStart.current.y),
-      });
-    }
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (activeTouches.current >= 2) {
       pinchStartDist.current = null;
+      pinchCenter.current = null;
+      pinchScrollStart.current = null;
       activeTouches.current = e.touches.length;
-      setIsPanning(false);
       return;
     }
     activeTouches.current = e.touches.length;
-    const wasPanning = isPanning;
-    setIsPanning(false);
-    // Only swipe to switch when not zoomed in / not pan mode
-    if (!wasPanning && !touchPanEnabled()) {
+    if (!isZoomed() && !panMode) {
       const diff = touchStartX.current - touchEndX.current;
       if (Math.abs(diff) > 50) {
         if (diff > 0) onNext();
