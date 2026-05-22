@@ -63,7 +63,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0
           ))}
         </div>
         
-        <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors leading-[1.6] h-[3.6rem] overflow-hidden break-words">
+        <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors leading-[1.6] min-h-[3.6rem] break-words">
           <span className="block">{projectTitle}</span>
         </h3>
         
