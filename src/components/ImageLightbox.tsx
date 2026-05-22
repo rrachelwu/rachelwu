@@ -316,27 +316,45 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
           onClose();
         }}
       >
-        <img
-          ref={imgRef}
-          src={images[currentIndex]}
-          alt=""
-          onLoad={recalcFit}
-          loading="eager"
-          decoding="sync"
-          onClick={(e) => e.stopPropagation()}
-          style={{
-            width: imgRef.current?.naturalWidth ? `${imgRef.current.naturalWidth * zoom}px` : 'auto',
-            height: 'auto',
-            maxWidth: 'none',
-            transform: `translate(${offset.x}px, ${offset.y}px)`,
-            imageRendering: 'auto',
-            WebkitUserSelect: 'none',
-            WebkitTouchCallout: 'none',
-          }}
-          className="rounded-lg select-none flex-shrink-0"
-          draggable={false}
-        />
-      </div>
+        {displaySrc && (
+          <img
+            ref={imgRef}
+            src={displaySrc}
+            alt=""
+            onLoad={() => { setLoading(false); recalcFit(); }}
+            loading="eager"
+            decoding="sync"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              width: imgRef.current?.naturalWidth ? `${imgRef.current.naturalWidth * zoom}px` : 'auto',
+              height: 'auto',
+              maxWidth: 'none',
+              transform: `translate(${offset.x}px, ${offset.y}px)`,
+              imageRendering: 'auto',
+              WebkitUserSelect: 'none',
+              WebkitTouchCallout: 'none',
+              opacity: loading ? 0 : 1,
+              transition: 'opacity 200ms ease',
+            }}
+            className="rounded-lg select-none flex-shrink-0"
+            draggable={false}
+          />
+        )}
+        {loading && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="w-[min(80%,520px)] aspect-[3/4] max-h-[70vh] rounded-lg bg-gradient-to-br from-neutral-800 via-neutral-700 to-neutral-800 bg-[length:200%_100%] animate-[shimmer_1.4s_linear_infinite] relative overflow-hidden">
+              <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col items-center gap-2">
+                <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-white/70 transition-[width] duration-150 ease-out"
+                    style={{ width: `${progress}%` }}
+                  />
+                </div>
+                <span className="text-[11px] tabular-nums text-white/70">{progress}%</span>
+              </div>
+            </div>
+          </div>
+        )}
 
       {/* Toolbar */}
       <div
