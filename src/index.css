@@ -191,12 +191,11 @@
 
   .project-card-title {
     display: block;
-    min-height: 3.1em;
-    max-height: 3.1em;
+    min-height: 3.2em;
+    max-height: 3.2em;
     line-height: 1.55;
     letter-spacing: 0;
     overflow: clip;
-    overflow-clip-margin: 0.35em;
     overflow-wrap: anywhere;
     text-wrap: balance;
   }
