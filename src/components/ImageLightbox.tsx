@@ -203,7 +203,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
             transform: `translate(${offset.x}px, ${offset.y}px)`,
             pointerEvents: 'none',
           }}
-          className="rounded-lg select-none"
+          className="rounded-lg select-none flex-shrink-0"
           draggable={false}
         />
       </div>
