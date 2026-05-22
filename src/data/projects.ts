@@ -296,7 +296,7 @@ export const projects: Project[] = [
     durationEn: "Apr 2025 - May 2026",
     status: "已上线/验证与推广前期",
     statusEn: "Launched / Early validation",
-    tags: ["出海品牌", "硬件配套软件", "B端/C端", "订阅制产品"],
+    tags: ["出海品牌", "硬件配套软件", "C端产品", "订阅制产品"],
     tagsEn: ["Global Brand", "Hardware Software", "B2B/B2C", "Subscription"],
     techStack: ["Figma", "中英俄多语言", "定价系统", "FAQ体系"],
     links: { demo: "https://ssrouter.com/" },
