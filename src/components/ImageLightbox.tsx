@@ -191,7 +191,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     >
       <button
         onClick={onClose}
-        className="fixed top-3 right-3 md:top-4 md:right-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white/20 active:bg-white/25 flex items-center justify-center text-white transition-colors z-20"
+        className="fixed top-3 right-3 md:top-4 md:right-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-neutral-200/90 hover:bg-neutral-300 active:bg-neutral-400 flex items-center justify-center text-black transition-colors z-20"
         style={{ top: 'max(0.75rem, env(safe-area-inset-top))' }}
         aria-label="Close"
       >
@@ -248,12 +248,12 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
 
       {/* Toolbar */}
       <div
-        className="fixed left-1/2 -translate-x-1/2 z-20 flex items-center gap-0.5 md:gap-1 px-1.5 py-1 md:px-2 md:py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 max-w-[calc(100vw-1rem)]"
+        className="fixed left-1/2 -translate-x-1/2 z-20 flex items-center gap-0.5 md:gap-1 px-1.5 py-1 md:px-2 md:py-1.5 rounded-full bg-neutral-200/90 backdrop-blur-md border border-black/10 shadow-lg max-w-[calc(100vw-1rem)]"
         style={{ bottom: 'max(1rem, env(safe-area-inset-bottom))' }}
       >
         <button
           onClick={fitScreen}
-          className="w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 active:bg-white/25 transition-colors"
+          className="w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-black hover:bg-black/10 active:bg-black/20 transition-colors"
           aria-label="Fit to screen"
           title="适应屏幕"
         >
@@ -261,7 +261,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         </button>
         <button
           onClick={() => setPanMode((v) => !v)}
-          className={`w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-white transition-colors ${panMode ? 'bg-white/25' : 'hover:bg-white/15 active:bg-white/25'}`}
+          className={`w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-black transition-colors ${panMode ? 'bg-black/20' : 'hover:bg-black/10 active:bg-black/20'}`}
           aria-label="Pan"
           title="抓手 / 拖动"
         >
@@ -269,7 +269,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         </button>
         <button
           onClick={zoomIn}
-          className="w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 active:bg-white/25 transition-colors disabled:opacity-40"
+          className="w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-black hover:bg-black/10 active:bg-black/20 transition-colors disabled:opacity-40"
           aria-label="Zoom in"
           title="放大"
           disabled={zoom >= MAX_ZOOM}
@@ -278,7 +278,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         </button>
         <button
           onClick={zoomOut}
-          className="w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 active:bg-white/25 transition-colors disabled:opacity-40"
+          className="w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-black hover:bg-black/10 active:bg-black/20 transition-colors disabled:opacity-40"
           aria-label="Zoom out"
           title="缩小"
           disabled={zoom <= MIN_ZOOM}
@@ -287,16 +287,16 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         </button>
         <button
           onClick={actualSize}
-          className="h-8 md:h-9 px-2 md:px-3 rounded-full text-xs font-medium text-white hover:bg-white/15 active:bg-white/25 transition-colors"
+          className="h-8 md:h-9 px-2 md:px-3 rounded-full text-xs font-medium text-black hover:bg-black/10 active:bg-black/20 transition-colors"
           title="实际比例 1:1"
         >
           1:1
         </button>
-        <span className="px-1.5 md:px-2 text-[11px] md:text-xs tabular-nums text-white/80 min-w-[3rem] md:min-w-[3.5rem] text-center">
+        <span className="px-1.5 md:px-2 text-[11px] md:text-xs tabular-nums text-black/80 min-w-[3rem] md:min-w-[3.5rem] text-center">
           {percent}%
         </span>
         {images.length > 1 && (
-          <span className="px-1.5 md:px-2 text-[11px] md:text-xs tabular-nums text-white/60 border-l border-white/15 ml-0.5 md:ml-1">
+          <span className="px-1.5 md:px-2 text-[11px] md:text-xs tabular-nums text-black/60 border-l border-black/15 ml-0.5 md:ml-1">
             {currentIndex + 1}/{images.length}
           </span>
         )}
