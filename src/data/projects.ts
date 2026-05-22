@@ -251,8 +251,8 @@ export const projects: Project[] = [
       },
       {
         problem: "Product serves a national cybersecurity research institution — visual style must match the authority of a government research organization, not the lightness of commercial SaaS",
-        judgment: "Jinyinhu Lab's logo uses a deep blue palette; the National Cybersecurity Base's overall visual tone is serious, authoritative, and tech-forward — this directly dictates that the interface cannot follow consumer AI products' minimal white aesthetic; it needs gravitas and institutional credibility",
-        solution: "Used Jinyinhu Lab's logo deep blue as the primary color foundation, supplemented with dark background blocks and cool-gray grids. The shield element extends from the logo into the interface as a visual anchor for security attributes; the login page centers the brand logo to reinforce institutional backing, clearly distinguishing the visual language from commercial AI products",
+        judgment: "Jinyinhu Lab's logo uses a deep blue palette — the National Cybersecurity Base's visual tone is professional and authoritative, determining the primary color direction. But as a tool platform, the interface itself needs to remain clean and restrained so users focus on content, not the interface — institutional gravitas cannot come at the cost of information readability",
+        solution: "White-base + deep blue primary color solution: overall interface maintains a clean white aesthetic, with Jinyinhu Lab's logo deep blue as the primary color applied to navigation, buttons, and key interactive nodes. The shield logo is centered on the login page as a visual anchor conveying institutional credibility. The clean white base ensures readability under information-dense conditions, while the deep blue primary color maintains clear visual distinction from consumer commercial products",
       },
     ],
     deliverables: [],
