@@ -46,7 +46,13 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     if (!img || !container || !img.naturalWidth) return;
     const maxW = container.clientWidth - 16;
     const maxH = container.clientHeight - 16;
-    const ratio = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
+    const imgRatio = img.naturalHeight / img.naturalWidth;
+    const containerRatio = maxH / maxW;
+    // 长图（明显比容器更"高瘦"）：按宽度适配，允许垂直滚动，避免被高度挤压导致模糊
+    const isLong = imgRatio > containerRatio * 1.5;
+    const ratio = isLong
+      ? Math.min(maxW / img.naturalWidth, 1)
+      : Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
     setFitZoom(ratio);
     setZoom(clamp(ratio));
     setOffset({ x: 0, y: 0 });
