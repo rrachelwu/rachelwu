@@ -208,17 +208,17 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         <>
           <button
             onClick={onPrev}
-            className="hidden md:flex fixed left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 items-center justify-center text-white transition-colors z-20"
+            className="fixed left-2 md:left-4 top-1/2 -translate-y-1/2 w-9 h-9 md:w-12 md:h-12 rounded-full bg-neutral-200/90 hover:bg-neutral-300 active:bg-neutral-400 flex items-center justify-center text-black transition-colors z-20 shadow-lg"
             aria-label="Previous"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
           </button>
           <button
             onClick={onNext}
-            className="hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 items-center justify-center text-white transition-colors z-20"
+            className="fixed right-2 md:right-4 top-1/2 -translate-y-1/2 w-9 h-9 md:w-12 md:h-12 rounded-full bg-neutral-200/90 hover:bg-neutral-300 active:bg-neutral-400 flex items-center justify-center text-black transition-colors z-20 shadow-lg"
             aria-label="Next"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
           </button>
         </>
       )}
