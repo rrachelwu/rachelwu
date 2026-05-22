@@ -355,6 +355,9 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
             </div>
           </div>
         )}
+      </div>
+
+
 
       {/* Toolbar */}
       <div
