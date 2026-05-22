@@ -33,14 +33,19 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   const imgRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // pinch state
+  const pinchStartDist = useRef<number | null>(null);
+  const pinchStartZoom = useRef(1);
+  const activeTouches = useRef(0);
+
   const clamp = (v: number) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, v));
 
   const recalcFit = () => {
     const img = imgRef.current;
     const container = containerRef.current;
     if (!img || !container || !img.naturalWidth) return;
-    const maxW = container.clientWidth - 32;
-    const maxH = container.clientHeight - 32;
+    const maxW = container.clientWidth - 16;
+    const maxH = container.clientHeight - 16;
     const ratio = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
     setFitZoom(ratio);
     setZoom(clamp(ratio));
@@ -87,20 +92,67 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     return () => window.removeEventListener('resize', onResize);
   }, [isOpen]);
 
+  // ----- Touch gestures: swipe / pan / pinch -----
+  const isZoomed = () => zoom > fitZoom + 0.01;
+  // On touch devices, allow drag-to-pan whenever zoomed in OR pan mode is on
+  const touchPanEnabled = () => panMode || isZoomed();
+
   const handleTouchStart = (e: React.TouchEvent) => {
-    if (panMode) return;
-    touchStartX.current = e.touches[0].clientX;
+    activeTouches.current = e.touches.length;
+    if (e.touches.length === 2) {
+      // pinch begin
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      pinchStartDist.current = Math.hypot(dx, dy);
+      pinchStartZoom.current = zoom;
+      setIsPanning(false);
+      return;
+    }
+    const t = e.touches[0];
+    touchStartX.current = t.clientX;
+    touchEndX.current = t.clientX;
+    if (touchPanEnabled()) {
+      setIsPanning(true);
+      panStart.current = { x: t.clientX, y: t.clientY, ox: offset.x, oy: offset.y };
+    }
   };
+
   const handleTouchMove = (e: React.TouchEvent) => {
-    if (panMode) return;
-    touchEndX.current = e.touches[0].clientX;
+    if (e.touches.length === 2 && pinchStartDist.current) {
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      const dist = Math.hypot(dx, dy);
+      const next = clamp(pinchStartZoom.current * (dist / pinchStartDist.current));
+      setZoom(next);
+      return;
+    }
+    const t = e.touches[0];
+    touchEndX.current = t.clientX;
+    if (isPanning) {
+      setOffset({
+        x: panStart.current.ox + (t.clientX - panStart.current.x),
+        y: panStart.current.oy + (t.clientY - panStart.current.y),
+      });
+    }
   };
-  const handleTouchEnd = () => {
-    if (panMode) return;
-    const diff = touchStartX.current - touchEndX.current;
-    if (Math.abs(diff) > 50 && zoom <= fitZoom + 0.01) {
-      if (diff > 0) onNext();
-      else onPrev();
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (activeTouches.current >= 2) {
+      pinchStartDist.current = null;
+      activeTouches.current = e.touches.length;
+      setIsPanning(false);
+      return;
+    }
+    activeTouches.current = e.touches.length;
+    const wasPanning = isPanning;
+    setIsPanning(false);
+    // Only swipe to switch when not zoomed in / not pan mode
+    if (!wasPanning && !touchPanEnabled()) {
+      const diff = touchStartX.current - touchEndX.current;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) onNext();
+        else onPrev();
+      }
     }
   };
 
@@ -109,7 +161,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   const actualSize = () => setZoom(1);
   const fitScreen = () => setZoom(clamp(fitZoom));
 
-  // Pan handling — translate-based so user can drag even when image fits
+  // Mouse pan (desktop)
   const onMouseDown = (e: React.MouseEvent) => {
     if (!panMode) return;
     setIsPanning(true);
@@ -125,21 +177,6 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   };
   const stopPan = () => setIsPanning(false);
 
-  const onPanTouchStart = (e: React.TouchEvent) => {
-    if (!panMode) return;
-    const t = e.touches[0];
-    setIsPanning(true);
-    panStart.current = { x: t.clientX, y: t.clientY, ox: offset.x, oy: offset.y };
-  };
-  const onPanTouchMove = (e: React.TouchEvent) => {
-    if (!panMode || !isPanning) return;
-    const t = e.touches[0];
-    setOffset({
-      x: panStart.current.ox + (t.clientX - panStart.current.x),
-      y: panStart.current.oy + (t.clientY - panStart.current.y),
-    });
-  };
-
   if (!isOpen) return null;
 
   const percent = Math.round(zoom * 100);
@@ -148,13 +185,14 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   return (
     <div
       className="fixed inset-0 z-50 bg-black/95 flex flex-col animate-fade-in"
-      onTouchStart={(e) => { handleTouchStart(e); onPanTouchStart(e); }}
-      onTouchMove={(e) => { handleTouchMove(e); onPanTouchMove(e); }}
-      onTouchEnd={() => { handleTouchEnd(); stopPan(); }}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       <button
         onClick={onClose}
-        className="fixed top-4 right-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors z-20"
+        className="fixed top-3 right-3 md:top-4 md:right-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white/20 active:bg-white/25 flex items-center justify-center text-white transition-colors z-20"
+        style={{ top: 'max(0.75rem, env(safe-area-inset-top))' }}
         aria-label="Close"
       >
         <X className="w-5 h-5 md:w-6 md:h-6" />
@@ -181,8 +219,8 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
 
       <div
         ref={containerRef}
-        className="flex-1 w-full overflow-hidden flex items-center justify-center p-4"
-        style={{ cursor }}
+        className="flex-1 w-full overflow-hidden flex items-center justify-center p-2 md:p-4"
+        style={{ cursor, touchAction: 'none' }}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
         onMouseUp={stopPan}
@@ -208,10 +246,14 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         />
       </div>
 
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1 px-2 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+      {/* Toolbar */}
+      <div
+        className="fixed left-1/2 -translate-x-1/2 z-20 flex items-center gap-0.5 md:gap-1 px-1.5 py-1 md:px-2 md:py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 max-w-[calc(100vw-1rem)]"
+        style={{ bottom: 'max(1rem, env(safe-area-inset-bottom))' }}
+      >
         <button
           onClick={fitScreen}
-          className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 transition-colors"
+          className="w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 active:bg-white/25 transition-colors"
           aria-label="Fit to screen"
           title="适应屏幕"
         >
@@ -219,7 +261,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         </button>
         <button
           onClick={() => setPanMode((v) => !v)}
-          className={`w-9 h-9 rounded-full flex items-center justify-center text-white transition-colors ${panMode ? 'bg-white/25' : 'hover:bg-white/15'}`}
+          className={`w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-white transition-colors ${panMode ? 'bg-white/25' : 'hover:bg-white/15 active:bg-white/25'}`}
           aria-label="Pan"
           title="抓手 / 拖动"
         >
@@ -227,7 +269,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         </button>
         <button
           onClick={zoomIn}
-          className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 transition-colors disabled:opacity-40"
+          className="w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 active:bg-white/25 transition-colors disabled:opacity-40"
           aria-label="Zoom in"
           title="放大"
           disabled={zoom >= MAX_ZOOM}
@@ -236,7 +278,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         </button>
         <button
           onClick={zoomOut}
-          className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 transition-colors disabled:opacity-40"
+          className="w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 active:bg-white/25 transition-colors disabled:opacity-40"
           aria-label="Zoom out"
           title="缩小"
           disabled={zoom <= MIN_ZOOM}
@@ -245,17 +287,17 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         </button>
         <button
           onClick={actualSize}
-          className="h-9 px-3 rounded-full text-xs font-medium text-white hover:bg-white/15 transition-colors"
+          className="h-8 md:h-9 px-2 md:px-3 rounded-full text-xs font-medium text-white hover:bg-white/15 active:bg-white/25 transition-colors"
           title="实际比例 1:1"
         >
           1:1
         </button>
-        <span className="px-2 text-xs tabular-nums text-white/80 min-w-[3.5rem] text-center">
+        <span className="px-1.5 md:px-2 text-[11px] md:text-xs tabular-nums text-white/80 min-w-[3rem] md:min-w-[3.5rem] text-center">
           {percent}%
         </span>
         {images.length > 1 && (
-          <span className="px-2 text-xs tabular-nums text-white/60 border-l border-white/15 ml-1">
-            {currentIndex + 1} / {images.length}
+          <span className="px-1.5 md:px-2 text-[11px] md:text-xs tabular-nums text-white/60 border-l border-white/15 ml-0.5 md:ml-1">
+            {currentIndex + 1}/{images.length}
           </span>
         )}
       </div>
