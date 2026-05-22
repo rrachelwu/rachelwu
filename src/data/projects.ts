@@ -523,6 +523,7 @@ export const projects: Project[] = [
       { caption: "", title: "Supply Chain Backend · Case Library", image: "/6e872ef5-c3fa-4cbc-acd6-a4187f803842.png", description: "Linked buyer cases with model and order data, allowing one-click customization and lowering barriers for mass production" },
       
       { caption: "", title: "Custom Drawing Order · Offline Process Structuring", image: "/a8811bdd-f8af-4f69-9f5e-1adb87fbaccc.png", description: "Structured the originally offline-dependent customization process into an Excel custom drawing order, covering vehicle info, wheel specs, finish selection, and reference images — laying the business groundwork for subsequent mini app-based factory-customer communication" },
+      { caption: "", title: "Consumer Mini App", image: "/lovable-uploads/66b1a3de-605c-4900-9484-e7b9988611b9.png", layout: "single", description: "An earlier Telegram Mini App was never built because it wasn't grounded in real business scenarios. This version was redesigned after deep involvement in the backend supply chain system gave me firsthand business data, making it the most realistic consumer-facing solution — covering order tracking, model recommendations, case entry, and a complete account system. Development was halted when the company dissolved." },
     ],
     results: [
       "从零完成品牌到系统的全链路基础设施搭建，覆盖C端展示、B端运营、线下定制沟通三个核心场景",
