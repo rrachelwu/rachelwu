@@ -17,7 +17,8 @@ const categories: Category[] = [
   { id: 'hardware', zh: '智能硬件 & HMI', en: 'Smart Hardware & HMI', matchTags: ['智能硬件', 'HMI交互', 'TV端设计'] },
   { id: 'ai', zh: 'AI产品', en: 'AI Product', matchTags: ['AI产品'] },
   { id: 'global', zh: '出海品牌', en: 'Overseas Brand', matchTags: ['出海品牌', '硬件配套软件'] },
-  { id: 'b-end', zh: 'B端系统', en: 'Enterprise System', matchTags: ['B端工具', 'B端/C端', 'SaaS工具', 'B端系统'] },
+  { id: 'b-end', zh: 'B端系统', en: 'Enterprise System', matchTags: ['B端工具', 'B端/C端', 'B端系统'] },
+  { id: 'c-end', zh: 'C端产品', en: 'Consumer Product', matchTags: ['社交电商', 'C端工具', 'C端App', '小程序'] },
   { id: 'security', zh: '网络安全', en: 'Cybersecurity', matchTags: ['网络安全', '政府科研机构'] },
   { id: 'web3', zh: 'Web3', en: 'Web3', matchTags: ['Web3'] },
 ];
