@@ -517,7 +517,7 @@ export const projects: Project[] = [
       { caption: "", title: "用户端 Mini App · C端小程序", image: "/lovable-uploads/wheelsline-miniapp-v2.png", layout: "single", description: "前期Telegram Mini App因未基于真实业务场景，未进入开发。此版本在深度参与后台供应链系统建设、掌握一手业务数据后重新设计，完成首页与个人中心设计，覆盖订单状态追踪、型号推荐、案例入口与完整账户体系，是最贴近实际业务场景的C端方案，因公司解散停止推进\n" },
     ],
     deliverablesEn: [
-      { caption: "", title: "Brand & Website", image: "/e3dbfbce-ca81-4110-a25a-6f7c1e5ef787.png", description: "From logo design to complete website build, establishing a 0-to-1 brand visual system covering all wheelsline.com pages" },
+      { caption: "", title: "Brand & Website", image: "/lovable-uploads/wheelsline-brand-v2.png", description: "From logo design to complete website build, establishing a 0-to-1 brand visual system covering all wheelsline.com pages" },
       { caption: "", title: "Supply Chain Backend · Orders & Models", image: "/f82b36b9-3c3b-4149-80ac-fc2eff8b47ed.png", description: "6-stage order lifecycle, parent-child model structure management, multi-currency and multi-factory support" },
       { caption: "", title: "Supply Chain Backend · Color Card System", image: "/50ce72bf-0bfc-48ac-91fd-d8852c7871c5.png", description: "Established the WheelsLine color code system with 99 codes in 13 groups, separating surface finish and structural process" },
       { caption: "", title: "Supply Chain Backend · Case Library", image: "/6e872ef5-c3fa-4cbc-acd6-a4187f803842.png", description: "Linked buyer cases with model and order data, allowing one-click customization and lowering barriers for mass production" },
