@@ -63,7 +63,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, className, index = 0
           ))}
         </div>
         
-        <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-relaxed h-[3.75rem]">
+        <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-relaxed h-[4rem] pt-1">
           {projectTitle}
         </h3>
         
