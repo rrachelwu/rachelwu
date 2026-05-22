@@ -189,6 +189,17 @@
     @apply opacity-0;
   }
 
+  .project-card-title {
+    display: block;
+    min-height: 3.2em;
+    max-height: 3.2em;
+    line-height: 1.55;
+    letter-spacing: 0;
+    overflow: clip;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+  }
+
   /* Decorative grid pattern */
   .grid-pattern {
     background-image: 
