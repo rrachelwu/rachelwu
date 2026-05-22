@@ -230,7 +230,7 @@ export const projects: Project[] = [
       {
         problem: "客户产品经验不足，需求表达模糊，设计方向反复变动",
         judgment: "外包项目中需求不清晰比设计难题更危险——每一次方向变动都意味着大量返工。必须主动介入产品决策，而不是被动等待需求",
-        solution: "主动推动线下需求对齐会议，带着初版线框图和关键问题清单到场，现场确认核心用户流程和功能优先级。将口头确认转化为书面共识后再进入高保真设计阶段，设计方案最终一次通过评审",
+        solution: "基于对网络安全工具产品形态的理解，独立完成高保真设计稿后带到线下与客户现场确认。会议中逐页走查，对齐细节调整点，整体方案一稿通过，后续只做局部微调。把设计决策的主导权握在自己手里，而不是等客户给方向——这是推动外包项目顺利交付的关键",
       },
       {
         problem: "产品服务于国家网安基地科研机构，视觉风格需要匹配政府科研机构的权威感，而不是商业SaaS产品的轻量感",
@@ -252,7 +252,7 @@ export const projects: Project[] = [
       {
         problem: "Client lacked product experience, requirements were vague, and design direction kept shifting",
         judgment: "In freelance projects, unclear requirements are more dangerous than design challenges — every directional change means significant rework. Must proactively engage in product decisions rather than passively waiting for requirements",
-        solution: "Proactively initiated in-person requirement alignment meeting, bringing initial wireframes and a list of key questions. Confirmed core user flows and feature priorities on-site. Converting verbal agreements to written consensus before entering high-fidelity design — final design passed client review in one round",
+        solution: "Based on understanding of cybersecurity tool product patterns, independently completed high-fidelity designs before bringing them to an in-person client review. Walked through pages together on-site, aligning on detail adjustments — overall concept passed in one round with only minor local revisions afterward. Keeping design decision-making authority in hand rather than waiting for client direction was key to smooth freelance project delivery",
       },
       {
         problem: "Product serves a national cybersecurity research institution — visual style must match the authority of a government research organization, not the lightness of commercial SaaS",
