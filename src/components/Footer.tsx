@@ -1,18 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
-  const [copied, setCopied] = useState(false);
   const email = 'rachelwuqian@icloud.com';
-
-  const handleCopyEmail = async () => {
-    await navigator.clipboard.writeText(email);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1800);
-  };
 
   return (
     <footer className="border-t border-border bg-muted/30">
