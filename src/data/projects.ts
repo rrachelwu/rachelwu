@@ -234,8 +234,8 @@ export const projects: Project[] = [
       },
       {
         problem: "产品服务于国家网安基地科研机构，视觉风格需要匹配政府科研机构的权威感，而不是商业SaaS产品的轻量感",
-        judgment: "金银湖实验室logo采用深蓝色系，国家网安基地的整体视觉调性是严肃、权威、科技感——这套语言直接决定了产品界面不能走消费级AI产品的简约白底路线，必须有厚重感和机构背书的信任感",
-        solution: "以金银湖实验室logo的深蓝色为主色基调，辅以深色背景区块和冷灰色栅格，整体界面呈现出国家机构级别的稳重与科技感。盾牌元素从logo延伸至界面，作为安全属性的视觉锚点，登录页以品牌logo为视觉中心，强化机构背书感，与商业AI产品的视觉语言形成明显区分",
+        judgment: "金银湖实验室logo采用深蓝色系，国家网安基地的视觉调性是专业、权威——这套语言决定了产品的主色方向。但作为一个工具类平台，界面本身需要保持简洁克制，让用户专注于内容而非界面本身，不能因为强调机构感而牺牲信息可读性",
+        solution: "白色底+深蓝主色的设计方案：整体界面保持白色简约风格，以金银湖实验室logo的深蓝色作为主色，用于导航、按钮、强调元素等关键交互节点。盾牌logo在登录页居中作为视觉锚点，传递安全可信的机构背书感。简约的白色底保证了信息密集时的可读性，深蓝主色则维持了与商业消费级产品的视觉区分",
       },
     ],
     decisionsEn: [
@@ -251,8 +251,8 @@ export const projects: Project[] = [
       },
       {
         problem: "Product serves a national cybersecurity research institution — visual style must match the authority of a government research organization, not the lightness of commercial SaaS",
-        judgment: "Jinyinhu Lab's logo uses a deep blue palette; the National Cybersecurity Base's overall visual tone is serious, authoritative, and tech-forward — this directly dictates that the interface cannot follow consumer AI products' minimal white aesthetic; it needs gravitas and institutional credibility",
-        solution: "Used Jinyinhu Lab's logo deep blue as the primary color foundation, supplemented with dark background blocks and cool-gray grids. The shield element extends from the logo into the interface as a visual anchor for security attributes; the login page centers the brand logo to reinforce institutional backing, clearly distinguishing the visual language from commercial AI products",
+        judgment: "Jinyinhu Lab's logo uses a deep blue palette — the National Cybersecurity Base's visual tone is professional and authoritative, determining the primary color direction. But as a tool platform, the interface itself needs to remain clean and restrained so users focus on content, not the interface — institutional gravitas cannot come at the cost of information readability",
+        solution: "White-base + deep blue primary color solution: overall interface maintains a clean white aesthetic, with Jinyinhu Lab's logo deep blue as the primary color applied to navigation, buttons, and key interactive nodes. The shield logo is centered on the login page as a visual anchor conveying institutional credibility. The clean white base ensures readability under information-dense conditions, while the deep blue primary color maintains clear visual distinction from consumer commercial products",
       },
     ],
     deliverables: [],
