@@ -11,8 +11,8 @@ interface ImageLightboxProps {
 }
 
 const MIN_ZOOM = 0.05;
-const MAX_ZOOM = 5;
-const ZOOM_STEP = 0.25;
+const MAX_ZOOM = 1;
+const ZOOM_STEP = 0.1;
 
 const ImageLightbox: React.FC<ImageLightboxProps> = ({
   images,
