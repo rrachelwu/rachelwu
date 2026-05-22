@@ -107,6 +107,49 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     return () => window.removeEventListener('resize', onResize);
   }, [isOpen]);
 
+  // 带进度的图片加载（XHR）+ 缓存
+  useEffect(() => {
+    if (!isOpen) return;
+    const url = images[currentIndex];
+    if (!url) return;
+    const cached = blobCache.current.get(url);
+    if (cached) {
+      setDisplaySrc(cached);
+      setLoading(false);
+      setProgress(100);
+      return;
+    }
+    setLoading(true);
+    setProgress(0);
+    setDisplaySrc('');
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'blob';
+    xhr.onprogress = (e) => {
+      if (e.lengthComputable) setProgress(Math.round((e.loaded / e.total) * 100));
+    };
+    xhr.onload = () => {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        const blobUrl = URL.createObjectURL(xhr.response);
+        blobCache.current.set(url, blobUrl);
+        setDisplaySrc(blobUrl);
+        setProgress(100);
+      } else {
+        setDisplaySrc(url);
+      }
+    };
+    xhr.onerror = () => setDisplaySrc(url);
+    xhr.send();
+    return () => xhr.abort();
+  }, [currentIndex, isOpen, images]);
+
+  useEffect(() => {
+    return () => {
+      blobCache.current.forEach((u) => URL.revokeObjectURL(u));
+      blobCache.current.clear();
+    };
+  }, []);
+
   // ----- Touch gestures: swipe / pinch (pan uses native scroll) -----
   const isZoomed = () => zoom > fitZoom + 0.01;
   const pinchCenter = useRef<{ x: number; y: number } | null>(null);
