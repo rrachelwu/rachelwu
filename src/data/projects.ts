@@ -514,7 +514,7 @@ export const projects: Project[] = [
       { caption: "", title: "供应链后台 · 案例库管理", image: "/6e872ef5-c3fa-4cbc-acd6-a4187f803842.png", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
       
       { caption: "", title: "定制绘图单 · 线下流程结构化", image: "/a8811bdd-f8af-4f69-9f5e-1adb87fbaccc.png", description: "将原本依赖线下沟通的定制流程结构化，输出为Excel定制绘图单，覆盖车辆信息、轮毂规格、工艺选择与参考图，是后续工厂与客户小程序化沟通流程的前期业务梳理基础" },
-      { caption: "", title: "用户端 Mini App · C端小程序", image: "/lovable-uploads/66b1a3de-605c-4900-9484-e7b9988611b9.png", layout: "single", description: "前期Telegram Mini App因未基于真实业务场景，未进入开发。此版本在深度参与后台供应链系统建设、掌握一手业务数据后重新设计，是最贴近实际业务场景的C端方案，覆盖订单追踪、型号推荐、案例入口与完整账户体系，因公司解散停止推进" },
+      { caption: "", title: "用户端 Mini App · C端小程序", image: "/lovable-uploads/66b1a3de-605c-4900-9484-e7b9988611b9.png", layout: "single", description: "前期Telegram Mini App因未基于真实业务场景，未进入开发。此版本在深度参与后台供应链系统建设、掌握一手业务数据后重新设计，完成首页与个人中心设计，覆盖订单状态追踪、型号推荐、案例入口与完整账户体系，是最贴近实际业务场景的C端方案，因公司解散停止推进\n" },
     ],
     deliverablesEn: [
       { caption: "", title: "Brand & Website", image: "/e3dbfbce-ca81-4110-a25a-6f7c1e5ef787.png", description: "From logo design to complete website build, establishing a 0-to-1 brand visual system covering all wheelsline.com pages" },
