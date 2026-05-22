@@ -539,7 +539,7 @@ export const projects: Project[] = [
       "Structured the offline customization communication process into a custom drawing order, reducing information loss between clients and factories, laying the business foundation for future mini-app integration",
       "Connected the case library with model and order data, allowing users to one-click customize from cases, shortening the decision path from browsing to inquiry",
     ],
-    reflection: "项目初期把大量精力放在视觉呈现上，但轮毂定制的核心转化障碍其实是信任问题——海外买家不确定能不能拿到真实样品、工厂资质是否可靠。如果重来，会更早推动把工厂认证信息和买家案例纳入主流程，而不是作为补充内容放在边缘位置。",
+    reflection: "这个项目最大的教训是：在业务逻辑没有跑通之前，过早投入产品化设计容易偏离真实场景。前期Telegram Mini App是根据老板描述的场景设计的，当时搁置转而推进其他项目。直到深度参与供应链系统建设、真正接触到一手业务数据后，重新设计C端小程序时才发现——之前基于描述建立的场景假设与实际业务存在明显偏差。如果重来，会在设计启动前先花时间把业务链路完整跑一遍，用真实数据验证场景假设，再决定从哪个触点切入设计。",
     reflectionEn: "Early on, too much effort was spent on visual presentation, but the core conversion barrier for custom wheels was actually trust — overseas buyers weren't sure they could get real samples or whether the factory was credible. If I could redo it, I'd push earlier to bring factory certification and buyer cases into the main flow rather than placing them as supplementary content on the periphery.",
   },
 {
