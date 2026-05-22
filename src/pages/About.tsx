@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import SectionTitle from '@/components/SectionTitle';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { cn } from '@/lib/utils';
-import rachelPhoto from '@/assets/rachel-photo.jpg';
+import rachelPhoto from '@/assets/rachel-photo.webp';
 
 const About: React.FC = () => {
   const { t, language } = useLanguage();
