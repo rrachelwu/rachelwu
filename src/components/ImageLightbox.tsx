@@ -131,6 +131,8 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     const t = e.touches[0];
     touchStartX.current = t.clientX;
     touchEndX.current = t.clientX;
+    touchStartY.current = t.clientY;
+    touchEndY.current = t.clientY;
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -144,7 +146,6 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
       const center = pinchCenter.current;
       if (container && start && center) {
         const scale = next / pinchStartZoom.current;
-        // 保持双指中点在图像上的相对位置（以缩放中心为焦点）
         const newScrollLeft = (start.left + center.x) * scale - center.x;
         const newScrollTop = (start.top + center.y) * scale - center.y;
         setZoom(next);
@@ -162,6 +163,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     }
     const t = e.touches[0];
     touchEndX.current = t.clientX;
+    touchEndY.current = t.clientY;
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
@@ -173,11 +175,18 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
       return;
     }
     activeTouches.current = e.touches.length;
-    if (!isZoomed() && !panMode) {
-      const diff = touchStartX.current - touchEndX.current;
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) onNext();
-        else onPrev();
+    if (!isZoomed() && !panMode && images.length > 1) {
+      const dx = touchEndX.current - touchStartX.current;
+      const dy = touchEndY.current - touchStartY.current;
+      // 仅当横向位移明显大于纵向时判定为左右滑动，避免与上下滚动冲突
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        if (dx < 0) {
+          onNext();
+          toast(`${currentIndex + 2 > images.length ? 1 : currentIndex + 2} / ${images.length}`, { duration: 1200 });
+        } else {
+          onPrev();
+          toast(`${currentIndex === 0 ? images.length : currentIndex} / ${images.length}`, { duration: 1200 });
+        }
       }
     }
   };
