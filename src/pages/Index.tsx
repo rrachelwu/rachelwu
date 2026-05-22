@@ -178,7 +178,7 @@ const Index: React.FC = () => {
           
           <div className="text-center">
             <Link
-              to="/more-works"
+              to="/projects"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {t('查看更多项目 →', 'View more projects →')}
