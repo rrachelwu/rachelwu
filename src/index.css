@@ -192,13 +192,15 @@
   .project-card-title {
     display: block;
     min-height: 3.2em;
-    max-height: 3.2em;
+    max-height: calc(3.2em + 6px);
     line-height: 1.55;
     letter-spacing: 0;
+    padding-top: 4px;
     overflow: clip;
     overflow-wrap: anywhere;
     text-wrap: balance;
   }
+
 
   /* Decorative grid pattern */
   .grid-pattern {
