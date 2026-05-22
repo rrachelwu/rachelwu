@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize2 } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize2, Hand } from 'lucide-react';
 
 interface ImageLightboxProps {
   images: string[];
@@ -11,7 +10,7 @@ interface ImageLightboxProps {
   onNext: () => void;
 }
 
-const MIN_ZOOM = 0.1;
+const MIN_ZOOM = 0.05;
 const MAX_ZOOM = 5;
 const ZOOM_STEP = 0.25;
 
@@ -27,10 +26,14 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   const touchEndX = useRef(0);
   const [zoom, setZoom] = useState(1);
   const [fitZoom, setFitZoom] = useState(1);
+  const [panMode, setPanMode] = useState(false);
+  const [isPanning, setIsPanning] = useState(false);
+  const panStart = useRef({ x: 0, y: 0, scrollLeft: 0, scrollTop: 0 });
   const imgRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Recalculate fit-to-screen zoom (treated as 100% baseline shown to user)
+  const clamp = (v: number) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, v));
+
   const recalcFit = () => {
     const img = imgRef.current;
     const container = containerRef.current;
@@ -39,7 +42,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     const maxH = container.clientHeight - 32;
     const ratio = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
     setFitZoom(ratio);
-    setZoom(ratio);
+    setZoom(clamp(ratio));
   };
 
   useEffect(() => {
@@ -64,7 +67,6 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     };
   }, [isOpen]);
 
-  // Reset zoom when image changes
   useEffect(() => {
     if (!isOpen) return;
     const id = requestAnimationFrame(() => recalcFit());
@@ -92,15 +94,39 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     }
   };
 
-  const zoomIn = () => setZoom((z) => Math.min(MAX_ZOOM, z + ZOOM_STEP));
-  const zoomOut = () => setZoom((z) => Math.max(MIN_ZOOM, z - ZOOM_STEP));
+  const zoomIn = () => setZoom((z) => clamp(z + ZOOM_STEP));
+  const zoomOut = () => setZoom((z) => clamp(z - ZOOM_STEP));
   const actualSize = () => setZoom(1);
-  const fitScreen = () => setZoom(fitZoom);
+  const fitScreen = () => setZoom(clamp(fitZoom));
+
+  // Pan handling
+  const onMouseDown = (e: React.MouseEvent) => {
+    if (!panMode) return;
+    const c = containerRef.current;
+    if (!c) return;
+    setIsPanning(true);
+    panStart.current = {
+      x: e.clientX,
+      y: e.clientY,
+      scrollLeft: c.scrollLeft,
+      scrollTop: c.scrollTop,
+    };
+    e.preventDefault();
+  };
+  const onMouseMove = (e: React.MouseEvent) => {
+    if (!panMode || !isPanning) return;
+    const c = containerRef.current;
+    if (!c) return;
+    c.scrollLeft = panStart.current.scrollLeft - (e.clientX - panStart.current.x);
+    c.scrollTop = panStart.current.scrollTop - (e.clientY - panStart.current.y);
+  };
+  const stopPan = () => setIsPanning(false);
 
   if (!isOpen) return null;
 
-  // Percentage relative to fit (fit = 100%)
-  const percent = fitZoom > 0 ? Math.round((zoom / fitZoom) * 100) : 100;
+  // Absolute percentage (1 = 100% actual size)
+  const percent = Math.round(zoom * 100);
+  const cursor = panMode ? (isPanning ? 'grabbing' : 'grab') : 'default';
 
   return (
     <div
@@ -109,7 +135,6 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Close button */}
       <button
         onClick={onClose}
         className="fixed top-4 right-4 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors z-20"
@@ -118,7 +143,6 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         <X className="w-5 h-5 md:w-6 md:h-6" />
       </button>
 
-      {/* Desktop navigation arrows */}
       {images.length > 1 && (
         <>
           <button
@@ -138,12 +162,16 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         </>
       )}
 
-      {/* Scrollable image container */}
       <div
         ref={containerRef}
         className="flex-1 w-full overflow-auto flex items-center justify-center p-4"
+        style={{ cursor }}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMouseMove}
+        onMouseUp={stopPan}
+        onMouseLeave={stopPan}
         onClick={(e) => {
-          if (e.target === e.currentTarget) onClose();
+          if (!panMode && e.target === e.currentTarget) onClose();
         }}
       >
         <img
@@ -155,37 +183,14 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
             width: imgRef.current?.naturalWidth ? `${imgRef.current.naturalWidth * zoom}px` : 'auto',
             height: 'auto',
             maxWidth: 'none',
+            pointerEvents: panMode ? 'none' : 'auto',
           }}
           className="rounded-lg select-none transition-[width] duration-150"
           draggable={false}
         />
       </div>
 
-      {/* Bottom toolbar */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1 px-2 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-        <button
-          onClick={zoomIn}
-          className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 transition-colors"
-          aria-label="Zoom in"
-          title="放大"
-        >
-          <ZoomIn className="w-4.5 h-4.5" />
-        </button>
-        <button
-          onClick={zoomOut}
-          className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 transition-colors"
-          aria-label="Zoom out"
-          title="缩小"
-        >
-          <ZoomOut className="w-4.5 h-4.5" />
-        </button>
-        <button
-          onClick={actualSize}
-          className="h-9 px-3 rounded-full text-xs font-medium text-white hover:bg-white/15 transition-colors"
-          title="实际比例 1:1"
-        >
-          1:1
-        </button>
         <button
           onClick={fitScreen}
           className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 transition-colors"
@@ -193,6 +198,39 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
           title="适应屏幕"
         >
           <Maximize2 className="w-4 h-4" />
+        </button>
+        <button
+          onClick={() => setPanMode((v) => !v)}
+          className={`w-9 h-9 rounded-full flex items-center justify-center text-white transition-colors ${panMode ? 'bg-white/25' : 'hover:bg-white/15'}`}
+          aria-label="Pan"
+          title="抓手 / 拖动"
+        >
+          <Hand className="w-4 h-4" />
+        </button>
+        <button
+          onClick={zoomIn}
+          className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 transition-colors disabled:opacity-40"
+          aria-label="Zoom in"
+          title="放大"
+          disabled={zoom >= MAX_ZOOM}
+        >
+          <ZoomIn className="w-4 h-4" />
+        </button>
+        <button
+          onClick={zoomOut}
+          className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/15 transition-colors disabled:opacity-40"
+          aria-label="Zoom out"
+          title="缩小"
+          disabled={zoom <= MIN_ZOOM}
+        >
+          <ZoomOut className="w-4 h-4" />
+        </button>
+        <button
+          onClick={actualSize}
+          className="h-9 px-3 rounded-full text-xs font-medium text-white hover:bg-white/15 transition-colors"
+          title="实际比例 1:1"
+        >
+          1:1
         </button>
         <span className="px-2 text-xs tabular-nums text-white/80 min-w-[3.5rem] text-center">
           {percent}%
