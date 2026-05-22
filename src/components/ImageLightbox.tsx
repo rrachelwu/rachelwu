@@ -342,7 +342,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
         )}
         {loading && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-[min(80%,520px)] aspect-[3/4] max-h-[70vh] rounded-lg bg-gradient-to-br from-neutral-800 via-neutral-700 to-neutral-800 bg-[length:200%_100%] animate-[shimmer_1.4s_linear_infinite] relative overflow-hidden">
+            <div className="w-[min(80%,520px)] aspect-[3/4] max-h-[70vh] rounded-lg bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 bg-[length:200%_100%] animate-shimmer relative overflow-hidden">
               <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col items-center gap-2">
                 <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
                   <div
