@@ -41,6 +41,12 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   const pinchStartZoom = useRef(1);
   const activeTouches = useRef(0);
 
+  // 图片加载进度与缓存
+  const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [displaySrc, setDisplaySrc] = useState<string>('');
+  const blobCache = useRef<Map<string, string>>(new Map());
+
   const clamp = (v: number) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, v));
 
   const recalcFit = () => {
@@ -100,6 +106,49 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
   }, [isOpen]);
+
+  // 带进度的图片加载（XHR）+ 缓存
+  useEffect(() => {
+    if (!isOpen) return;
+    const url = images[currentIndex];
+    if (!url) return;
+    const cached = blobCache.current.get(url);
+    if (cached) {
+      setDisplaySrc(cached);
+      setLoading(false);
+      setProgress(100);
+      return;
+    }
+    setLoading(true);
+    setProgress(0);
+    setDisplaySrc('');
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'blob';
+    xhr.onprogress = (e) => {
+      if (e.lengthComputable) setProgress(Math.round((e.loaded / e.total) * 100));
+    };
+    xhr.onload = () => {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        const blobUrl = URL.createObjectURL(xhr.response);
+        blobCache.current.set(url, blobUrl);
+        setDisplaySrc(blobUrl);
+        setProgress(100);
+      } else {
+        setDisplaySrc(url);
+      }
+    };
+    xhr.onerror = () => setDisplaySrc(url);
+    xhr.send();
+    return () => xhr.abort();
+  }, [currentIndex, isOpen, images]);
+
+  useEffect(() => {
+    return () => {
+      blobCache.current.forEach((u) => URL.revokeObjectURL(u));
+      blobCache.current.clear();
+    };
+  }, []);
 
   // ----- Touch gestures: swipe / pinch (pan uses native scroll) -----
   const isZoomed = () => zoom > fitZoom + 0.01;
@@ -254,7 +303,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
 
       <div
         ref={containerRef}
-        className="flex-1 w-full overflow-auto flex items-start justify-center p-2 md:p-4"
+        className="flex-1 w-full overflow-auto flex items-start justify-center p-2 md:p-4 relative"
         style={{ cursor, touchAction: 'pan-x pan-y' }}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
@@ -267,27 +316,48 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
           onClose();
         }}
       >
-        <img
-          ref={imgRef}
-          src={images[currentIndex]}
-          alt=""
-          onLoad={recalcFit}
-          loading="eager"
-          decoding="sync"
-          onClick={(e) => e.stopPropagation()}
-          style={{
-            width: imgRef.current?.naturalWidth ? `${imgRef.current.naturalWidth * zoom}px` : 'auto',
-            height: 'auto',
-            maxWidth: 'none',
-            transform: `translate(${offset.x}px, ${offset.y}px)`,
-            imageRendering: 'auto',
-            WebkitUserSelect: 'none',
-            WebkitTouchCallout: 'none',
-          }}
-          className="rounded-lg select-none flex-shrink-0"
-          draggable={false}
-        />
+        {displaySrc && (
+          <img
+            ref={imgRef}
+            src={displaySrc}
+            alt=""
+            onLoad={() => { setLoading(false); recalcFit(); }}
+            loading="eager"
+            decoding="sync"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              width: imgRef.current?.naturalWidth ? `${imgRef.current.naturalWidth * zoom}px` : 'auto',
+              height: 'auto',
+              maxWidth: 'none',
+              transform: `translate(${offset.x}px, ${offset.y}px)`,
+              imageRendering: 'auto',
+              WebkitUserSelect: 'none',
+              WebkitTouchCallout: 'none',
+              opacity: loading ? 0 : 1,
+              transition: 'opacity 200ms ease',
+            }}
+            className="rounded-lg select-none flex-shrink-0"
+            draggable={false}
+          />
+        )}
+        {loading && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="w-[min(80%,520px)] aspect-[3/4] max-h-[70vh] rounded-lg bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 bg-[length:200%_100%] animate-shimmer relative overflow-hidden">
+              <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col items-center gap-2">
+                <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-white/70 transition-[width] duration-150 ease-out"
+                    style={{ width: `${progress}%` }}
+                  />
+                </div>
+                <span className="text-[11px] tabular-nums text-white/70">{progress}%</span>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
+
+
 
       {/* Toolbar */}
       <div
