@@ -21,16 +21,15 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            {/* Email */}
-            <button
-              type="button"
-              onClick={handleCopyEmail}
+            {/* Email - opens default mail client */}
+            <a
+              href={`mailto:${email}`}
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              aria-label={copied ? t('邮箱已复制', 'Email copied') : t('复制邮箱地址', 'Copy email address')}
-              title={copied ? t('已复制', 'Copied') : email}
+              aria-label={t('发送邮件', 'Send email')}
+              title={email}
             >
               <Mail className="w-5 h-5" />
-            </button>
+            </a>
 
             {/* WeChat - Link to dedicated page */}
             <Link
