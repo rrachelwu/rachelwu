@@ -28,7 +28,8 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   const [fitZoom, setFitZoom] = useState(1);
   const [panMode, setPanMode] = useState(false);
   const [isPanning, setIsPanning] = useState(false);
-  const panStart = useRef({ x: 0, y: 0, scrollLeft: 0, scrollTop: 0 });
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const panStart = useRef({ x: 0, y: 0, ox: 0, oy: 0 });
   const imgRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -43,6 +44,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     const ratio = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
     setFitZoom(ratio);
     setZoom(clamp(ratio));
+    setOffset({ x: 0, y: 0 });
   };
 
   useEffect(() => {
@@ -69,9 +71,14 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
 
   useEffect(() => {
     if (!isOpen) return;
+    setOffset({ x: 0, y: 0 });
     const id = requestAnimationFrame(() => recalcFit());
     return () => cancelAnimationFrame(id);
   }, [currentIndex, isOpen]);
+
+  useEffect(() => {
+    setOffset({ x: 0, y: 0 });
+  }, [zoom]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -81,12 +88,15 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   }, [isOpen]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
+    if (panMode) return;
     touchStartX.current = e.touches[0].clientX;
   };
   const handleTouchMove = (e: React.TouchEvent) => {
+    if (panMode) return;
     touchEndX.current = e.touches[0].clientX;
   };
   const handleTouchEnd = () => {
+    if (panMode) return;
     const diff = touchStartX.current - touchEndX.current;
     if (Math.abs(diff) > 50 && zoom <= fitZoom + 0.01) {
       if (diff > 0) onNext();
@@ -99,41 +109,48 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
   const actualSize = () => setZoom(1);
   const fitScreen = () => setZoom(clamp(fitZoom));
 
-  // Pan handling
+  // Pan handling — translate-based so user can drag even when image fits
   const onMouseDown = (e: React.MouseEvent) => {
     if (!panMode) return;
-    const c = containerRef.current;
-    if (!c) return;
     setIsPanning(true);
-    panStart.current = {
-      x: e.clientX,
-      y: e.clientY,
-      scrollLeft: c.scrollLeft,
-      scrollTop: c.scrollTop,
-    };
+    panStart.current = { x: e.clientX, y: e.clientY, ox: offset.x, oy: offset.y };
     e.preventDefault();
   };
   const onMouseMove = (e: React.MouseEvent) => {
     if (!panMode || !isPanning) return;
-    const c = containerRef.current;
-    if (!c) return;
-    c.scrollLeft = panStart.current.scrollLeft - (e.clientX - panStart.current.x);
-    c.scrollTop = panStart.current.scrollTop - (e.clientY - panStart.current.y);
+    setOffset({
+      x: panStart.current.ox + (e.clientX - panStart.current.x),
+      y: panStart.current.oy + (e.clientY - panStart.current.y),
+    });
   };
   const stopPan = () => setIsPanning(false);
 
+  const onPanTouchStart = (e: React.TouchEvent) => {
+    if (!panMode) return;
+    const t = e.touches[0];
+    setIsPanning(true);
+    panStart.current = { x: t.clientX, y: t.clientY, ox: offset.x, oy: offset.y };
+  };
+  const onPanTouchMove = (e: React.TouchEvent) => {
+    if (!panMode || !isPanning) return;
+    const t = e.touches[0];
+    setOffset({
+      x: panStart.current.ox + (t.clientX - panStart.current.x),
+      y: panStart.current.oy + (t.clientY - panStart.current.y),
+    });
+  };
+
   if (!isOpen) return null;
 
-  // Absolute percentage (1 = 100% actual size)
   const percent = Math.round(zoom * 100);
   const cursor = panMode ? (isPanning ? 'grabbing' : 'grab') : 'default';
 
   return (
     <div
       className="fixed inset-0 z-50 bg-black/95 flex flex-col animate-fade-in"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
+      onTouchStart={(e) => { handleTouchStart(e); onPanTouchStart(e); }}
+      onTouchMove={(e) => { handleTouchMove(e); onPanTouchMove(e); }}
+      onTouchEnd={() => { handleTouchEnd(); stopPan(); }}
     >
       <button
         onClick={onClose}
@@ -164,7 +181,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
 
       <div
         ref={containerRef}
-        className="flex-1 w-full overflow-auto flex items-center justify-center p-4"
+        className="flex-1 w-full overflow-hidden flex items-center justify-center p-4"
         style={{ cursor }}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
@@ -183,9 +200,10 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
             width: imgRef.current?.naturalWidth ? `${imgRef.current.naturalWidth * zoom}px` : 'auto',
             height: 'auto',
             maxWidth: 'none',
-            pointerEvents: panMode ? 'none' : 'auto',
+            transform: `translate(${offset.x}px, ${offset.y}px)`,
+            pointerEvents: 'none',
           }}
-          className="rounded-lg select-none transition-[width] duration-150"
+          className="rounded-lg select-none"
           draggable={false}
         />
       </div>
