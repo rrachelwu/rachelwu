@@ -225,8 +225,8 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
 
       <div
         ref={containerRef}
-        className="flex-1 w-full overflow-hidden flex items-center justify-center p-2 md:p-4"
-        style={{ cursor, touchAction: 'none' }}
+        className="flex-1 w-full overflow-auto flex items-start justify-center p-2 md:p-4"
+        style={{ cursor, touchAction: 'pan-y' }}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}
         onMouseUp={stopPan}
@@ -240,12 +240,15 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
           src={images[currentIndex]}
           alt=""
           onLoad={recalcFit}
+          loading="eager"
+          decoding="sync"
           style={{
             width: imgRef.current?.naturalWidth ? `${imgRef.current.naturalWidth * zoom}px` : 'auto',
             height: 'auto',
             maxWidth: 'none',
             transform: `translate(${offset.x}px, ${offset.y}px)`,
             pointerEvents: 'none',
+            imageRendering: 'auto',
           }}
           className="rounded-lg select-none flex-shrink-0"
           draggable={false}
