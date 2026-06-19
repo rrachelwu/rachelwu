@@ -126,12 +126,12 @@ const Index: React.FC = () => {
                 ))}
               </div>
               
-              <div className="flex flex-wrap gap-4">
-                <Button to="/projects" size="lg">
+              <div className="flex flex-row flex-nowrap gap-3 sm:gap-4">
+                <Button to="/projects" size="lg" className="w-[160px] sm:w-auto flex-none px-4 sm:px-8">
                   {t('查看作品', 'View Projects')}
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5 hidden sm:inline-block" />
                 </Button>
-                <Button to="/contact" variant="outline" size="lg">
+                <Button to="/contact" variant="outline" size="lg" className="w-[160px] sm:w-auto flex-none px-4 sm:px-8">
                   {t('联系我', 'Contact Me')}
                 </Button>
               </div>
