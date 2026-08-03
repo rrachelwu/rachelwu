@@ -35,8 +35,8 @@ const About: React.FC = () => {
       role: t('高级产品设计师', 'Senior Product Designer'),
       period: '2025.03 - 2026.05',
       description: t(
-        '独立主导路由器、轮毂、POKUBUY三条DTC出海产品线的全链路交付，覆盖官网、订单管理后台、Telegram Mini App等多端；建立英俄双语国际化设计规范；借助AI辅助原型验证，15天内完成订单系统核心模块交付。',
-        'Independently led UX design delivery for three DTC overseas product lines (router, wheels, PokuBuy), covering websites, order management backend, Telegram Mini App and more; established EN/RU bilingual internationalization design standards; leveraged AI-assisted prototyping, delivering core modules of the order system within 15 days.'
+        '独立主导路由器、轮毂、PokuBuy三条DTC出海产品线的全链路设计交付，覆盖官网、订单管理后台、Telegram Mini App等多端；建立英俄双语国际化设计规范；借助AI辅助原型验证，15天内完成订单系统核心模块交付。',
+        'Independently led full-chain design delivery for three DTC overseas product lines (router, wheels, PokuBuy), covering official websites, order management backend, Telegram Mini App and more; established EN/RU bilingual internationalization design standards; leveraged AI-assisted prototyping to deliver core modules of the order system within 15 days.'
       ),
     },
     {
@@ -44,8 +44,8 @@ const About: React.FC = () => {
       role: t('UI设计师', 'UI Designer'),
       period: '2023.12 - 2024.06',
       description: t(
-        '独立负责NN App全链路UI/UX设计，从0搭建Figma组件库与设计规范，提升团队交付效率与开发还原质量',
-        'Independently led full UI/UX design for NN App, built Figma component library and design standards from scratch, improving team delivery efficiency and dev implementation quality'
+        '独立负责NN App全链路UI/UX设计，从0搭建Figma组件库与设计规范，提升团队交付效率与开发还原质量。',
+        'Independently led full-chain UI/UX design for NN App, built Figma component library and design standards from scratch, improving team delivery efficiency and development implementation quality.'
       ),
     },
     {
@@ -53,8 +53,8 @@ const About: React.FC = () => {
       role: t('产品UI设计师', 'Product UI Designer'),
       period: '2023.08 - 2023.11',
       description: t(
-        '参与FengOS系统设计，负责启动台常用面板交互设计、AIGC屏保生成功能、影视内容首页信息架构；参与屏幕色彩标准测试，积累软硬件结合的产品感知经验',
-        'Participated in FengOS system design, responsible for launcher panel interaction, AIGC screensaver generation, and media homepage IA; involved in screen color standard testing, gaining hardware-software product experience'
+        '参与FengOS系统UI设计，负责启动台常用面板交互方案、AIGC屏保生成功能及影视内容首页信息架构；参与屏幕色彩标准测试，积累软硬件结合的产品感知经验。',
+        'Participated in FengOS system UI design, responsible for launcher panel interaction solutions, AIGC screensaver generation features, and media homepage information architecture; participated in screen color standard testing, gaining product perception experience combining hardware and software.'
       ),
     },
     {
@@ -62,8 +62,8 @@ const About: React.FC = () => {
       role: t('高级UI设计师', 'Senior UI Designer'),
       period: '2022.03 - 2023.01',
       description: t(
-        '主导隐私钱包App及KMS响应式网页从0到1设计；在关键交互节点主动提出更优方案并说服产品经理采纳，按自己的设计判断落地实现',
-        'Led 0-to-1 design of Privacy Wallet App and KMS responsive web; proactively proposed better solutions at key interaction points, convincing PM to adopt designs based on own design judgment'
+        '主导隐私钱包App及KMS响应式网页从0到1设计；在关键交互节点主动提出更优方案并说服产品经理采纳，按自己的设计判断落地实现。',
+        'Led 0-to-1 design of Privacy Wallet App and KMS responsive web; proactively proposed better solutions at key interaction points and convinced product managers to adopt them, implementing based on own design judgment.'
       ),
     },
     {
@@ -71,8 +71,8 @@ const About: React.FC = () => {
       role: t('高级UI设计师', 'Senior UI Designer'),
       period: '2019.02 - 2022.01',
       description: t(
-        '独立负责人人相册App全链路设计长达3年；首页改版方案被采纳，设计方向被竞品（拼多多旗下产品）参考，验证设计判断的市场有效性',
-        'Independently led full design for Renren Album App for 3 years; homepage redesign adopted, design direction referenced by competitor (Pinduoduo subsidiary), validating market effectiveness of design decisions'
+        '独立负责人人相册App全链路设计长达3年；首页改版方案被采纳，设计方向被同类竞品参考，验证设计判断的市场有效性。',
+        'Independently led full-chain design for Renren Album App for 3 years; homepage redesign was adopted, design direction referenced by similar competitors, validating market effectiveness of design judgment.'
       ),
     },
     {
@@ -80,8 +80,8 @@ const About: React.FC = () => {
       role: t('UI设计师', 'UI Designer'),
       period: '2017.02 - 2018.11',
       description: t(
-        '负责多款金融App及PC端B端后台从0到1设计，独立把控全流程交付质量；负责品牌VI制定与logo设计',
-        'Responsible for 0-to-1 design of multiple finance Apps and PC B-end backends, independently managing full delivery quality; led brand VI and logo design'
+        '负责多款金融App及PC端后台从0到1设计，独立把控全流程交付质量；负责品牌VI制定与logo设计。',
+        'Responsible for 0-to-1 design of multiple finance Apps and PC backend systems, independently managing full-process delivery quality; led brand VI development and logo design.'
       ),
     },
     {
@@ -89,8 +89,8 @@ const About: React.FC = () => {
       role: t('视觉设计师', 'Visual Designer'),
       period: '2013.11 - 2016.03',
       description: t(
-        '负责小米电视运营设计，统筹管理多平台海报库（规模逾3万张）；从0组建并管理6人设计团队，提前完成高强度交付任务',
-        'Led Xiaomi TV operational design, managing multi-platform poster library (30,000+ assets); built and managed a 6-person design team from scratch, completing high-intensity deliverables ahead of schedule'
+        '负责小米电视运营设计，统筹管理多平台海报库（规模逾3万张）；从0组建并管理6人设计团队，提前完成高强度交付任务。',
+        'Responsible for Xiaomi TV operational design, managing multi-platform poster library (30,000+ assets); built and managed a 6-person design team from scratch, completing high-intensity deliverables ahead of schedule.'
       ),
     },
   ];
@@ -152,8 +152,8 @@ const About: React.FC = () => {
             
             <p className="text-muted-foreground mb-8 max-w-2xl leading-relaxed">
               {t(
-                '10年跨硬件与互联网UX设计经验，小米/峰米背景。主导过FengOS智能终端HMI交互设计及出海硬件品牌（美俄双市场）从用户研究到交互规范的全链路设计交付。具备交互设计、视觉规范到开发验收的完整能力，软硬件双背景。',
-                '10 years of UX design experience across hardware and internet, with Xiaomi/Formovie background. Led HMI interaction design for FengOS smart terminals and full-chain design delivery for overseas hardware brands (US/RU markets) from user research to interaction standards. Complete capabilities from interaction design and visual standards to development acceptance, with both software and hardware background.'
+                '10年产品设计经验，软硬件双背景。主导过DTC出海硬件品牌（美俄双市场）、智能终端HMI系统及B端订单系统的产品设计与交付，具备从需求判断、交互设计、设计规范到开发验收的完整能力。既有消费电子硬件的交互设计积累，也有跨境出海多市场的用户体验经验，能在资源有限的情况下独立推动0到1项目落地，兼具设计判断力与产品判断力。',
+                '10 years of product design experience, with both software and hardware background. Led product design and delivery for DTC overseas hardware brands (US & RU markets), smart terminal HMI systems, and B-end order management systems. Complete capabilities from requirement judgment, interaction design, design standards to development acceptance. Strong foundation in consumer electronics hardware interaction design, plus cross-border user experience across multiple markets, able to independently drive 0-to-1 projects under limited resources with both design judgment and product judgment.'
               )}
             </p>
 

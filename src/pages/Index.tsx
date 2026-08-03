@@ -111,8 +111,8 @@ const Index: React.FC = () => {
               
               <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
                 {t(
-                  '10年跨硬件与互联网UX设计经验，小米/峰米背景。主导过FengOS智能终端HMI交互设计及出海硬件品牌（美俄双市场）从用户研究到交互规范的全链路设计交付。具备交互设计、视觉规范到开发验收的完整能力，软硬件双背景。',
-                  '10 years of UX design experience across hardware and internet, with Xiaomi/Formovie background. Led HMI interaction design for FengOS smart terminals and full-chain design delivery for overseas hardware brands (US/RU markets) from user research to interaction standards. Complete capabilities from interaction design and visual standards to development acceptance, with both software and hardware background.'
+                  '10年产品设计经验，软硬件双背景。主导过DTC出海硬件品牌（美俄双市场）、智能终端HMI系统及B端订单系统的产品设计与交付，具备从需求判断、交互设计、设计规范到开发验收的完整能力。既有消费电子硬件的交互设计积累，也有跨境出海多市场的用户体验经验，能在资源有限的情况下独立推动0到1项目落地，兼具设计判断力与产品判断力。',
+                  '10 years of product design experience, with both software and hardware background. Led product design and delivery for DTC overseas hardware brands (US & RU markets), smart terminal HMI systems, and B-end order management systems. Complete capabilities from requirement judgment, interaction design, design standards to development acceptance. Strong foundation in consumer electronics hardware interaction design, plus cross-border user experience across multiple markets, able to independently drive 0-to-1 projects under limited resources with both design judgment and product judgment.'
                 )}
               </p>
 
