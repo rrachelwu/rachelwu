@@ -32,7 +32,7 @@ const About: React.FC = () => {
   const workExperience = [
     {
       company: t('武汉光速源科技有限公司', 'Wuhan Guangsuyuan Tech'),
-      role: t('高级产品设计师', 'Senior Product Designer'),
+      role: t('UI & 产品负责人', 'UI & Product Lead'),
       period: '2025.03 - 2026.05',
       description: t(
         '独立主导路由器、轮毂、PokuBuy三条DTC出海产品线的全链路设计交付，覆盖官网、订单管理后台、Telegram Mini App等多端；建立英俄双语国际化设计规范；借助AI辅助原型验证，15天内完成订单系统核心模块交付。',
