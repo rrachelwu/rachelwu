@@ -50,7 +50,7 @@ const About: React.FC = () => {
     },
     {
       company: t('峰米（北京）科技有限公司', 'Formovie Technology'),
-      role: t('产品UI设计师', 'Product UI Designer'),
+      role: t('产品设计师', 'Product Designer'),
       period: '2023.08 - 2023.11',
       description: t(
         '参与FengOS系统UI设计，负责启动台常用面板交互方案、AIGC屏保生成功能及影视内容首页信息架构；参与屏幕色彩标准测试，积累软硬件结合的产品感知经验。',
