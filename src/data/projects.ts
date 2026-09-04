@@ -613,6 +613,16 @@ export const projects: Project[] = [
         judgment: "Use component-based design to control layout flexibility, reserve sufficient space for text areas, prevent visual disruption from Russian text wrapping",
         solution: "Established bilingual design specifications, validated key pages in both languages",
       },
+      {
+        problem: "Cross-border procurement involves two currencies — CNY (domestic procurement payment) and USD (international logistics/account balance), making exchange, recharge, and payment interactions highly complex",
+        judgment: "The two currencies have different business logic and can't be unified into a single conversion; users need clear exchange or recharge paths when balance is insufficient",
+        solution: "Designed a dual-currency fund system: CNY/USD managed separately, bidirectional exchange, payment password for secondary confirmation, unified transaction history showing 9 types (recharge/procurement payment/refund/logistics payment/exchange, etc.), with exchange payment or recharge as two paths when balance is insufficient",
+      },
+      {
+        problem: "Cross-border procurement has a high trust barrier — users hesitate to entrust money and procurement needs to a Chinese agent",
+        judgment: "Trust can't be solved by piling on features — it requires a three-layer design of front-loaded credibility + human intervention + full-chain transparency",
+        solution: "Three-layer trust design: ① Front-load three credibility metrics on the inquiry page (15 years experience / 100% timeliness / 98% reliability); ② Each user is assigned a dedicated sourcing manager, with a fixed entry point on the homepage to reduce distrust through human intervention; ③ Full-chain status transparency — every stage from inquiry to receipt has an independent page and status label, users can track at any time",
+      },
     ],
     deliverables: [
       {
