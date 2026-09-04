@@ -108,7 +108,7 @@ const Index: React.FC = () => {
                   alt="Rachel Wu"
                   width="720"
                   height="900"
-                  className="w-full max-w-[240px] h-auto mx-auto rounded-2xl shadow-elevated"
+                  className="w-full h-auto rounded-2xl shadow-elevated"
                 />
               </div>
 
