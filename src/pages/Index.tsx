@@ -13,6 +13,7 @@ import heroPattern from '@/assets/hero-pattern.svg';
 
 const Index: React.FC = () => {
   const { t, language } = useLanguage();
+  const [bioExpanded, setBioExpanded] = useState(false);
   const heroRef = useScrollAnimation();
   const featuresRef = useScrollAnimation();
   const logosRef = useScrollAnimation();
