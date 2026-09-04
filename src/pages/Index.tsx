@@ -153,12 +153,13 @@ const Index: React.FC = () => {
                 ))}
               </div>
               
-              <div className="flex flex-row flex-nowrap gap-3 sm:gap-4 max-w-lg">
-                <Button to="/projects" size="lg" className="flex-1 sm:flex-none sm:w-auto px-4 sm:px-8">
+              {/* Desktop CTA - inline */}
+              <div className="hidden lg:flex flex-row flex-nowrap gap-4 max-w-lg">
+                <Button to="/projects" size="lg" className="px-8">
                   {t('查看作品', 'View Projects')}
-                  <ArrowRight className="w-5 h-5 hidden sm:inline-block" />
+                  <ArrowRight className="w-5 h-5" />
                 </Button>
-                <Button to="/contact" variant="outline" size="lg" className="flex-1 sm:flex-none sm:w-auto px-4 sm:px-8">
+                <Button to="/contact" variant="outline" size="lg" className="px-8">
                   {t('联系我', 'Contact Me')}
                 </Button>
               </div>
