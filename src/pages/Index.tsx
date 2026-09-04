@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight, Code, Palette, Sparkles, Zap } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Code, Palette, Sparkles, Zap, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { projects } from '@/data/projects';
@@ -13,6 +13,7 @@ import heroPattern from '@/assets/hero-pattern.svg';
 
 const Index: React.FC = () => {
   const { t, language } = useLanguage();
+  const [bioExpanded, setBioExpanded] = useState(false);
   const heroRef = useScrollAnimation();
   const featuresRef = useScrollAnimation();
   const logosRef = useScrollAnimation();
@@ -100,7 +101,17 @@ const Index: React.FC = () => {
                   : 'opacity-0 translate-y-8'
               )}
             >
-              
+              {/* Mobile photo */}
+              <div className="lg:hidden mb-6">
+                <img
+                  src={rachelPhoto}
+                  alt="Rachel Wu"
+                  width="720"
+                  height="900"
+                  className="w-full max-w-[240px] h-auto mx-auto rounded-2xl shadow-elevated"
+                />
+              </div>
+
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.05]">
                 {t('吴倩', 'Rachel Wu')}
               </h1>
@@ -109,12 +120,28 @@ const Index: React.FC = () => {
                 {t('高级产品设计师', 'Senior Product Designer')}
               </p>
               
-              <p className="text-base text-muted-foreground mb-8 max-w-lg leading-relaxed">
+              <p
+                className={cn(
+                  'text-base text-muted-foreground mb-8 max-w-lg leading-relaxed cursor-pointer lg:cursor-default',
+                  'transition-all duration-300',
+                  bioExpanded ? 'line-clamp-none' : 'lg:line-clamp-none line-clamp-4'
+                )}
+                onClick={() => setBioExpanded(!bioExpanded)}
+              >
                 {t(
                   '10年产品设计经验，软硬件双背景。主导过DTC出海硬件品牌（美俄双市场）、智能终端HMI系统及B端订单系统的产品设计与交付，具备从需求判断、交互设计、设计规范到开发验收的完整能力。既有消费电子硬件的交互设计积累，也有跨境出海多市场的用户体验经验，能在资源有限的情况下独立推动0到1项目落地，兼具设计判断力与产品判断力。',
                   '10 years of product design experience, with both software and hardware background. Led product design and delivery for DTC overseas hardware brands (US & RU markets), smart terminal HMI systems, and B-end order management systems. Complete capabilities from requirement judgment, interaction design, design standards to development acceptance. Strong foundation in consumer electronics hardware interaction design, plus cross-border user experience across multiple markets, able to independently drive 0-to-1 projects under limited resources with both design judgment and product judgment.'
                 )}
               </p>
+              <button
+                type="button"
+                onClick={() => setBioExpanded(!bioExpanded)}
+                className="lg:hidden flex items-center gap-1 text-sm text-primary mb-8 transition-colors hover:text-primary/80"
+                aria-label={bioExpanded ? t('收起', 'Collapse') : t('展开', 'Expand')}
+              >
+                {bioExpanded ? t('收起', 'Show less') : t('展开全部', 'Show more')}
+                <ChevronDown className={cn('w-4 h-4 transition-transform', bioExpanded && 'rotate-180')} />
+              </button>
 
               {/* Stats - like in PDF */}
               <div className="flex gap-12 mb-10">
