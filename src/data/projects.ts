@@ -509,8 +509,8 @@ export const projects: Project[] = [
     ],
     deliverables: [
       { caption: "", title: "品牌与官网 · Brand & Website", image: "/lovable-uploads/wheelsline-brand-v2.png", description: "从Logo设计到官网完整搭建，建立品牌从零到一的视觉体系，覆盖wheelsline.com全站页面" },
-      { caption: "", title: "供应链后台 · 订单与型号管理", image: "/f82b36b9-3c3b-4149-80ac-fc2eff8b47ed.png", description: "订单六阶段生命周期（确认中→设计中→生产中→待尾款→已发货→完成），型号父子结构管理，支持多货币多工厂" },
-      { caption: "", title: "供应链后台 · 色卡规范系统", image: "/50ce72bf-0bfc-48ac-91fd-d8852c7871c5.png", description: "建立WheelsLine色卡体系，区分表面工艺与结构工艺两个独立维度，共99种色卡/13个分组，前台筛选与后台录入引用同一套标准" },
+      { caption: "", title: "供应链后台 · 订单与型号管理", image: "/f82b36b9-3c3b-4149-80ac-fc2eff8b47ed.png", description: "订单七阶段生命周期（待确认→设计中→已锁单→生产中→待发货→已发货→已完成）+取消分支，每个状态绑定强制校验规则（设计图纸满3张/锁单不可改/发货前记录尾款），收款进度条组件；型号父子结构管理（概览/订单记录/应用案例三子页面），支持多货币多工厂" },
+      { caption: "", title: "供应链后台 · 色卡规范系统", image: "/50ce72bf-0bfc-48ac-91fd-d8852c7871c5.png", description: "建立WheelsLine色卡体系，区分表面工艺与结构工艺两个独立维度，11色系（枪灰/黑/银/古铜/金/红/蓝/绿/橙黄/紫/白）共99种颜色，6位编码规则（色系2位+色调2位+工艺1位+颜色序号1位），支持新增/编辑/分组/批量操作/搜索筛选/导出，前台筛选与后台录入引用同一套标准；色卡系统经历过一轮改版迭代" },
       { caption: "", title: "供应链后台 · 案例库管理", image: "/6e872ef5-c3fa-4cbc-acd6-a4187f803842.png", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
       
       { caption: "", title: "定制绘图单 · 线下流程结构化", image: "/a8811bdd-f8af-4f69-9f5e-1adb87fbaccc.png", description: "将原本依赖线下沟通的定制流程结构化，输出为Excel定制绘图单，覆盖车辆信息、轮毂规格、工艺选择与参考图，是后续工厂与客户小程序化沟通流程的前期业务梳理基础" },
