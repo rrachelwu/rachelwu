@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight, Code, Palette, Sparkles, Zap } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Code, Palette, Sparkles, Zap, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { projects } from '@/data/projects';
