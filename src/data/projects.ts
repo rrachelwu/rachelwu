@@ -449,8 +449,8 @@ export const projects: Project[] = [
     title: "WheelsLine — 轮毂定制平台从0到1的产品体系与后台系统搭建",
     titleEn: "WheelsLine — Building a Custom Wheel Platform from 0 to 1: Product System & Backend",
     coverImage: wheelslineCover,
-    summary: "将非标轮毂行业数据转化为可结构化管理的产品体系，主导B端订单全生命周期管理系统从0到1落地。",
-    summaryEn: "Built a complete frontend showcase and backend order management system for a premium custom wheel brand targeting overseas markets",
+    summary: "将非标轮毂行业混沌的数据转化为可结构化管理的产品体系——建立色号/工艺/规格三维分类标准（11色系99种颜色，6位编码规则），主导B端订单7阶段全生命周期管理系统（含强制校验规则）从0到1落地。",
+    summaryEn: "Transformed chaotic non-standard wheel industry data into a structured product system — established a 3-dimensional classification standard (color/finish/spec, 11 color families × 99 colors, 6-digit coding rule), led the 0-to-1 build of a B2B 7-stage order lifecycle management system (with enforced validation rules).",
     role: "产品设计师 / 项目负责人",
     roleEn: "Product Designer / Project Lead",
     duration: "2025.07 - 2026.05",
@@ -509,8 +509,8 @@ export const projects: Project[] = [
     ],
     deliverables: [
       { caption: "", title: "品牌与官网 · Brand & Website", image: "/lovable-uploads/wheelsline-brand-v2.png", description: "从Logo设计到官网完整搭建，建立品牌从零到一的视觉体系，覆盖wheelsline.com全站页面" },
-      { caption: "", title: "供应链后台 · 订单与型号管理", image: "/f82b36b9-3c3b-4149-80ac-fc2eff8b47ed.png", description: "订单六阶段生命周期（确认中→设计中→生产中→待尾款→已发货→完成），型号父子结构管理，支持多货币多工厂" },
-      { caption: "", title: "供应链后台 · 色卡规范系统", image: "/50ce72bf-0bfc-48ac-91fd-d8852c7871c5.png", description: "建立WheelsLine色卡体系，区分表面工艺与结构工艺两个独立维度，共99种色卡/13个分组，前台筛选与后台录入引用同一套标准" },
+      { caption: "", title: "供应链后台 · 订单与型号管理", image: "/f82b36b9-3c3b-4149-80ac-fc2eff8b47ed.png", description: "订单七阶段生命周期（待确认→设计中→已锁单→生产中→待发货→已发货→已完成）+取消分支，每个状态绑定强制校验规则（设计图纸满3张/锁单不可改/发货前记录尾款），收款进度条组件；型号父子结构管理（概览/订单记录/应用案例三子页面），支持多货币多工厂" },
+      { caption: "", title: "供应链后台 · 色卡规范系统", image: "/50ce72bf-0bfc-48ac-91fd-d8852c7871c5.png", description: "建立WheelsLine色卡体系，区分表面工艺与结构工艺两个独立维度，11色系（枪灰/黑/银/古铜/金/红/蓝/绿/橙黄/紫/白）共99种颜色，6位编码规则（色系2位+色调2位+工艺1位+颜色序号1位），支持新增/编辑/分组/批量操作/搜索筛选/导出，前台筛选与后台录入引用同一套标准；色卡系统经历过一轮改版迭代" },
       { caption: "", title: "供应链后台 · 案例库管理", image: "/6e872ef5-c3fa-4cbc-acd6-a4187f803842.png", description: "买家成品案例与型号、订单数据关联展示，用户通过案例可直接查看对应轮毂的规格、型号与工艺详情，一键定制同款，降低定制门槛，推动规模化量产" },
       
       { caption: "", title: "定制绘图单 · 线下流程结构化", image: "/a8811bdd-f8af-4f69-9f5e-1adb87fbaccc.png", description: "将原本依赖线下沟通的定制流程结构化，输出为Excel定制绘图单，覆盖车辆信息、轮毂规格、工艺选择与参考图，是后续工厂与客户小程序化沟通流程的前期业务梳理基础" },
@@ -518,8 +518,8 @@ export const projects: Project[] = [
     ],
     deliverablesEn: [
       { caption: "", title: "Brand & Website", image: "/lovable-uploads/wheelsline-brand-v2.png", description: "From logo design to complete website build, establishing a 0-to-1 brand visual system covering all wheelsline.com pages" },
-      { caption: "", title: "Supply Chain Backend · Orders & Models", image: "/f82b36b9-3c3b-4149-80ac-fc2eff8b47ed.png", description: "6-stage order lifecycle, parent-child model structure management, multi-currency and multi-factory support" },
-      { caption: "", title: "Supply Chain Backend · Color Card System", image: "/50ce72bf-0bfc-48ac-91fd-d8852c7871c5.png", description: "Established the WheelsLine color code system with 99 codes in 13 groups, separating surface finish and structural process" },
+      { caption: "", title: "Supply Chain Backend · Orders & Models", image: "/f82b36b9-3c3b-4149-80ac-fc2eff8b47ed.png", description: "7-stage order lifecycle (pending confirmation → in design → locked → in production → pending shipment → shipped → completed) + cancellation branch, each state with enforced validation rules (3 design drawings required / lock-down immutable / record final payment before shipment), payment progress bar component; parent-child model structure management (3 sub-pages: overview/order records/application cases), multi-currency and multi-factory support" },
+      { caption: "", title: "Supply Chain Backend · Color Card System", image: "/50ce72bf-0bfc-48ac-91fd-d8852c7871c5.png", description: "Established the WheelsLine color card system, separating surface finish and structural process into two independent dimensions — 11 color families (gunmetal/black/silver/bronze/gold/red/blue/green/orange-yellow/purple/white) with 99 colors, 6-digit coding rule (2-digit family + 2-digit tone + 1-digit finish + 1-digit sequence), supporting CRUD/grouping/batch ops/search/filter/export; frontend filtering and backend entry reference the same standard; the color card system went through one redesign iteration" },
       { caption: "", title: "Supply Chain Backend · Case Library", image: "/6e872ef5-c3fa-4cbc-acd6-a4187f803842.png", description: "Linked buyer cases with model and order data, allowing one-click customization and lowering barriers for mass production" },
       
       { caption: "", title: "Custom Drawing Order · Offline Process Structuring", image: "/a8811bdd-f8af-4f69-9f5e-1adb87fbaccc.png", description: "Structured the originally offline-dependent customization process into an Excel custom drawing order, covering vehicle info, wheel specs, finish selection, and reference images — laying the business groundwork for subsequent mini app-based factory-customer communication" },
@@ -550,16 +550,16 @@ export const projects: Project[] = [
     title: "PokuBuy — 重构面向俄罗斯市场的跨境采购平台Telegram Mini App",
     titleEn: "PokuBuy — Rebuilding a Cross-border Purchasing Telegram Mini App for the Russian Market",
     coverImage: pokubyCover,
-    summary: "跨境采购的信任问题不能靠功能堆砌解决——为俄语市场独立设计 Telegram Mini App 和采购平台，80+页面覆盖询价到物流完整闭环。",
-    summaryEn: "Trust in cross-border procurement can't be solved by piling on features — independently designed Telegram Mini App and procurement platform for Russian market, 80+ pages covering the full loop from inquiry to logistics.",
+    summary: "面向俄语区买家的跨境采购B2B平台——半人工代购服务模式（用户询价→专属采购经理人工报价→用户确认），80+页面覆盖询价/采购/支付/物流/资金管理完整闭环；采购单10阶段状态机+人民币/美元双币种资金体系，信任背书前置（15年经验/100%时效/98%可靠性）。",
+    summaryEn: "A cross-border procurement B2B platform for Russian-speaking buyers — semi-manual sourcing service model (user inquiry → dedicated sourcing manager quotes → user confirms), 80+ pages covering the full loop of inquiry/procurement/payment/logistics/fund management; 10-stage purchase order state machine + CNY/USD dual-currency fund system, trust signals front-loaded (15 years experience / 100% timeliness / 98% reliability).",
     role: "产品设计师 / 设计负责人",
     roleEn: "Product Designer / Design Lead",
     duration: "2025.07 - 2026.01",
     durationEn: "Jul 2025 - Jan 2026",
     status: "已交付",
     statusEn: "Delivered",
-    tags: ["跨境电商", "C端产品", "Telegram生态"],
-    tagsEn: ["Cross-border E-commerce", "Consumer Product", "Telegram Ecosystem"],
+    tags: ["跨境采购", "B2B平台", "Telegram生态", "复杂规则"],
+    tagsEn: ["Cross-border Procurement", "B2B Platform", "Telegram Ecosystem", "Complex Rules"],
     techStack: ["Figma", "Telegram Mini App", "中俄双语", "信息架构"],
     links: { demo: "https://pokubuy.com/" },
     background: "PokuBuy是面向俄罗斯用户的跨境采购一站式服务平台，用户可以通过平台从中国采购、运输商品。我介入时，Web端设计混乱、H5开发滞后，用户访问路径不清晰。作为设计负责人，我需要在指导团队设计师的同时，独立完成Telegram Mini App的全部设计。",
@@ -583,6 +583,16 @@ export const projects: Project[] = [
         judgment: "用组件化设计控制布局弹性，文字区域预留足够空间，避免俄文换行导致的视觉错乱",
         solution: "建立双语设计规范，关键页面在两种语言下均做验证",
       },
+      {
+        problem: "跨境采购涉及人民币（国内采购支付）与美元（国际物流/账户余额）两套币种，换汇、充值、支付的交互复杂度高",
+        judgment: "两套币种业务逻辑不同，不能统一换算，需要分离管理；用户在余额不足时需要明确的换汇或充值路径",
+        solution: "设计双币种资金体系：人民币/美元分离管理，换汇支持双向，支付密码二次确认，资金明细流水统一展示9种类型（充值/采购付款/退款/物流付款/换汇等），余额不足时提供换汇支付或充值两条路径",
+      },
+      {
+        problem: "跨境采购信任门槛高，用户不敢把钱和采购需求交给一个中国代理方",
+        judgment: "信任不能靠功能堆砌解决，需要前置背书+人工介入+全链路透明三层设计",
+        solution: "三层信任设计：①询价页顶部前置展示15年经验/100%时效/98%可靠性三项指标；②每个用户绑定专属采购经理，首页固定展示入口，用人工介入降低不信任感；③全链路状态透明，从询价到签收到每个阶段都有独立页面和状态标签，用户可随时追踪",
+      },
     ],
     decisionsEn: [
       {
@@ -602,6 +612,16 @@ export const projects: Project[] = [
         problem: "Platform needs Chinese-Russian bilingual support; the two languages have significant character length differences that easily break layouts",
         judgment: "Use component-based design to control layout flexibility, reserve sufficient space for text areas, prevent visual disruption from Russian text wrapping",
         solution: "Established bilingual design specifications, validated key pages in both languages",
+      },
+      {
+        problem: "Cross-border procurement involves two currencies — CNY (domestic procurement payment) and USD (international logistics/account balance), making exchange, recharge, and payment interactions highly complex",
+        judgment: "The two currencies have different business logic and can't be unified into a single conversion; users need clear exchange or recharge paths when balance is insufficient",
+        solution: "Designed a dual-currency fund system: CNY/USD managed separately, bidirectional exchange, payment password for secondary confirmation, unified transaction history showing 9 types (recharge/procurement payment/refund/logistics payment/exchange, etc.), with exchange payment or recharge as two paths when balance is insufficient",
+      },
+      {
+        problem: "Cross-border procurement has a high trust barrier — users hesitate to entrust money and procurement needs to a Chinese agent",
+        judgment: "Trust can't be solved by piling on features — it requires a three-layer design of front-loaded credibility + human intervention + full-chain transparency",
+        solution: "Three-layer trust design: ① Front-load three credibility metrics on the inquiry page (15 years experience / 100% timeliness / 98% reliability); ② Each user is assigned a dedicated sourcing manager, with a fixed entry point on the homepage to reduce distrust through human intervention; ③ Full-chain status transparency — every stage from inquiry to receipt has an independent page and status label, users can track at any time",
       },
     ],
     deliverables: [
