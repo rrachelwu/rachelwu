@@ -153,12 +153,13 @@ const Index: React.FC = () => {
                 ))}
               </div>
               
-              <div className="flex flex-row flex-nowrap gap-3 sm:gap-4 max-w-lg">
-                <Button to="/projects" size="lg" className="flex-1 sm:flex-none sm:w-auto px-4 sm:px-8">
+              {/* Desktop CTA - inline */}
+              <div className="hidden lg:flex flex-row flex-nowrap gap-4 max-w-lg">
+                <Button to="/projects" size="lg" className="px-8">
                   {t('查看作品', 'View Projects')}
-                  <ArrowRight className="w-5 h-5 hidden sm:inline-block" />
+                  <ArrowRight className="w-5 h-5" />
                 </Button>
-                <Button to="/contact" variant="outline" size="lg" className="flex-1 sm:flex-none sm:w-auto px-4 sm:px-8">
+                <Button to="/contact" variant="outline" size="lg" className="px-8">
                   {t('联系我', 'Contact Me')}
                 </Button>
               </div>
@@ -298,6 +299,19 @@ const Index: React.FC = () => {
           </Button>
         </div>
       </section>
+
+      {/* Mobile fixed CTA bar */}
+      <div
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-40 flex gap-3 px-4 py-3 bg-background/95 backdrop-blur-md border-t border-border"
+        style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
+      >
+        <Button to="/projects" size="md" className="flex-1 px-4">
+          {t('查看作品', 'View Projects')}
+        </Button>
+        <Button to="/contact" variant="outline" size="md" className="flex-1 px-4">
+          {t('联系我', 'Contact Me')}
+        </Button>
+      </div>
     </main>
   );
 };
