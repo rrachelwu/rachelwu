@@ -101,14 +101,14 @@ const Index: React.FC = () => {
                   : 'opacity-0 translate-y-8'
               )}
             >
-              {/* Mobile photo */}
-              <div className="lg:hidden mb-6">
+              {/* Mobile photo - cropped to landscape, top third removed */}
+              <div className="lg:hidden mb-6 w-full overflow-hidden rounded-2xl shadow-elevated" style={{ aspectRatio: '996 / 819' }}>
                 <img
                   src={rachelPhoto}
                   alt="Rachel Wu"
                   width="720"
                   height="900"
-                  className="w-full h-auto rounded-2xl shadow-elevated"
+                  className="w-full h-full object-cover object-bottom"
                 />
               </div>
 
@@ -302,7 +302,7 @@ const Index: React.FC = () => {
 
       {/* Mobile fixed CTA bar */}
       <div
-        className="lg:hidden fixed bottom-0 left-0 right-0 z-40 flex gap-3 px-4 py-3 bg-background/95 backdrop-blur-md border-t border-border"
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-40 flex gap-3 px-4 py-3 border-t border-border/40"
         style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
       >
         <Button to="/projects" size="md" className="flex-1 px-4">
