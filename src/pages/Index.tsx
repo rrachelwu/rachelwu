@@ -302,13 +302,13 @@ const Index: React.FC = () => {
 
       {/* Mobile fixed CTA bar */}
       <div
-        className="lg:hidden fixed bottom-0 left-0 right-0 z-40 flex gap-3 px-4 py-3 border-t border-border/40"
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-40 flex gap-3 px-4 py-3"
         style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
       >
         <Button to="/projects" size="md" className="flex-1 px-4">
           {t('查看作品', 'View Projects')}
         </Button>
-        <Button to="/contact" variant="outline" size="md" className="flex-1 px-4">
+        <Button to="/contact" variant="outline" size="md" className="flex-1 px-4 bg-white/70 backdrop-blur-md border-white/40">
           {t('联系我', 'Contact Me')}
         </Button>
       </div>
