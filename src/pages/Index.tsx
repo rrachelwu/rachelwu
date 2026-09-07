@@ -101,14 +101,14 @@ const Index: React.FC = () => {
                   : 'opacity-0 translate-y-8'
               )}
             >
-              {/* Mobile photo - cropped to landscape, top third visible */}
-              <div className="lg:hidden mb-6 w-full aspect-[3/1] overflow-hidden rounded-2xl shadow-elevated">
+              {/* Mobile photo - cropped to landscape, top third removed */}
+              <div className="lg:hidden mb-6 w-full overflow-hidden rounded-2xl shadow-elevated" style={{ aspectRatio: '996 / 819' }}>
                 <img
                   src={rachelPhoto}
                   alt="Rachel Wu"
                   width="720"
                   height="900"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-bottom"
                 />
               </div>
 
