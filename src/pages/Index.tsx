@@ -308,7 +308,7 @@ const Index: React.FC = () => {
         <Button to="/projects" size="md" className="flex-1 px-4">
           {t('查看作品', 'View Projects')}
         </Button>
-        <Button to="/contact" variant="outline" size="md" className="flex-1 px-4 bg-white/70 backdrop-blur-md border-white/40">
+        <Button to="/contact" variant="outline" size="md" className="flex-1 px-4 bg-white/70 backdrop-blur-md border-black">
           {t('联系我', 'Contact Me')}
         </Button>
       </div>
