@@ -69,7 +69,7 @@ const Index: React.FC = () => {
   return (
     <main>
       {/* Hero Section - Matching PDF Cover Style */}
-      <section className="min-h-screen flex items-center pt-20 pb-16 lg:pb-16 pb-32 relative overflow-hidden bg-gradient-mesh">
+      <section className="min-h-screen flex items-center pt-20 pb-32 lg:pb-16 relative overflow-hidden bg-gradient-mesh">
         {/* Framer-style floating decorative shapes */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           {/* Hero pattern SVG - full screen */}
