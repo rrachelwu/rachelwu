@@ -129,8 +129,8 @@ const Index: React.FC = () => {
                 onClick={() => setBioExpanded(!bioExpanded)}
               >
                 {t(
-                  '10年产品设计经验，软硬件双背景。主导过DTC出海硬件品牌（美俄双市场）、智能终端HMI系统及B端订单系统的产品设计与交付，具备从需求判断、交互设计、设计规范到开发验收的完整能力。既有消费电子硬件的交互设计积累，也有跨境出海多市场的用户体验经验，能在资源有限的情况下独立推动0到1项目落地，兼具设计判断力与产品判断力。',
-                  '10 years of product design experience, with both software and hardware background. Led product design and delivery for DTC overseas hardware brands (US & RU markets), smart terminal HMI systems, and B-end order management systems. Complete capabilities from requirement judgment, interaction design, design standards to development acceptance. Strong foundation in consumer electronics hardware interaction design, plus cross-border user experience across multiple markets, able to independently drive 0-to-1 projects under limited resources with both design judgment and product judgment.'
+                  '10年产品设计相关经验，具备软件与硬件项目经验，经历覆盖智能终端、出海产品、B端业务系统及消费级应用。擅长从业务需求与用户场景出发，梳理信息架构、用户流程，并设计交互与界面方案；能够与产品、研发、测试等团队协作，推进设计规范、开发落地与交付验收。在复杂业务流程和多端产品场景中，兼顾用户体验、业务目标与实现条件。',
+                  '10 years of product design experience, with both software and hardware project background. Experience spans smart terminals, overseas products, B-end business systems, and consumer applications. Skilled at starting from business requirements and user scenarios to organize information architecture and user flows, and to design interaction and interface solutions; able to collaborate with product, development, and testing teams to advance design standards, development implementation, and delivery acceptance. In complex business processes and multi-platform product scenarios, balances user experience, business goals, and implementation constraints.'
                 )}
               </p>
               <button
